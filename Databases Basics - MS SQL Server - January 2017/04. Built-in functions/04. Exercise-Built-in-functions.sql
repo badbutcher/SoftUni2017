@@ -72,6 +72,13 @@ FROM Countries
 WHERE LEN(CountryName) - LEN(REPLACE(CountryName, 'a', '')) >= 3
 ORDER BY IsoCode ASC
 
+-- OR
+
+SELECT CountryName, IsoCode 
+FROM Countries
+WHERE CountryName LIKE ('%a%a%a%')
+ORDER BY IsoCode
+
 -- Problem 11. Mix of Peak and River Names
 SELECT PeakName, RiverName, CONCAT(LOWER (PeakName), LOWER(RIGHT (RiverName, LEN(RiverName) - 1 ))) AS 'Mix'
 FROM Peaks, Rivers
@@ -96,6 +103,13 @@ ORDER BY Start ASC, Name ASC
 SELECT Username, RIGHT(Email, LEN(Email) - CHARINDEX('@',Email)) AS 'Email Provider'
 FROM Users
 ORDER BY 'Email Provider' ASC, Username ASC
+
+-- OR
+
+SELECT CountryName, IsoCode 
+FROM Countries
+WHERE CountryName LIKE ('%a%a%a%')
+ORDER BY IsoCode
 
 -- Problem 14. Get Users with IPAdress Like Pattern
 SELECT Username, IpAddress
