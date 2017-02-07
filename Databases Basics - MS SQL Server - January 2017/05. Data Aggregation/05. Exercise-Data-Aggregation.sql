@@ -43,7 +43,6 @@ FROM WizzardDeposits
 GROUP BY DepositGroup
 ORDER BY AVG(MagicWandSize)
 
-
 -- Problem 5. Deposits Sum
 SELECT DepositGroup, SUM(DepositAmount) AS 'TotalSum'
 FROM WizzardDeposits
@@ -70,12 +69,6 @@ GROUP BY DepositGroup, MagicWandCreator
 ORDER BY MagicWandCreator ASC, DepositGroup ASC
 
 -- Problem 9. Age Groups
-<<<<<<< HEAD
---SELECT Age AS 'AgeGroup', COUNT(Id) AS 'WizardCount'
---FROM WizzardDeposits 
---WHERE Age BETWEEN 11 AND 20
---GROUP BY Age
-=======
 SELECT
 CASE 
 WHEN Age BETWEEN 0 AND 10 THEN '[0-10]'
@@ -114,7 +107,6 @@ END AS AgeGroup
 FROM WizzardDeposits
 ) AS ageGroups
 GROUP BY ageGroups.AgeGroup
->>>>>>> origin/master
 
 -- Problem 10. First Letter
 SELECT SUBSTRING(FirstName,1,1) AS 'FirstLetter'
@@ -196,11 +188,6 @@ WHERE DepartmentID IN (2,5,7) AND HireDate > '2000.01.01'
 GROUP BY DepartmentID
 
 -- Problem 15. Employees Average Salaries
-<<<<<<< HEAD
-SELECT DepartmentID, AVG(Salary) AS 'AverageSalary'
-FROM Employees
-WHERE ManagerID != 42 
-=======
 SELECT DepartmentID, Salary, ManagerID
 INTO EmployeesAverageSalaries
 FROM Employees;
@@ -216,7 +203,6 @@ WHERE DepartmentID = 1
 SELECT DepartmentID, AVG(Salary) AS 'AverageSalary'
 FROM EmployeesAverageSalaries
 WHERE Salary > 30000
->>>>>>> origin/master
 GROUP BY DepartmentID
 
 -- Problem 16. Employees Maximum Salaries
@@ -242,7 +228,6 @@ FROM Employees
 GROUP BY DepartmentID, Salary
 ) AS salaries
 WHERE Rank = 3
-
 
 -- Problem 19. **Salary Challenge
 SELECT TOP(10) FirstName, LastName, DepartmentID 
