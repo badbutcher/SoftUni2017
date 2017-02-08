@@ -1,12 +1,40 @@
 --- Part I – Queries for SoftUni Database ---
 
 -- Problem 1. Employees with Salary Above 35000
-			  
+CREATE PROC usp_GetEmployeesSalaryAbove35000
+AS
+BEGIN
+	SELECT e.FirstName, e.LastName
+	FROM Employees AS e
+	WHERE e.Salary > 35000
+END
+
+EXEC usp_GetEmployeesSalaryAbove35000
+		  
 -- Problem 2. Employees with Salary Above Number
+CREATE PROC usp_GetEmployeesSalaryAboveNumber (@number MONEY)
+AS
+BEGIN
+	SELECT e.FirstName, e.LastName
+	FROM Employees AS e
+	WHERE e.Salary > @number
+END
+
+EXEC dbo.usp_GetEmployeesSalaryAboveNumber 35000
 			  
 -- Problem 3. Town Names Starting With
+CREATE PROC usp_GetTownsStartingWith (@starts nvarchar(MAX))
+AS
+BEGIN
+	SELECT t.Name
+	FROM Towns AS t
+	WHERE LEFT(t.Name, len(@starts)) = @starts
+END
+
+EXEC dbo.usp_GetTownsStartingWith 's'
 			  
 -- Problem 4. Employees from Town
+CREATE PROC usp_GetEmployeesFromTown (@townName nvarchar)
 			  
 -- Problem 5. Salary Level Function
 			  
@@ -75,3 +103,23 @@
 -- Problem 34. Monasteries by Country
 			   
 -- Problem 35. Monasteries by Continents and Countries
+
+
+
+
+-----1111
+--CREATE PROCEDURE usp_GetEmployeesSalaryAbove35000 (@Salary money)
+--RETURNS bit
+--AS
+--BEGIN
+--	IF(@Salary > 35000)
+--	BEGIN
+--		RETURN 1;
+--	END
+--	RETURN 0;
+--END
+
+--SELECT FirstName, LastName
+--FROM Employees
+--WHERE dbo.usp_GetEmployeesSalaryAbove35000(Salary) = 1
+--ORDER BY dbo.usp_GetEmployeesSalaryAbove35000(Salary)
