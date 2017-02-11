@@ -141,7 +141,27 @@ FROM (
 		GROUP BY cx.Continentcode, ccx.Currencycode
 	 ) AS xxx
 ) AND Count(cc.Countrycode) > 1
-ORDER  BY c.Continentcode  
+ORDER  BY c.Continentcode
+
+-- OR
+
+SELECT usages.ContinentCode, usages.CurrencyCode, usages.Usage FROM
+(
+SELECT c.ContinentCode, c.CurrencyCode, COUNT(*) AS 'Usage'
+FROM Countries AS c
+GROUP BY c.ContinentCode, c.CurrencyCode
+HAVING COUNT(*) > 1
+) AS usages
+INNER JOIN 
+(
+	SELECT usages.ContinentCode, MAX(usages.Usage) AS 'maxUsages' FROM
+	(
+	SELECT c.ContinentCode, c.CurrencyCode, COUNT(*) AS 'Usage'
+	FROM Countries AS c
+	GROUP BY c.ContinentCode, c.CurrencyCode
+	) AS usages
+	GROUP BY usages.ContinentCode
+) AS maxUsages ON usages.ContinentCode = maxUsages.ContinentCode AND maxUsages.maxUsages = usages.Usage
 
 -- Problem 16. Countries Without any Mountains
 SELECT

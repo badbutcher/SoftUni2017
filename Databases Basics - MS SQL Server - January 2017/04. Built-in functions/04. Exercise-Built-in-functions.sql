@@ -104,13 +104,6 @@ SELECT Username, RIGHT(Email, LEN(Email) - CHARINDEX('@',Email)) AS 'Email Provi
 FROM Users
 ORDER BY 'Email Provider' ASC, Username ASC
 
--- OR
-
-SELECT CountryName, IsoCode 
-FROM Countries
-WHERE CountryName LIKE ('%a%a%a%')
-ORDER BY IsoCode
-
 -- Problem 14. Get Users with IPAdress Like Pattern
 SELECT Username, IpAddress
 FROM Users
