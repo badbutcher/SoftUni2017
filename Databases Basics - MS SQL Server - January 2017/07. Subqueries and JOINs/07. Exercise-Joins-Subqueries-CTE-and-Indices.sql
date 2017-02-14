@@ -93,6 +93,9 @@ FROM Employees AS e
 GROUP BY e.DepartmentID
 ) AS m
 
+--offset 2 rows
+--fetch next 1 row only
+
 -- Problem 12. Highest Peak in Bulgaria
 SELECT mc.Countrycode, m.MountainRange, p.PeakName, p.Elevation
 FROM MountainsCountries AS mc
