@@ -1,6 +1,8 @@
 --- Part I – SQL Queries ---
 
 -- Problem 1. All Teams
+SELECT t.TeamName
+FROM Teams AS t
               
 -- Problem 2. Biggest Countries by Population
               

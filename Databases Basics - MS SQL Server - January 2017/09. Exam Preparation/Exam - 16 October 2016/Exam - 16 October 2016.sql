@@ -6,7 +6,7 @@ CREATE TABLE Flights
 FlightID INT PRIMARY KEY,
 DepartureTime DATETIME NOT NULL,
 ArrivalTime DATETIME NOT NULL,
-Status VARCHAR(9) NOT NULL  CHECK(Status = 'Departing' OR Status = 'Delayed' OR Status = 'Arrived' OR Status = 'Cancelled'),
+Status VARCHAR(9) NOT NULL  CHECK(Status = 'Departing' OR Status = 'Delayed' OR Status = 'Arrived' OR Status = 'Cancelled'), -- moje i s IN
 OriginAirportID INT FOREIGN KEY REFERENCES Airports(AirportID),
 DestinationAirportID INT FOREIGN KEY REFERENCES Airports(AirportID),
 AirlineID INT FOREIGN KEY REFERENCES Airlines(AirlineID)
@@ -64,6 +64,21 @@ FROM
 ) AS r
 WHERE r.Rating = 200
 
+-- OR
+
+UPDATE Tickets
+SET Price *= 1.5
+WHERE FlightID IN
+(
+	SELECT FlightID FROM Flights
+	WHERE AirlineID = 
+	(
+		SELECT TOP(1) AirlineID
+		FROM Airlines
+		ORDER BY Rating DESC
+	)
+)
+
 -- Task 4: Table Creation
 CREATE TABLE CustomerReviews
 (
@@ -117,8 +132,20 @@ ORDER BY f.FlightID ASC
 -- Task 4: Extract Top 5 Most Highly Rated Airlines which have any Flights
 SELECT TOP(5) a.AirlineID, a.AirlineName, a.Nationality, a.Rating
 FROM Airlines AS a
-WHERE a.AirlineID IN(SELECT f.AirlineID FROM Flights AS f)
+WHERE a.AirlineID IN
+(
+SELECT f.AirlineID 
+FROM Flights AS f
+)
 ORDER BY a.Rating DESC, a.AirlineID ASC
+
+-- OR
+
+SELECT DISTINCT TOP(5) a.AirlineID, AirlineName, Nationality, Rating
+FROM Airlines AS a
+INNER JOIN Flights AS f
+ON f.AirlineID = a.AirlineID
+ORDER BY Rating DESC, a.AirlineID ASC
 
 -- Task 5: Extract all Tickets with price below 5000, for First Class
 SELECT t.TicketID, a.AirportName AS 'Destination', c.FirstName + ' ' + c.LastName AS 'CustomerName'
@@ -168,6 +195,19 @@ ON a.AirportID = f.DestinationAirportID
 WHERE f.Status = 'Delayed'
 ORDER BY TicketPrice DESC, c.CustomerID ASC
 
+-- OR
+
+SELECT TOP(3) c.CustomerID, c.FirstName + ' ' + c.LastName AS 'FullName', t.Price AS 'TicketPrice', a.AirportName
+FROM Customers AS c
+INNER JOIN Tickets AS t
+ON t.CustomerID = c.CustomerID
+INNER JOIN Flights AS f
+ON f.FlightID = t.FlightID
+AND f.Status = 'Delayed' --!!!
+INNER JOIN Airports AS a
+ON a.AirportID = f.DestinationAirportID
+ORDER BY TicketPrice DESC, c.CustomerID ASC
+
 -- Task 9: Extract the Last 5 Flights, which are departing.
 SELECT fl.FlightID, fl.DepartureTime, fl.ArrivalTime, ao.AirportName AS 'Origin', ad.AirportName AS 'Destination'
 FROM
@@ -193,6 +233,21 @@ WHERE a.AirportID = f.DestinationAirportID AND b.AirportID = f.OriginAirportID A
 ORDER BY f.DepartureTime DESC
 ) AS asd ORDER BY DepartureTime, FlightID
 
+-- OR
+
+SELECT f.FlightID, f.DepartureTime, f.ArrivalTime, orig.AirportName, dest.AirportName FROM
+(
+	SELECT TOP(5) * FROM Flights
+	WHERE Status = 'Departing'
+	ORDER BY DepartureTime DESC 
+) AS f
+JOIN Airports AS orig
+ON f.OriginAirportID = orig.AirportID
+JOIN Airports AS dest
+ON f.DestinationAirportID = dest.AirportID
+ORDER BY DepartureTime ASC, f.FlightID
+
+
 -- Task 10: Extract all Customers below 21 years, which have already flew at least once
 SELECT c.CustomerID, c.FirstName + ' ' + c.LastName AS 'FullName', DATEDIFF(YEAR, c.DateOfBirth, '2016.01.01') AS 'Age'
 FROM Customers AS c
@@ -204,17 +259,20 @@ WHERE DATEDIFF(YEAR, c.DateOfBirth, '2016.01.01') < 21 AND c.CustomerID IN
 	ON f.FlightID = t.FlightID
 	WHERE f.Status = 'Arrived'
 )
-
 ORDER BY 'Age' DESC, c.CustomerID ASC
 
---SELECT c.CustomerID, c.FirstName + ' ' + c.LastName AS 'FullName', DATEDIFF(YEAR, c.DateOfBirth, '2016.01.01') AS 'Age'
---FROM Customers AS c
---INNER JOIN Tickets AS t
---ON t.CustomerID = c.CustomerID
---INNER JOIN Flights AS f
---ON f.FlightID = t.FlightID
---WHERE DATEDIFF(YEAR, c.DateOfBirth, '2016.01.01') < 21 AND f.Status = 'Arrived'
---ORDER BY 'Age' DESC, c.CustomerID ASC
+-- OR
+
+SELECT DISTINCT c.CustomerID, CONCAT(FirstName, ' ', LastName) AS FullName, DATEDIFF(YEAR, c.DateOfBirth, '2016.01.01') AS Age
+FROM Customers AS c
+INNER JOIN Tickets AS t
+ON t.CustomerID = c.CustomerID
+INNER JOIN Flights AS f
+ON f.FlightID = t.FlightID
+AND f.Status = 'Arrived'
+WHERE DATEDIFF(YEAR, c.DateOfBirth, '2016.01.01') < 21
+ORDER BY 'Age' DESC, CustomerID ASC
+
 
 -- Task 11: Extract all Airports and the Count of People departing from them
 SELECT ap.AirportID, ap.AirportName, COUNT(t.CustomerID) AS 'Passengers'
@@ -226,6 +284,18 @@ ON t.FlightID = f.FlightID
 WHERE f.Status = 'Departing'
 GROUP BY ap.AirportID, ap.AirportName
 ORDER BY ap.AirportID
+
+-- OR
+
+SELECT a.AirportID, a.AirportName, COUNT(t.TicketID) AS 'Passengers'
+FROM Airports AS a
+JOIN Flights AS f
+ON f.OriginAirportID = a.AirportID
+AND f.Status = 'Departing'
+JOIN Tickets AS t
+ON t.FlightID = f.FlightID
+GROUP BY a.AirportID, a.AirportName
+ORDER BY a.AirportID
 
 --- Section 4: Programmability ---
 
@@ -253,6 +323,8 @@ END
 
 EXEC dbo.usp_SubmitReview 1, 'asdasfffffffffdasd', 10, 'Royal Airline'
 
+-- OR
+
 -- Task 2: Ticket Purchase Procedure
 GO
 CREATE PROC usp_PurchaseTicket(@CustomerID INT, @FlightID INT, @TicketPrice DECIMAL(8, 2), @Class VARCHAR(6), @Seat VARCHAR(5))
@@ -277,6 +349,38 @@ BEGIN
 	WHERE CustomerID = @CustomerID
 END
 
+-- OR
+
+GO
+CREATE PROC usp_PurchaseTicket(@CustomerID INT, @FlightID INT, @TicketPrice DECIMAL(8, 2), @Class VARCHAR(6), @Seat VARCHAR(5))
+AS
+BEGIN
+
+
+UPDATE CustomerBankAccounts
+SET Balance -= @TicketPrice
+WHERE CustomerID = @CustomerID
+
+begin tran
+
+DECLARE @Balance decimal(10,2) = (
+SELECT Balance 
+FROM CustomerBankAccounts 
+WHERE CustomerID = @CustomerID
+);
+
+IF (@Balance <0 OR @Balance IS NULL)
+BEGIN
+	RAISERROR('Insufficient bank account balance for ticket purchase.', 16, 1)
+	RETURN;
+END
+
+DECLARE @TicketID int = (SELECT ISNULL(MAX(TicketID) + 1, 1) FROM Tickets)
+
+INSERT INTO Tickets
+	VALUES(@TicketID, @TicketPrice, @Class, @Seat, @CustomerID, @FlightID)
+Commit
+END
 
 --- Section 5 (BONUS): Update Trigger ---
 CREATE TABLE ArrivedFlights
@@ -306,9 +410,51 @@ BEGIN
 
 END
 
---SET @AirlineName = 
---	(SELECT AirlineName 
---	FROM Airlines AS a
---	INNER JOIN CustomerReviews AS cr
---	ON cr.AirlineID = a.AirlineID
---	WHERE @AirlineName = a.AirlineName)
+-- OR
+
+GO
+ALTER TRIGGER tr_ArrivedFlights ON Flights FOR UPDATE -- s for purvo updaitva i posle pravvi trigura
+AS
+BEGIN
+	INSERT INTO ArrivedFlights([FlightID], [ArrivalTime], [Origin], [Destination], [Passengers])
+	SELECT FlightID, 
+	ArrivalTime, 
+	orig.AirportName AS OriginAirport,
+	dest.AirportName AS DestinationAirport,
+	(SELECT COUNT(*) FROM Tickets WHERE FlightID = i.FlightID) AS Passengers
+	FROM inserted AS i
+	JOIN Airports AS orig
+	ON orig.AirportID = i.OriginAirportID
+	JOIN Airports AS dest
+	ON dest.AirportID = i.DestinationAirportID
+	WHERE Status = 'Arrived'
+END
+
+-- Po pravilno
+
+GO
+ALTER TRIGGER tr_ArrivedFlights ON Flights FOR UPDATE
+AS
+BEGIN
+	--INSERT INTO ArrivedFlights([FlightID], [ArrivalTime], [Origin], [Destination], [Passengers])
+	SELECT i.FlightID, 
+	i.ArrivalTime, 
+	orig.AirportName AS OriginAirport,
+	dest.AirportName AS DestinationAirport,
+	(SELECT COUNT(*) FROM Tickets WHERE FlightID = i.FlightID) AS Passengers
+	FROM inserted AS i
+	JOIN Airports AS orig
+	ON orig.AirportID = i.OriginAirportID
+	JOIN Airports AS dest
+	ON dest.AirportID = i.DestinationAirportID
+	JOIN deleted AS dt
+	ON i.FlightID = dt.FlightID
+	WHERE i.Status = 'Arrived' AND dt.Status != 'Arrived'
+END
+
+
+BEGIN TRAN
+UPDATE Flights
+SET Status = 'Arrived'
+WHERE FlightID IN(1, 2)
+ROLLBACK

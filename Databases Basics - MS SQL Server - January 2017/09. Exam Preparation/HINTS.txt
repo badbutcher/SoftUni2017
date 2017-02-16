@@ -1,0 +1,4 @@
+moje s "BEGIN TRAN" ... "ROLLBACK" da si testvame
+cooncat zamenq null s prazen string 
+prazen string + null = null
+moje da ima nujda ot destinct

@@ -42,11 +42,11 @@ FROM Games AS g
 ORDER BY g.Name ASC, 'Duration' ASC, 'Part of the Day' ASC
               
 -- Problem 6. Number of Users for Email Provider !!!!
-SELECT RIGHT(u.Email, CHARINDEX('@',REVERSE(u.Email))-1) AS 'Email Provider',  COUNT(u.Username) AS 'Email Provider'
+SELECT RIGHT(u.Email, CHARINDEX('@',REVERSE(u.Email))-1) AS 'Email Provider',  COUNT(u.Username) AS 'Number Of Users'
 FROM Users AS u
 GROUP BY RIGHT(u.Email, CHARINDEX('@',REVERSE(u.Email))-1)
-ORDER BY COUNT(u.Username) DESC, 'Email Provider' ASC
-              
+ORDER BY [Number Of Users] DESC, [Email Provider] ASC
+
 -- Problem 7. All User in Games
 SELECT g.Name AS 'Game', gt.Name AS 'Game Type', u.Username AS 'Username', ug.Level AS 'Level', ug.Cash AS 'Cash', c.Name AS 'Character'
 FROM Games AS g
@@ -113,18 +113,45 @@ FROM [Statistics] AS st
 ORDER BY i.Name ASC
              
 -- Problem 11. Display All Items with Information about Forbidden Game Type
-SELECT i.Name, i.Price, i.MinLevel, gt.Name
+SELECT i.Name AS 'Item', i.Price AS 'Price', i.MinLevel, gt.Name AS 'Forbidden Game Type'
 FROM Items AS i
-INNER JOIN GameTypeForbiddenItems AS fi
+LEFT JOIN GameTypeForbiddenItems AS fi
 ON fi.ItemId = i.Id
-INNER JOIN GameTypes AS gt
+LEFT JOIN GameTypes AS gt
 ON gt.Id = fi.GameTypeId
 ORDER BY gt.Name DESC, i.Name ASC
 
 --- Part III – Changes in the Database ---
 
 -- Problem 12. Buy items for user in game
-SELECT DISTINCT i.Name, i.Price
+DECLARE @Sum MONEY =
+(
+	SELECT SUM(i.Price)
+	FROM Items AS i
+	WHERE i.Name IN ('Blackguard', 'Bottomless Potion of Amplification', 'Eye of Etlich (Diablo III)', 'Gem of Efficacious Toxin', 'Golden Gorget of Leoric', 'Hellfire Amulet')
+)
+
+
+UPDATE UsersGames
+SET Cash -= @Sum
+WHERE UserId =
+(
+	SELECT Id
+	FROM Users
+	WHERE Username = 'Alex'
+)
+
+INSERT INTO UserGameItems (ItemId, UserGameId)
+(
+	SELECT i.Id, 235
+	FROM Items AS i
+	WHERE i.Name IN ('Blackguard', 'Bottomless Potion of Amplification',
+	'Eye of Etlich (Diablo III)', 'Gem of Efficacious Toxin', 
+	'Golden Gorget of Leoric', 'Hellfire Amulet')
+)
+
+
+SELECT u.Username AS 'Username', g.Name AS 'Name', ug.Cash AS 'Cash', i.Name AS 'Item Name'
 FROM UsersGames AS ug
 INNER JOIN Users AS u
 ON u.Id = ug.UserId
@@ -134,7 +161,8 @@ INNER JOIN UserGameItems AS ugi
 ON ugi.UserGameId = ug.Id
 INNER JOIN Items AS i
 ON i.Id = ugi.ItemId
-WHERE i.Name IN ('Blackguard', 'Bottomless Potion of Amplification', 'Eye of Etlich (Diablo III)', 'Gem of Efficacious Toxin', 'Golden Gorget of Leoric', ' Hellfire Amulet')
+WHERE g.Name = 'Edinburgh'
+ORDER BY i.Name
 
 -- Problem 13. Massive shopping
 
