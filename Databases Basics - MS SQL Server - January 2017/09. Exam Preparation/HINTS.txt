@@ -2,3 +2,7 @@ moje s "BEGIN TRAN" ... "ROLLBACK" da si testvame
 cooncat zamenq null s prazen string 
 prazen string + null = null
 moje da ima nujda ot destinct
+kogato se insertva gledai dali id-to trqbva da se insertne su6to
+vij kude trqbva da e updaita
+after purvo se izpulnqva sled kato destvieto se izpulni
+instead of zamenq zqlata operaciq

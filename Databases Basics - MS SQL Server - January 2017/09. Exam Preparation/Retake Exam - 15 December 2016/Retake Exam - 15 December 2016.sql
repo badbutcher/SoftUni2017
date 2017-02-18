@@ -462,5 +462,23 @@ BEGIN
 	WHERE Users.Id IN(SELECT Id FROM deleted)
 END
 
+-- OR
+
+GO
+CREATE TRIGGER tr_Users_InsteadOF_Delete ON Users
+INSTEAD OF DELETE
+AS
+BEGIN
+	DELETE FROM UsersChats 
+	WHERE UserId IN(SELECT Id FROM deleted)
+
+	UPDATE Messages
+	SET UserId = NULL
+	WHERE UserId IN(SELECT Id FROM deleted)
+
+	DELETE FROM Users
+	WHERE Users.Id IN(SELECT Id FROM deleted)
+END
+
 DELETE FROM Users
 WHERE Users.Id = 1
