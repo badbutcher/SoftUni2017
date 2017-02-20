@@ -1,0 +1,1 @@
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\001\bin\Debug\001.exe.config
