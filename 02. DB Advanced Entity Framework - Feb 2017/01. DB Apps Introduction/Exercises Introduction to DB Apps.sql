@@ -6,29 +6,30 @@ USE MinionsDB
 CREATE TABLE Towns
 (
 TownID INT PRIMARY KEY,
-TownName VARCHAR(40),
-CountryName VARCHAR(30)
+TownName VARCHAR(50),
+CountryName VARCHAR(50)
 )
 
 CREATE TABLE Minions
 (
-Name VARCHAR(20) PRIMARY KEY,
+MinionId INT PRIMARY KEY,
+Name VARCHAR(50),
 Age INT,
-TownID INT
-CONSTRAINT FK_Minions_Town FOREIGN KEY (TownID) REFERENCES Towns(TownID)
+TownID INT FOREIGN KEY (TownID) REFERENCES Towns(TownID)
 )
 
 CREATE TABLE Villains
 (
-Name VARCHAR(100) PRIMARY KEY,
+VillainId INT PRIMARY KEY,
+Name VARCHAR(100),
 EvilnessFactor VARCHAR(10) CHECK (Evilnessfactor = 'good' OR Evilnessfactor = 'bad' OR Evilnessfactor = 'evil' OR Evilnessfactor = 'super evil')
 )
 
 CREATE TABLE VilliansMinions
 (
-VillianName VARCHAR(100),
-MinionName VARCHAR(20)
-CONSTRAINT PK_VilliansMinions PRIMARY KEY (VillianName, MinionName)
+VillianId INT FOREIGN KEY REFERENCES Villains(VillainId),
+MinionId INT FOREIGN KEY REFERENCES Minions(MinionId)
+PRIMARY KEY (VillianId, MinionId)
 )
 
 INSERT INTO Towns(TownID, TownName, CountryName)
@@ -37,50 +38,101 @@ VALUES
 (2, 'Plovdiv', 'Bulgaria'),
 (3, 'Berlin', 'Germany'),
 (4, 'Paris', 'France'),
-(5, 'Liverpool', 'England')
+(5, 'Liverpool', 'England'),
+(6, 'London', 'England'),
+(7, 'Rome', 'Italy'),
+(8, 'Faeto', 'Italy'),
+(9, 'Imbersago', 'Italy'),
+(10, 'Nazzano', 'Italy')
 
-INSERT INTO Minions (Name, Age, TownID)
+INSERT INTO Minions (MinionId, Name, Age, TownID)
 VALUES 
-('Kev', 11, 1),
-('Bobb', 12, 2),
-('Stew', 5, 3),
-('Malk', 3, 5),
-('Tosh', 1, 4)
+(1, 'Kev', 11, 1),
+(2, 'Bobb', 12, 2),
+(3, 'Stew', 5, 3),
+(4, 'Malk', 3, 4),
+(5, 'Tosh', 1, 5),
+(6, 'Dean', 11, 6),
+(7, 'Wanda', 32, 7),
+(8, 'Lonnie', 15, 8),
+(9, 'Arturo', 6, 9),
+(10, 'Herbert', 77, 10),
+(11, 'Carolyn', 31, 3),
+(12, 'Delbert', 22, 6),
+(13, 'Roger', 45, 8),
+(14, 'Jody', 3, 3),
+(15, 'Nancy', 3, 9)
 
-INSERT INTO Villains (Name, EvilnessFactor)
+INSERT INTO Villains (VillainId, Name, EvilnessFactor)
 VALUES
-('Gosho', 'bad'),
-('Tosho', 'good'),
-('Misho', 'evil'),
-('Gogo', 'super evil'),
-('Tiho', 'bad')
+(1, 'Gosho', 'bad'),
+(2, 'Tosho', 'good'),
+(3, 'Misho', 'evil'),
+(4, 'Gogo', 'super evil'),
+(5, 'Tiho', 'bad'),
+(6, 'Mike', 'bad'),
+(7, 'Martha', 'good'),
+(8, 'Muriel', 'evil'),
+(9, 'Antonia', 'super evil'),
+(10,'Denise', 'bad')
 
-INSERT INTO VilliansMinions(VillianName, MinionName)
+INSERT INTO VilliansMinions(VillianId, MinionId)
 VALUES 
-('Kev', 'Kev'),
-('Bobb','Bobb'),
-('Stew','Stew'),
-('Malk','Malk'),
-('Tosh','Tosh')
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5),
+(6,6),
+(7,7),
+(8,8),
+(9,9),
+(10,10),
+(1,11),
+(2,12),
+(3,13),
+(4,14),
+(5,15)
 
 -- 2
-SELECT v.Name, COUNT(*)
+SELECT v.Name, COUNT(vm.MinionId) AS 'Count'
 FROM Villains AS v
 LEFT JOIN VilliansMinions AS vm
-ON vm.VillianName = v.Name
+ON vm.VillianId = v.VillainId
 GROUP BY v.Name
+HAVING COUNT(vm.MinionId) > 1
 
 -- 3
+SELECT v.Name
+FROM Villains AS v
+WHERE v.VillainId = 6
+
+SELECT m.MinionId, m.Name, m.Age
+FROM Minions AS m
+INNER JOIN VilliansMinions AS vm
+ON vm.VillianId = m.MinionId
+INNER JOIN Villains AS v
+ON v.VillainId = vm.VillianId
+WHERE v.VillainId = 6
 
 -- 4
 
 -- 5
+UPDATE Towns
+SET TownName = UPPER(TownName)
+WHERE CountryName = 'England' AND TownName != UPPER(TownName) COLLATE SQL_Latin1_General_CP1_CS_AS
+
+SELECT TownName
+FROM Towns
 
 -- 6
 
 -- 7
 
 -- 8
+UPDATE Minions
+SET Age += 1
+WHERE MinionId = 1
 
 -- 9
 

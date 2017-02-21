@@ -1,0 +1,6 @@
+sled zatvarqne na reader-a moje da se izpolzva su6tata konekciq
+
+Fule.ReadAllText(../../imeto na sql-a.sql) i trqva v querito da se kaje koq baza da ispolzvame
+
+SqlParameter ime = new SqlParameter("@id", id);
+command.Parameters.Add(ime);
