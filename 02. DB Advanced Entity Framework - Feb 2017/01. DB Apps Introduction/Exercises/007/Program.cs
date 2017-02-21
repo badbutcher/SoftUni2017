@@ -13,9 +13,9 @@
         {
             SqlConnection connection = new SqlConnection
                 (
-                    "Server=.; " +
-                    "Database=MinionsDB; " +
-                    "Integrated Security=true"
+                    @"Server=.;
+                    Database=MinionsDB;
+                    Integrated Security=true"
                 );
 
             connection.Open();
