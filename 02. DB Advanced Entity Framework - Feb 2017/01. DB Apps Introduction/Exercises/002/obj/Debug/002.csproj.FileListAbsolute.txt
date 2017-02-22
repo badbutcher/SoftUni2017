@@ -3,3 +3,8 @@ C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps In
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\bin\Debug\002.pdb
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\obj\Debug\002.exe
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\obj\Debug\002.pdb
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\bin\Debug\002.exe.config
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\obj\Debug\002.exe
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\obj\Debug\002.pdb
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\bin\Debug\002.exe
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\002\bin\Debug\002.pdb

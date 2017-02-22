@@ -24,19 +24,24 @@
             connection.Open();
             using (connection)
             {
-                string query = $@"SELECT v.Name
-FROM Villains AS v
-WHERE v.VillainId = @VillainId";
+                string getVillainName = $@"SELECT v.Name
+                                           FROM Villains AS v
+                                           WHERE v.VillainId = @VillainId";
 
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@VillainId", VillainId);
+                SqlCommand command = new SqlCommand(getVillainName, connection);
+                SqlParameter villainIdParam = new SqlParameter("@VillainId", VillainId);
+                command.Parameters.Add(villainIdParam);
                 SqlDataReader reader = command.ExecuteReader();
 
                 using (reader)
                 {
-                    while (reader.Read())
+                    if (reader.Read())
                     {
                         Console.WriteLine("Villain: {0}", reader["Name"]);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"No villain with ID {VillainId} exists in the database.");
                     }
                 }
             }
@@ -51,23 +56,30 @@ WHERE v.VillainId = @VillainId";
             connection2.Open();
             using (connection2)
             {
-                string query = $@"SELECT m.MinionId, m.Name, m.Age
-FROM Minions AS m
-INNER JOIN VilliansMinions AS vm
-ON vm.VillianId = m.MinionId
-INNER JOIN Villains AS v
-ON v.VillainId = vm.VillianId
-WHERE v.VillainId = @VillainId";
+                string getMinionsNames = $@"SELECT m.Name, m.Age
+                                            FROM Minions AS m
+                                            INNER JOIN VilliansMinions AS vm
+                                            ON vm.VillianId = m.MinionId
+                                            INNER JOIN Villains AS v
+                                            ON v.VillainId = vm.VillianId
+                                            WHERE v.VillainId = @VillainId";
 
-                SqlCommand command = new SqlCommand(query, connection2);
+                SqlCommand command = new SqlCommand(getMinionsNames, connection2);
                 command.Parameters.AddWithValue("@VillainId", VillainId);
                 SqlDataReader reader = command.ExecuteReader();
-
+                int counter = 1;
                 using (reader)
                 {
+                    if (!reader.HasRows)
+                    {
+                        Console.WriteLine("<no minions>");
+                        return;
+                    }
+
                     while (reader.Read())
                     {
-                        Console.WriteLine($"{reader["MinionId"]} {reader["Name"]} {reader["Age"]}");
+                        Console.WriteLine($"{counter}. {reader["Name"]} {reader["Age"]}");
+                        counter++;
                     }
                 }
             }

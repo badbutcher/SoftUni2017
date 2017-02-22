@@ -1,1 +1,7 @@
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\008\bin\Debug\008.exe.config
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\008\bin\Debug\008.exe.config
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\008\bin\Debug\008.exe
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\008\bin\Debug\008.pdb
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\008\obj\Debug\008.exe
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\008\obj\Debug\008.pdb
+D:\Github\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\01. DB Apps Introduction\Exercises\008\obj\Debug\008.csprojResolveAssemblyReference.cache
