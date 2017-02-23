@@ -13,7 +13,54 @@ namespace Exercises
             //_03EmployeesFullInformation();
             //_04EmployeesWithSalaryOver50000();
             //_05EmployeesFromSeattle();
-            _06AddingANewAddressAndUpdatingEmployee();
+            //_06AddingANewAddressAndUpdatingEmployee();
+
+            //_08AddressesByTownName();
+
+            var context = new SoftuniContext();
+
+            var employee = context.Employees
+                .Where(e => e.EmployeeID == 147);
+
+            var projects = context.Projects
+                .OrderBy(p => p.Name);
+
+            foreach (var item in employee)
+            {
+                Console.WriteLine("{0} {1} {2}",item.FirstName, item.LastName, item.JobTitle);
+            }
+
+            foreach (var item in projects)
+            {
+                Console.WriteLine("{0}", item.Name);
+            }
+            
+        }
+
+        private static void _08AddressesByTownName()
+        {
+            var context = new SoftuniContext();
+
+            var result = context.Addresses
+                .OrderByDescending(a => a.Employees.Count)
+                .Take(10)
+                .Select
+                (
+                    a => new
+                    {
+                        AddressName = a.AddressText,
+                        TownName = a.Town.Name,
+                        EmployeeName = a.Employees.Count
+                    }
+                );
+
+            foreach (var address in result)
+            {
+                Console.WriteLine("{0}, {1} - {2} employees",
+                   address.AddressName,
+                   address.TownName,
+                   address.EmployeeName);
+            }
         }
 
         private static void _06AddingANewAddressAndUpdatingEmployee()
@@ -26,7 +73,7 @@ namespace Exercises
                 TownID = 4
             };
 
-            Employee employee = context.Employees.FirstOrDefault(e => e.LastName == "Nakov");
+            Employee employee = context.Employees.First(e => e.LastName == "Nakov");
 
             employee.Address = addres;
             context.SaveChanges();
