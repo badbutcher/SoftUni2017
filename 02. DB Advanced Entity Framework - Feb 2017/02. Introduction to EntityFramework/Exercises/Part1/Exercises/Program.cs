@@ -14,50 +14,19 @@ namespace Exercises
             //_04EmployeesWithSalaryOver50000();
             //_05EmployeesFromSeattle();
             //_06AddingANewAddressAndUpdatingEmployee();
-
+            _7FindEmployeesInPeriod();
             //_08AddressesByTownName();
-
+            //_9EmployeeWithId147();
             //_10DepartmentsWithMoreThan5Employees();
-
+            //_11FindLatest10Projects();
             //_12IncreaseSalaries();
             //_13FindEmployeesByFirstNameStartingWithSA();
             //_14 e v "Part 2"
+            //_15DeleteProjectById();
+        }
 
-
-            //var context = new SoftuniContext();
-
-            //var employee = context.Employees
-            //    .Where(e => e.EmployeeID == 147);
-
-            //var projects = context.Projects
-
-            //    .OrderBy(p => p.Name);
-
-            //foreach (var item in employee)
-            //{
-            //    Console.WriteLine("{0} {1} {2}", item.FirstName, item.LastName, item.JobTitle);
-            //}
-
-            //foreach (var item in projects)
-            //{
-            //    Console.WriteLine("{0}", item.Name);
-            //}
-
-            //11
-            //var context = new SoftuniContext();
-
-            //var projects = context.Projects
-            //    .OrderByDescending(p => p.StartDate)
-            //    .Take(10)
-            //    .OrderBy(p => p.Name);
-
-            //foreach (var project in projects)
-            //{
-            //    Console.WriteLine($"{project.Name} {project.Description} {project.StartDate:M/d/yyyy h:mm:ss t} {project.EndDate}");
-            //}
-
-
-            //15
+        private static void _15DeleteProjectById()
+        {
             var context = new SoftuniContext();
 
             var project = context.Projects.Find(2);
@@ -76,7 +45,6 @@ namespace Exercises
                 Console.WriteLine(pr.Name);
             }
         }
-
 
         private static void _13FindEmployeesByFirstNameStartingWithSA()
         {
@@ -109,6 +77,20 @@ namespace Exercises
 
             context.SaveChanges();
         }
+        private static void _11FindLatest10Projects()
+        {
+            var context = new SoftuniContext();
+
+            var projects = context.Projects
+                .OrderByDescending(p => p.StartDate)
+                .Take(10)
+                .OrderBy(p => p.Name);
+
+            foreach (var project in projects)
+            {
+                Console.WriteLine($"{project.Name} {project.Description} {project.StartDate:M/d/yyyy h:mm:ss tt} {project.EndDate:M/d/yyyy h:mm:ss tt}");
+            }
+        }
 
         private static void _10DepartmentsWithMoreThan5Employees()
         {
@@ -131,6 +113,23 @@ namespace Exercises
                         employee.FirstName,
                         employee.LastName,
                         employee.JobTitle);
+                }
+            }
+        }
+        private static void _9EmployeeWithId147()
+        {
+            var context = new SoftuniContext();
+
+            var employee = context.Employees
+                .Where(e => e.EmployeeID == 147);
+
+            foreach (var item in employee)
+            {
+                Console.WriteLine("{0} {1} {2}", item.FirstName, item.LastName, item.JobTitle);
+
+                foreach (var pro in item.Projects.OrderBy(p => p.Name))
+                {
+                    Console.WriteLine(pro.Name);
                 }
             }
         }
@@ -159,6 +158,44 @@ namespace Exercises
                    address.TownName,
                    address.EmployeeName);
             }
+        }
+
+        private static void _7FindEmployeesInPeriod()
+        {
+            //var context = new SoftuniContext();
+
+            //var projectResult = context.Employees
+            //    .Where(e => e.Projects.Count(p => p.StartDate.Year >= 2001 && p.StartDate.Year <= 2003) > 0)
+            //    .Take(30);
+
+            //foreach (var e in projectResult)
+            //{
+            //    Console.WriteLine($"{e.FirstName} {e.LastName} {e.Manager.FirstName}");
+
+            //    foreach (var p in e.Projects)
+            //    {
+            //        Console.WriteLine($"--{p.Name} {p.StartDate:M/d/yyyy h:mm:ss tt} {p.EndDate:M/d/yyyy h:mm:ss tt}");
+            //    }
+            //}
+
+            SoftuniContext context = new SoftuniContext();
+            var emp = context.Employees;
+            var proj = context.Projects;
+            int counter = 1;
+
+                var result = emp.Where(p => p.Projects.Count(x => x.StartDate.Year >= 2001 && x.StartDate.Year <= 2003) > 0).Take(30);
+            foreach (var empl in result)
+            {
+                Console.WriteLine($"{empl.FirstName} {empl.LastName} {empl.Manager.FirstName}");
+
+                foreach (var project in empl.Projects)
+                {
+                    Console.WriteLine($"--{project.Name} {project.StartDate:M/d/yyyy h:mm:ss tt} {project.EndDate:M/d/yyyy h:mm:ss tt}");
+                }
+            }
+                
+
+
         }
 
         private static void _06AddingANewAddressAndUpdatingEmployee()
