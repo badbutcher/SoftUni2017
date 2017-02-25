@@ -39,20 +39,32 @@
 
             // OR
 
-            var context = new GringottsContext();
+            //var context = new GringottsContext();
 
-            var letters = context.WizzardDeposits
-                .Where(w => w.DepositGroup == "Troll Chest")
-                .Select(w => w.FirstName)
-                .ToList()
-                .Select(f => f[0])
-                .Distinct()
-                .OrderBy(c => c);
+            //var letters = context.WizzardDeposits
+            //    .Where(w => w.DepositGroup == "Troll Chest")
+            //    .Select(w => w.FirstName)
+            //    .ToList()
+            //    .Select(f => f[0])
+            //    .Distinct()
+            //    .OrderBy(c => c);
 
-            foreach (var letter in letters)
+            //foreach (var letter in letters)
+            //{
+            //    Console.WriteLine(letter);
+            //}
+
+            // OR
+
+            GringottsContext context = new GringottsContext();
+            var wizzards = context.WizzardDeposits.Where(x => x.DepositGroup == "Troll Chest").Distinct();
+            SortedSet<Char> unqSet = new SortedSet<char>();
+            foreach (var wizzard in wizzards)
             {
-                Console.WriteLine(letter);
+                unqSet.Add(wizzard.FirstName[0]);
             }
+
+            Console.WriteLine(string.Join(Environment.NewLine, unqSet));
         }
     }
 }
