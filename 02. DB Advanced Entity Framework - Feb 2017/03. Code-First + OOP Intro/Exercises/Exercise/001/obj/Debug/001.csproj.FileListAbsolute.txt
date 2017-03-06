@@ -1,0 +1,1 @@
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\03. Code-First + OOP Intro\Exercises\Exercise\001\bin\Debug\001.exe.config
