@@ -4,6 +4,10 @@
 
     public class Customer
     {
+        public Customer()
+        {
+            this.SalesForCustomer = new List<_Sale>();
+        }
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

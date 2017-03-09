@@ -1,15 +1,10 @@
-﻿using Sale.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sale
+﻿namespace Sale
 {
+    using Sale.Models;
+
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             SaleContext context = new SaleContext();
 

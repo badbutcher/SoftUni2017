@@ -8,3 +8,13 @@ C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\obj\Debug\Store.csprojResolveAssemblyReference.cache
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\obj\Debug\Store.exe
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\obj\Debug\Store.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\bin\Debug\Store.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\bin\Debug\Store.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\bin\Debug\Store.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\obj\Debug\Store.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\obj\Debug\Store.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\04. Code-First (Advanced)\Exercises\Store\obj\Debug\Store.pdb

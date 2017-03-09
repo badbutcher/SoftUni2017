@@ -10,3 +10,15 @@ C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Rel
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\01Do04.csproj.GenerateResource.Cache
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\001.exe
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\001.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\bin\Debug\001.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\001.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\001.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\bin\Debug\001.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\bin\Debug\001.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\_01Do04.Migrations.InitialCreate.resources
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\_01Do04.Migrations.AddedLicenses.resources
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\05. Entity Relations (OOP Composition)\Exercises\001\obj\Debug\01Do04.csproj.GenerateResource.Cache

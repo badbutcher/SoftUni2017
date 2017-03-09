@@ -4,6 +4,11 @@
 
     public class Product
     {
+        public Product()
+        {
+            this.SalesOfProduct = new List<_Sale>();
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public double Quantity { get; set; }
