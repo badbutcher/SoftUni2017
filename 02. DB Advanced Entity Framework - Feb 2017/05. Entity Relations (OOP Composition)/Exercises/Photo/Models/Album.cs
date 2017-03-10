@@ -1,19 +1,14 @@
-﻿using Photo.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Photo.Models
+﻿namespace Photo.Models
 {
+    using System.Collections.Generic;
+
     public class Album
     {
         public Album()
         {
-            Pictures = new List<Picture>();
-            Tags = new List<Tag>();
-            Photographers = new List<Photographer>();
+            this.Pictures = new List<Picture>();
+            this.Tags = new List<Tag>();
+            this.Photographers = new List<Photographer>();
         }
 
         public int Id { get; set; }

@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookShopSystem.Models
+﻿namespace BookShopSystem.Models
 {
-    using Enums;
+    using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.Design;
+    using Enums;
 
     public class Book
     {

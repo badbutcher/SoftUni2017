@@ -1,17 +1,14 @@
-﻿using BookShopSystem.Data;
-using BookShopSystem.Migrations;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookShopSystem
+﻿namespace BookShopSystem
 {
-    class Startup
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+    using Data; 
+    using Migrations;
+
+    public class Startup
     {
-        static void Main()
+        public static void Main()
         {
             var migrationStrategy = new MigrateDatabaseToLatestVersion<BookShopContext, Configuration>();
             Database.SetInitializer(migrationStrategy);
@@ -31,20 +28,16 @@ namespace BookShopSystem
                 {
                     Title = b.Title,
                     RelatedBooks = b.RelatedBooks
-                }).Take(3); ;
-               
-            // TODO:
-            // Query the first three books to get their names
-            // and their related book names
+                }).Take(3);
+
             foreach (var book in booksFromQuery)
             {
                 Console.WriteLine("--{0}", book.Title);
                 foreach (var relatedBook in book.RelatedBooks)
                 {
-                    Console.WriteLine(relatedBook.ToString());
+                    Console.WriteLine(relatedBook.Title);
                 }
             }
-
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookShopSystem.Models
+﻿namespace BookShopSystem.Models
 {
+    using System.Collections.Generic;
+
     public class Category
     {
         public Category()

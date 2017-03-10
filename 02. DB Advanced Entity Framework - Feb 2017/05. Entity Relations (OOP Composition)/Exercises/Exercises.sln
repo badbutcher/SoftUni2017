@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Do04", "001\01Do04.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photo", "Photo\Photo.csproj", "{4FE53CEC-00CD-48C1-9E1C-31CDB4C7C3AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballDB", "FootballDB\FootballDB.csproj", "{518AE711-7676-4ADC-B5F4-4E5B3F196EE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4FE53CEC-00CD-48C1-9E1C-31CDB4C7C3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FE53CEC-00CD-48C1-9E1C-31CDB4C7C3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FE53CEC-00CD-48C1-9E1C-31CDB4C7C3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518AE711-7676-4ADC-B5F4-4E5B3F196EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518AE711-7676-4ADC-B5F4-4E5B3F196EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518AE711-7676-4ADC-B5F4-4E5B3F196EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518AE711-7676-4ADC-B5F4-4E5B3F196EE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

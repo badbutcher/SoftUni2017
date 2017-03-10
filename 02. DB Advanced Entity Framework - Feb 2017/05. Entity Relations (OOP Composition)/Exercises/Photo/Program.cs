@@ -1,13 +1,10 @@
-﻿using Photo.Models;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity.Validation;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Photo
+﻿namespace Photo
 {
+    using System;
+    using System.Data.Entity.Validation;
+    using System.Linq;
+    using Models;
+
     class Program
     {
         static void Main()
@@ -30,7 +27,6 @@ namespace Photo
                 context.SaveChanges();
             }
 
-            
             Console.WriteLine(context.Photographers.Count());
         }
     }

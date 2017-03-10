@@ -1,16 +1,16 @@
 ﻿namespace _01Do04.Models
 {
-    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using Enums;
+    using System.ComponentModel.DataAnnotations;
     using System.Collections.Generic;
+    using Enums;
 
     [Table("Resources")]
     public class Resources
     {
         public Resources()
         {
-            Licenses = new HashSet<License>();
+            this.Licenses = new HashSet<License>();
         }
 
         [Key]

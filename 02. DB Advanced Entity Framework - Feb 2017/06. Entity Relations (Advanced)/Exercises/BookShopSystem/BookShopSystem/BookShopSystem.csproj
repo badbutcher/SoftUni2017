@@ -62,7 +62,6 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Enums\AgeRestriction.cs" />
     <Compile Include="Models\Enums\EditionType.cs" />
-    <Compile Include="Models\RelatedBooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

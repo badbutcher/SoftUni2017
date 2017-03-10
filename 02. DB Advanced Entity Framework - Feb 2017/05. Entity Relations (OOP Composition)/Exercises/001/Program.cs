@@ -1,6 +1,7 @@
 ﻿namespace _01Do04
 {
     using System;
+    using System.Data.Entity.SqlServer;
     using System.Linq;
 
     class Program
@@ -10,10 +11,10 @@
             StudentSystemContext context = new StudentSystemContext();
             context.Database.Initialize(true);
             //Treta nqma da raboti s tezi usloviq za moqta baza
-            //Part1(context);
+            Part1(context);
             //Part2(context);
             //Part3(context);
-            Part4(context);
+            //Part4(context);
             //Part5(context);
 
         }
@@ -25,7 +26,7 @@
             foreach (var s in result)
             {
                 var totalPrice = s.Courses.Sum(p => p.Price);
-                
+
                 if (s.Courses.Count == 0)
                 {
                     Console.WriteLine("Name:{0}  Count:{1}  Total:{2}  Avrage:{3}", s.Name, s.Courses.Count, totalPrice, totalPrice);
@@ -34,13 +35,28 @@
                 {
                     var averagePrice = s.Courses.Average(p => p.Price);
                     Console.WriteLine("Name:{0}  Count:{1}  Total:{2}  Avrage:{3}", s.Name, s.Courses.Count, totalPrice, averagePrice);
-                }                
-            }               
+                }
+            }
         }
 
         private static void Part4(StudentSystemContext context)
         {
-            throw new NotImplementedException();
+            var result = context.Courses
+                .Where(c => c.StartDate <= DateTime.Now && c.EndDate >= DateTime.Now)
+                .OrderByDescending(c => c.Students.Count)
+                .Select(course => new
+                {
+                    course.Name,
+                    course.StartDate,
+                    course.EndDate,
+                    Duration = SqlFunctions.DateDiff("DAY", course.StartDate, course.EndDate),
+                    StudentsCount = course.Students.Count
+                });
+
+            foreach (var item in result)
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4}", item.Name, item.StartDate, item.EndDate, item.Duration, item.StudentsCount);
+            }
         }
 
         private static void Part3(StudentSystemContext context)

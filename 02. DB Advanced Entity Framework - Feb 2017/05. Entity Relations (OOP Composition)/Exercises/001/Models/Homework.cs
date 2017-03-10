@@ -1,9 +1,9 @@
 ﻿namespace _01Do04.Models
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using Enums;
-    using System;
 
     [Table("Homework")]
     public class Homework

@@ -1,28 +1,27 @@
 namespace BookShopSystem.Migrations
 {
     using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Globalization;
+    using System.IO;
     using System.Linq;
     using Data;
-    using System.IO;
     using Models;
     using Models.Enums;
-    using System.Globalization;
 
-    public sealed class Configuration : DbMigrationsConfiguration<BookShopSystem.Data.BookShopContext>
+    public sealed class Configuration : DbMigrationsConfiguration<BookShopContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "BookShopSystem.Data.BookShopContext";
+            this.AutomaticMigrationsEnabled = true;
+            this.ContextKey = "BookShopSystem.Data.BookShopContext";
         }
 
-        protected override void Seed(BookShopSystem.Data.BookShopContext context)
+        protected override void Seed(BookShopContext context)
         {
-            SeedAuthors(context);
-            SeedBooks(context);
-            SeedCategories(context);
+            this.SeedAuthors(context);
+            this.SeedBooks(context);
+            this.SeedCategories(context);
         }
 
         private void SeedAuthors(BookShopContext context)
@@ -104,7 +103,6 @@ namespace BookShopSystem.Migrations
 
                 context.Categorys.AddOrUpdate(c => c.Name, category);
             }
-
         }
     }
 }
