@@ -55,14 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\FootballContext.cs" />
-    <Compile Include="Client\Startup.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Models\Bet.cs" />
     <Compile Include="Models\BetGame.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Competition.cs" />
     <Compile Include="Models\CompetitionType.cs" />
     <Compile Include="Models\Continent.cs" />
-    <Compile Include="Models\Countrie.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Enums\PredictionType.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerStatistic.cs" />
@@ -78,7 +79,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Client\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

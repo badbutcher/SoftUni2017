@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FootballDB.Models
+﻿namespace FootballDB.Models
 {
+    using Enums;
+
     public class ResultPrediction
     {
+        public int Id { get; set; }
+
+        public PredictionType Prediction { get; set; }
     }
 }
