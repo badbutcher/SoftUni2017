@@ -5,14 +5,16 @@
 
     public class PlayerStatistic
     {
-        public int Id { get; set; }
+        [Key]
+        [Column(Order = 0)]
+        public int GameId { get; set; }
 
-        //[Key]
-        //[Column(Order = 0)]
+        [Key]
+        [Column(Order = 1)]
+        public int PlayerId { get; set; }
+
         public Game Game { get; set; }
 
-        //[Key]
-        //[Column(Order = 1)]
         public Player Player { get; set; }
 
         public int ScoredGoals { get; set; }

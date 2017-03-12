@@ -19,10 +19,8 @@
         [Required]
         public string Name { get; set; }
 
-        public Continent Continent { get; set; }
-
         public virtual ICollection<Continent> Continents { get; set; }
 
-        public virtual ICollection<Town> Towns { get; set; }    
+        public virtual ICollection<Town> Towns { get; set; }
     }
 }

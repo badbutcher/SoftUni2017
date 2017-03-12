@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Team
     {
@@ -22,14 +23,8 @@
         [MaxLength(3)]
         public string Initials { get; set; }
 
-        public int PirmaryColorId { get; set; }
-
-        [Required]
         public Color PirmaryColor { get; set; }
 
-        public int SecondaryColorId { get; set; }
-
-        [Required]
         public Color SecondaryColor { get; set; }
 
         public Town Town { get; set; }

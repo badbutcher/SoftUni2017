@@ -8,6 +8,7 @@ namespace FootballDB.Data
         public FootballContext()
             : base("name=FootballContext")
         {
+            Database.SetInitializer(new DropCreateDatabaseAlways<FootballContext>());
         }
 
         public virtual DbSet<Bet> Bets { get; set; }

@@ -8,7 +8,6 @@
     {
         public Bet()
         {
-            //this.Games = new HashSet<Game>();
             this.BetGames = new HashSet<BetGame>();
         }
 
@@ -18,11 +17,9 @@
 
         public DateTime TimeOfBet { get; set; }
 
-
         public User User { get; set; }
 
-        //public virtual ICollection<Game> Games { get; set; }
-
+        [InverseProperty("Bet")]
         public virtual ICollection<BetGame> BetGames { get; set; }
     }
 }

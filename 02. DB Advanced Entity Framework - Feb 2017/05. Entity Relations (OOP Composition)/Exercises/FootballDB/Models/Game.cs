@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Game
     {
@@ -12,6 +13,7 @@
             this.BetGames = new HashSet<BetGame>();
         }
 
+        [Key]
         public int Id { get; set; }
 
         public Team HomeTeam { get; set; }
@@ -39,6 +41,7 @@
 
         public Competition Competition { get; set; }
 
+        [InverseProperty("Game")]
         public virtual ICollection<BetGame> BetGames { get; set; }
 
         public virtual ICollection<PlayerStatistic> PlayerStatistics { get; set; }

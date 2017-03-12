@@ -7,7 +7,6 @@
     {
         public Player()
         {
-            //this.Games = new HashSet<Game>();
             this.PlayerStatistics = new HashSet<PlayerStatistic>();
         }
 
@@ -23,8 +22,6 @@
         public Position Position { get; set; }
 
         public bool IsInjured { get; set; }
-
-        //public virtual ICollection<Game> Games { get; set; }
 
         public virtual ICollection<PlayerStatistic> PlayerStatistics { get; set; }
     }
