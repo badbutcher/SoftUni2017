@@ -19,9 +19,9 @@ namespace BookShop.Migrations
 
         protected override void Seed(BookShopContext context)
         {
-            this.SeedAuthors(context);
-            this.SeedBooks(context);
-            this.SeedCategories(context);
+            //this.SeedAuthors(context);
+            //this.SeedBooks(context);
+            //this.SeedCategories(context);
         }
 
         private void SeedAuthors(BookShopContext context)

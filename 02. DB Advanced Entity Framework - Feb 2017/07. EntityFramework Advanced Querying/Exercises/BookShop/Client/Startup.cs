@@ -1,6 +1,8 @@
 ﻿using BookShop.Data;
 using BookShop.Migrations;
+using BookShop.Models;
 using BookShop.Models.Enums;
+using EntityFramework.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -20,49 +22,222 @@ namespace BookShop
             //_001(context);
             //_002(context);
             //_003(context);
-            _004(context);
+            //_004(context);
             //_005(context);
             //_006(context);
             //_007(context);
             //_008(context);
             //_009(context);
             //_010(context);
+            //_011(context);
+            //_012(context);
+            //_013(context);
+            _014(context);
 
+        }
+
+        private static void _014(BookShopContext context)
+        {
+            DateTime date = DateTime.ParseExact("06 06 2013", "dd MM yyyy", null);
+
+            int numberOfUpdates = context.Books.Update(
+                 c => c.RelaseDate > date,
+                 c => new Book() { Copies = c.Copies + 44 });
+
+            Console.WriteLine($"{numberOfUpdates} books are released after 6 Jun 2013 so total of {numberOfUpdates * 44} book copies were added");
+        }
+
+        private static void _013(BookShopContext context)
+        {
+            var resultCategories = context.Categorys
+                .Where(c => c.Books.Count > 35)
+                .Select(c => new
+                {
+                    Category = c.Name,
+                    Count = c.Books.Count,
+                    Books = c.Books
+                    .OrderByDescending(r => r.RelaseDate)
+                    .ThenBy(t => t.Title)
+                    .Select(b => new
+                    {
+                        Title = b.Title,
+                        RelaseDate = b.RelaseDate
+                    })
+                    .Take(3)
+                })
+            .OrderByDescending(c => c.Count);
+
+            foreach (var category in resultCategories)
+            {
+                Console.WriteLine("--{0}: {1} books", category.Category, category.Count);
+
+                foreach (var book in category.Books)
+                {
+                    Console.WriteLine("{0} ({1})", book.Title, book.RelaseDate.Value.Year);
+                }
+            }
+        }
+        private static void _012(BookShopContext context)
+        {
+            var result = context.Categorys
+                .GroupBy(b => new
+                {
+                    Category = b.Name,
+                    Sum = b.Books.Sum(s => s.Copies * s.Price)
+                })
+                .OrderByDescending(s => s.Key.Sum);
+
+            foreach (var item in result)
+            {
+                Console.WriteLine("{0} - ${1}", item.Key.Category, item.Key.Sum);
+            }
+        }
+
+        private static void _011(BookShopContext context)
+        {
+            var result = context.Authors
+                .GroupBy(b => new
+                {
+                    Copies = b.Books.Sum(s => s.Copies),
+                    Author = b.FirstName + " " + b.LastName
+                })
+                .OrderByDescending(c => c.Key.Copies);
+
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.Key.Author} - {item.Key.Copies}");
+            }
         }
 
         private static void _010(BookShopContext context)
         {
-            throw new NotImplementedException();
+            int input = int.Parse(Console.ReadLine());
+
+            var result = context.Books
+                .Select(b => new
+                {
+                    Title = b.Title
+                })
+                .Where(t => t.Title.Length > input)
+                .Count();
+
+            Console.WriteLine(result);
         }
 
         private static void _009(BookShopContext context)
         {
-            throw new NotImplementedException();
+            string input = Console.ReadLine();
+
+            var result = context.Books
+                .Select(b => new
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Author = b.Author
+                })
+                .Where(a => a.Author.LastName.StartsWith(input))
+                .OrderBy(a => a.Id);
+
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.Title} ({item.Author.FirstName} {item.Author.LastName})");
+            }
         }
 
         private static void _008(BookShopContext context)
         {
-            throw new NotImplementedException();
+            string input = Console.ReadLine();
+
+            var result = context.Books
+                .Select(b => new
+                {
+                    Title = b.Title
+                })
+                .Where(b => b.Title.Contains(input));
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Title);
+            }
         }
 
         private static void _007(BookShopContext context)
         {
-            throw new NotImplementedException();
+            string input = Console.ReadLine();
+
+            var result = context.Books
+                .Select(b => new
+                {
+                    Author = b.Author
+                })
+                .Distinct()
+                .Where(a => a.Author.FirstName.EndsWith(input));
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Author.FirstName + " " + item.Author.LastName);
+            }
         }
 
         private static void _006(BookShopContext context)
         {
-            throw new NotImplementedException();
+            string input = Console.ReadLine();
+            DateTime date = DateTime.ParseExact(input, "dd-MM-yyyy", null);
+
+            var result = context.Books
+                .Select(b => new
+                {
+                    Title = b.Title,
+                    EditionType = b.EditionType,
+                    Price = b.Price,
+                    RelaseDate = b.RelaseDate
+                })
+                .Where(r => r.RelaseDate.Value < date);
+
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.Title} - {item.EditionType} - {item.Price}");
+            }
         }
 
         private static void _005(BookShopContext context)
         {
-            throw new NotImplementedException();
+            string[] input = Console.ReadLine().Split();
+
+            var result = context.Books
+                .Select(b => new
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Categories = b.Categorys
+                })
+                .Where(c => c.Categories.Any() == input.Any())
+                .OrderBy(c => c.Id);
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Title);
+            }
         }
 
         private static void _004(BookShopContext context)
         {
-            throw new NotImplementedException();
+            int input = int.Parse(Console.ReadLine());
+
+            var result = context.Books
+                .Select(b => new
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Date = b.RelaseDate
+                })
+                .Where(d => d.Date.Value.Year != input)
+                .OrderBy(b => b.Id);
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Title);
+            }
         }
 
         private static void _003(BookShopContext context)
