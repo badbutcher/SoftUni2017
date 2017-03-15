@@ -8,3 +8,6 @@ D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\07. EntityFram
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\07. EntityFramework Advanced Querying\Exercises\SoftUni\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\07. EntityFramework Advanced Querying\Exercises\SoftUni\bin\Debug\EntityFramework.xml
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\07. EntityFramework Advanced Querying\Exercises\SoftUni\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\07. EntityFramework Advanced Querying\Exercises\SoftUni\bin\Debug\SoftUni.exe.config
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\07. EntityFramework Advanced Querying\Exercises\SoftUni\obj\Debug\SoftUni.exe
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\07. EntityFramework Advanced Querying\Exercises\SoftUni\obj\Debug\SoftUni.pdb
