@@ -1,0 +1,9 @@
+﻿CREATE PROC pro_ReturnBooks(@firstName VARCHAR(MAX), @lastName VARCHAR(MAX))
+AS
+BEGIN
+	SELECT COUNT(*)
+	FROM Authors AS a
+	INNER JOIN Books AS b
+	ON b.AuthorId = a.id
+	WHERE a.FirstName = @firstName AND a.LastName = @lastName
+END

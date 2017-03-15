@@ -1,0 +1,11 @@
+﻿CREATE PROC pro_ReturnAllProjects(@firstName VARCHAR(MAX), @lastName VARCHAR(MAX))
+AS
+BEGIN
+	SELECT p.Name, p.Description, p.StartDate
+	FROM Projects AS p
+	INNER JOIN EmployeesProjects AS ep
+	ON ep.ProjectID = p.ProjectID
+	INNER JOIN Employees AS e
+	ON e.EmployeeID = ep.EmployeeID
+	WHERE e.FirstName = @firstName AND e.LastName = @lastName
+END

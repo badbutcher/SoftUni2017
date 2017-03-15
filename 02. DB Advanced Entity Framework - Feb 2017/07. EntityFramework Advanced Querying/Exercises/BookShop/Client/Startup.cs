@@ -1,48 +1,65 @@
-﻿using BookShop.Data;
-using BookShop.Migrations;
-using BookShop.Models;
-using BookShop.Models.Enums;
-using EntityFramework.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookShop
+﻿namespace BookShop
 {
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+    using Data;
+    using Models;
+    using Models.Enums;
+    using EntityFramework.Extensions;   
+
     class Startup
     {
-        static void Main(string[] args)
+        static void Main()
         {
             BookShopContext context = new BookShopContext();
             context.Database.Initialize(true);
 
-            //_001(context);
-            //_002(context);
-            //_003(context);
-            //_004(context);
-            //_005(context);
-            //_006(context);
-            //_007(context);
-            //_008(context);
-            //_009(context);
-            //_010(context);
-            //_011(context);
-            //_012(context);
-            //_013(context);
-            _014(context);
+            ////_001(context);
+            ////_002(context);
+            ////_003(context);
+            ////_004(context);
+            ////_005(context);
+            ////_006(context);
+            ////_007(context);
+            ////_008(context);
+            ////_009(context);
+            ////_010(context);
+            ////_011(context);
+            ////_012(context);
+            ////_013(context);
+            ////_014(context);
+            ////_015(context);
+            ////_016(context);
+        }
 
+        private static void _016(BookShopContext context)
+        {
+            string[] input = Console.ReadLine().Split();
+
+            var count = context.Database
+                .SqlQuery<int>("EXEC dbo.pro_ReturnBooks {0},{1}", input[0], input[1])
+                .First();
+
+            Console.WriteLine("{0} {1} has written {2} books", input[0], input[1], count);
+        }
+
+        private static void _015(BookShopContext context)
+        {
+            int numberOfDeletes = context.Books
+                .Where(c => c.Copies < 4200)
+                .Delete();
+
+            Console.WriteLine(numberOfDeletes + " books were deleted");
         }
 
         private static void _014(BookShopContext context)
         {
             DateTime date = DateTime.ParseExact("06 06 2013", "dd MM yyyy", null);
 
-            int numberOfUpdates = context.Books.Update(
-                 c => c.RelaseDate > date,
-                 c => new Book() { Copies = c.Copies + 44 });
+            int numberOfUpdates = context.Books
+                .Where(c => c.RelaseDate > date)
+                .Update(c => new Book() { Copies = c.Copies + 44 });
 
             Console.WriteLine($"{numberOfUpdates} books are released after 6 Jun 2013 so total of {numberOfUpdates * 44} book copies were added");
         }
@@ -77,6 +94,7 @@ namespace BookShop
                 }
             }
         }
+
         private static void _012(BookShopContext context)
         {
             var result = context.Categorys
@@ -218,6 +236,18 @@ namespace BookShop
             {
                 Console.WriteLine(item.Title);
             }
+
+            ////OR
+
+            ////string[] input = Console.ReadLine().Split();
+
+            ////foreach (var item in context.Books)
+            ////{
+            ////    if (item.Categorys.Any(c=> input.Contains(c.Name.ToLower())))
+            ////    {
+            ////        Console.WriteLine(item.Title);
+            ////    }
+            ////}
         }
 
         private static void _004(BookShopContext context)

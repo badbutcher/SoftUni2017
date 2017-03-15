@@ -19,9 +19,9 @@ namespace BookShop.Migrations
 
         protected override void Seed(BookShopContext context)
         {
-            //this.SeedAuthors(context);
-            //this.SeedBooks(context);
-            //this.SeedCategories(context);
+            this.SeedAuthors(context);
+            this.SeedBooks(context);
+            this.SeedCategories(context);
         }
 
         private void SeedAuthors(BookShopContext context)
@@ -66,7 +66,7 @@ namespace BookShop.Migrations
                 Book book = new Book
                 {
                     Author = author,
-                    AuthorId = author.id,
+                    AuthorId = author.Id,
                     EditionType = edition,
                     RelaseDate = releaseDate,
                     Copies = copies,

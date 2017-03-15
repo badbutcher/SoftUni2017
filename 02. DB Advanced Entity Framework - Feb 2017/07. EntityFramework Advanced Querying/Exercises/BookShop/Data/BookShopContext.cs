@@ -1,8 +1,8 @@
 namespace BookShop.Data
 {
+    using System.Data.Entity;
     using Migrations;
     using Models;
-    using System.Data.Entity;
 
     public class BookShopContext : DbContext
     {
