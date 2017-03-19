@@ -3,6 +3,7 @@
     using System;
     using Data;
     using Models;
+    using System.Linq;
 
     class Startup
     {
@@ -10,7 +11,24 @@
         {
             SoftUniContext context = new SoftUniContext();
 
-            _017(context);
+            ////_017(context);
+            ////_018(context);
+        }
+
+        private static void _018(SoftUniContext context)
+        {
+            var result = context.Departments
+                .Select(e => new
+                {
+                    e.Name,
+                    Sum = e.Employees.Sum(s => s.Salary)
+                })
+                .Where(s => s.Sum < 30000 || s.Sum > 70000);
+
+            foreach (var item in result)
+            {
+                Console.WriteLine("{0} - {1:F2}", item.Name, item.Sum);
+            }
         }
 
         private static void _017(SoftUniContext context)
