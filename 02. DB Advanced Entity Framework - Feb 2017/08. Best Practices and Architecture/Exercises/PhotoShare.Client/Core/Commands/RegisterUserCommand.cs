@@ -3,10 +3,17 @@
     using System;
 
     using Models;
-    using System.Linq;
+    using Services;
 
     public class RegisterUserCommand
     {
+        private UserService userService;
+
+        public RegisterUserCommand(UserService userService)
+        {
+            this.userService = userService;
+        }
+
         // RegisterUser <username> <password> <repeat-password> <email>
         public string Execute(string[] data)
         {
@@ -15,35 +22,19 @@
             string repeatPassword = data[2];
             string email = data[3];
 
+            if (this.userService.IsUserExisting(username))
+            {
+                throw new ArgumentException($"Username {username} is already taken!");
+            }
+
             if (password != repeatPassword)
             {
                 throw new ArgumentException("Passwords do not match!");
             }
 
-            User user = new User
-            {
-                Username = username,
-                Password = password,
-                Email = email,
-                IsDeleted = false,
-                RegisteredOn = DateTime.Now,
-                LastTimeLoggedIn = DateTime.Now
-            };
+            this.userService.RegisterUser(username, password, email);
 
-            using (PhotoShareContext context = new PhotoShareContext())
-            {
-                //var checkUsername = context.Users.FirstOrDefault(u => u.Username == username);
-
-                //if (checkUsername.Username == username)
-                //{
-                //    throw new InvalidOperationException($"Username {username} is already taken!");
-                //}
-
-                context.Users.Add(user);
-                context.SaveChanges();
-            }
-
-            return "User " + user.Username + " was registered successfully!";
+            return "User " + username + " was registered successfully!";
         }
     }
 }

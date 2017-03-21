@@ -1,27 +1,31 @@
 ﻿namespace PhotoShare.Client.Core.Commands
 {
+    using System;
     using Models;
-
+    using Services;
     using Utilities;
 
     public class AddTagCommand
     {
-        // AddTag <tag>
+        private TagService tagService;
+
+        public AddTagCommand(TagService tagService)
+        {
+           this.tagService = tagService;
+        }
+
         public string Execute(string[] data)
         {
-            string tag = data[1].ValidateOrTransform();
+            string tagName = TagUtilities.ValidateOrTransform(data[0]);
 
-            using (PhotoShareContext context = new PhotoShareContext())
+            if (this.tagService.IsTagExisting(tagName))
             {
-                context.Tags.Add(new Tag
-                {
-                    Name = tag
-                });
-
-                context.SaveChanges();
+                throw new ArgumentException($"Tag {tagName} exists!");
             }
 
-            return tag + " was added successfully to database!";
+            this.tagService.AddTag(tagName);
+
+            return $"Tag {tagName} was added successfully!";
         }
     }
 }

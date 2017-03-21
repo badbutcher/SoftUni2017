@@ -17,7 +17,7 @@
         /// </summary>
         /// <param name="wrongTag">wrong tag to be converted</param>
         /// <returns>converted tag validated by given rules</returns>
-        public static string ValidateOrTransform(this string wrongTag)
+        public static string ValidateOrTransform(string wrongTag)
         {
             if (string.IsNullOrWhiteSpace(wrongTag))
             {

@@ -1,0 +1,14 @@
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\PhotoShare.Services.dll.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\PhotoShare.Services.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\PhotoShare.Services.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\PhotoShare.Data.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\PhotoShare.Models.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\PhotoShare.Data.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\PhotoShare.Models.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\obj\Debug\PhotoShare.Services.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\obj\Debug\PhotoShare.Services.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Services\obj\Debug\PhotoShare.Services.pdb

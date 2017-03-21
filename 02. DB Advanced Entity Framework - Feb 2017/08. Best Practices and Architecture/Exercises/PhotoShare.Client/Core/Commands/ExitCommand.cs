@@ -7,7 +7,7 @@
         public string Execute()
         {
             Environment.Exit(0);
-            return "Bye-bye!";
+            return "Good Bye!";
         }
     }
 }

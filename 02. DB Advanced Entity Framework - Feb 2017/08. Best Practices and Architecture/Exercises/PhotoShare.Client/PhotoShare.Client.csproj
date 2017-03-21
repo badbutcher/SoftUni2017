@@ -58,7 +58,7 @@
     <Compile Include="Core\Commands\AddTagToCommand.cs" />
     <Compile Include="Core\Commands\AddTownCommand.cs" />
     <Compile Include="Core\Commands\CreateAlbumCommand.cs" />
-    <Compile Include="Core\Commands\DeleteUser.cs" />
+    <Compile Include="Core\Commands\DeleteUserCommand.cs" />
     <Compile Include="Core\Commands\ExitCommand.cs" />
     <Compile Include="Core\Commands\MakeFriendsCommand.cs" />
     <Compile Include="Core\Commands\ModifyUserCommand.cs" />
@@ -67,8 +67,6 @@
     <Compile Include="Core\Commands\ShareAlbumCommand.cs" />
     <Compile Include="Core\Commands\UploadPictureCommand.cs" />
     <Compile Include="Core\Engine.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PhotoShareContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\TagUtilities.cs" />
   </ItemGroup>
@@ -77,9 +75,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PhotoShare.Data\PhotoShare.Data.csproj">
+      <Project>{56DED1D0-1EB6-400C-A76E-E649BF8BBF40}</Project>
+      <Name>PhotoShare.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PhotoShare.Models\PhotoShare.Models.csproj">
       <Project>{1f36af83-9c71-4a06-9345-2e1f9350ec6d}</Project>
       <Name>PhotoShare.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhotoShare.Services\PhotoShare.Services.csproj">
+      <Project>{2C86B338-17CF-4C82-AF24-33DF45656FB5}</Project>
+      <Name>PhotoShare.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
