@@ -1,0 +1,42 @@
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.exe.config
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.exe
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.pdb
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.dll
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Data.dll
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Models.dll
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Data.pdb
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Models.pdb
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.xml
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.csprojResolveAssemblyReference.cache
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.exe
+D:\GitHub\DB-EF-Teamwork\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.pdb
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.exe.config
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.exe
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.pdb
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.exe
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.pdb
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.dll
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Data.dll
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Models.dll
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Data.pdb
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Models.pdb
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.xml
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\DB-EF-Teamwork-TeamBennu\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Client.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Data.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Models.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Data.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\Teamwork.Models.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Client\obj\Debug\Teamwork.Client.csprojResolveAssemblyReference.cache

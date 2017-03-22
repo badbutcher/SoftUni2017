@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamwork.Client", "Teamwork.Client\Teamwork.Client.csproj", "{60AA92F2-3750-437F-A1A9-F952448634A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamwork.Data", "Teamwork.Data\Teamwork.Data.csproj", "{67FA0313-E3FD-49E4-AFBE-6673FD2768B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamwork.Models", "Teamwork.Models\Teamwork.Models.csproj", "{376F724C-6EB5-43BA-8581-1B04F8CA58CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teamwork.Services", "Teamwork.Services\Teamwork.Services.csproj", "{5A9C74D5-0284-4718-BE9D-E23E70916368}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60AA92F2-3750-437F-A1A9-F952448634A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60AA92F2-3750-437F-A1A9-F952448634A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60AA92F2-3750-437F-A1A9-F952448634A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60AA92F2-3750-437F-A1A9-F952448634A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FA0313-E3FD-49E4-AFBE-6673FD2768B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FA0313-E3FD-49E4-AFBE-6673FD2768B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FA0313-E3FD-49E4-AFBE-6673FD2768B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FA0313-E3FD-49E4-AFBE-6673FD2768B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{376F724C-6EB5-43BA-8581-1B04F8CA58CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376F724C-6EB5-43BA-8581-1B04F8CA58CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376F724C-6EB5-43BA-8581-1B04F8CA58CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376F724C-6EB5-43BA-8581-1B04F8CA58CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A9C74D5-0284-4718-BE9D-E23E70916368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9C74D5-0284-4718-BE9D-E23E70916368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A9C74D5-0284-4718-BE9D-E23E70916368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A9C74D5-0284-4718-BE9D-E23E70916368}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
