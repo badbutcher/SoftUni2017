@@ -22,7 +22,7 @@ namespace Teamwork.Client.Core
                 try
                 {
                     string input = Console.ReadLine().Trim();
-                    string[] data = input.Split(' ');
+                    string data = input;
                     string result = this.commandDispatcher.DispatchCommand(data);
                     Console.WriteLine(result);
                 }
@@ -34,3 +34,14 @@ namespace Teamwork.Client.Core
         }
     }
 }
+//try
+//                {
+//                    string input = Console.ReadLine().Trim();
+//string[] data = input.Split(' ');
+//string result = this.commandDispatcher.DispatchCommand(data);
+//Console.WriteLine(result);
+//                }
+//                catch (Exception e)
+//                {
+//                    Console.WriteLine(e.Message);
+//                }

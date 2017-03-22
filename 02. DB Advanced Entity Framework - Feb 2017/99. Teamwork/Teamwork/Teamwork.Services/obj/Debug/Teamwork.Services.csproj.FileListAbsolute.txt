@@ -1,0 +1,14 @@
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\Teamwork.Services.dll.config
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\Teamwork.Services.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\Teamwork.Services.pdb
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\EntityFramework.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\Teamwork.Data.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\Teamwork.Models.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\Teamwork.Data.pdb
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\Teamwork.Models.pdb
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\EntityFramework.xml
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\obj\Debug\Teamwork.Services.csprojResolveAssemblyReference.cache
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\obj\Debug\Teamwork.Services.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Services\obj\Debug\Teamwork.Services.pdb

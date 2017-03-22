@@ -14,3 +14,6 @@ D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Pract
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Client\bin\Debug\PhotoShare.Services.pdb
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Client\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Client\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Client\bin\Debug\PhotoShare.Client.exe.config
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Client\obj\Debug\PhotoShare.Client.exe
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\08. Best Practices and Architecture\Exercises\PhotoShare.Client\obj\Debug\PhotoShare.Client.pdb

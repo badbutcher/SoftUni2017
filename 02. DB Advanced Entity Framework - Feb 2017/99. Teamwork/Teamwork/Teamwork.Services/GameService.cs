@@ -11,7 +11,7 @@ namespace Teamwork.Services
 {
     public class GameService
     {
-        public void GreateGame(string name, bool isSingleplayer, bool isMultiplayer, DateTime relaseDate, string gameGender)
+        public void GreateGame(string name, bool isSingleplayer, bool isMultiplayer, DateTime relaseDate, GameGender gameGender)
         {
             Game game = new Game
             {
@@ -19,12 +19,22 @@ namespace Teamwork.Services
                 IsSingleplayer = isSingleplayer,
                 IsMultiplayer = isSingleplayer,
                 RelaseDate = relaseDate,
-                GameGender = (GameGender)int.Parse(gameGender)
+                GameGender = gameGender
             };
 
             using (TeamworkContext context = new TeamworkContext())
             {
-                
+                context.Games.Add(game);
+                context.SaveChanges();
+            }
+        }
+
+        public bool DoesGameExist(string game)
+        {
+            using (TeamworkContext context = new TeamworkContext())
+            {
+                var check = context.Games.Any(g => g.Name == game);
+                return check;
             }
         }
     }

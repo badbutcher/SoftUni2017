@@ -13,3 +13,8 @@ D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\T
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\obj\Debug\Teamwork.Models.csprojResolveAssemblyReference.cache
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\obj\Debug\Teamwork.Models.dll
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\obj\Debug\Teamwork.Models.pdb
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\bin\Debug\Teamwork.Models.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\bin\Debug\Teamwork.Models.pdb
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\obj\Debug\Teamwork.Models.csprojResolveAssemblyReference.cache
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\obj\Debug\Teamwork.Models.dll
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Models\obj\Debug\Teamwork.Models.pdb

@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Teamwork.Client.Core.Commands;
+using Teamwork.Services;
 
 namespace Teamwork.Client.Core
 {
     public class CommandDispatcher
     {
-        public string DispatchCommand(string[] commandParameters)
+        public string DispatchCommand(string commandParameters)
         {
-            string commandName = commandParameters[0];
-            commandParameters = commandParameters.Skip(1).ToArray();
+            GameService gameService = new GameService();
+
             string result = string.Empty;
 
-            switch (commandName)
+            switch (commandParameters)
             {
                 case "AddGame":
-                    AddGameCommand addGame = new AddGameCommand();
+                    AddGameCommand addGame = new AddGameCommand(gameService);
                     result = addGame.Execute(commandParameters);
                     break;
                 default:
@@ -29,3 +30,23 @@ namespace Teamwork.Client.Core
         }
     }
 }
+//public string DispatchCommand(string[] commandParameters)
+//{
+//    GameService gameService = new GameService();
+
+//    string commandName = commandParameters[0];
+//    commandParameters = commandParameters.Skip(1).ToArray();
+//    string result = string.Empty;
+
+//    switch (commandName)
+//    {
+//        case "AddGame":
+//            AddGameCommand addGame = new AddGameCommand(gameService);
+//            result = addGame.Execute(commandParameters);
+//            break;
+//        default:
+//            break;
+//    }
+
+//    return result;
+//}
