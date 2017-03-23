@@ -1,17 +1,14 @@
 namespace ProductsShop
 {
     using Models;
-    using System;
     using System.Data.Entity;
-    using System.Linq;
 
     public class ShopContext : DbContext
     {
-
         public ShopContext()
             : base("name=ShopContext")
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<ShopContext>());
+            ////Database.SetInitializer(new DropCreateDatabaseAlways<ShopContext>());
         }
 
         public virtual DbSet<User> Users { get; set; }

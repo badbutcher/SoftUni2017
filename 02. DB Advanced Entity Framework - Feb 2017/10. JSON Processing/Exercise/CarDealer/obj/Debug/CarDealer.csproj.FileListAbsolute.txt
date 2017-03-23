@@ -8,3 +8,6 @@ D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Proce
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.csprojResolveAssemblyReference.cache
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.exe
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.pdb
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\CarDealer.exe.config
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.exe
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.pdb
