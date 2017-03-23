@@ -13,5 +13,10 @@ namespace _002
         public string LastName { get; set; }
 
         public decimal Salary { get; set; }
+
+        public override string ToString()
+        {
+            return $"    - {FirstName} {LastName} {Salary}";
+        }
     }
 }

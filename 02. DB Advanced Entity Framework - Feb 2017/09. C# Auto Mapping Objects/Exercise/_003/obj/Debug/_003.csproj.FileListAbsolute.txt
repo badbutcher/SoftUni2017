@@ -1,0 +1,12 @@
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\_003.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\_003.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\_003.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\AutoMapper.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\AutoMapper.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\obj\Debug\_003.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\obj\Debug\_003.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_003\obj\Debug\_003.pdb

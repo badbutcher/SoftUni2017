@@ -12,6 +12,19 @@ namespace _002
 
         public string LastName { get; set; }
 
-        public IList<Employee> Employees { get; set; }
+        public int EmployeesCount { get; set; }
+
+        public IList<EmployeeDto> Employees { get; set; }
+
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+            result.AppendLine($"{this.FirstName} {this.LastName} | Employees: {this.EmployeesCount}");
+            foreach (var employee in this.Employees)
+            {
+                result.AppendLine(employee.ToString());
+            }
+            return result.ToString();
+        }
     }
 }

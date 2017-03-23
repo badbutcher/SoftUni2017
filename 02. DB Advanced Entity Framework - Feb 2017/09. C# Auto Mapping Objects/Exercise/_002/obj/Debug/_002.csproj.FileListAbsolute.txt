@@ -1,1 +1,9 @@
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\bin\Debug\_002.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\bin\Debug\_002.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\bin\Debug\_002.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\bin\Debug\AutoMapper.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\bin\Debug\System.ValueTuple.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\bin\Debug\AutoMapper.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\obj\Debug\_002.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\obj\Debug\_002.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\09. C# Auto Mapping Objects\Exercise\_002\obj\Debug\_002.pdb

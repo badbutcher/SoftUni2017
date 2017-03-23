@@ -11,56 +11,69 @@ namespace _002
     {
         static void Main(string[] args)
         {
-            Employee manager = new Employee()
+            IEnumerable<Employee> managers = CreateManagers();
+
+            Mapper.Initialize(cfg =>
             {
-                FirstName = "Smint",
-                LastName = "Dominos",
-                Birthday = DateTime.Now,
-                Salary = 123.45m,
-                IsOnHoliday = false,
-                Address = "Sofai",
-                Manager = new Employee()
+                cfg.CreateMap<Employee, EmployeeDto>();
+                cfg.CreateMap<Employee, ManagerDto>()
+                .ForMember(dto => dto.EmployeesCount, configExpr => configExpr
+                .MapFrom(e => e.Employees.Count));
+            });
+
+         
+            IEnumerable<ManagerDto> managerDtos = Mapper.Map<IEnumerable<Employee>, IEnumerable<ManagerDto>>(managers);
+
+            foreach (var item in managerDtos)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static IEnumerable<Employee> CreateManagers()
+        {
+            var managers = new List<Employee>();
+            for (int i = 0; i < 3; i++)
+            {
+                var manager = new Employee()
                 {
-                    FirstName = "Frank",
-                    LastName = "Loid"
-                },
-                Employees = new List<Employee>()
-            };
+                    FirstName = "Pesho",
+                    LastName = "Peshev",
+                    Address = "Sofia, Tintyava 10",
+                    Birthday = new DateTime(1992, 3, 2),
+                    Employees = new List<Employee>(),
+                    IsOnHoliday = false,
+                    Manager = new Employee() { FirstName = "Ivan", LastName = "Ivanov" },
+                    Salary = 100m
+                };
+                var employee1 = new Employee()
+                {
+                    FirstName = "John",
+                    LastName = "Doe",
+                    Salary = 120.20m,
+                    Manager = manager
+                };
+                var employee2 = new Employee()
+                {
+                    FirstName = "Johny",
+                    LastName = "Doing",
+                    Salary = 120.22m,
+                    Manager = manager
+                };
+                var employee3 = new Employee()
+                {
+                    FirstName = "Johnnie",
+                    LastName = "Doable",
+                    Salary = 120.23m,
+                    Manager = manager
+                };
+                manager.Employees.Add(employee1);
+                manager.Employees.Add(employee2);
+                manager.Employees.Add(employee3);
+                managers.Add(manager);
+            }
 
-            Employee e1 = new Employee()
-            {
-                FirstName = "Pacha",
-                LastName = "Salza",
-                Birthday = DateTime.Now,
-                Salary = 423.45m,
-                IsOnHoliday = true,
-                Address = "Varna",
-                Manager = manager
-            };
-
-            Employee e2 = new Employee()
-            {
-                FirstName = "Midea",
-                LastName = "Plantinet",
-                Birthday = DateTime.Now,
-                Salary = 9000.00m,
-                IsOnHoliday = true,
-                Address = "Varna",
-                Manager = manager
-            };
-
-            Employee e3 = new Employee()
-            {
-                FirstName = "Q",
-                LastName = "Vi",
-                Birthday = DateTime.Now,
-                Salary = 0.50m,
-                IsOnHoliday = true,
-                Address = "Ruse",
-                Manager = manager
-            };
-
-           
+            return managers;
         }
     }
 }

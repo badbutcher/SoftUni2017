@@ -1,0 +1,10 @@
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\CarDealer.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\CarDealer.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\CarDealer.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\10. JSON Processing\Exercise\CarDealer\obj\Debug\CarDealer.pdb
