@@ -10,7 +10,7 @@ namespace CarDealer
         public CarContext()
             : base("name=CarContext")
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<CarContext>());
+            ////Database.SetInitializer(new DropCreateDatabaseAlways<CarContext>());
         }
 
         public virtual DbSet<Car> Cars { get; set; }

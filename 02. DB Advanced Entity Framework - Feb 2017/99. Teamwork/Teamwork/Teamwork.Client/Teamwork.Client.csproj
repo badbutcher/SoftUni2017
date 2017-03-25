@@ -54,6 +54,12 @@
   <ItemGroup>
     <Compile Include="Core\Commands\AddGameCommand.cs" />
     <Compile Include="Core\CommandDispatcher.cs" />
+    <Compile Include="Core\Commands\AddDeveloperCommand.cs" />
+    <Compile Include="Core\Commands\AddGameToPublisherCommand.cs" />
+    <Compile Include="Core\Commands\AddGameToDeveloperCommand.cs" />
+    <Compile Include="Core\Commands\AddPublisherCommand.cs" />
+    <Compile Include="Core\Commands\ExitCommand.cs" />
+    <Compile Include="Core\Commands\SelectGameByGenre.cs" />
     <Compile Include="Core\Engine.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

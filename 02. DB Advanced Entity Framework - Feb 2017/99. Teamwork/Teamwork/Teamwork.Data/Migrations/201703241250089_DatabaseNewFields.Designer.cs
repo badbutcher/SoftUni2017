@@ -7,13 +7,13 @@ namespace Teamwork.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class FirstMigration : IMigrationMetadata
+    public sealed partial class DatabaseNewFields : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(DatabaseNewFields));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703220818368_FirstMigration"; }
+            get { return "201703241250089_DatabaseNewFields"; }
         }
         
         string IMigrationMetadata.Source

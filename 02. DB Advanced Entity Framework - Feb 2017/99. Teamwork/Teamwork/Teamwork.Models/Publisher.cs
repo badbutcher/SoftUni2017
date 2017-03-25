@@ -16,9 +16,11 @@
         [Required]
         public string Name { get; set; }
 
-        public string Location { get; set; }
+        public string FoundedInCountryName { get; set; }
 
-        public DateTime? Founded { get; set; }
+        public string FoundedInCityName { get; set; }
+
+        public DateTime? FoundedIn { get; set; }
 
         public virtual ICollection<Game> Games { get; set; }
     }

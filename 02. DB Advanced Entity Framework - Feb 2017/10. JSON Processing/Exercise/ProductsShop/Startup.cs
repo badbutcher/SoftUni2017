@@ -56,7 +56,7 @@ namespace ProductsShop
             };
 
             var jsonProduct = JsonConvert.SerializeObject(uCount, Formatting.Indented);
-            Console.WriteLine(jsonProduct);
+
             File.WriteAllText("../../Exports/[3.4].json", jsonProduct);
         }
 

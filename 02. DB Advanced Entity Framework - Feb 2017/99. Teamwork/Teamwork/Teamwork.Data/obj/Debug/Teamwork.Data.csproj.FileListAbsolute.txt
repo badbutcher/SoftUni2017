@@ -36,9 +36,6 @@ D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\T
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.csprojResolveAssemblyReference.cache
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.dll
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.pdb
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.FirstMigration.resources
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.csproj.GenerateResource.Cache
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.SPForGames.resources
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\bin\Debug\Teamwork.Data.dll.config
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\bin\Debug\Teamwork.Data.dll
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\bin\Debug\Teamwork.Data.pdb
@@ -54,3 +51,6 @@ C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\T
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.csproj.GenerateResource.Cache
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.dll
 C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.FirstMigration.resources
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.csproj.GenerateResource.Cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.DatabaseNewFields.resources

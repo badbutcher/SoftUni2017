@@ -51,13 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201703220818368_FirstMigration.cs" />
-    <Compile Include="Migrations\201703220818368_FirstMigration.Designer.cs">
-      <DependentUpon>201703220818368_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201703241218238_FirstMigration.cs" />
+    <Compile Include="Migrations\201703241218238_FirstMigration.Designer.cs">
+      <DependentUpon>201703241218238_FirstMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703220827500_SPForGames.cs" />
-    <Compile Include="Migrations\201703220827500_SPForGames.Designer.cs">
-      <DependentUpon>201703220827500_SPForGames.cs</DependentUpon>
+    <Compile Include="Migrations\201703241250089_DatabaseNewFields.cs" />
+    <Compile Include="Migrations\201703241250089_DatabaseNewFields.Designer.cs">
+      <DependentUpon>201703241250089_DatabaseNewFields.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,11 +74,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703220818368_FirstMigration.resx">
-      <DependentUpon>201703220818368_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703241218238_FirstMigration.resx">
+      <DependentUpon>201703241218238_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703220827500_SPForGames.resx">
-      <DependentUpon>201703220827500_SPForGames.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703241250089_DatabaseNewFields.resx">
+      <DependentUpon>201703241250089_DatabaseNewFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

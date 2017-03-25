@@ -1,6 +1,6 @@
 ﻿namespace Teamwork.Models.Enums
 {
-    public enum GameGender
+    public enum GameGenre
     {
         FPS = 0,
         fps = 0,

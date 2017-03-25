@@ -19,22 +19,22 @@ namespace Teamwork.Data.Migrations
             Developer dev1 = new Developer()
             {
                 Name = "Valve",
-                Location = "United States",
-                Founded = DateTime.Parse("24.08.1996")
+                FoundedInCountryName = "United States",
+                DateFounded = DateTime.Parse("24.08.1996")
             };
 
             Developer dev2 = new Developer()
             {
                 Name = "Turtle Rock Studios",
-                Location = "United States",
-                Founded = DateTime.Parse("01.03.2002")
+                FoundedInCountryName = "United States",
+                DateFounded = DateTime.Parse("01.03.2002")
             };
 
             Publisher pub1 = new Publisher()
             {
                 Name = "Valve",
-                Location = "United States",
-                Founded = DateTime.Parse("24.08.1996")
+                FoundedInCountryName = "United States",
+                FoundedIn = DateTime.Parse("24.08.1996")
             };
 
             context.Developers.AddOrUpdate(d => d.Name, dev1, dev2);
@@ -52,7 +52,7 @@ namespace Teamwork.Data.Migrations
                 IsSingleplayer = true,
                 IsMultiplayer = false,
                 RelaseDate = DateTime.Parse("19.11.1999"),
-                GameGender = GameGender.FPS,
+                GameGenre = GameGenre.FPS,
                 Publishers = new List<Publisher>()
                 {
                     ValvePub
@@ -68,7 +68,7 @@ namespace Teamwork.Data.Migrations
                 IsSingleplayer = true,
                 IsMultiplayer = false,
                 RelaseDate = DateTime.Parse("09.10.2007"),
-                GameGender = GameGender.FPS,
+                GameGenre = GameGenre.FPS,
                 Publishers = new List<Publisher>()
                 {
                     ValvePub
@@ -84,7 +84,7 @@ namespace Teamwork.Data.Migrations
                 IsSingleplayer = true,
                 IsMultiplayer = true,
                 RelaseDate = DateTime.Parse("17.11.2008"),
-                GameGender = GameGender.FPS,
+                GameGenre = GameGenre.FPS,
                 Publishers = new List<Publisher>()
                 {
                     ValvePub
@@ -104,7 +104,7 @@ namespace Teamwork.Data.Migrations
                 IsSingleplayer = true,
                 IsMultiplayer = true,
                 RelaseDate = DateTime.Parse("10.09.2007"),
-                GameGender = GameGender.FPS,
+                GameGenre = GameGenre.FPS,
                 Publishers = new List<Publisher>()
                 {
                     ValvePub
@@ -120,7 +120,7 @@ namespace Teamwork.Data.Migrations
                 IsSingleplayer = true,
                 IsMultiplayer = true,
                 RelaseDate = DateTime.Parse("09.07.2013"),
-                GameGender = GameGender.MOBA,
+                GameGenre = GameGenre.MOBA,
                 Publishers = new List<Publisher>()
                 {
                     ValvePub
@@ -136,7 +136,7 @@ namespace Teamwork.Data.Migrations
                 IsSingleplayer = true,
                 IsMultiplayer = true,
                 RelaseDate = DateTime.Parse("01.11.2004"),
-                GameGender = GameGender.FPS,
+                GameGenre = GameGenre.FPS,
                 Publishers = new List<Publisher>()
                 {
                     ValvePub

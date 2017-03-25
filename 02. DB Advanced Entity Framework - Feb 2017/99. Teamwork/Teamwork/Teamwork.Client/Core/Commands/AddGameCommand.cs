@@ -19,35 +19,47 @@ namespace Teamwork.Client.Core.Commands
 
         public string Execute(string data)
         {
-
+            Console.Write("Enter game name: ");
             string name = Console.ReadLine();
-            string isSingleplayer = Console.ReadLine();
-            bool isMultiplayer = bool.Parse(Console.ReadLine());
-            DateTime relaseDate = DateTime.Parse(Console.ReadLine());
-            string gameGender = Console.ReadLine();
 
-            if (gameService.DoesGameExist(name))
+            Console.Write("Is the game singleplayer: ");
+            string isSingleplayer = Console.ReadLine();
+
+            Console.Write("Is the game multiplayer: ");
+            string isMultiplayer = Console.ReadLine();
+
+            Console.Write("When was the game released: ");
+            DateTime releaseDate = DateTime.Parse(Console.ReadLine());
+
+            Console.Write("What is the game genre: ");
+            string gameGenre = Console.ReadLine();
+
+            if (this.gameService.DoesGameExist(name))
             {
-                throw new ArgumentException("Game does exist");
+                throw new ArgumentException("Game already exist");
             }
 
-            GameGender gender;
-            bool isGenderValid = Enum.TryParse(gameGender, out gender);
-            this.gameService.GreateGame(name, ToBoolean(isSingleplayer), isMultiplayer, relaseDate, gender);
+            GameGenre gender;
+            bool isGenderValid = Enum.TryParse(gameGenre, out gender);
+            this.gameService.GreateGame(name, ToBoolean(isSingleplayer), ToBoolean(isMultiplayer), releaseDate, gender);
 
-            return "asd";
+            return $"Game {name} was added";
         }
 
         private static bool ToBoolean(string s)
         {
-            string[] trueStrings = { "1", "y", "yes", "true" };
-            string[] falseStrings = { "0", "n", "no", "false" };
-
+            string[] trueStrings = { "y", "yes", "Yes", "true" };
+            string[] falseStrings = { "n", "no", "No", "false" };
 
             if (trueStrings.Contains(s, StringComparer.OrdinalIgnoreCase))
+            {
                 return true;
+            }
+
             if (falseStrings.Contains(s, StringComparer.OrdinalIgnoreCase))
+            {
                 return false;
+            }
 
             throw new InvalidCastException("only the following are supported for converting strings to boolean: "
                 + string.Join(",", trueStrings)
@@ -55,27 +67,4 @@ namespace Teamwork.Client.Core.Commands
                 + string.Join(",", falseStrings));
         }
     }
-
 }
-
-
-//public string Execute(string[] data)
-//{
-
-//    string name = data[0];
-//    bool isSingleplayer = bool.Parse(data[1]);
-//    bool isMultiplayer = bool.Parse(data[2]);
-//    DateTime relaseDate = DateTime.Parse(data[3]);
-//    string gameGender = data[4];
-
-//    if (gameService.DoesGameExist(name))
-//    {
-//        throw new ArgumentException("Game does exist");
-//    }
-
-//    GameGender gender;
-//    bool isGenderValid = Enum.TryParse(gameGender, out gender);
-//    this.gameService.GreateGame(name, isSingleplayer, isMultiplayer, relaseDate, gender);
-
-//    return "asd";
-//}

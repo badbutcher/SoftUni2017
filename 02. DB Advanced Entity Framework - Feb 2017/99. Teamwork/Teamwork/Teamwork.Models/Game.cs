@@ -25,7 +25,7 @@
 
         public DateTime? RelaseDate { get; set; }
 
-        public GameGender GameGender { get; set; }
+        public GameGenre GameGenre { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }
 

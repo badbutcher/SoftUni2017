@@ -12,9 +12,9 @@ namespace Teamwork.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false),
                         Location = c.String(),
-                        Founded = c.DateTime(nullable: false),
+                        Founded = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -23,10 +23,11 @@ namespace Teamwork.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false),
+                        IsSingleplayer = c.Boolean(nullable: false),
                         IsMultiplayer = c.Boolean(nullable: false),
-                        RelaseDate = c.DateTime(nullable: false),
-                        GameGender = c.Int(nullable: false),
+                        RelaseDate = c.DateTime(nullable: false, defaultValueSql: null),
+                        GameGenre = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -35,9 +36,9 @@ namespace Teamwork.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false),
                         Location = c.String(),
-                        Founded = c.DateTime(nullable: false),
+                        Founded = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -46,8 +47,8 @@ namespace Teamwork.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Content = c.String(),
+                        Name = c.String(nullable: false),
+                        Content = c.String(nullable: false),
                         Rating = c.Single(nullable: false),
                         GameId = c.Int(nullable: false),
                     })
@@ -60,7 +61,7 @@ namespace Teamwork.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Content = c.String(),
+                        Content = c.String(nullable: false),
                         ReviewId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
