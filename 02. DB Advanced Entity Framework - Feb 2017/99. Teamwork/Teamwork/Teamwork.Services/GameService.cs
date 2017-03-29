@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Teamwork.Data;
-using Teamwork.Models;
-using Teamwork.Models.Enums;
-
-namespace Teamwork.Services
+﻿namespace Teamwork.Services
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Data;
+    using Models;
+    using Models.Enums;
+    using Models.Anonymous;
+
     public class GameService
     {
         public void GreateGame(string name, bool isSingleplayer, bool isMultiplayer, DateTime relaseDate, GameGenre gameGender)
@@ -63,24 +62,20 @@ namespace Teamwork.Services
             }
         }
 
-        //public void AddGameToDeveloper(string[] gameName, string developerName)
-        //{
-        //    using (TeamworkContext context = new TeamworkContext())
-        //    {
-        //        foreach (var item in gameName)
-        //        {
-        //            Game game = context.Games.SingleOrDefault(g => g.Name == item);
-        //            Developer developer = context.Developers.SingleOrDefault(d => d.Name == developerName);
-
-        //            developer.Games.Add(game);
-        //            game.Developers.Add(developer);
-        //        }
-
-
-        //        context.SaveChanges();
-
-        //    }
-        //}
+        ////public void AddGameToDeveloper(string[] gameName, string developerName)
+        ////{
+        ////    using (TeamworkContext context = new TeamworkContext())
+        ////    {
+        ////        foreach (var item in gameName)
+        ////        {
+        ////            Game game = context.Games.SingleOrDefault(g => g.Name == item);
+        ////            Developer developer = context.Developers.SingleOrDefault(d => d.Name == developerName);
+        ////            developer.Games.Add(game);
+        ////            game.Developers.Add(developer);
+        ////        }
+        ////        context.SaveChanges();
+        ////    }
+        ////}
 
         public bool DoesTheGameHaveAnPublisher(string gameName, string publisherName)
         {
@@ -107,18 +102,23 @@ namespace Teamwork.Services
             }
         }
 
-        public List<Game> GetGamesByGenre(string genreName)
+        public List<GetGamesByGenreAnonymous> GetGamesByGenre(string genreName)
         {
             using (TeamworkContext context = new TeamworkContext())
             {
-                GameGenre gender = (GameGenre) Enum.Parse(typeof(GameGenre), genreName);
+                GameGenre genre = (GameGenre)Enum.Parse(typeof(GameGenre), genreName);
 
-                var result = context.Games
+                var query = context.Games
+                            .Select(g => new GetGamesByGenreAnonymous()
+                            {
+                                Name = g.Name,
+                                SP = g.IsSingleplayer,
+                                MP = g.IsMultiplayer,
+                                Genre = g.GameGenre
+                            })
+                            .Where(g => g.Genre == genre);
 
-                    .Where(g=>g.GameGenre == gender)
-                    .ToList();
-
-                return result.ToList();
+                return query.ToList();
             }
         }
     }

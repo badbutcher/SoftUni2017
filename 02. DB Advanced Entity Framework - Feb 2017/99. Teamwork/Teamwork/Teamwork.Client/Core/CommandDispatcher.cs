@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Teamwork.Client.Core.Commands;
-using Teamwork.Services;
-
-namespace Teamwork.Client.Core
+﻿namespace Teamwork.Client.Core
 {
+    using Commands;
+    using Services;
+
     public class CommandDispatcher
     {
         public string DispatchCommand(string commandParameters)
@@ -15,6 +10,8 @@ namespace Teamwork.Client.Core
             GameService gameService = new GameService();
             DeveloperService developerService = new DeveloperService();
             PublisherService publisherService = new PublisherService();
+            ReviewService reviewService = new ReviewService();
+            CommentService commentService = new CommentService();
 
             string result = string.Empty;
 
@@ -29,7 +26,7 @@ namespace Teamwork.Client.Core
                     result = addDeveloper.Execute(commandParameters);
                     break;
                 case "AddGameToDeveloper":
-                    AddGameToDeveloperCommand addGameToDeveloper = new AddGameToDeveloperCommand(gameService,developerService);
+                    AddGameToDeveloperCommand addGameToDeveloper = new AddGameToDeveloperCommand(gameService, developerService);
                     result = addGameToDeveloper.Execute(commandParameters);
                     break;
                 case "AddPublisher":
@@ -40,9 +37,21 @@ namespace Teamwork.Client.Core
                     AddGameToPublisherCommand addGameToPublisher = new AddGameToPublisherCommand(gameService, publisherService);
                     result = addGameToPublisher.Execute(commandParameters);
                     break;
+                case "AddReview":
+                    AddReviewToGameCommand addReviewCommand = new AddReviewToGameCommand(reviewService, gameService);
+                    result = addReviewCommand.Execute(commandParameters);
+                    break;
+                case "AddComment":
+                    AddCommentToReviewCommand addCommentCommand = new AddCommentToReviewCommand(commentService, reviewService);
+                    result = addCommentCommand.Execute(commandParameters);
+                    break;
                 case "SelectGameByGenre":
                     SelectGameByGenre selectGameByGenre = new SelectGameByGenre(gameService);
                     result = selectGameByGenre.Execute(commandParameters);
+                    break;
+                case "Rating":
+                    SelectGameReviewRating selectGameByRating = new SelectGameReviewRating(reviewService);
+                    result = selectGameByRating.Execute(commandParameters);
                     break;
                 case "Exit":
                     ExitCommand exit = new ExitCommand();
@@ -51,7 +60,7 @@ namespace Teamwork.Client.Core
                 default:
                     break;
             }
-            
+
             return result;
         }
     }

@@ -54,3 +54,6 @@ C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\T
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.FirstMigration.resources
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.csproj.GenerateResource.Cache
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.DatabaseNewFields.resources
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.ReviewGameIdFix.resources
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.CommentDBSet.resources
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\99. Teamwork\Teamwork\Teamwork.Data\obj\Debug\Teamwork.Data.Migrations.CommentReviewIdFix.resources

@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Teamwork.Data;
-using Teamwork.Models;
-using Teamwork.Models.Enums;
-
-namespace Teamwork.Services
+﻿namespace Teamwork.Services
 {
+    using System;
+    using System.Linq;
+    using Data;
+    using Models;
+
     public class DeveloperService
     {
         public void GreateDeveloper(string name, string countryName, string cityName, DateTime founded)
         {
-            Developer Developer = new Developer
+            Developer developer = new Developer
             {
                 Name = name,
                 FoundedInCountryName = countryName,
@@ -23,7 +19,7 @@ namespace Teamwork.Services
 
             using (TeamworkContext context = new TeamworkContext())
             {
-                context.Developers.Add(Developer);
+                context.Developers.Add(developer);
                 context.SaveChanges();
             }
         }

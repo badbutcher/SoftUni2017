@@ -59,6 +59,18 @@
     <Compile Include="Migrations\201703241250089_DatabaseNewFields.Designer.cs">
       <DependentUpon>201703241250089_DatabaseNewFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703251543173_ReviewGameIdFix.cs" />
+    <Compile Include="Migrations\201703251543173_ReviewGameIdFix.Designer.cs">
+      <DependentUpon>201703251543173_ReviewGameIdFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703260827474_CommentDBSet.cs" />
+    <Compile Include="Migrations\201703260827474_CommentDBSet.Designer.cs">
+      <DependentUpon>201703260827474_CommentDBSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703260843002_CommentReviewIdFix.cs" />
+    <Compile Include="Migrations\201703260843002_CommentReviewIdFix.Designer.cs">
+      <DependentUpon>201703260843002_CommentReviewIdFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeamworkContext.cs" />
@@ -79,6 +91,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703241250089_DatabaseNewFields.resx">
       <DependentUpon>201703241250089_DatabaseNewFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703251543173_ReviewGameIdFix.resx">
+      <DependentUpon>201703251543173_ReviewGameIdFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703260827474_CommentDBSet.resx">
+      <DependentUpon>201703260827474_CommentDBSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703260843002_CommentReviewIdFix.resx">
+      <DependentUpon>201703260843002_CommentReviewIdFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

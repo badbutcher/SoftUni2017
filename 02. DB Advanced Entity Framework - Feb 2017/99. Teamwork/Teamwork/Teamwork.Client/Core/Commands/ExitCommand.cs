@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Teamwork.Client.Core.Commands
+﻿namespace Teamwork.Client.Core.Commands
 {
+    using System;
+
     public class ExitCommand
     {
         public string Execute()

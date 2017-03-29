@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Teamwork.Client.Core
+﻿namespace Teamwork.Client.Core
 {
+    using System;
+
     public class Engine
     {
         private readonly CommandDispatcher commandDispatcher;

@@ -19,9 +19,10 @@
         public string Content { get; set; }
 
         [Required]
+        [Range(1, 10)]
         public float Rating { get; set; }
 
-        public int GameId { get; set; }
+        public int? GameId { get; set; }
 
         public virtual Game Game { get; set; }
 

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Teamwork.Models.Enums;
-using Teamwork.Services;
-
-namespace Teamwork.Client.Core.Commands
+﻿namespace Teamwork.Client.Core.Commands
 {
+    using System;
+    using System.Linq;
+    using Models.Enums;
+    using Services;
+
     public class AddGameCommand
     {
         private GameService gameService;
@@ -39,9 +36,9 @@ namespace Teamwork.Client.Core.Commands
                 throw new ArgumentException("Game already exist");
             }
 
-            GameGenre gender;
-            bool isGenderValid = Enum.TryParse(gameGenre, out gender);
-            this.gameService.GreateGame(name, ToBoolean(isSingleplayer), ToBoolean(isMultiplayer), releaseDate, gender);
+            GameGenre genre = (GameGenre)Enum.Parse(typeof(GameGenre), gameGenre);
+
+            this.gameService.GreateGame(name, ToBoolean(isSingleplayer), ToBoolean(isMultiplayer), releaseDate, genre);
 
             return $"Game {name} was added";
         }

@@ -9,7 +9,7 @@
         [Required]
         public string Content { get; set; }
 
-        public int ReviewId { get; set; }
+        public int? ReviewId { get; set; }
 
         public virtual Review Review { get; set; }
     }

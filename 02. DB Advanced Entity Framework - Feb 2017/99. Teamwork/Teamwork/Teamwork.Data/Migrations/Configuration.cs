@@ -149,19 +149,3 @@ namespace Teamwork.Data.Migrations
         }
     }
 }
-//,
-//            new Game()
-//{
-//    Name = "Counter-Strike: Source",
-//                IsMultiplayer = true,
-//                RelaseDate = DateTime.Parse("01.11.2004"),
-//                GameGender = GameGender.FPS,
-//                Publishers = new List<Publisher>()
-//                {
-//                    ValvePub
-//                },
-//                Developers = new List<Developer>()
-//                {
-//                    ValveDev, TurtleRockStudiosDev
-//                }
-//            }
