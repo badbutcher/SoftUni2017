@@ -1,0 +1,14 @@
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\CarDealer.App.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\CarDealer.App.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\CarDealer.App.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\CarDealer.Data.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\CarDealer.Models.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\CarDealer.Data.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\CarDealer.Models.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\obj\Debug\CarDealer.App.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\obj\Debug\CarDealer.App.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.App\obj\Debug\CarDealer.App.pdb

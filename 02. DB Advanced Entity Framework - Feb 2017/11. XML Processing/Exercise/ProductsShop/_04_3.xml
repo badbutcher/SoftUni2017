@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<categories>
+  <categoty name="Drugs">
+    <products-count>116</products-count>
+    <average-price>759.818793</average-price>
+    <total-revenue>88138.98</total-revenue>
+  </categoty>
+  <categoty name="Other">
+    <products-count>121</products-count>
+    <average-price>761.980909</average-price>
+    <total-revenue>92199.69</total-revenue>
+  </categoty>
+  <categoty name="Autoparts">
+    <products-count>122</products-count>
+    <average-price>786.112540</average-price>
+    <total-revenue>95905.73</total-revenue>
+  </categoty>
+  <categoty name="For Children">
+    <products-count>124</products-count>
+    <average-price>791.587258</average-price>
+    <total-revenue>98156.82</total-revenue>
+  </categoty>
+  <categoty name="Business">
+    <products-count>126</products-count>
+    <average-price>768.616428</average-price>
+    <total-revenue>96845.67</total-revenue>
+  </categoty>
+  <categoty name="Garden">
+    <products-count>127</products-count>
+    <average-price>772.531181</average-price>
+    <total-revenue>98111.46</total-revenue>
+  </categoty>
+  <categoty name="Adult">
+    <products-count>128</products-count>
+    <average-price>744.140859</average-price>
+    <total-revenue>95250.03</total-revenue>
+  </categoty>
+  <categoty name="Sports">
+    <products-count>129</products-count>
+    <average-price>792.411317</average-price>
+    <total-revenue>102221.06</total-revenue>
+  </categoty>
+  <categoty name="Electronics">
+    <products-count>130</products-count>
+    <average-price>744.413615</average-price>
+    <total-revenue>96773.77</total-revenue>
+  </categoty>
+  <categoty name="Weapons">
+    <products-count>131</products-count>
+    <average-price>795.168702</average-price>
+    <total-revenue>104167.10</total-revenue>
+  </categoty>
+  <categoty name="Fashion">
+    <products-count>133</products-count>
+    <average-price>790.931052</average-price>
+    <total-revenue>105193.83</total-revenue>
+  </categoty>
+</categories>

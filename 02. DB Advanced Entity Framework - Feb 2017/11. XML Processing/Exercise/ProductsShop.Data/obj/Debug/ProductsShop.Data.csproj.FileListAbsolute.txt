@@ -1,0 +1,12 @@
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\ProductsShop.Data.dll.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\ProductsShop.Data.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\ProductsShop.Data.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\ProductsShop.Models.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\ProductsShop.Models.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\obj\Debug\ProductsShop.Data.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\obj\Debug\ProductsShop.Data.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\ProductsShop.Data\obj\Debug\ProductsShop.Data.pdb
