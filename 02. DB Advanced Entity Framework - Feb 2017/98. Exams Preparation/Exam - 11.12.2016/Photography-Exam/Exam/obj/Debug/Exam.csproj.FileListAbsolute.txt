@@ -1,1 +1,10 @@
 D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\bin\Debug\Exam.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\bin\Debug\Exam.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\bin\Debug\Exam.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\obj\Debug\Exam.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\obj\Debug\Exam.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\Exam\obj\Debug\Exam.pdb

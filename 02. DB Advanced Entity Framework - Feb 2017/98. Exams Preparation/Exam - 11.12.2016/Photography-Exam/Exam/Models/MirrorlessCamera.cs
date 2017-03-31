@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Exam.Models
 {
-    public class MirrorlessCamera
+    [Table("MirrorlessCameras")]
+    public class MirrorlessCamera : Camera
     {
-        public int Id { get; set; }
+        public string MaxVidoeResolution { get; set; }
+
+        public int MaxFrameRate { get; set; }
+
     }
 }
