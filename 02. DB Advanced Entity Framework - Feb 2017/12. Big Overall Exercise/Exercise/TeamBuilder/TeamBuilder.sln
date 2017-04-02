@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBuilder.Models", "TeamBuilder.Models\TeamBuilder.Models.csproj", "{7AD3CD3C-5295-4E15-AC50-228B1AFBA5C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBuilder.Data", "TeamBuilder.Data\TeamBuilder.Data.csproj", "{6733870F-1287-4C4C-A18B-3E2AB0857033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBuilder.App", "TeamBuilder.App\TeamBuilder.App.csproj", "{8AA5A05C-1CC1-4E71-A658-A7641B8B5588}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7AD3CD3C-5295-4E15-AC50-228B1AFBA5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AD3CD3C-5295-4E15-AC50-228B1AFBA5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AD3CD3C-5295-4E15-AC50-228B1AFBA5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6733870F-1287-4C4C-A18B-3E2AB0857033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6733870F-1287-4C4C-A18B-3E2AB0857033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6733870F-1287-4C4C-A18B-3E2AB0857033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6733870F-1287-4C4C-A18B-3E2AB0857033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA5A05C-1CC1-4E71-A658-A7641B8B5588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA5A05C-1CC1-4E71-A658-A7641B8B5588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA5A05C-1CC1-4E71-A658-A7641B8B5588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA5A05C-1CC1-4E71-A658-A7641B8B5588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
