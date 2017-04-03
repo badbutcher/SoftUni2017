@@ -6,8 +6,8 @@
   <sourcecode name="Application.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-03-10 10:41:30.669</styleCop>
-      <settingsFile>2017-03-30 18:59:49.782</settingsFile>
-      <sourceFile>2017-03-30 19:00:07.982</sourceFile>
+      <settingsFile>2017-04-03 11:34:28.011</settingsFile>
+      <sourceFile>2017-04-03 11:34:32.542</sourceFile>
       <parser>2017-03-10 10:41:30.669</parser>
       <StyleCop.CSharp.DocumentationRules>2017-03-10 10:41:30.669</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -27,20 +27,43 @@
     <violations>
       <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
         <context>The line contains unnecessary parenthesis.</context>
-        <line>40</line>
-        <index>1134</index>
-        <endIndex>1164</endIndex>
-        <startLine>40</startLine>
+        <line>39</line>
+        <index>1136</index>
+        <endIndex>1166</endIndex>
+        <startLine>39</startLine>
         <startColumn>37</startColumn>
-        <endLine>40</endLine>
+        <endLine>39</endLine>
         <endColumn>67</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name 'isYoungDriver' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>281</line>
+        <line>280</line>
         <warning>False</warning>
       </violation>
     </violations>
+  </sourcecode>
+  <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-03-10 10:41:30.669</styleCop>
+      <settingsFile>2017-04-03 11:34:28.011</settingsFile>
+      <sourceFile>2017-03-26 18:59:16.000</sourceFile>
+      <parser>2017-03-10 10:41:30.669</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-03-10 10:41:30.669</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-03-10 10:41:30.669</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-03-10 10:41:30.669</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-03-10 10:41:30.669</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-03-10 10:41:30.669</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-03-10 10:41:30.669</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-03-10 10:41:30.669</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
   </sourcecode>
 </stylecopresultscache>

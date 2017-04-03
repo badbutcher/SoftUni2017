@@ -1,7 +1,6 @@
 ﻿namespace CarDealer.App
 {
     using System;
-
     using Data;
     using Models;
     using System.Xml.Linq;
@@ -24,7 +23,7 @@
             ////_06_2(context);
             ////_06_3(context);
             ////_06_4(context);
-            _06_5(context);
+            ////_06_5(context);
             ////_06_6(context);
         }
 
@@ -144,10 +143,10 @@
                     XElement carPart = new XElement("part");
                     carPart.SetAttributeValue("name", part.Name);
                     carPart.SetAttributeValue("price", part.Price);
-
                     parts.Add(carPart);
                 }
 
+                car.Add(parts);
                 xml.Add(parts);
             }
 
