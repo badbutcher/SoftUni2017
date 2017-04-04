@@ -1,0 +1,23 @@
+﻿namespace MassDefect.Models
+{
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
+    public class SolarSystem
+    {
+        public SolarSystem()
+        {
+            this.Stars = new HashSet<Star>();
+            this.Planet = new HashSet<Planet>();
+        }
+
+        public int Id { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        public virtual ICollection<Star> Stars { get; set; }
+
+        public virtual ICollection<Planet> Planet { get; set; }
+    }
+}
