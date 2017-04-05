@@ -1,0 +1,14 @@
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\ImportJson.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\ImportJson.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\ImportJson.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\obj\Debug\ImportJson.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\obj\Debug\ImportJson.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\obj\Debug\ImportJson.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\Exam.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\Exam.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ImportJson\bin\Debug\Newtonsoft.Json.xml

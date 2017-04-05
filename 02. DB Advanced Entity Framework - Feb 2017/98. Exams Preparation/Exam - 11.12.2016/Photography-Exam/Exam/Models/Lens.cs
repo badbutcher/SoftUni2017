@@ -10,13 +10,15 @@ namespace Exam.Models
     {
         public int Id { get; set; }
 
-        public int FocalLenght { get; set; }
+        public string Make { get; set; }
+
+        public int LocalLenght { get; set; }
 
         public float MaxAperture { get; set; }
 
-        public bool CompatibleWith { get; set; }
+        public string CompatibleWith { get; set; }
 
-        public int OwnerId { get; set; }
+        public int? OwnerId { get; set; }
 
         public virtual Photographer Owner { get; set; }
     }

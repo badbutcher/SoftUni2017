@@ -28,6 +28,29 @@ namespace Exam
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Photographer>()
+                    .HasRequired(a => a.PrimaryCamera)
+                    .WithMany(b => b.PrimaryCamerasPhotographers)
+                    .HasForeignKey(d => d.PrimaryCameraId)
+                    .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Photographer>()
+                 .HasRequired(a => a.SecondaryCamera)
+                 .WithMany(b => b.SecondaryCamerasPhotographers)
+                 .HasForeignKey(d => d.SecondaryCameraId)
+                 .WillCascadeOnDelete(false);
+
+
+            modelBuilder.Entity<Photographer>()
+                .HasMany(p => p.WorkshopsParticipated)
+                .WithMany(w => w.Participants)
+                .Map(pw =>
+                {
+                    pw.ToTable("Enrollment");
+                    pw.MapLeftKey("WorkshopId");
+                    pw.MapRightKey("PhotographerId");
+                });
+
             base.OnModelCreating(modelBuilder);
         }
     }

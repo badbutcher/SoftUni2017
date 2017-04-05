@@ -10,8 +10,8 @@ namespace Exam.Models
     {
         public Camera()
         {
-            this.PrimaryCamera = new HashSet<Photographer>();
-            this.SecondaryCamera = new HashSet<Photographer>();
+            this.PrimaryCamerasPhotographers = new HashSet<Photographer>();
+            this.SecondaryCamerasPhotographers = new HashSet<Photographer>();
         }
 
         public int Id { get; set; }
@@ -26,8 +26,8 @@ namespace Exam.Models
 
         public int MaxIso { get; set; }
 
-        public virtual ICollection<Photographer> PrimaryCamera { get; set; }
+        public virtual ICollection<Photographer> PrimaryCamerasPhotographers { get; set; }
 
-        public virtual ICollection<Photographer> SecondaryCamera { get; set; }
+        public virtual ICollection<Photographer> SecondaryCamerasPhotographers { get; set; }
     }
 }

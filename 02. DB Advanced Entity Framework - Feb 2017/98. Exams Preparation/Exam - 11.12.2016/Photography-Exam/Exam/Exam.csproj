@@ -57,6 +57,8 @@
     <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Camera.cs" />
     <Compile Include="Models\DslrCamera.cs" />
+    <Compile Include="Models\Dtos\ImportCameraDto.cs" />
+    <Compile Include="Models\Dtos\ImportLensesDto.cs" />
     <Compile Include="Models\Lens.cs" />
     <Compile Include="Models\MirrorlessCamera.cs" />
     <Compile Include="Models\Photographer.cs" />

@@ -25,7 +25,7 @@ namespace Exam.Models
 
         public float PricePerParticipant  { get; set; }
 
-        public int TrainerId { get; set; }
+        public int? TrainerId { get; set; }
 
         public virtual Photographer Trainer { get; set; }
 

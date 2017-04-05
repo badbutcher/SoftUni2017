@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ExportJson\bin\Debug\ExportJson.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ExportJson\bin\Debug\ExportJson.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ExportJson\bin\Debug\ExportJson.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ExportJson\obj\Debug\ExportJson.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ExportJson\obj\Debug\ExportJson.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\Exam - 11.12.2016\Photography-Exam\ExportJson\obj\Debug\ExportJson.pdb
