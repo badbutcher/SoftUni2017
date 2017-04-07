@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exam.Models
+﻿namespace Exam.Models
 {
+    using System;
+    using System.Collections.Generic;
+
     public class Workshop
     {
         public Workshop()
@@ -17,13 +14,13 @@ namespace Exam.Models
 
         public string Name { get; set; }
 
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         public string Location { get; set; }
 
-        public float PricePerParticipant  { get; set; }
+        public float PricePerParticipant { get; set; }
 
         public int? TrainerId { get; set; }
 

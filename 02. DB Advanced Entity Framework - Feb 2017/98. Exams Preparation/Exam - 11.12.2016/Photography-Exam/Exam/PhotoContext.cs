@@ -1,9 +1,7 @@
 namespace Exam
 {
     using Models;
-    using System;
     using System.Data.Entity;
-    using System.Linq;
 
     public class PhotoContext : DbContext
     {
@@ -28,6 +26,8 @@ namespace Exam
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            ////modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
             modelBuilder.Entity<Photographer>()
                     .HasRequired(a => a.PrimaryCamera)
                     .WithMany(b => b.PrimaryCamerasPhotographers)
@@ -39,7 +39,6 @@ namespace Exam
                  .WithMany(b => b.SecondaryCamerasPhotographers)
                  .HasForeignKey(d => d.SecondaryCameraId)
                  .WillCascadeOnDelete(false);
-
 
             modelBuilder.Entity<Photographer>()
                 .HasMany(p => p.WorkshopsParticipated)

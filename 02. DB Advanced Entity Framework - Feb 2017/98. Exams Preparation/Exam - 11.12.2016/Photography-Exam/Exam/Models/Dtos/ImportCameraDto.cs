@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exam.Models.Dtos
+﻿namespace Exam.Models.Dtos
 {
     public class ImportCameraDto
     {
@@ -25,6 +19,5 @@ namespace Exam.Models.Dtos
         public string MaxVideoResolution { get; set; }
 
         public int MaxFrameRate { get; set; }
-
     }
 }
