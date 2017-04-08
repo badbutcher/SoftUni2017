@@ -1,0 +1,14 @@
+D:\Exam\_02. ImportJson\bin\Debug\_02.ImportJson.exe.config
+D:\Exam\_02. ImportJson\bin\Debug\_02.ImportJson.exe
+D:\Exam\_02. ImportJson\bin\Debug\_02.ImportJson.pdb
+D:\Exam\_02. ImportJson\bin\Debug\EntityFramework.dll
+D:\Exam\_02. ImportJson\bin\Debug\EntityFramework.SqlServer.dll
+D:\Exam\_02. ImportJson\bin\Debug\Newtonsoft.Json.dll
+D:\Exam\_02. ImportJson\bin\Debug\_01.CodeFirst.exe
+D:\Exam\_02. ImportJson\bin\Debug\_01.CodeFirst.pdb
+D:\Exam\_02. ImportJson\bin\Debug\EntityFramework.xml
+D:\Exam\_02. ImportJson\bin\Debug\EntityFramework.SqlServer.xml
+D:\Exam\_02. ImportJson\bin\Debug\Newtonsoft.Json.xml
+D:\Exam\_02. ImportJson\obj\Debug\_02. ImportJson.csprojResolveAssemblyReference.cache
+D:\Exam\_02. ImportJson\obj\Debug\_02.ImportJson.exe
+D:\Exam\_02. ImportJson\obj\Debug\_02.ImportJson.pdb

@@ -13,7 +13,7 @@ namespace Exam.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(60, MinimumLength = 1)]
+        [Required, StringLength(60)]
         public string FirstName { get; set; }
 
         [Required, StringLength(1, MinimumLength = 1)]

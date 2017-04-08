@@ -25,8 +25,8 @@ namespace ImportJson
             ExamContext context = new ExamContext();
 
             //ImportAgencies(context);
-            //ImportPeople(context);
-            ImportWeddings(context);
+            ImportPeople(context);
+            //ImportWeddings(context);
         }
 
         private static void ImportWeddings(ExamContext context)
