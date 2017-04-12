@@ -10,6 +10,8 @@ namespace _01.CodeFirst
     {
         static void Main()
         {
+            ExamContext context = new ExamContext();
+            context.Database.Initialize(true);
         }
     }
 }

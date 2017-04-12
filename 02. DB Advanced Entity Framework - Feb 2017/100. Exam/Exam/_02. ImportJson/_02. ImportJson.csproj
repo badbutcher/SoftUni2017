@@ -61,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Jsons\astronomers.json" />
+    <None Include="Jsons\planets.json" />
+    <None Include="Jsons\telescopes.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -69,9 +72,7 @@
       <Name>_01. CodeFirst</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Jsons\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

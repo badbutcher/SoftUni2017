@@ -55,6 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExamContext.cs" />
+    <Compile Include="Models\Astronomer.cs" />
+    <Compile Include="Models\Discovery.cs" />
+    <Compile Include="Models\Dtos\ImportAstronomersDto.cs" />
+    <Compile Include="Models\Dtos\ImportPlanetsDto.cs" />
+    <Compile Include="Models\Dtos\ImportTelescopesDto.cs" />
+    <Compile Include="Models\Planet.cs" />
+    <Compile Include="Models\Star.cs" />
+    <Compile Include="Models\StarSystem.cs" />
+    <Compile Include="Models\Telescope.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,9 +71,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

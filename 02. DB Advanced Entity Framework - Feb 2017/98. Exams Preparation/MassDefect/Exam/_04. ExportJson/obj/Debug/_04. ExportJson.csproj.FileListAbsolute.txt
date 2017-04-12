@@ -12,3 +12,6 @@ D:\Exam\_04. ExportJson\bin\Debug\Newtonsoft.Json.xml
 D:\Exam\_04. ExportJson\obj\Debug\_04. ExportJson.csprojResolveAssemblyReference.cache
 D:\Exam\_04. ExportJson\obj\Debug\_04.ExportJson.exe
 D:\Exam\_04. ExportJson\obj\Debug\_04.ExportJson.pdb
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\MassDefect\Exam\_04. ExportJson\bin\Debug\_04.ExportJson.exe.config
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\MassDefect\Exam\_04. ExportJson\obj\Debug\_04.ExportJson.exe
+C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\98. Exams Preparation\MassDefect\Exam\_04. ExportJson\obj\Debug\_04.ExportJson.pdb

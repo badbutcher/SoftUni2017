@@ -65,8 +65,10 @@
       <Name>_01. CodeFirst</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Xmls\" />
+    <Content Include="Xmls\discoveries.xml" />
+    <Content Include="Xmls\stars.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
