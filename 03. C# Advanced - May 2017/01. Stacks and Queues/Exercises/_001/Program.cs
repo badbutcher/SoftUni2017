@@ -8,7 +8,7 @@
     {
         static void Main()
         {
-            int[] n = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int[] n = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             Stack<int> result = new Stack<int>(n);
 
             for (int i = 0; i < n.Length; i++)

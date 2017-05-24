@@ -51,11 +51,11 @@
 
             if (check == true)
             {
-                Console.WriteLine(check);
+                Console.WriteLine("true");
             }
             else
             {
-                Console.WriteLine(result.OrderBy(a=>a).First());
+                Console.WriteLine(result.OrderBy(a=>a).FirstOrDefault());
             }
         }
     }
