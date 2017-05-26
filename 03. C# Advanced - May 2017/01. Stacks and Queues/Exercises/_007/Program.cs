@@ -1,33 +1,62 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _007
+﻿namespace _007
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class Program
     {
         static void Main()
         {
             string input = Console.ReadLine();
-            Stack<int> stack = new Stack<int>();
+
+            Stack<char> openedParanthesis = new Stack<char>();
+            char[] openingCases = new char[] { '{', '[', '(' };
+
             for (int i = 0; i < input.Length; i++)
             {
-                char currentChar = input[i];
-
-                if (currentChar == '(')
+                if (openingCases.Contains(input[i]))
                 {
-                    stack.Push(i);
+                    openedParanthesis.Push(input[i]);
                 }
-                else if (currentChar == ')')
+                else
                 {
-                    int start = stack.Pop();
-                    Console.WriteLine(input.Substring(start, i - start + 1));
+                    if (openedParanthesis.Count() == 0)
+                    {
+                        Console.WriteLine("NO");
+                        return;
+                    }
+
+                    switch (input[i])
+                    {
+                        case '}':
+                            if (openedParanthesis.Pop() != '{')
+                            {
+                                Console.WriteLine("NO");
+                                return;
+                            }
+                            break;
+                        case ']':
+                            if (openedParanthesis.Pop() != '[')
+                            {
+                                Console.WriteLine("NO");
+                                return;
+                            }
+                            break;
+                        case ')':
+                            if (openedParanthesis.Pop() != '(')
+                            {
+                                Console.WriteLine("NO");
+                                return;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
 
-            Console.WriteLine();
+            Console.WriteLine("YES");
         }
     }
 }

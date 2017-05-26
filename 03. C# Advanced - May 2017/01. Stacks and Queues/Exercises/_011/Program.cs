@@ -10,6 +10,13 @@ namespace _011
     {
         static void Main()
         {
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                int poison = int.Parse(Console.ReadLine());
+
+            }
         }
     }
 }

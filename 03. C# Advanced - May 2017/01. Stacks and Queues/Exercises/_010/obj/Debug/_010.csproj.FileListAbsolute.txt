@@ -4,3 +4,9 @@ C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises
 C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\obj\Debug\_010.exe
 C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\obj\Debug\_010.pdb
 C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\obj\Debug\_010.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\bin\Debug\_010.exe.config
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\bin\Debug\_010.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\bin\Debug\_010.pdb
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\obj\Debug\_010.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\obj\Debug\_010.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_010\obj\Debug\_010.pdb
