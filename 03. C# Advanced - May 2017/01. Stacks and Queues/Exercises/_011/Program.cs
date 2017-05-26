@@ -11,12 +11,40 @@ namespace _011
         static void Main()
         {
             int n = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < n; i++)
+            List<int> posions = Console.ReadLine().Split().Select(int.Parse).ToList();
+               
+            List<int> indexToRemove = new List<int>();
+            int counter = 0;
+            while (true)
             {
-                int poison = int.Parse(Console.ReadLine());
+                for (int i = 1; i < posions.Count; i++)
+                {
+                    int left = posions[i - 1];
+                    int right = posions[i];
+                    if (right >= left && right != -100)
+                    {
+                        indexToRemove.Add(i);
+                    }
+                }
 
+                if (indexToRemove.Count == 0)
+                {
+                    break;
+                }
+                else
+                {
+                    for (int i = 0; i < indexToRemove.Count; i++)
+                    {
+                        posions.RemoveAt(indexToRemove[i]);
+                        posions.Insert(indexToRemove[i],-100);
+                    }
+
+                    indexToRemove.Clear();
+                    counter++;
+                }
             }
+
+            Console.WriteLine(counter);
         }
     }
 }
