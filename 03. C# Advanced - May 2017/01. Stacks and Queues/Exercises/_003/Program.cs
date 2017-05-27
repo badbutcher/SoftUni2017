@@ -46,6 +46,7 @@
                                     maxValue = 0;
                                 }
                             }
+
                             break;
                         case 3:
                             Console.WriteLine(maxValue);

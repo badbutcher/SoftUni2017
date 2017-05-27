@@ -10,7 +10,7 @@
         {
             int n = int.Parse(Console.ReadLine());
             Stack<string> result = new Stack<string>();
-            result.Push("");
+            result.Push(string.Empty);
             for (int i = 0; i < n; i++)
             {
                 string[] input = Console.ReadLine().Split();

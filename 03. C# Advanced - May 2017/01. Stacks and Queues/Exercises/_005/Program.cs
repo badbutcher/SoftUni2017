@@ -11,27 +11,27 @@
             Queue<double> result = new Queue<double>();
             double input = double.Parse(Console.ReadLine());
 
-            double S1 = input;
-            double S2 = S1 + 1;
-            double S3 = 2 * S1 + 1;
-            double S4 = S1 + 2;
+            double s1 = input;
+            double s2 = s1 + 1;
+            double s3 = 2 * s1 + 1;
+            double s4 = s1 + 2;
 
-            result.Enqueue(S1);
-            result.Enqueue(S2);
-            result.Enqueue(S3);
-            result.Enqueue(S4);
+            result.Enqueue(s1);
+            result.Enqueue(s2);
+            result.Enqueue(s3);
+            result.Enqueue(s4);
 
             for (int i = 1; i <= 16; i++)
             {
-                S2 = result.ElementAt(i) + 1;
-                S3 = 2 * result.ElementAt(i) + 1;
-                S4 = result.ElementAt(i) + 2;
-                result.Enqueue(S2);
+                s2 = result.ElementAt(i) + 1;
+                s3 = 2 * result.ElementAt(i) + 1;
+                s4 = result.ElementAt(i) + 2;
+                result.Enqueue(s2);
 
                 if (i != 16)
                 {
-                    result.Enqueue(S3);
-                    result.Enqueue(S4);
+                    result.Enqueue(s3);
+                    result.Enqueue(s4);
                 }
             }
 

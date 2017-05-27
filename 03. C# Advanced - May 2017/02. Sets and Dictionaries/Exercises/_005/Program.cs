@@ -11,40 +11,45 @@
 
             while (true)
             {
-                string[] input = Console.ReadLine().Split();
+                string[] input = Console.ReadLine().Split('-');
 
-                if (input[0] == "END")
+                if (input[0] == "search")
                 {
                     break;
                 }
                 else
                 {
-                    if (input[0] == "A")
-                    {
-                        string name = input[1];
-                        string phoneNumber = input[2];
+                    string name = input[0];
+                    string phoneNumber = input[1];
 
-                        if (!phonebook.ContainsKey(name))
-                        {
-                            phonebook.Add(name, phoneNumber);
-                        }
-                        else
-                        {
-                            phonebook[name] = phoneNumber;
-                        }
+                    if (!phonebook.ContainsKey(name))
+                    {
+                        phonebook.Add(name, phoneNumber);
                     }
-                    else if (input[0] == "S")
+                    else
                     {
-                        string name = input[1];
+                        phonebook[name] = phoneNumber;
+                    }
+                }
+            }
 
-                        if (phonebook.ContainsKey(name))
-                        {
-                            Console.WriteLine("{0} -> {1}", name, phonebook[name]);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Contact {0} does not exist.", name);
-                        }
+            while (true)
+            {
+                string input = Console.ReadLine();
+
+                if (input == "stop")
+                {
+                    break;
+                }
+                else
+                {
+                    if (phonebook.ContainsKey(input))
+                    {
+                        Console.WriteLine("{0} -> {1}", input, phonebook[input]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Contact {0} does not exist.", input);
                     }
                 }
             }

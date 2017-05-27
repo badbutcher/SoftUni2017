@@ -21,12 +21,12 @@
                 return 1;
             }
 
-            if (fibNumbers[n-1] != 0)
+            if (fibNumbers[n - 1] != 0)
             {
                 return fibNumbers[n - 1];
             }
 
-            return fibNumbers[n-1] = GetFibunacci(n - 1) + GetFibunacci(n - 2);
+            return fibNumbers[n - 1] = GetFibunacci(n - 1) + GetFibunacci(n - 2);
         }
     }
 }

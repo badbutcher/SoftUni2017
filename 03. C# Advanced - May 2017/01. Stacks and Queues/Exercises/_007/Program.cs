@@ -35,6 +35,7 @@
                                 Console.WriteLine("NO");
                                 return;
                             }
+
                             break;
                         case ']':
                             if (openedParanthesis.Pop() != '[')
@@ -42,6 +43,7 @@
                                 Console.WriteLine("NO");
                                 return;
                             }
+
                             break;
                         case ')':
                             if (openedParanthesis.Pop() != '(')
@@ -49,6 +51,7 @@
                                 Console.WriteLine("NO");
                                 return;
                             }
+
                             break;
                         default:
                             break;

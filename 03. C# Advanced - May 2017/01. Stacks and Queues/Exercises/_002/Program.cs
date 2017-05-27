@@ -55,7 +55,7 @@
             }
             else
             {
-                Console.WriteLine(result.OrderBy(a=>a).FirstOrDefault());
+                Console.WriteLine(result.OrderBy(a => a).FirstOrDefault());
             }
         }
     }
