@@ -1,0 +1,6 @@
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\BashSoft\bin\Debug\BashSoft.exe.config
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\BashSoft\bin\Debug\BashSoft.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\BashSoft\bin\Debug\BashSoft.pdb
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.csprojResolveAssemblyReference.cache
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.pdb
