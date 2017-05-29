@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BashSoft
+﻿namespace BashSoft
 {
+    using System;
+    using System.Collections.Generic;
+
     public static class StudentsRepository
     {
         public static bool isDataInitialized = false;
@@ -49,6 +46,7 @@ namespace BashSoft
                 studentsByCourse[course][student].Add(mark);
                 input = Console.ReadLine();
             }
+
             Console.WriteLine(studentsByCourse.Count);
             isDataInitialized = true;
             OutputWriter.WriteMessageOnNewLine("Data read!");
@@ -66,6 +64,8 @@ namespace BashSoft
                 {
                     OutputWriter.DisplayExeption(ExceptionMessages.InexistingCourseInDataBase);
                 }
+
+                return false;
             }
             else
             {
