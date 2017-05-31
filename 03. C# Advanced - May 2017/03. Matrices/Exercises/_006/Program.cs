@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _006
+﻿namespace _006
 {
+    using System;
+    using System.Linq;
+
     class Program
     {
         static void Main()
@@ -38,7 +35,7 @@ namespace _006
             {
                 for (int j = 0; j < matrix[i].Length; j++)
                 {
-                    Console.Write(matrix[i][j] + " ");
+                    Console.Write(matrix[i][j]);
                 }
 
                 Console.WriteLine();

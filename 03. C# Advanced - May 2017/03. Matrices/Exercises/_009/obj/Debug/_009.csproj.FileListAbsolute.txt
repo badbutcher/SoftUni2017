@@ -1,0 +1,5 @@
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\03. Matrices\Exercises\_009\bin\Debug\_009.exe.config
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\03. Matrices\Exercises\_009\bin\Debug\_009.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\03. Matrices\Exercises\_009\bin\Debug\_009.pdb
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\03. Matrices\Exercises\_009\obj\Debug\_009.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\03. Matrices\Exercises\_009\obj\Debug\_009.pdb

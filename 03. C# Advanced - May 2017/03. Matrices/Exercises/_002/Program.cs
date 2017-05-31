@@ -15,7 +15,7 @@
 
             for (int i = 0; i < matrix.Length; i++)
             {
-                matrix[i] = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                matrix[i] = Console.ReadLine().Trim().Split().Select(int.Parse).ToArray();
             }
 
             for (int row = 0; row < matrix.Length; row++)
