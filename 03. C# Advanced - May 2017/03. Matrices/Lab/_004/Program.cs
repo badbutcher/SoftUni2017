@@ -17,15 +17,15 @@
                 matrix[i][matrix[i].Length - 1] = 1;
             }
 
-            for (int i = 0; i < n-1; i++)
+            for (int i = 0; i < n - 1; i++)
             {
                 if (i >= 1)
                 {
-                    for (int j = 0; j < matrix[i].Length-1; j++)
+                    for (int j = 0; j < matrix[i].Length - 1; j++)
                     {
                         long left = matrix[i][j];
                         long right = matrix[i][j + 1];
-                        matrix[i + 1][j+1] = left + right;
+                        matrix[i + 1][j + 1] = left + right;
                     }
                 }
             }
