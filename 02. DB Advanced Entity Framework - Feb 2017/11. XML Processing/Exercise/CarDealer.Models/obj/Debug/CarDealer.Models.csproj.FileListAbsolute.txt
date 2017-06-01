@@ -1,5 +1,0 @@
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.Models\bin\Debug\CarDealer.Models.dll
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.Models\bin\Debug\CarDealer.Models.pdb
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.Models\obj\Debug\CarDealer.Models.csprojResolveAssemblyReference.cache
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.Models\obj\Debug\CarDealer.Models.dll
-D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\11. XML Processing\Exercise\CarDealer.Models\obj\Debug\CarDealer.Models.pdb

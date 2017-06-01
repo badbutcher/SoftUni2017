@@ -1,12 +1,13 @@
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_03.ImportXml.exe.config
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_03.ImportXml.exe
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_03.ImportXml.pdb
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.dll
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.SqlServer.dll
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_01.CodeFirst.exe
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_01.CodeFirst.pdb
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.xml
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.SqlServer.xml
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\obj\Debug\_03. ImportXml.csprojResolveAssemblyReference.cache
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\obj\Debug\_03.ImportXml.exe
-C:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\obj\Debug\_03.ImportXml.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_03.ImportXml.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_03.ImportXml.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_03.ImportXml.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_01.CodeFirst.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_01.CodeFirst.pdb
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\_01.CodeFirst.exe.config
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\obj\Debug\_03. ImportXml.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\obj\Debug\_03.ImportXml.exe
+D:\GitHub\SoftUni2017\02. DB Advanced Entity Framework - Feb 2017\100. Exam\Exam\_03. ImportXml\obj\Debug\_03.ImportXml.pdb
