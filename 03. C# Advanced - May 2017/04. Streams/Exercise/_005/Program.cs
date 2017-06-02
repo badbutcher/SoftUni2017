@@ -12,7 +12,7 @@ namespace _005
         static void Main()
         {
             string sourceFile = "../../image.jpg";
-            string destinationDirectory = "../../clone.jpg";
+            string destinationDirectory = "../../clone {0}.jpg";
             int parts = 5;
 
             Slice(sourceFile, destinationDirectory, parts);
@@ -21,17 +21,19 @@ namespace _005
         private static void Slice(string sourceFile, string destinationDirectory, int parts)
         {
             int counter = 1;
-
-            using (FileStream file = new FileStream(sourceFile, FileMode.Open))
+            for (int i = 0; i < parts; i++)
             {
-                for (int i = 0; i < parts; i++)
+                using (FileStream file = new FileStream(sourceFile, FileMode.Open))
                 {
-                    using (FileStream clone = new FileStream(destinationDirectory, FileMode.Create))
+                    string format = string.Format(destinationDirectory, counter);
+
+                    using (FileStream clone = new FileStream(format, FileMode.Create))
                     {
+                        counter++;
                         byte[] buffer = new byte[4096];
+
                         while (true)
                         {
-
                             int read = file.Read(buffer, 0, buffer.Length);
                             if (read == 0)
                             {
