@@ -69,6 +69,31 @@
                     }
                 }
             }
+
+            //while (true)
+            //{
+            //    bool hasFallen = false;
+
+            //    for (int row = 1; row < matrix.Length; row++)
+            //    {
+            //        for (int col = 0; col < matrix[row].Length; col++)
+            //        {
+            //            char topChar = matrix[row - 1][col];
+            //            char currentChar = matrix[row][col];
+            //            if (currentChar == ' ' && topChar != ' ')
+            //            {
+            //                matrix[row][col] = topChar;
+            //                matrix[row - 1][col] = ' ';
+            //                hasFallen = true;
+            //            }
+            //        }
+            //    }
+
+            //    if (!hasFallen)
+            //    {
+            //        break;
+            //    }
+            //}
         }
 
         private static void CleanMatrix(int[] bombInfo, char[][] matrix)
@@ -108,21 +133,34 @@
         {
             int textCount = 0;
 
+            bool leftDirection = true;
             for (int row = matrix.Length - 1; row >= 0; row--)
             {
-                if (row % 2 == 0)
+                if (leftDirection)
                 {
                     for (int col = matrix[row].Length - 1; col >= 0; col--)
                     {
                         matrix[row][col] = text[textCount++];
+                        if (textCount == text.Length)
+                        {
+                            textCount = 0;
+                        }
                     }
+
+                    leftDirection = false;
                 }
                 else
                 {
                     for (int col = 0; col < matrix[row].Length; col++)
                     {
                         matrix[row][col] = text[textCount++];
+                        if (textCount == text.Length)
+                        {
+                            textCount = 0;
+                        }
                     }
+
+                    leftDirection = true;
                 }
             }
         }
