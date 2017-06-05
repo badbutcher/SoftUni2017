@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _012
+﻿namespace _012
 {
+    using System;
+    using System.Collections.Generic;
+
     class Program
     {
         static void Main()
         {
             string[] rotate = Console.ReadLine().Split(new char[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
             Queue<string> texts = new Queue<string>();
-            int textCount = 0;
+            int longestWord = 0;
             while (true)
             {
                 string text = Console.ReadLine();
@@ -22,33 +19,54 @@ namespace _012
                 }
                 else
                 {
+                    if (text.Length > longestWord)
+                    {
+                        longestWord = text.Length;
+                    }
+
                     texts.Enqueue(text);
-                    textCount++;
                 }
             }
 
             char[][] matrix = new char[texts.Count][];
-            string longestWord = texts.Max();
             for (int i = 0; i < matrix.Length; i++)
             {
-                matrix[i] = new char[texts.Peek().Length];
+                matrix[i] = new char[longestWord];
                 string word = texts.Dequeue();
-                for (int j = 0; j < word.Length; j++)
+                for (int j = 0; j < matrix[i].Length; j++)
                 {
-                    matrix[i][j] = word[j];
+                    if (j < word.Length)
+                    {
+                        matrix[i][j] = word[j];
+                    }
+                    else
+                    {
+                        matrix[i][j] = ' ';
+                    }
                 }
             }
 
             int rotateNumber = Math.Abs(int.Parse(rotate[1]));
-
-            if (rotateNumber % 360 == 0 || rotateNumber == 0)
+            int rotations = (rotateNumber % 360) / 90;
+            if (rotations == 1)
             {
-                foreach (var item in matrix)
+                char[][] finalMatrix = new char[matrix[0].Length][];
+
+                for (int row = 0; row < finalMatrix.Length; row++)
                 {
-                    Console.WriteLine(item);
+                    finalMatrix[row] = new char[matrix.Length];
+                    for (int col = 0; col < finalMatrix[row].Length; col++)
+                    {
+                        finalMatrix[row][col] = matrix[matrix.Length - 1 - col][row];
+                    }
+                }
+
+                foreach (var row in finalMatrix)
+                {
+                    Console.WriteLine(row);
                 }
             }
-            else if (rotateNumber % 180 == 0)
+            else if (rotations == 2)
             {
                 for (int i = matrix.Length - 1; i >= 0; i--)
                 {
@@ -56,27 +74,31 @@ namespace _012
                     Console.WriteLine(matrix[i]);
                 }
             }
-            else if (rotateNumber % 270 == 0)
+            else if (rotations == 3)
             {
-                Console.WriteLine(270);
-            }
-            else if (rotateNumber % 90 == 0)
-            {
-                char[][] newMatrix = new char[longestWord.Length][];
-                for (int i = 0; i < newMatrix.Length; i++)
-                {
-                    newMatrix[i] = new char[matrix.Length];
-                }
+                char[][] finalMatrix = new char[matrix[0].Length][];
 
-                for (int row = 0; row < newMatrix.Length; row++)
+                for (int row = 0; row < finalMatrix.Length; row++)
                 {
-                    for (int col = 0; col < matrix.Length; col++)
+                    finalMatrix[row] = new char[matrix.Length];
+                    for (int col = 0; col < finalMatrix[row].Length; col++)
                     {
-                        newMatrix[row][col] = matrix[col][row];
-                        Console.WriteLine(matrix[row][col]);
+                        finalMatrix[row][col] = matrix[col][matrix[col].Length - 1 - row];
                     }
                 }
-            }   
+
+                foreach (var row in finalMatrix)
+                {
+                    Console.WriteLine(row);
+                }
+            }
+            else
+            {
+                foreach (var item in matrix)
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
     }
 }

@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _005
+﻿namespace _005
 {
+    using System;
+    using System.IO;
+
     class Program
     {
         static void Main()
         {
-            string sourceFile = "../../image.jpg";
-            string destinationDirectory = "../../clone {0}.jpg";
+            string sourceFile = "../../text.txt";
+            string destinationDirectory = "../../clone {0}.txt";
             int parts = 5;
 
             Slice(sourceFile, destinationDirectory, parts);
@@ -21,26 +17,24 @@ namespace _005
         private static void Slice(string sourceFile, string destinationDirectory, int parts)
         {
             int counter = 1;
-            for (int i = 0; i < parts; i++)
+            var buffer = new byte[4096];
+            using (var fileReader = new FileStream(sourceFile, FileMode.Open))
             {
-                using (FileStream file = new FileStream(sourceFile, FileMode.Open))
+                long partSize = (long)Math.Ceiling((double)fileReader.Length / parts);
+
+                for (int i = 0; i < parts; i++)
                 {
                     string format = string.Format(destinationDirectory, counter);
-
-                    using (FileStream clone = new FileStream(format, FileMode.Create))
+                    using (var fileWriter = new FileStream(format, FileMode.Create))
                     {
                         counter++;
-                        byte[] buffer = new byte[4096];
+                        int number = fileReader.Read(buffer, 0, buffer.Length);
 
-                        while (true)
+                        while (number != 0 && fileWriter.Length <= partSize)
                         {
-                            int read = file.Read(buffer, 0, buffer.Length);
-                            if (read == 0)
-                            {
-                                break;
-                            }
+                            fileWriter.Write(buffer, 0, number);
 
-                            clone.Write(buffer, 0, read);
+                            number = fileReader.Read(buffer, 0, buffer.Length);
                         }
                     }
                 }
