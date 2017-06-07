@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _001
+﻿namespace _001
 {
+    using System;
+    using System.Linq;
+
     class Program
     {
         static void Main()
         {
+            char[] text = Console.ReadLine().ToArray();
+            Array.Reverse(text);
+            Console.WriteLine(text);
         }
     }
 }
