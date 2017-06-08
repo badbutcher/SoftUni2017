@@ -1,0 +1,5 @@
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Lab\_002\bin\Debug\_002.exe.config
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Lab\_002\bin\Debug\_002.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Lab\_002\bin\Debug\_002.pdb
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Lab\_002\obj\Debug\_002.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Lab\_002\obj\Debug\_002.pdb
