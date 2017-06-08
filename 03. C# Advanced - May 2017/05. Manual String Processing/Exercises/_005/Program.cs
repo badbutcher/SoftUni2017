@@ -24,7 +24,7 @@
             Console.WriteLine(result);
         }
 
-        public static string Reverse(string s)
+        private static string Reverse(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);

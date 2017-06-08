@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _011
+﻿namespace _011
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class Program
     {
         static void Main()
@@ -22,7 +20,7 @@ namespace _011
             }
 
             var res = result.OrderBy(x => x).Distinct();
-            Console.WriteLine(string.Join(", ", res));
+            Console.WriteLine("[" + string.Join(", ", res) + "]");
         }
     }
 }

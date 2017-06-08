@@ -51,7 +51,7 @@
             Console.WriteLine(Reverse(result).TrimStart('0'));
         }
 
-        public static string Reverse(string s)
+        private static string Reverse(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);

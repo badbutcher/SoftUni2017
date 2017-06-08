@@ -25,13 +25,12 @@
 
                 if (currentWord.Length > word.Length)
                 {
-                    currentWord = "";
+                    currentWord = string.Empty;
                     i -= word.Length;
                 }
             }
 
             Console.WriteLine(counter);
-
 
             //string text = Console.ReadLine();
             //string searchString = Console.ReadLine();

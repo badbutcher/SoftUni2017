@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _016
+﻿namespace _016
 {
+    using System;
+    using System.Text;
+
     class Program
     {
         static void Main()
@@ -46,14 +43,14 @@ namespace _016
 
                 int hrefIndex = aTag.IndexOf(hrefTag);
                 string word = string.Empty;
-                
+
                 for (int i = hrefIndex; i < aTag.Length; i++)
                 {
                     word += aTag[i];
                 }
 
                 Console.WriteLine(word);
-                word = word.Substring(word.IndexOf(hrefTag)+5);
+                word = word.Substring(word.IndexOf(hrefTag) + 5);
                 word = word.Trim(new char[] { ' ', '=' });
                 char tagToRemove = word[0];
                 if (tagToRemove == '\"')
@@ -86,17 +83,6 @@ namespace _016
                 }
                 else
                 {
-                    //int nextTag = 0;
-                    //for (int i = 0; i < word.Length; i++)
-                    //{
-                    //    if (word[i] == ' ')
-                    //    {
-                    //        nextTag = word.IndexOf(word[i]);
-                    //        break;
-                    //    }
-                    //}
-
-
                     word = word.Substring(word.IndexOf(hrefTag));
                 }
             }
