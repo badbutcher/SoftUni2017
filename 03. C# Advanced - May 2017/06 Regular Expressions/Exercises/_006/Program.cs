@@ -9,8 +9,7 @@
         {
             string word = Console.ReadLine();
             string text = Console.ReadLine();
-            string pattern = string.Format(@"\s*(.*?\b{0}\b.*?[.!?])", word);
-            //string pattern = @"[A-Z][a-z\s]+[^\!\.\?]+[\!\.\?]";
+            string pattern = string.Format(@"[^!?.]*?\b{0}.*?[.!?]", word);
 
             Regex regex = new Regex(pattern);
             MatchCollection matches = regex.Matches(text);

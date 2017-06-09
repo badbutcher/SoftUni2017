@@ -1,15 +1,16 @@
 ﻿namespace _004
 {
     using System;
+    using System.Text;
     using System.Text.RegularExpressions;
 
     class Program
     {
         static void Main()
         {
-            string pattern = @"(<a href=)(.*)(<\/a>)";
+            string pattern = @"<a (href=.+?)>(.*)<\/a>";
             Regex regex = new Regex(pattern);
-
+            StringBuilder sb = new StringBuilder();
             while (true)
             {
                 string input = Console.ReadLine();
@@ -23,15 +24,16 @@
                     Match match = regex.Match(input);
                     if (match.Success)
                     {
-                        string href = match.Groups[2].Value.Replace('>', ']');
-                        Console.WriteLine("[URL href={0}[/URL]", href);
+                        sb.AppendFormat("[URL href={0}]{1}[/URL]", match.Groups[1], match.Groups[2]).Append(Environment.NewLine);
                     }
                     else
                     {
-                        Console.WriteLine(input);
+                        sb.AppendLine(input.Trim());
                     }
                 }
             }
+
+            Console.WriteLine(sb);
         }
     }
 }
