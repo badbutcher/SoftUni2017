@@ -7,7 +7,7 @@
     {
         static void Main()
         {
-            string pattern = @"^(\d{2}\:\d{2}\:\d{2}\s[AM]+|[PM]+)$";
+            string pattern = @"^([01][0-9]):([012345][0-9]):([012345][0-9]) [AP]M$";
             Regex regex = new Regex(pattern);
 
             while (true)
