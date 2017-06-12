@@ -20,7 +20,7 @@
             Console.WriteLine();
         }
 
-        public static void DisplayExeption(string message)
+        public static void DisplayException(string message)
         {
             ConsoleColor currentColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;

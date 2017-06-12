@@ -9,3 +9,4 @@ C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Exercise
 C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Exercises\_004\obj\Debug\_004.exe
 C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Exercises\_004\obj\Debug\_004.pdb
 C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Exercises\_004\obj\Debug\_004.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\06 Regular Expressions\Exercises\_004\obj\Debug\_004.csprojResolveAssemblyReference.cache

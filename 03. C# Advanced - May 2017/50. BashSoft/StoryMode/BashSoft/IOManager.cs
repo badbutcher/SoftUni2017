@@ -35,7 +35,7 @@
                 }
                 catch (UnauthorizedAccessException)
                 {
-                    OutputWriter.DisplayExeption(ExceptionMessages.UnauthorizedAccessExeptionMessage);
+                    OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExeptionMessage);
                 }
 
                 if (depth - identation < 0)
@@ -54,7 +54,7 @@
             }
             catch (ArgumentException)
             {
-                OutputWriter.DisplayExeption(ExceptionMessages.ForbiddenSymbolsContainedInName);
+                OutputWriter.DisplayException(ExceptionMessages.ForbiddenSymbolsContainedInName);
             }
         }
 
@@ -71,7 +71,7 @@
                 }
                 catch (ArgumentOutOfRangeException)
                 {
-                    OutputWriter.DisplayExeption(ExceptionMessages.UnauthorizedAccessExeptionMessage);
+                    OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExeptionMessage);
                 }
             }
             else
@@ -86,7 +86,7 @@
         {
             if (!Directory.Exists(absolutePath))
             {
-                OutputWriter.DisplayExeption(ExceptionMessages.InvalidPath);
+                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
                 return;
             }
 

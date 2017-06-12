@@ -4,18 +4,7 @@
     {
         static void Main()
         {
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
-            IOManager.ChangeCurrentDirectoryRelative("..");
+            InputReader.StartReadingCommands();
         }
     }
 }

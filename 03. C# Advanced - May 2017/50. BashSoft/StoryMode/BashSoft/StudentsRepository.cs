@@ -2,49 +2,68 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
+    using System.Text.RegularExpressions;
 
     public static class StudentsRepository
     {
         public static bool isDataInitialized = false;
         private static Dictionary<string, Dictionary<string, List<int>>> studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
 
-        public static void InitializeData()
+        public static void InitializeData(string fileName)
         {
             if (!isDataInitialized)
             {
                 OutputWriter.WriteMessageOnNewLine("Reading data...");
                 studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
-                ReadData();
+                ReadData(fileName);
             }
             else
             {
-                OutputWriter.DisplayExeption(ExceptionMessages.DataAlreadyInitialisedException);
+                OutputWriter.DisplayException(ExceptionMessages.DataAlreadyInitialisedException);
             }
         }
 
-        private static void ReadData()
+        private static void ReadData(string fileName)
         {
-            string input = Console.ReadLine();
+            string path = SessionData.currentPath + "\\" + fileName;
 
-            while (!string.IsNullOrEmpty(input))
+            if (File.Exists(path))
             {
-                string[] token = input.Split(' ');
-                string course = token[0];
-                string student = token[1];
-                int mark = int.Parse(token[2]);
+                string pattern = @"([A-Z][A-Za-z+#]*_[A-Z][a-z]{2}_\d{4})\s+([A-Z][a-z]{0,3}\d{2}_\d{2,4})\s+(\d+)";
+                Regex rgx = new Regex(pattern);
+                string[] allInputLines = File.ReadAllLines(path);
 
-                if (!studentsByCourse.ContainsKey(course))
+                for (int line = 0; line < allInputLines.Length; line++)
                 {
-                    studentsByCourse.Add(course, new Dictionary<string, List<int>>());
-                }
+                    if (!string.IsNullOrEmpty(allInputLines[line]) && rgx.IsMatch(allInputLines[line]))
+                    {
+                        Match currentMatch = rgx.Match(allInputLines[line]);
+                        string courseName = currentMatch.Groups[1].Value;
+                        string username = currentMatch.Groups[2].Value;
+                        int studentScoreOnTask;
+                        bool hasParsedScore = int.TryParse(currentMatch.Groups[3].Value, out studentScoreOnTask);
 
-                if (!studentsByCourse[course].ContainsKey(student))
-                {
-                    studentsByCourse[course].Add(student, new List<int>());
-                }
+                        if (hasParsedScore && studentScoreOnTask >= 0 && studentScoreOnTask <= 100)
+                        {
+                            if (!studentsByCourse.ContainsKey(courseName))
+                            {
+                                studentsByCourse.Add(courseName, new Dictionary<string, List<int>>());
+                            }
 
-                studentsByCourse[course][student].Add(mark);
-                input = Console.ReadLine();
+                            if (!studentsByCourse[courseName].ContainsKey(username))
+                            {
+                                studentsByCourse[courseName].Add(username, new List<int>());
+                            }
+
+                            studentsByCourse[courseName][username].Add(studentScoreOnTask);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
             }
 
             Console.WriteLine(studentsByCourse.Count);
@@ -62,16 +81,16 @@
                 }
                 else
                 {
-                    OutputWriter.DisplayExeption(ExceptionMessages.InexistingCourseInDataBase);
+                    OutputWriter.DisplayException(ExceptionMessages.InexistingCourseInDataBase);
                 }
 
                 return false;
             }
             else
             {
-                OutputWriter.DisplayExeption(ExceptionMessages.DataNotInitializedExceptionMessage);
+                OutputWriter.DisplayException(ExceptionMessages.DataNotInitializedExceptionMessage);
             }
-           
+
             return false;
         }
 
@@ -83,7 +102,7 @@
             }
             else
             {
-                OutputWriter.DisplayExeption(ExceptionMessages.InexistingStudentInDataBase);
+                OutputWriter.DisplayException(ExceptionMessages.InexistingStudentInDataBase);
             }
 
             return false;

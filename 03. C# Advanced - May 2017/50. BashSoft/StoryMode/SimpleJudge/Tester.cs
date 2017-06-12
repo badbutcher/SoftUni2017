@@ -24,7 +24,7 @@
             }
             catch (FileNotFoundException)
             {
-                OutputWriter.DisplayExeption(ExceptionMessages.InvalidPath);
+                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
             }
         }
 
@@ -43,7 +43,7 @@
                 }
                 catch (DirectoryNotFoundException)
                 {
-                    OutputWriter.DisplayExeption(ExceptionMessages.InvalidPath);
+                    OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
                 }
 
                 return;
@@ -62,7 +62,7 @@
             {
                 hasMismatch = true;
                 minOutputLines = Math.Min(actualOutputLines.Length, expectedOutputLines.Length);
-                OutputWriter.DisplayExeption(ExceptionMessages.ComparisonOfFilesWithDifferentSizes);
+                OutputWriter.DisplayException(ExceptionMessages.ComparisonOfFilesWithDifferentSizes);
             }
 
             string[] mismarches = new string[minOutputLines];

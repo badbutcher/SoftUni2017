@@ -8,7 +8,7 @@
     {
         static void Main()
         {
-            string pattern = @"<a (href=.+?)>(.*)<\/a>";
+            string pattern = @"<a (href=.+?)>(.+)<\/a>";
             Regex regex = new Regex(pattern);
             StringBuilder sb = new StringBuilder();
             while (true)
@@ -21,19 +21,13 @@
                 }
                 else
                 {
-                    Match match = regex.Match(input);
-                    if (match.Success)
-                    {
-                        sb.AppendFormat("[URL href={0}]{1}[/URL]", match.Groups[1], match.Groups[2]).Append(Environment.NewLine);
-                    }
-                    else
-                    {
-                        sb.AppendLine(input.Trim());
-                    }
+                    sb.AppendLine(input);
                 }
             }
 
-            Console.WriteLine(sb);
+            var result = Regex.Replace(sb.ToString(), pattern, w => $"[URL {w.Groups[1]}]{w.Groups[2]}[/URL]");
+
+            Console.WriteLine(result);
         }
     }
 }
