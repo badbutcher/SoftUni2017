@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _002
+﻿namespace _002
 {
+    using System;
+    using System.Linq;
+
     class Program
     {
         static void Main()
         {
+            int[] input = Console.ReadLine().Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            Console.WriteLine(input.Count());
+            Console.WriteLine(input.Sum());
         }
     }
 }

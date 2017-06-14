@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _001
+﻿namespace _001
 {
+    using System;
+
     class Program
     {
         static void Main()
         {
+            string[] input = Console.ReadLine().Split();
+
+            Action<string> print = a => Console.WriteLine(a);
+
+            foreach (var item in input)
+            {
+                print(item);
+            }
         }
     }
 }
