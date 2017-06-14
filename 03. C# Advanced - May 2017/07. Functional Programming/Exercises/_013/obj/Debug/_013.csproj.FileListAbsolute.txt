@@ -1,0 +1,5 @@
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_013\bin\Debug\_013.exe.config
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_013\bin\Debug\_013.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_013\bin\Debug\_013.pdb
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_013\obj\Debug\_013.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_013\obj\Debug\_013.pdb

@@ -3,3 +3,8 @@ D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exer
 D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\bin\Debug\_004.pdb
 D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\obj\Debug\_004.exe
 D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\obj\Debug\_004.pdb
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\bin\Debug\_004.exe.config
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\bin\Debug\_004.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\bin\Debug\_004.pdb
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\obj\Debug\_004.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\07. Functional Programming\Exercises\_004\obj\Debug\_004.pdb
