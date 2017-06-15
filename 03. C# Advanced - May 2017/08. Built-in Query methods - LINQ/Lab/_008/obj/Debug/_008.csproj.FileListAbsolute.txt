@@ -1,0 +1,5 @@
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Lab\_008\bin\Debug\_008.exe.config
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Lab\_008\bin\Debug\_008.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Lab\_008\bin\Debug\_008.pdb
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Lab\_008\obj\Debug\_008.exe
+C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Lab\_008\obj\Debug\_008.pdb
