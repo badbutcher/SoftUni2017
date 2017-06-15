@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _011
+﻿namespace _011
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class Program
     {
         static void Main()
@@ -31,14 +29,18 @@ namespace _011
                     if (addOrRemove == "Remove filter")
                     {
                         Func<List<string>, string, string, List<string>> remove = RemovePersone;
-                        //peopleToRemove.Remove(remove(people, commandType, critaria));
+                        var res = (remove(people, commandType, critaria));
+
+                        foreach (var item in res)
+                        {
+                            peopleToRemove.Remove(item);
+                        }
                     }
                     else if (addOrRemove == "Add filter")
                     {
                         Func<List<string>, string, string, List<string>> add = AddPeople;
                         peopleToRemove.AddRange(add(people, commandType, critaria));
                     }
-                    hgj
                 }
             }
 
@@ -107,7 +109,7 @@ namespace _011
             {
                 foreach (var item in people)
                 {
-                    if (!item.StartsWith(critaria))
+                    if (item.StartsWith(critaria))
                     {
                         result.Add(item);
                     }
@@ -117,7 +119,7 @@ namespace _011
             {
                 foreach (var item in people)
                 {
-                    if (item.Length != int.Parse(critaria))
+                    if (item.Length == int.Parse(critaria))
                     {
                         result.Add(item);
                     }
@@ -127,7 +129,7 @@ namespace _011
             {
                 foreach (var item in people)
                 {
-                    if (!item.EndsWith(critaria))
+                    if (item.EndsWith(critaria))
                     {
                         result.Add(item);
                     }
@@ -137,7 +139,7 @@ namespace _011
             {
                 foreach (var item in people)
                 {
-                    if (!item.Contains(critaria))
+                    if (item.Contains(critaria))
                     {
                         result.Add(item);
                     }
