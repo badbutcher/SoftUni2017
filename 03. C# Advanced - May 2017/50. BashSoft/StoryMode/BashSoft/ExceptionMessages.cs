@@ -11,5 +11,8 @@
         public const string UnauthorizedAccessExeptionMessage = "The folder/file you are trying to get access needs a higher level of rights than you currently have.";
         public const string ComparisonOfFilesWithDifferentSizes = "Files not of equal size, certain mismatch.";
         public const string ForbiddenSymbolsContainedInName = "The given name contains symbols that are not allowed to be used in names of files and folders.";
+        public const string InvalidStudentFilter = "The given filter is not one of the following: excellent/average/poor";
+        public const string InvalidComparisonQuery = "The comparison query you want, does not exist in the context of the current program!";
+        public const string InvalidTakeQuantityParameter = "The take command expected does not match the format wanted!";
     }
 }

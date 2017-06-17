@@ -12,22 +12,22 @@
             string type = Console.ReadLine().Trim().ToLower();
             Predicate<string> typeCheck = x => x == "odd";
 
-            Predicate<int> numbers;
+            Predicate<int> check;
 
             if (typeCheck(type))
             {
-                numbers = x => x % 2 == 1;
+                check = x => x % 2 == 1;
             }
             else
             {
-                numbers = x => x % 2 == 0;
+                check = x => x % 2 == 0;
             }
 
             List<int> result = new List<int>();
 
             for (int i = input[0]; i <= input[1]; i++)
             {
-                if (numbers(i))
+                if (check(Math.Abs(i)))
                 {
                     result.Add(i);
                 }

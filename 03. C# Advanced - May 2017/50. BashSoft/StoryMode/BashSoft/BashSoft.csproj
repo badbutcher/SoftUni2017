@@ -49,6 +49,8 @@
     <Compile Include="Launcher.cs" />
     <Compile Include="OutputWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryFilters.cs" />
+    <Compile Include="RepositorySorters.cs" />
     <Compile Include="SessionData.cs" />
     <Compile Include="StudentsRepository.cs" />
     <Compile Include="Tester.cs" />

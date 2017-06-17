@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Exercises\_001\bin\Debug\_001.exe.config
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Exercises\_001\bin\Debug\_001.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Exercises\_001\bin\Debug\_001.pdb
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Exercises\_001\obj\Debug\_001.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Exercises\_001\obj\Debug\_001.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\08. Built-in Query methods - LINQ\Exercises\_001\obj\Debug\_001.pdb
