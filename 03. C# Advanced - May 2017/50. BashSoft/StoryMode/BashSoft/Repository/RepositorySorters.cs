@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     public static class RepositorySorters
     {
@@ -10,11 +11,15 @@
             comparison = comparison.ToLower();
             if (comparison == "ascending")
             {
-                OrderAndTake(wantedData, studentsToTake, CompareInOrder);
+                PrintStudents(wantedData.OrderBy(x => x.Value.Sum())
+                    .Take(studentsToTake)
+                    .ToDictionary(pair => pair.Key, pair => pair.Value));
             }
             else if (comparison == "descending")
             {
-                OrderAndTake(wantedData, studentsToTake, CompareDescendingOrder);
+                PrintStudents(wantedData.OrderByDescending(x => x.Value.Sum())
+                   .Take(studentsToTake)
+                   .ToDictionary(pair => pair.Key, pair => pair.Value));
             }
             else
             {
@@ -22,12 +27,11 @@
             }
         }
 
-        private static void OrderAndTake(Dictionary<string, List<int>> wantedData, int studentsToTake, Func<KeyValuePair<string, List<int>>, KeyValuePair<string, List<int>>, int> comparionFunc)
+        private static void PrintStudents(Dictionary<string, List<int>> studentsSorted)
         {
-            Dictionary<string, List<int>> studentsSorted = GetSortedStudents(wantedData, studentsToTake, comparionFunc);
-            foreach (var student in studentsSorted)
+            foreach (KeyValuePair<string, List<int>> keyValuePair in studentsSorted)
             {
-                OutputWriter.PrintStudent(student);
+                OutputWriter.PrintStudent(keyValuePair);
             }
         }
 

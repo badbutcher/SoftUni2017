@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 28 February 2016\Exam28February2016\_004Events\bin\Debug\_004Events.exe.config
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 28 February 2016\Exam28February2016\_004Events\bin\Debug\_004Events.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 28 February 2016\Exam28February2016\_004Events\bin\Debug\_004Events.pdb
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 28 February 2016\Exam28February2016\_004Events\obj\Debug\_004Events.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 28 February 2016\Exam28February2016\_004Events\obj\Debug\_004Events.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 28 February 2016\Exam28February2016\_004Events\obj\Debug\_004Events.pdb

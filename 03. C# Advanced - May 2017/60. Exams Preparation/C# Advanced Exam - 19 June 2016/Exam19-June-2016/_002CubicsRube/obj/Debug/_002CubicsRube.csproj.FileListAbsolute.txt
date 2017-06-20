@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam - 19 June 2016\Exam19-June-2016\_002CubicsRube\bin\Debug\_002CubicsRube.exe.config
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam - 19 June 2016\Exam19-June-2016\_002CubicsRube\bin\Debug\_002CubicsRube.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam - 19 June 2016\Exam19-June-2016\_002CubicsRube\bin\Debug\_002CubicsRube.pdb
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam - 19 June 2016\Exam19-June-2016\_002CubicsRube\obj\Debug\_002CubicsRube.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam - 19 June 2016\Exam19-June-2016\_002CubicsRube\obj\Debug\_002CubicsRube.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam - 19 June 2016\Exam19-June-2016\_002CubicsRube\obj\Debug\_002CubicsRube.pdb

@@ -1,6 +1,5 @@
 ﻿namespace BashSoft
 {
-    using System;
     using System.Diagnostics;
 
     public static class CommandInterpreter

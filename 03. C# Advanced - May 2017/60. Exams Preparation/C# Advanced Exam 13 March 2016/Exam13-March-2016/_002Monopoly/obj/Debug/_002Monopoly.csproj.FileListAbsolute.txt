@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_002Monopoly\bin\Debug\_002Monopoly.exe.config
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_002Monopoly\bin\Debug\_002Monopoly.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_002Monopoly\bin\Debug\_002Monopoly.pdb
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_002Monopoly\obj\Debug\_002Monopoly.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_002Monopoly\obj\Debug\_002Monopoly.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_002Monopoly\obj\Debug\_002Monopoly.pdb

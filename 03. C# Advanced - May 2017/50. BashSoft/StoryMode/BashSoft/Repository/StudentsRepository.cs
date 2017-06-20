@@ -24,6 +24,52 @@
             }
         }
 
+        public static void GetStudentScoreFromCourse(string courseName, string username)
+        {
+            if (IsQueryForStudentPossiblе(courseName, username))
+            {
+                OutputWriter.PrintStudent(new KeyValuePair<string, List<int>>(username, studentsByCourse[courseName][username]));
+            }
+        }
+
+        public static void GetAllStudentsFromCourse(string courseName)
+        {
+            if (IsQueryForCoursePossible(courseName))
+            {
+                OutputWriter.WriteMessageOnNewLine($"{courseName}.");
+                foreach (var studentMarksEntry in studentsByCourse[courseName])
+                {
+                    OutputWriter.PrintStudent(studentMarksEntry);
+                }
+            }
+        }
+
+        public static void FilterAndTake(string courseName, string givenFilter, int? studentsToTake = null)
+        {
+            if (IsQueryForCoursePossible(courseName))
+            {
+                if (studentsToTake == null)
+                {
+                    studentsToTake = studentsByCourse[courseName].Count;
+                }
+
+                RepositoryFilters.FilterAndTake(studentsByCourse[courseName], givenFilter, studentsToTake.Value);
+            }
+        }
+
+        public static void OrderAndTake(string courseName, string comparison, int? studentsToTake = null)
+        {
+            if (IsQueryForCoursePossible(courseName))
+            {
+                if (studentsToTake == null)
+                {
+                    studentsToTake = studentsByCourse[courseName].Count;
+                }
+
+                RepositorySorters.OrderAndTake(studentsByCourse[courseName], comparison, studentsToTake.Value);
+            }
+        }
+
         private static void ReadData(string fileName)
         {
             string path = SessionData.currentPath + "\\" + fileName;
@@ -106,52 +152,6 @@
             }
 
             return false;
-        }
-
-        public static void GetStudentScoreFromCourse(string courseName, string username)
-        {
-            if (IsQueryForStudentPossiblе(courseName, username))
-            {
-                OutputWriter.PrintStudent(new KeyValuePair<string, List<int>>(username, studentsByCourse[courseName][username]));
-            }
-        }
-
-        public static void GetAllStudentsFromCourse(string courseName)
-        {
-            if (IsQueryForCoursePossible(courseName))
-            {
-                OutputWriter.WriteMessageOnNewLine($"{courseName}.");
-                foreach (var studentMarksEntry in studentsByCourse[courseName])
-                {
-                    OutputWriter.PrintStudent(studentMarksEntry);
-                }
-            }
-        }
-
-        public static void FilterAndTake(string courseName, string givenFilter, int? studentsToTake = null)
-        {
-            if (IsQueryForCoursePossible(courseName))
-            {
-                if (studentsToTake == null)
-                {
-                    studentsToTake = studentsByCourse[courseName].Count;
-                }
-
-                RepositoryFilters.FilterAndTake(studentsByCourse[courseName], givenFilter, studentsToTake.Value);
-            }
-        }
-
-        public static void OrderAndTake(string courseName, string comparison, int? studentsToTake = null)
-        {
-            if (IsQueryForCoursePossible(courseName))
-            {
-                if (studentsToTake == null)
-                {
-                    studentsToTake = studentsByCourse[courseName].Count;
-                }
-
-                RepositorySorters.OrderAndTake(studentsByCourse[courseName], comparison, studentsToTake.Value);
-            }
         }
     }
 }
