@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Retake Exam - 22 August 2016\Exam22August2016\_004AshesofRoses\bin\Debug\_004AshesofRoses.exe.config
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Retake Exam - 22 August 2016\Exam22August2016\_004AshesofRoses\bin\Debug\_004AshesofRoses.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Retake Exam - 22 August 2016\Exam22August2016\_004AshesofRoses\bin\Debug\_004AshesofRoses.pdb
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Retake Exam - 22 August 2016\Exam22August2016\_004AshesofRoses\obj\Debug\_004AshesofRoses.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Retake Exam - 22 August 2016\Exam22August2016\_004AshesofRoses\obj\Debug\_004AshesofRoses.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Retake Exam - 22 August 2016\Exam22August2016\_004AshesofRoses\obj\Debug\_004AshesofRoses.pdb

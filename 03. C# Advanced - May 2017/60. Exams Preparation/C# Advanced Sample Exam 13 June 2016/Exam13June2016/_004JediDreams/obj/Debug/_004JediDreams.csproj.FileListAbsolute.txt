@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Sample Exam 13 June 2016\Exam13June2016\_004JediDreams\bin\Debug\_004JediDreams.exe.config
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Sample Exam 13 June 2016\Exam13June2016\_004JediDreams\bin\Debug\_004JediDreams.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Sample Exam 13 June 2016\Exam13June2016\_004JediDreams\bin\Debug\_004JediDreams.pdb
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Sample Exam 13 June 2016\Exam13June2016\_004JediDreams\obj\Debug\_004JediDreams.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Sample Exam 13 June 2016\Exam13June2016\_004JediDreams\obj\Debug\_004JediDreams.exe
+D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Sample Exam 13 June 2016\Exam13June2016\_004JediDreams\obj\Debug\_004JediDreams.pdb
