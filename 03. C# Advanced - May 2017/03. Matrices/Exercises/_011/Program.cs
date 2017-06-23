@@ -42,7 +42,6 @@
                             isParked = true;
                             break;
                         }
-
                     }
 
                     if (!isParked)
@@ -90,7 +89,6 @@
                                     matrix[carRow][carCol - leftDistance] = 1;
                                     Console.WriteLine(distance);
                                 }
-
                                 else
                                 {
                                     var distance = carCol + rightDistance + 1 + Math.Abs(enterRow - carRow);

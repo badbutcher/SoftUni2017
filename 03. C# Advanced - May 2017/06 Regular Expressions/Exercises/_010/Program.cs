@@ -37,7 +37,7 @@
                     {
                         text += (char)(item[i] - 13);
                     }
-                    else if (Char.IsDigit(item[i]) || Char.IsWhiteSpace(item[i]))
+                    else if (char.IsDigit(item[i]) || char.IsWhiteSpace(item[i]))
                     {
                         text += item[i];
                     }

@@ -51,8 +51,7 @@
                 matrix[maxRow + 1][maxCol + 2],
                 matrix[maxRow + 2][maxCol],
                 matrix[maxRow + 2][maxCol + 1],
-                matrix[maxRow + 2][maxCol + 2]
-                );
+                matrix[maxRow + 2][maxCol + 2]);
         }
     }
 }

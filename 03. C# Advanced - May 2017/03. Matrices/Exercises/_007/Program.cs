@@ -53,7 +53,6 @@
             }
             else
             {
-
                 Console.WriteLine("The total number of cells is: {0}", sum);
             }
         }

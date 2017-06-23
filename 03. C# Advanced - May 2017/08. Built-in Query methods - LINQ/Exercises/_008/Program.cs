@@ -25,7 +25,7 @@
                 }
             }
 
-            var sort = result.Where(a => a.Skip(2).Count(y=>int.Parse(y) <= 3) >= 2);
+            var sort = result.Where(a => a.Skip(2).Count(y => int.Parse(y) <= 3) >= 2);
 
             foreach (var item in sort)
             {

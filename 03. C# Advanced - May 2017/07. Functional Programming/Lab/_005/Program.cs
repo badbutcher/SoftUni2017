@@ -36,7 +36,7 @@
             }
         }
 
-        public static Func<int, bool> CreateTester(string condition, int age)
+        private static Func<int, bool> CreateTester(string condition, int age)
         {
             switch (condition)
             {
@@ -49,7 +49,7 @@
             }
         }
 
-        public static Action<KeyValuePair<string, int>> CreatePrinter(string format)
+        private static Action<KeyValuePair<string, int>> CreatePrinter(string format)
         {
             switch (format)
             {

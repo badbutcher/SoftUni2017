@@ -32,18 +32,18 @@
 
             Console.WriteLine(counter);
 
-            //string text = Console.ReadLine();
-            //string searchString = Console.ReadLine();
-            //int counter = 0;
-            //for (int i = 0; i < text.Length - searchString.Length; i++)
-            //{
-            //    if (text.Substring(i, searchString.Length).ToLower() == searchString.ToLower())
-            //    {
-            //        counter++;
-            //    }
-            //}
+            ////string text = Console.ReadLine();
+            ////string searchString = Console.ReadLine();
+            ////int counter = 0;
+            ////for (int i = 0; i < text.Length - searchString.Length; i++)
+            ////{
+            ////    if (text.Substring(i, searchString.Length).ToLower() == searchString.ToLower())
+            ////    {
+            ////        counter++;
+            ////    }
+            ////}
 
-            //Console.WriteLine(counter);
+            ////Console.WriteLine(counter);
         }
     }
 }

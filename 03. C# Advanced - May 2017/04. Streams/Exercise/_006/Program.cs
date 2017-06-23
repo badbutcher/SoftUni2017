@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _006
+﻿namespace _006
 {
+    using System;
+    using System.IO;
+    using System.IO.Compression;
+
     class Program
     {
         static void Main()
@@ -21,9 +17,7 @@ namespace _006
                 {
                     using (var compressStream = new GZipStream(writer, CompressionMode.Compress))
                     {
-
-                    }
-                    
+                    }                  
                 }
             }
         }

@@ -33,7 +33,7 @@
             Console.WriteLine($"Last is {result.Dequeue()}");
         }
 
-        public static bool IsPrime(int number)
+        private static bool IsPrime(int number)
         {
             if (number == 1)
             {

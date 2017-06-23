@@ -6,7 +6,7 @@
     {
         static void Main()
         {
-            using (FileStream file = new FileStream("../../image.jpg",FileMode.Open))
+            using (FileStream file = new FileStream("../../image.jpg", FileMode.Open))
             {
                 using (FileStream clone = new FileStream("../../clone.jpg", FileMode.Create))
                 {

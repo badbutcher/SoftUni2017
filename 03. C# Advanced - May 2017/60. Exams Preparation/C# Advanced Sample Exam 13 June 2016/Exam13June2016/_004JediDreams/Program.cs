@@ -11,22 +11,39 @@ namespace _004JediDreams
     {
         static void Main()
         {
-            string getMetodsPattern = @"static\s.*?\s(.*?)\((.*?)\)";
-            Regex regex = new Regex(getMetodsPattern);
+            //static\s+.+?\s+([a-zA-Z]*[A-Z]{1}[a-zA-Z]*)
+            //[A-Z]{1}[a-zA-Z]+\(
 
             int n = int.Parse(Console.ReadLine());
 
+            Dictionary<string, List<string>> methods = new Dictionary<string, List<string>>();
+
+            StringBuilder text = new StringBuilder();
+
             for (int i = 0; i < n; i++)
             {
-                string text = Console.ReadLine();
-                Match matchMetod = regex.Match(text);
-
-                if (matchMetod.Success)
-                {
-                    Console.WriteLine(matchMetod.Groups[1].Value);
-                    Console.WriteLine(matchMetod.Groups[2].Value);
-                }
+                string inputLine = Console.ReadLine();
+                text.Append(inputLine);
             }
+
+            Regex methodDeclarationPattern = new Regex(@"static\s+.+?\s+([a-zA-Z]*[A-Z]{1}[a-zA-Z]*)");
+            Regex methodCallPattern = new Regex(@"([A-Z]{1}[a-zA-Z]+)\(");
+
+            MatchCollection methodDeclarationMatches = methodDeclarationPattern.Matches(text.ToString());
+            MatchCollection methodCallMatches = methodCallPattern.Matches(text.ToString());
+
+            string parsedText = text.ToString();
+
+            for (int i = 0; i < methodDeclarationMatches.Count; i++)
+            {
+                string currentMethod = methodDeclarationMatches[i].Groups[1].Value;
+                string currentPartision = parsedText.Substring(parsedText.IndexOf(methodDeclarationMatches[i].Groups[0].Value)+methodDeclarationMatches[i].Groups[0].Value.Length, parsedText.IndexOf(methodDeclarationMatches[i+1].Groups[0].Value));
+            }
+
+
+
+
+
         }
     }
 }

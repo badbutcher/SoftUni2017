@@ -12,7 +12,7 @@
             string result = string.Empty;
 
             Regex regex = new Regex(pattern);
-            Console.WriteLine(Regex.Replace(input, pattern, "$1"));//Dolara zamenq grupata
+            Console.WriteLine(Regex.Replace(input, pattern, "$1")); ///Dolara zamenq grupata
         }
     }
 }
