@@ -1,6 +1,0 @@
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_004ChampionsLeague\bin\Debug\_004ChampionsLeague.exe.config
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_004ChampionsLeague\bin\Debug\_004ChampionsLeague.exe
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_004ChampionsLeague\bin\Debug\_004ChampionsLeague.pdb
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_004ChampionsLeague\obj\Debug\_004ChampionsLeague.exe
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_004ChampionsLeague\obj\Debug\_004ChampionsLeague.pdb
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\60. Exams Preparation\C# Advanced Exam 13 March 2016\Exam13-March-2016\_004ChampionsLeague\obj\Debug\_004ChampionsLeague.csprojResolveAssemblyReference.cache

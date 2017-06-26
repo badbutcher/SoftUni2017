@@ -1,5 +1,0 @@
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_014\bin\Debug\_014.exe.config
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_014\bin\Debug\_014.exe
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_014\bin\Debug\_014.pdb
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_014\obj\Debug\_014.exe
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_014\obj\Debug\_014.pdb

@@ -1,6 +1,0 @@
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_012\bin\Debug\_012.exe.config
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_012\bin\Debug\_012.exe
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_012\bin\Debug\_012.pdb
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_012\obj\Debug\_012.csprojResolveAssemblyReference.cache
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_012\obj\Debug\_012.exe
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\05. Manual String Processing\Exercises\_012\obj\Debug\_012.pdb

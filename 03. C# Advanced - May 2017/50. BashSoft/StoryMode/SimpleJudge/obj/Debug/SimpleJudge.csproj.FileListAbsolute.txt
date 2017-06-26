@@ -1,9 +1,0 @@
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\bin\Debug\SimpleJudge.exe.config
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\bin\Debug\SimpleJudge.exe
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\bin\Debug\SimpleJudge.pdb
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\bin\Debug\BashSoft.exe
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\bin\Debug\BashSoft.pdb
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\bin\Debug\BashSoft.exe.config
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\obj\Debug\SimpleJudge.csprojResolveAssemblyReference.cache
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\obj\Debug\SimpleJudge.exe
-D:\GitHub\SoftUni2017\03. C# Advanced - May 2017\50. BashSoft\StoryMode\SimpleJudge\obj\Debug\SimpleJudge.pdb

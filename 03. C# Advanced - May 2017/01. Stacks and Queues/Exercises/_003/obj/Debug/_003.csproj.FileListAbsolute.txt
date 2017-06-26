@@ -1,6 +1,0 @@
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_003\bin\Debug\_003.exe.config
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_003\bin\Debug\_003.exe
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_003\bin\Debug\_003.pdb
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_003\obj\Debug\_003.csprojResolveAssemblyReference.cache
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_003\obj\Debug\_003.exe
-C:\GitHub\SoftUni2017\03. C# Advanced - May 2017\01. Stacks and Queues\Exercises\_003\obj\Debug\_003.pdb
