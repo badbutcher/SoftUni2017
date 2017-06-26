@@ -1,0 +1,6 @@
+C:\Users\badbutcherbg\Desktop\Exam\_002\bin\Debug\_002.exe.config
+C:\Users\badbutcherbg\Desktop\Exam\_002\bin\Debug\_002.exe
+C:\Users\badbutcherbg\Desktop\Exam\_002\bin\Debug\_002.pdb
+C:\Users\badbutcherbg\Desktop\Exam\_002\obj\Debug\_002.csprojResolveAssemblyReference.cache
+C:\Users\badbutcherbg\Desktop\Exam\_002\obj\Debug\_002.exe
+C:\Users\badbutcherbg\Desktop\Exam\_002\obj\Debug\_002.pdb
