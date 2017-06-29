@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49F3E09C-9C70-4329-8087-F36A0D8CCF66}</ProjectGuid>
+    <ProjectGuid>{CDB416F9-586A-40F4-BB7A-979C32F9237C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_010</RootNamespace>
-    <AssemblyName>_010</AssemblyName>
+    <RootNamespace>_004</RootNamespace>
+    <AssemblyName>_004</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
