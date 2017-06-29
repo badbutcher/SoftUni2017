@@ -8,7 +8,7 @@ namespace _007
 {
     public class Program
     {
-        static void Main()
+        public static void Main()
         {
         }
     }

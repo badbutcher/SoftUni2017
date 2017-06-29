@@ -52,13 +52,23 @@ namespace _006
                            
             }
 
-            var avrSalary = employees.Select(a=>a.salary).Average();
+            var avrSalary = employees
+                .GroupBy(a => a.Department)
+                .Select(c => new
+                {
+                    Department = c.Key,
+                    AverageSalary = c.Average(d => d.Salary),
+                    Employees = c.OrderByDescending(d => d.Salary)
+                })
+                .OrderByDescending(q => q.AverageSalary)
+                .First();
 
-            Console.WriteLine(avrSalary);
 
-            foreach (var item in employees.Where(a=>a.salary).OrderByDescending(c=>c.salary))
+            Console.WriteLine($"Highest Average Salary: {avrSalary.Department}");
+
+            foreach (var item in avrSalary.Employees.OrderByDescending(c => c.Salary))
             {
-                Console.WriteLine("{0} {1} {2} {3}", item.name, item.salary, item.email, item.age);
+                Console.WriteLine("{0} {1:F2} {2} {3}", item.Name, item.Salary, item.Email, item.Age);
             }
         }
     }
