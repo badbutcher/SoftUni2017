@@ -1,0 +1,6 @@
+D:\GitHub\SoftUni2017\04. C# OOP Basics - June 2017\01. Defining Classes\Exercises\_012\_012\bin\Debug\_012.exe.config
+D:\GitHub\SoftUni2017\04. C# OOP Basics - June 2017\01. Defining Classes\Exercises\_012\_012\bin\Debug\_012.exe
+D:\GitHub\SoftUni2017\04. C# OOP Basics - June 2017\01. Defining Classes\Exercises\_012\_012\bin\Debug\_012.pdb
+D:\GitHub\SoftUni2017\04. C# OOP Basics - June 2017\01. Defining Classes\Exercises\_012\_012\obj\Debug\_012.csprojResolveAssemblyReference.cache
+D:\GitHub\SoftUni2017\04. C# OOP Basics - June 2017\01. Defining Classes\Exercises\_012\_012\obj\Debug\_012.exe
+D:\GitHub\SoftUni2017\04. C# OOP Basics - June 2017\01. Defining Classes\Exercises\_012\_012\obj\Debug\_012.pdb

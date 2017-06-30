@@ -14,10 +14,10 @@
             {
                 string[] data = Console.ReadLine().Split();
                 string id = data[0];
-                int width = int.Parse(data[1]);
-                int height = int.Parse(data[2]);
-                int x = int.Parse(data[3]);
-                int y = int.Parse(data[4]);
+                double width = double.Parse(data[1]);
+                double height = double.Parse(data[2]);
+                double x = double.Parse(data[3]);
+                double y = double.Parse(data[4]);
 
                 Rectangle rect = new Rectangle(id, width, height, x, y);
                 rects.Add(rect);

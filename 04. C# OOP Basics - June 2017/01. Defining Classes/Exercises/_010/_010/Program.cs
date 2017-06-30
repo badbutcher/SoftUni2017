@@ -19,32 +19,31 @@ namespace _010
                 string model = data[0];
                 int power = int.Parse(data[1]);
                 int displacement;
-                Engine engine = new Engine(model, power);
-                if (data.Length > 2)
+
+                if (data.Length == 2)
+                {
+                    engines.Add(new Engine(model, power));
+                }
+                else if (data.Length == 3)
                 {
                     bool check = int.TryParse(data[2], out displacement);
-                    if (data.Length >= 3 && check)
+                    if (check)
                     {
                         displacement = int.Parse(data[2]);
-                        engine.Displaycement = displacement;
+                        engines.Add(new Engine(model, power, displacement));
                     }
                     else
                     {
-                        if (data.Length == 3)
-                        {
-                            char efficiency = char.Parse(data[2]);
-                            engine.Efficiency = efficiency;
-                        }
-                    }
-
-                    if (data.Length == 4)
-                    {
-                        char efficiency = char.Parse(data[3]);
-                        engine.Efficiency = efficiency;
+                        string efficiency = data[2];
+                        engines.Add(new Engine(model, power, efficiency));
                     }
                 }
-
-                engines.Add(engine);
+                else if (data.Length == 4)
+                {
+                    displacement = int.Parse(data[2]);
+                    string efficiency = data[3];
+                    engines.Add(new Engine(model, power, displacement, efficiency));
+                }
             }
 
             int carCount = int.Parse(Console.ReadLine());
@@ -57,32 +56,30 @@ namespace _010
                 Engine engine = engines.First(a => a.Model == data[1]);
                 int weight;
 
-                Car car = new Car(model, engine);
-                if (data.Length > 2)
+                if (data.Length == 2)
+                {
+                    cars.Add(new Car(model, engine));
+                }
+                else if (data.Length == 3)
                 {
                     bool check = int.TryParse(data[2], out weight);
-                    if (data.Length >= 3 && check)
+                    if (check)
                     {
                         weight = int.Parse(data[2]);
-                        car.Weight = weight;
+                        cars.Add(new Car(model, engine, weight));
                     }
                     else
                     {
-                        if (data.Length == 3)
-                        {
-                            string color = data[2];
-                            car.Color = color;
-                        }
-                    }
-
-                    if (data.Length == 4)
-                    {
-                        string color = data[3];
-                        car.Color = color;
+                        string color = data[2];
+                        cars.Add(new Car(model, engine, color));
                     }
                 }
-
-                cars.Add(car);
+                else if (data.Length == 4)
+                {
+                    weight = int.Parse(data[2]);
+                    string color = data[3];
+                    cars.Add(new Car(model, engine, weight, color));
+                }
             }
 
             foreach (var car in cars)
@@ -90,8 +87,26 @@ namespace _010
                 Console.WriteLine("{0}:", car.Model);
                 Console.WriteLine("  {0}:", car.Engine.Model);
                 Console.WriteLine("    Power: {0}", car.Engine.Power);
-                Console.WriteLine("    Displacement: {0}", car.Engine.Displaycement);
+                if (car.Engine.Displaycement != 0)
+                {
+                    Console.WriteLine("    Displacement: {0}", car.Engine.Displaycement);
+                }
+                else
+                {
+                    Console.WriteLine("    Displacement: n/a");
+                }
+
                 Console.WriteLine("    Efficiency: {0}", car.Engine.Efficiency);
+                if (car.Weight != 0)
+                {
+                    Console.WriteLine("  Weight: {0}", car.Weight);
+                }
+                else
+                {
+                    Console.WriteLine("  Weight: n/a");
+                }
+
+                Console.WriteLine("  Color: {0}", car.Color);
             }
         }
     }
