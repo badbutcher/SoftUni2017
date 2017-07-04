@@ -6,10 +6,21 @@ using System.Threading.Tasks;
 
 namespace _015
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
+            string input = Console.ReadLine();
+
+            if (input == "Square")
+            {
+                int n = int.Parse(Console.ReadLine());
+            }
+            else if (input == "Rectangle")
+            {
+                int cols = int.Parse(Console.ReadLine());
+                int rows = int.Parse(Console.ReadLine());
+            }
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _005
+﻿namespace _005
 {
+    using System;
+
     public class Topping
     {
         private string type;
@@ -74,15 +70,19 @@ namespace _005
                 case "meat":
                     type = 1.2m;
                     break;
+
                 case "veggies":
                     type = 0.8m;
                     break;
+
                 case "cheese":
                     type = 1.1m;
                     break;
+
                 case "sauce":
                     type = 0.9m;
                     break;
+
                 default:
                     break;
             }

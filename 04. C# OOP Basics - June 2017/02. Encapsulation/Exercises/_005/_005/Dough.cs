@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _005
+﻿namespace _005
 {
+    using System;
+
     public class Dough
     {
         private string flour;
@@ -15,7 +11,6 @@ namespace _005
 
         public Dough()
         {
-
         }
 
         public Dough(string flour, string technique, decimal weight)
@@ -99,9 +94,11 @@ namespace _005
                 case "white":
                     flour = 1.5m;
                     break;
+
                 case "wholegrain":
                     flour = 1.0m;
                     break;
+
                 default:
                     break;
             }
@@ -111,12 +108,15 @@ namespace _005
                 case "crispy":
                     technique = 0.9m;
                     break;
+
                 case "chewy":
                     technique = 1.1m;
                     break;
+
                 case "homemade":
                     technique = 1.0m;
                     break;
+
                 default:
                     break;
             }

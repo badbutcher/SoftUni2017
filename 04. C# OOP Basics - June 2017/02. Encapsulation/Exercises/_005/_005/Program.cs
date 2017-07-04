@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _005
+﻿namespace _005
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Program
     {
         public static void Main()
         {
             try
             {
-
                 while (true)
                 {
                     string input = Console.ReadLine();
@@ -73,7 +70,6 @@ namespace _005
                     }
                 }
             }
-
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
