@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
+    using System;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
     public class Student : Human
     {
         private string facultyNumber;
 
-        public Student(string firstName, string lastName, string facultyNumber) 
+        public Student(string firstName, string lastName, string facultyNumber)
             : base(firstName, lastName)
         {
             this.FacultyNumber = facultyNumber;

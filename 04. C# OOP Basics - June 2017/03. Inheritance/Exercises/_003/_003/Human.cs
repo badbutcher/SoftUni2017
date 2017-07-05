@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
+    using System;
+
     public class Human
     {
         private string firstName;
