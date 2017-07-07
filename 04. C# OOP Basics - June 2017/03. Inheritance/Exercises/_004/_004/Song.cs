@@ -6,13 +6,15 @@
     {
         private string artistName;
         private string songName;
-        private string duration;
+        private int minutes;
+        private int seconds;
 
-        public Song(string artistName, string songName, string duration)
+        public Song(string artistName, string songName, int minutes, int seconds)
         {
             this.ArtistName = artistName;
             this.SongName = songName;
-            this.Duration = duration;
+            this.Minutes = minutes;
+            this.Seconds = seconds;
         }
 
         public string ArtistName
@@ -49,34 +51,37 @@
             }
         }
 
-        public string Duration
+        public int Minutes
         {
             get
             {
-                return this.duration;
+                return minutes;
             }
             set
             {
-                string[] data = value.Split(':');
-                long minutes = long.Parse(data[0]);
-                long seconds = long.Parse(data[1]);
-                long totalSeconds = minutes * 60 + seconds;
-                if (totalSeconds < 0 || totalSeconds > 899)
-                {
-                    throw new InvalidSongLengthException("Invalid song length.");
-                }
-
-                if (minutes < 0 || minutes > 14)
+                if (value < 0 || value > 14)
                 {
                     throw new InvalidSongMinutesException("Song minutes should be between 0 and 14.");
                 }
 
-                if (seconds < 0 || seconds > 59)
+                this.minutes = value;
+            }
+        }
+
+        public int Seconds
+        {
+            get
+            {
+                return seconds;
+            }
+            set
+            {
+                if (value < 0 || value > 59)
                 {
                     throw new InvalidSongSecondsException("Song seconds should be between 0 and 59.");
                 }
 
-                this.duration = value;
+                seconds = value;
             }
         }
     }

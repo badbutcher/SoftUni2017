@@ -16,46 +16,36 @@
                 }
                 else
                 {
+                    string[] data = Console.ReadLine().Split();
+                    int age;
+                    if (!int.TryParse(data[1], out age))
+                    {
+                        throw new ArgumentException("Invalid input!");
+                    }
                     try
                     {
-                        string[] data = Console.ReadLine().Split();
                         switch (input)
                         {
                             case "Cat":
-                                Cat cat = new Cat(data[0], int.Parse(data[1]), data[2]);
-                                Console.WriteLine(input);
-                                Console.WriteLine(string.Join(" ", data));
-                                cat.ProduceSound();
+                                Cat cat = new Cat(data[0], age, data[2]);
+                                Console.WriteLine(cat.ToString());
                                 break;
-
                             case "Dog":
-                                Dog dog = new Dog(data[0], int.Parse(data[1]), data[2]);
-                                Console.WriteLine(input);
-                                Console.WriteLine(string.Join(" ", data));
-                                dog.ProduceSound();
+                                Dog dog = new Dog(data[0], age, data[2]);
+                                Console.WriteLine(dog.ToString());
                                 break;
-
                             case "Frog":
-                                Frog frog = new Frog(data[0], int.Parse(data[1]), data[2]);
-                                Console.WriteLine(input);
-                                Console.WriteLine(string.Join(" ", data));
-                                frog.ProduceSound();
+                                Frog frog = new Frog(data[0], age, data[2]);
+                                Console.WriteLine(frog.ToString());
                                 break;
-
                             case "Kitten":
-                                Kitten kitten = new Kitten(data[0], int.Parse(data[1]), data[2]);
-                                Console.WriteLine(input);
-                                Console.WriteLine(string.Join(" ", data));
-                                kitten.ProduceSound();
+                                Kitten kitten = new Kitten(data[0], age);
+                                Console.WriteLine(kitten.ToString());
                                 break;
-
                             case "Tomcat":
-                                Tomcat tomcat = new Tomcat(data[0], int.Parse(data[1]), data[2]);
-                                Console.WriteLine(input);
-                                Console.WriteLine(string.Join(" ", data));
-                                tomcat.ProduceSound();
+                                Tomcat tomcat = new Tomcat(data[0], age);
+                                Console.WriteLine(tomcat.ToString());
                                 break;
-
                             default:
                                 break;
                         }

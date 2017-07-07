@@ -1,8 +1,9 @@
 ﻿namespace _006
 {
     using System;
+    using System.Text;
 
-    public class Animal
+    public abstract class Animal
     {
         private string name;
         private int age;
@@ -40,7 +41,7 @@
             }
             set
             {
-                if (value <= 0)
+                if (value < 0 || string.IsNullOrEmpty(value.ToString()))
                 {
                     throw new ArgumentException("Invalid input!");
                 }
@@ -66,8 +67,16 @@
             }
         }
 
-        public virtual void ProduceSound()
+        public abstract string ProduceSound();
+
+        public override string ToString()
         {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{this.GetType().Name}")
+                .AppendLine($"{this.Name} {this.Age} {this.Gender}")
+                .Append(this.ProduceSound());
+
+            return sb.ToString();
         }
     }
 }

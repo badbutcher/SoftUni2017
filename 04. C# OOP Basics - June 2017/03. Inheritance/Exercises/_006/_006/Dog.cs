@@ -1,7 +1,5 @@
 ﻿namespace _006
 {
-    using System;
-
     public class Dog : Animal
     {
         public Dog(string name, int age, string gender)
@@ -9,9 +7,9 @@
         {
         }
 
-        public override void ProduceSound()
+        public override string ProduceSound()
         {
-            Console.WriteLine("BauBau");
+            return "BauBau";
         }
     }
 }

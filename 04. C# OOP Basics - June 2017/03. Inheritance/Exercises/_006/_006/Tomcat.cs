@@ -1,17 +1,15 @@
 ﻿namespace _006
 {
-    using System;
-
     public class Tomcat : Cat
     {
-        public Tomcat(string name, int age, string gender)
-            : base(name, age, gender)
+        public Tomcat(string name, int age)
+            : base(name, age, "Male")
         {
         }
 
-        public override void ProduceSound()
+        public override string ProduceSound()
         {
-            Console.WriteLine("Give me one million b***h");
+            return "Give me one million b***h";
         }
     }
 }

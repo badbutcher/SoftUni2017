@@ -16,13 +16,22 @@
             {
                 try
                 {
-                    string[] data = Console.ReadLine().Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] data = Console.ReadLine().Split(new char[] { ';', ':' }, StringSplitOptions.RemoveEmptyEntries);
                     string artistName = data[0];
                     string songName = data[1];
-                    string duration = data[2];
-                    Song song = new Song(artistName, songName, duration);
-                    songs.Add(song);
-                    Console.WriteLine("Song added.");
+                    int min;
+                    int sec;
+
+                    if (int.TryParse(data[2], out min) && int.TryParse(data[3], out sec))
+                    {
+                        Song song = new Song(artistName, songName, min, sec);
+                        songs.Add(song);
+                        Console.WriteLine("Song added.");
+                    }
+                    else
+                    {
+                        throw new InvalidSongLengthException("Invalid song length.");
+                    }
                 }
                 catch (InvalidSongException ex)
                 {
@@ -39,9 +48,8 @@
             long totalSeconds = 0;
             foreach (var item in songs)
             {
-                string[] data = item.Duration.Split(':');
-                long minutes = long.Parse(data[0]);
-                long seconds = long.Parse(data[1]);
+                int minutes = item.Minutes;
+                int seconds = item.Seconds;
                 totalSeconds += minutes * 60 + seconds;
             }
 
