@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
     public class Cat : Felime
     {
         private string breed;
 
-        public Cat(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion, string breed) 
-            : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
+        public Cat(string animalName, string animalType, double animalWeight, string livingRegion, string breed)
+            : base(animalName, animalType, animalWeight, livingRegion)
         {
             this.Breed = breed;
         }
@@ -28,14 +22,14 @@ namespace _003
             }
         }
 
-        public override bool Eat(Food food)
-        {
-            return true;
-        }
-
         public override string MakeSound()
         {
-            throw new NotImplementedException();
+            return "Meowwww";
+        }
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}[{base.AnimalName}, {this.Breed}, {this.AnimalWeight}, {this.LivingRegion}, {this.FoodEaten}]";
         }
     }
 }

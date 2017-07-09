@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
     public abstract class Animal
     {
@@ -13,12 +7,14 @@ namespace _003
         private double animalWeight;
         private int foodEaten;
 
-        public Animal(string animalName, string animalType, double animalWeight, int foodEaten)
+        public Animal(string animalName, string animalType, double animalWeight)
         {
-
+            this.AnimalName = animalName;
+            this.AnimalType = animalType;
+            this.AnimalWeight = animalWeight;
         }
 
-        public string AnimalName
+        protected string AnimalName
         {
             get
             {
@@ -30,7 +26,7 @@ namespace _003
             }
         }
 
-        public string AnimalType
+        protected string AnimalType
         {
             get
             {
@@ -42,7 +38,7 @@ namespace _003
             }
         }
 
-        public double AnimalWeight
+        protected double AnimalWeight
         {
             get
             {
@@ -54,7 +50,7 @@ namespace _003
             }
         }
 
-        public int FoodEaten
+        protected int FoodEaten
         {
             get
             {
@@ -66,9 +62,11 @@ namespace _003
             }
         }
 
-
         public abstract string MakeSound();
 
-        public abstract bool Eat(Food food);
+        public virtual void Eat(Food food)
+        {
+            this.FoodEaten += food.Quantity;
+        }
     }
 }

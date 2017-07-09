@@ -1,30 +1,25 @@
 ﻿namespace _002
 {
+    using System;
+
     public class Car : Vehicle
     {
         public Car(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity) 
-            : base(fuelQuantity, fuelConsumptionPerKm, tankCapacity)
+            : base(fuelQuantity, fuelConsumptionPerKm + 0.9, tankCapacity)
         {
         }
 
-        public override bool Drive(double km)
+        public override double FuelQuantity
         {
-            var distanceTravled = km * (base.FuelConsumptionPerKm + 0.9);
-
-            if (distanceTravled <= base.FuelQuantity)
+            set
             {
-                base.FuelQuantity -= distanceTravled;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+                if (value > this.TankCapacity)
+                {
+                    throw new ArgumentException("Cannot fit in tank");
+                }
 
-        public override void Refuel(double amount)
-        {
-            base.FuelQuantity += amount;
+                base.FuelQuantity = value;
+            }
         }
     }
 }

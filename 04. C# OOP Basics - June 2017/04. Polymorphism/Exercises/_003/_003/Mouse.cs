@@ -1,26 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
+    using System;
+
     public class Mouse : Mammal
     {
-        public Mouse(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion)
-            : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
+        public Mouse(string animalName, string animalType, double animalWeight, string livingRegion)
+            : base(animalName, animalType, animalWeight, livingRegion)
         {
         }
 
-        public override bool Eat(Food food)
+        public override void Eat(Food food)
         {
-            throw new NotImplementedException();
+            if (food.GetType().Name != "Vegetable")
+            {
+                throw new ArgumentException($"{this.GetType().Name}s are not eating that type of food!");
+            }
+
+            base.Eat(food);
         }
 
         public override string MakeSound()
         {
-            throw new NotImplementedException();
+            return "SQUEEEAAAK!";
         }
     }
 }

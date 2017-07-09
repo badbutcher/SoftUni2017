@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
     public class Meat : Food
     {
-        public Meat(int quantity) 
+        public Meat(int quantity)
             : base(quantity)
         {
         }

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace _002
+﻿namespace _002
 {
+    using System;
+
     public abstract class Vehicle
     {
         private double fuelQuantity;
@@ -10,12 +10,12 @@ namespace _002
 
         public Vehicle(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity)
         {
+            this.TankCapacity = tankCapacity;
             this.FuelQuantity = fuelQuantity;
             this.FuelConsumptionPerKm = fuelConsumptionPerKm;
-            this.TankCapacity = tankCapacity;
         }
 
-        public double FuelQuantity
+        public virtual double FuelQuantity
         {
             get
             {
@@ -39,7 +39,7 @@ namespace _002
             }
         }
 
-        public double TankCapacity
+        public virtual double TankCapacity
         {
             get
             {
@@ -47,17 +47,50 @@ namespace _002
             }
             set
             {
-                if (value < 0)
-                {
-                    throw new ArgumentException("Fuel must be a positive number");
-                }
-
                 this.tankCapacity = value;
             }
         }
 
-        public abstract void Refuel(double amount);
+        public virtual void Refuel(double amount)
+        {
+            if (amount <= 0)
+            {
+                throw new ArgumentException("Fuel must be a positive number");
+            }
+            else
+            {
+                this.FuelQuantity += amount;
+            }
+        }
 
-        public abstract bool Drive(double km);
+        public virtual bool Drive(double km, bool isAcOn)
+        {
+            var distanceTravled = km * this.FuelConsumptionPerKm;
+
+            if (distanceTravled <= this.FuelQuantity)
+            {
+                this.FuelQuantity -= distanceTravled;
+                return true;
+            }
+
+            return false;
+        }
+
+        public string TryTravelDistance(double distance, bool isAcOn)
+        {
+            if (this.Drive(distance, isAcOn))
+            {
+                return $"{this.GetType().Name} travelled {distance} km";
+            }
+            else
+            {
+                return $"{this.GetType().Name} needs refueling";
+            }
+        }
+
+        public string TryTravelDistance(double distance)
+        {
+            return this.TryTravelDistance(distance, true);
+        }
     }
 }

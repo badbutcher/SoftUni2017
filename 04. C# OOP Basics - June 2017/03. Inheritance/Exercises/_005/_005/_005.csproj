@@ -42,13 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FoodFactory.cs" />
-    <Compile Include="MoodFactory.cs" />
+    <Compile Include="Factories\FoodFactory.cs" />
+    <Compile Include="Models\Foods\Apple.cs" />
+    <Compile Include="Models\Foods\Cram.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Foods\HoneyCake.cs" />
+    <Compile Include="Models\Foods\Junk.cs" />
+    <Compile Include="Models\Foods\Lembas.cs" />
+    <Compile Include="Models\Foods\Melon.cs" />
+    <Compile Include="Models\Foods\Mushrooms.cs" />
+    <Compile Include="Factories\MoodFactory.cs" />
+    <Compile Include="Models\Gandalf.cs" />
+    <Compile Include="Models\Moods\Angry.cs" />
+    <Compile Include="Models\Moods\Happy.cs" />
+    <Compile Include="Models\Moods\JavaScript.cs" />
+    <Compile Include="Models\Mood.cs" />
+    <Compile Include="Models\Moods\Sad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

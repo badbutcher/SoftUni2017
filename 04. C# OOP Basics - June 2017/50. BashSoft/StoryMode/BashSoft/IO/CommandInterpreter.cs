@@ -1,221 +1,168 @@
 ﻿namespace BashSoft
 {
-    using System;
     using System.Diagnostics;
-    using System.IO;
 
-    public class CommandInterpreter
+    public static class CommandInterpreter
     {
-        private Tester judge;
-        private StudentsRepository repository;
-        private IOManager inputOutputManager;
-
-        public CommandInterpreter(Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        public static void InterpredCommand(string input)
         {
-            this.judge = judge;
-            this.repository = repository;
-            this.inputOutputManager = inputOutputManager;
-        }
-
-        public void InterpredCommand(string input)
-        {
-            string[] data = input.Split(' ');
+            string[] data = input.Split();
             string command = data[0];
-            command = command.ToLower();
-
-            try
-            {
-                this.ParseCommand(input, command, data);
-            }
-            catch (DirectoryNotFoundException dnfe)
-            {
-                OutputWriter.DisplayException(dnfe.Message);
-            }
-            catch (ArgumentOutOfRangeException aoore)
-            {
-                OutputWriter.DisplayException(aoore.Message);
-            }
-            catch (ArgumentException ae)
-            {
-                OutputWriter.DisplayException(ae.Message);
-            }
-            catch (Exception e)
-            {
-                OutputWriter.DisplayException(e.Message);
-            }
-        }
-
-        private void ParseCommand(string input, string command, string[] data)
-        {
             switch (command)
             {
                 case "open":
-                    this.TryOpenFile(input, data);
+                    TryOpenFile(input, data);
                     break;
                 case "mkdir":
-                    this.TryCreateDirectory(input, data);
+                    TryCreateDirectory(input, data);
                     break;
                 case "ls":
-                    this.TryTraverseFolders(input, data);
+                    TryTraverseFolders(input, data);
                     break;
                 case "cmp":
-                    this.TryCompareFiles(input, data);
+                    TryCompareFiles(input, data);
                     break;
                 case "cdRel":
-                    this.TryChangePathRelatively(input, data);
+                    TryChangePathRelatively(input, data);
                     break;
                 case "cdAbs":
-                    this.TryChangePathAbsolutely(input, data);
+                    TryChangePathAbsolute(input, data);
                     break;
-                case "readdb": ///readDb
-                    this.TryReadDataBaseFromFile(input, data);
+                case "readDb":
+                    TryReadDatabaseFromFile(input, data);
                     break;
                 case "help":
-                    this.TryGetHelp(input, data);
-                    break;
-                case "show":
-                    this.TryShowWantedData(input, data);
+                    TryGetHelp(input, data);
                     break;
                 case "filter":
-                    this.TryFilterAndTake(input, data);
+                    TryFilterAndTake(input, data);
                     break;
                 case "order":
-                    this.TryOrderAndTake(input, data);
+                    TryOrderAndTake(input, data);
                     break;
                 case "decOrder":
                     break;
                 case "download":
                     break;
-                case "downloadAsync":
+                case "downloadAsynch":
+                    break;
+                case "show":
+                    TryShowWantedData(input, data);
                     break;
                 default:
-                    this.DisplayInvalidCommandsMessage(input);
+                    DisplayInvalidCommandMessage(input);
                     break;
             }
         }
 
-        private void TryDropDb(string input, string[] data)
+        private static void TryOrderAndTake(string input, string[] data)
         {
-            if (data.Length != 1)
+            if (!IsDataValid(data, 5))
             {
-                this.DisplayInvalidCommandsMessage(input);
                 return;
             }
 
-            this.repository.UnloadData();
-            OutputWriter.WriteMessageOnNewLine("Database dropped!");
+            var courseName = data[1];
+            var comparison = data[2].ToLower();
+            var takeCommand = data[3].ToLower();
+            var takeQuantity = data[4].ToLower();
+
+            TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, comparison);
         }
 
-        private void TryOrderAndTake(string input, string[] data)
-        {
-            if (data.Length == 5)
-            {
-                string courseName = data[1];
-                string filter = data[2].ToLower();
-                string takeCommand = data[3].ToLower();
-                string takeQuantity = data[4].ToLower();
-
-                this.TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, filter);
-            }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
-        }
-
-        private void TryParseParametersForOrderAndTake(string takeCommand, string takeQuantity, string courseName, string filter)
+        private static void TryParseParametersForOrderAndTake(string takeCommand, string takeQuantity, string courseName, string comparison)
         {
             if (takeCommand == "take")
             {
                 if (takeQuantity == "all")
                 {
-                    this.repository.OrderAndTake(courseName, filter);
+                    StudentsRepository.OrderAndTake(courseName, comparison, null);
                 }
                 else
                 {
                     int studentsToTake;
-                    bool hasParsed = int.TryParse(takeQuantity, out studentsToTake);
+                    var hasParsed = int.TryParse(takeQuantity, out studentsToTake);
                     if (hasParsed)
                     {
-                        this.repository.OrderAndTake(courseName, filter, studentsToTake);
+                        StudentsRepository.OrderAndTake(courseName, comparison, studentsToTake);
                     }
                     else
                     {
-                        OutputWriter.DisplayException(ExceptionMessages.InvalidTakeQuantityParameter);
+                        OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidTakeQueryParamter);
                     }
                 }
             }
             else
             {
-                OutputWriter.DisplayException(ExceptionMessages.InvalidTakeQuantityParameter);
+                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidTakeQueryParamter);
             }
         }
 
-        private void TryFilterAndTake(string input, string[] data)
+        private static void TryFilterAndTake(string input, string[] data)
         {
-            if (data.Length == 5)
+            if (!IsDataValid(data, 5))
             {
-                string courseName = data[1];
-                string filter = data[2].ToLower();
-                string takeCommand = data[3].ToLower();
-                string takeQuantity = data[4].ToLower();
+                return;
+            }
 
-                this.TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
-            }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
+            var courseName = data[1];
+            var filter = data[2].ToLower();
+            var takeCommand = data[3].ToLower();
+            var takeQuantity = data[4].ToLower();
+
+            TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
         }
 
-        private void TryParseParametersForFilterAndTake(string takeCommand, string takeQuantity, string courseName, string filter)
+        private static void TryParseParametersForFilterAndTake(string takeCommand, string takeQuantity, string courseName, string filter)
         {
             if (takeCommand == "take")
             {
                 if (takeQuantity == "all")
                 {
-                    this.repository.FilterAndTake(courseName, filter);
+                    StudentsRepository.FilterAndTake(courseName, filter, null);
                 }
                 else
                 {
                     int studentsToTake;
-                    bool hasParsed = int.TryParse(takeQuantity, out studentsToTake);
+                    var hasParsed = int.TryParse(takeQuantity, out studentsToTake);
                     if (hasParsed)
                     {
-                        this.repository.FilterAndTake(courseName, filter, studentsToTake);
+                        StudentsRepository.FilterAndTake(courseName, filter, studentsToTake);
                     }
                     else
                     {
-                        OutputWriter.DisplayException(ExceptionMessages.InvalidTakeQuantityParameter);
+                        OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidTakeQueryParamter);
                     }
                 }
             }
             else
             {
-                OutputWriter.DisplayException(ExceptionMessages.InvalidTakeQuantityParameter);
+                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidTakeQueryParamter);
             }
         }
 
-        private void TryShowWantedData(string input, string[] data)
+        private static void TryShowWantedData(string input, string[] data)
         {
             if (data.Length == 2)
             {
-                string courseName = data[1];
-                this.repository.GetAllStudentsFromCourse(courseName);
+                var course = data[1];
+                StudentsRepository.GetAllStudentsFromCourse(course);
             }
             else if (data.Length == 3)
             {
-                string courseName = data[1];
-                string username = data[2];
-                this.repository.GetStudentScoreFromCourse(courseName, username);
+                var course = data[1];
+                var username = data[2];
+                StudentsRepository.GetStudentScoresFromCourse(course, username);
             }
             else
             {
-                this.DisplayInvalidCommandsMessage(input);
+                DisplayInvalidCommandMessage(input);
             }
+
+            return;
         }
 
-        private void TryGetHelp(string input, string[] data)
+        private static void TryGetHelp(string input, string[] data)
         {
             OutputWriter.WriteMessageOnNewLine($"{new string('_', 100)}");
             OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "make directory - mkdir: path "));
@@ -233,114 +180,106 @@
             OutputWriter.WriteEmptyLine();
         }
 
-        private void TryReadDataBaseFromFile(string input, string[] data)
+        private static void TryReadDatabaseFromFile(string input, string[] data)
         {
-            if (data.Length == 2)
+            if (!IsDataValid(data, 2))
             {
-                string fileName = data[1];
-                this.repository.LoadData(fileName);
+                return;
             }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
+
+            var databasePath = data[1];
+            StudentsRepository.InitilizeData(databasePath);
         }
 
-        private void TryChangePathAbsolutely(string input, string[] data)
+        private static void TryChangePathRelatively(string input, string[] data)
         {
-            if (data.Length == 2)
+            if (!IsDataValid(data, 2))
             {
-                string absolutePath = data[1];
-                this.inputOutputManager.ChangeCurrentDirectoryAbsolute(absolutePath);
+                return;
             }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
+
+            var relPath = data[1];
+            IOManager.ChangeCurrentDirectoryRelative(relPath);
         }
 
-        private void TryChangePathRelatively(string input, string[] data)
+        private static void TryChangePathAbsolute(string input, string[] data)
         {
-            if (data.Length == 2)
+            if (!IsDataValid(data, 2))
             {
-                string relPath = data[1];
-                this.inputOutputManager.ChangeCurrentDirectoryRelative(relPath);
+                return;
             }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
+
+            var absPath = data[1];
+            IOManager.ChangeCurrentDirectoryAbsolute(absPath);
         }
 
-        private void TryCompareFiles(string input, string[] data)
+        private static void TryCompareFiles(string input, string[] data)
         {
-            if (data.Length == 3)
+            if (!IsDataValid(data, 3))
             {
-                string firstPath = data[1];
-                string secondPath = data[2];
+                return;
+            }
 
-                this.judge.CompareContent(firstPath, secondPath);
-            }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
+            Tester.CompareContent(data[1], data[2]);
         }
 
-        private void TryTraverseFolders(string input, string[] data)
+        private static void TryTraverseFolders(string input, string[] data)
         {
-            if (data.Length == 1)
+            if (data.Length < 2)
             {
-                this.inputOutputManager.TraverseDirectory(0);
+                IOManager.TraverseDirectory(0);
             }
-            else if (data.Length == 2)
+            else
             {
                 int depth;
-                bool hasParsed = int.TryParse(data[1], out depth);
-                if (hasParsed)
+                var success = int.TryParse(data[1], out depth);
+                if (success)
                 {
-                    this.inputOutputManager.TraverseDirectory(depth);
+                    IOManager.TraverseDirectory(depth);
                 }
                 else
                 {
-                    OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExeptionMessage);
+                    OutputWriter.WriteMessageOnNewLine(ExceptionMessages.UnableToParseNumber);
                 }
             }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
         }
 
-        private void TryCreateDirectory(string input, string[] data)
+        private static void TryCreateDirectory(string input, string[] data)
         {
-            if (data.Length == 2)
+            if (!IsDataValid(data, 2))
             {
-                string folderName = data[1];
-                this.inputOutputManager.CreateDirectoryInCurrentFolder(folderName);
+                return;
             }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
+
+            var folderName = data[1];
+            IOManager.CreateDirectoryInCurrentFolder(folderName);
         }
 
-        private void TryOpenFile(string input, string[] data)
+        private static void TryOpenFile(string input, string[] data)
         {
-            if (data.Length == 2)
+            if (!IsDataValid(data, 2))
             {
-                string fileName = data[1];
-                Process.Start(SessionData.currentPath + "\\" + fileName);
+                return;
             }
-            else
-            {
-                this.DisplayInvalidCommandsMessage(input);
-            }
+
+            var filename = data[1];
+            Process.Start(SessionData.CurrentPath + "\\" + filename);
         }
 
-        private void DisplayInvalidCommandsMessage(string input)
+        private static bool IsDataValid(string[] data, int neededLength)
         {
-            OutputWriter.WriteMessageOnNewLine($"The command '{input}' is invalid");
+            if (data.Length != neededLength)
+            {
+                DisplayInvalidCommandMessage(string.Join(" ", data));
+                return false;
+            }
+
+            return true;
+        }
+
+        private static void DisplayInvalidCommandMessage(string input)
+        {
+            OutputWriter.WriteMessageOnNewLine($"The command {input} is invalid!");
         }
     }
 }

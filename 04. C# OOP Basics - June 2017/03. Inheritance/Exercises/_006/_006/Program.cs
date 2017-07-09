@@ -47,7 +47,7 @@
                                 Console.WriteLine(tomcat.ToString());
                                 break;
                             default:
-                                break;
+                                throw new ArgumentException("Invalid input!");
                         }
                     }
                     catch (Exception ex)

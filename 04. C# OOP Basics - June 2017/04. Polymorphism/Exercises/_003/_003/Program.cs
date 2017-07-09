@@ -1,55 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
+    using System;
+    using _003.Factories;
+
     public class Program
     {
         public static void Main()
         {
-            while (true)
+            string inputLine;
+            while ((inputLine = Console.ReadLine()) != "End")
             {
-                string input = Console.ReadLine();
-                if (input == "End")
+                var animalTokens = inputLine.Split(new[] { '\t', ' ', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                var foodTokens = Console.ReadLine().Split(new[] { '\t', ' ', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+                Animal animal = AnimalFactory.GetAnimal(animalTokens);
+                Food food = FoodFactory.GetFood(foodTokens);
+
+                Console.WriteLine(animal.MakeSound());
+                try
                 {
-                    break;
+                    animal.Eat(food);
                 }
-                else
+                catch (Exception e)
                 {
-                    string[] animalData = input.Split();
-                    string animalType = animalData[0];
-
-                    string[] foodData = Console.ReadLine().Split();
-                    Food food = MakeFood(foodData);
-
-                    if (animalType == "Cat")
-                    {
-                        Animal cat = new Cat(animalData[0], animalData[1], double.Parse(animalData[2]), 0, animalData[3], animalData[4]);
-
-                        if (cat.Eat(food))
-                        {
-                            cat.MakeSound();
-                        }
-                    }
+                    Console.WriteLine(e.Message);
                 }
-            }
-        }
 
-        private static Food MakeFood(string[] foodData)
-        {
-            string foodType = foodData[0];
-            int quantity = int.Parse(foodData[1]);
-
-            if (foodType == "Meat")
-            {
-                return new Meat(quantity);
-            }
-            else
-            {
-                return new Vegetable(quantity);
+                Console.WriteLine(animal);
             }
         }
     }

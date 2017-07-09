@@ -35,8 +35,36 @@
             }
         }
 
-        public abstract void Refuel(double amount);
+        public virtual void Refuel(double amount)
+        {
+            this.FuelQuantity += amount;
+        }
 
-        public abstract bool Drive(double km);
+        public bool Drive(double km)
+        {
+            var distanceTravled = km * this.FuelConsumptionPerKm;
+
+            if (distanceTravled <= this.FuelQuantity)
+            {
+                this.FuelQuantity -= distanceTravled;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public string TryTravelDistance(double distance)
+        {
+            if (this.Drive(distance))
+            {
+                return $"{this.GetType().Name} travelled {distance} km";
+            }
+            else
+            {
+                return $"{this.GetType().Name} needs refueling";
+            }
+        }
     }
 }

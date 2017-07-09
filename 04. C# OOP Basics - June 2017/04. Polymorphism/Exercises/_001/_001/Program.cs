@@ -29,46 +29,33 @@
                 string vehicle = data[1];
                 double value = double.Parse(data[2]);
 
-                if (command == "Drive")
+                if (vehicle == "Car")
                 {
-                    if (vehicle == "Car")
-                    {
-                        if (car.Drive(value))
-                        {
-                            Console.WriteLine("Car travelled {0} km", value);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Car needs refueling");
-                        }
-                    }
-                    else if (vehicle == "Truck")
-                    {
-                        if (truck.Drive(value))
-                        {
-                            Console.WriteLine("Truck travelled {0} km", value);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Truck needs refueling");
-                        }
-                    }
+                    ExecuteAction(car, command, value);
                 }
-                else if (command == "Refuel")
+                else if (vehicle == "Truck")
                 {
-                    if (vehicle == "Car")
-                    {
-                        car.Refuel(value);
-                    }
-                    else if (vehicle == "Truck")
-                    {
-                        truck.Refuel(value);
-                    }
+                    ExecuteAction(truck, command, value);
                 }
             }
 
             Console.WriteLine("Car: {0:F2}", car.FuelQuantity);
             Console.WriteLine("Truck: {0:F2}", truck.FuelQuantity);
+        }
+
+        private static void ExecuteAction(Vehicle vehicle, string command, double value)
+        {
+            switch (command)
+            {
+                case "Drive":
+                    Console.WriteLine(vehicle.TryTravelDistance(value));
+                    break;
+                case "Refuel":
+                    vehicle.Refuel(value);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _003
+﻿namespace _003
 {
     public abstract class Mammal : Animal
     {
         private string livingRegion;
 
-        public Mammal(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion)
-            : base(animalName, animalType, animalWeight, foodEaten)
+        public Mammal(string animalName, string animalType, double animalWeight, string livingRegion)
+            : base(animalName, animalType, animalWeight)
         {
             this.LivingRegion = livingRegion;
         }
 
-        public string LivingRegion
+        protected string LivingRegion
         {
             get
             {
@@ -26,6 +20,11 @@ namespace _003
             {
                 this.livingRegion = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}[{base.AnimalName}, {this.AnimalWeight}, {this.LivingRegion}, {this.FoodEaten}]";
         }
     }
 }

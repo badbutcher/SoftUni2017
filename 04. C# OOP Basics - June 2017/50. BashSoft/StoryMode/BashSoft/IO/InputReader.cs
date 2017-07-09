@@ -2,28 +2,20 @@
 {
     using System;
 
-    public class InputReader
+    public static class InputReader
     {
-        private const string endCommand = "quit";
-        private CommandInterpreter interpreter;
+        private const string EndCommand = "quit";
 
-        public InputReader(CommandInterpreter interpreter)
+        public static void StartReadingCommands()
         {
-            this.interpreter = interpreter;
-        }
+            OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
+            string input = Console.ReadLine().Trim();
 
-        public void StartReadingCommands()
-        {
-            OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
-            string input = Console.ReadLine();
-            input = input.Trim();
-
-            while (input != endCommand)
+            while (input != EndCommand)
             {
-                this.interpreter.InterpredCommand(input);
-                OutputWriter.WriteMessageOnNewLine($"{SessionData.currentPath}> ");
-                input = Console.ReadLine();
-                input = input.Trim();
+                CommandInterpreter.InterpredCommand(input);
+                OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
+                input = Console.ReadLine().Trim();
             }
         }
     }
