@@ -2,18 +2,24 @@
 {
     using System;
 
-    public static class InputReader
+    public class InputReader
     {
         private const string EndCommand = "quit";
+        private CommandInterpreter interpreter;
 
-        public static void StartReadingCommands()
+        public InputReader(CommandInterpreter interpreter)
+        {
+            this.interpreter = interpreter;
+        }
+
+        public void StartReadingCommands()
         {
             OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
             string input = Console.ReadLine().Trim();
 
             while (input != EndCommand)
             {
-                CommandInterpreter.InterpredCommand(input);
+                this.interpreter.InterpredCommand(input);
                 OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
                 input = Console.ReadLine().Trim();
             }

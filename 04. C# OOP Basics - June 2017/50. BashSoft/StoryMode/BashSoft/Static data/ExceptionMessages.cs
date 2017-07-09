@@ -15,5 +15,9 @@
         public const string InvalidStudentFilter = "The given filter is not one of the following: excellent/average/poor";
         public const string InvalidQueryComparison = "The comparison query you want, does not exist in the context of the current program!";
         public const string InvalidTakeQueryParamter = "The take command expected does not match the format wanted!";
+        public const string StudentAlreadyEnrolledInGivenCourse = "The {0} already exists in {1}.";
+        public const string NotEnrolledInCourse = "Student must be enrolled in a course before you set his mark.";
+        public const string InvalidNumberOfScores = "The number of scores for the given course is greater than the possible.";
+        public const string InvalidScore = "The number for the score you've entered is not in the range of 0 - 100";
     }
 }

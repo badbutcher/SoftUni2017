@@ -2,11 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
 
-    public static class RepositoryFilters
+    public class RepositoryFilter
     {
-        public static void FilterAndTake(Dictionary<string, List<int>> wantedData, string wantedFilters, int studentsToTake)
+        public void FilterAndTake(Dictionary<string, double> wantedData, string wantedFilters, int studentsToTake)
         {
             if (wantedFilters == "excellent")
             {
@@ -26,24 +25,20 @@
             }
         }
 
-        private static void FilterAndTake(Dictionary<string, List<int>> wantedData, Predicate<double> givenFilter, int studentsToTake)
+        private void FilterAndTake(Dictionary<string, double> studentsWithMarks, Predicate<double> givenFilter, int studentsToTake)
         {
-            int counter = 0;
-            foreach (var username_score in wantedData)
+            int counterForPrinted = 0;
+            foreach (var studentMark in studentsWithMarks)
             {
-                if (counter == studentsToTake)
+                if (counterForPrinted == studentsToTake)
                 {
                     break;
                 }
 
-                var avrScore = username_score.Value.Average();
-                var percentageOfFullfillments = avrScore / 100;
-                var mark = percentageOfFullfillments * 4 + 2;
-
-                if (givenFilter(mark))
+                if (givenFilter(studentMark.Value))
                 {
-                    OutputWriter.PrintStudent(username_score);
-                    counter++;
+                    OutputWriter.PrintStudent(new KeyValuePair<string, double>(studentMark.Key, studentMark.Value));
+                    counterForPrinted++;
                 }
             }
         }
