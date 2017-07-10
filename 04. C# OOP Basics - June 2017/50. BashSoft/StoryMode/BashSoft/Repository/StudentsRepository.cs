@@ -5,6 +5,7 @@
     using System.IO;
     using System.Linq;
     using System.Text.RegularExpressions;
+    using BashSoft.Exceptions;
     using BashSoft.Models;
 
     public class StudentsRepository
@@ -157,7 +158,7 @@
             }
             else
             {
-                throw new ArgumentException(ExceptionMessages.InvalidPath);
+                throw new InvalidPathException();
             }
 
             this.isDataInilized = true;

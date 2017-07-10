@@ -2,6 +2,7 @@
 {
     using System;
     using System.IO;
+    using BashSoft.Exceptions;
 
     public class Tester
     {
@@ -33,7 +34,7 @@
             }
             catch (IOException)
             {
-                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
+                throw new InvalidPathException();
             }
         }
 

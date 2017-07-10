@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using BashSoft.Exceptions;
 
     public class Student
     {
@@ -27,7 +28,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException(nameof(this.username), ExceptionMessages.NullOrEmptyValue);
+                    throw new InvalidStringException();
                 }
                 this.username = value;
             }
@@ -47,7 +48,7 @@
         {
             if (this.enrolledCourses.ContainsKey(course.Name))
             {
-                throw new Exception(string.Format(ExceptionMessages.StudentAlreadyEnrolledInGivenCourse));
+                throw new DuplicateEntryInStructureException(this.Username, course.Name);
             }
 
             this.enrolledCourses.Add(course.Name, course);
