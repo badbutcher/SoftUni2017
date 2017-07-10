@@ -1,7 +1,7 @@
 ﻿namespace BashSoft.Models
 {
-    using System.Collections.Generic;
     using BashSoft.Exceptions;
+    using System.Collections.Generic;
 
     public class Course
     {

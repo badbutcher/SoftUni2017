@@ -1,9 +1,9 @@
 ﻿namespace BashSoft.Models
 {
+    using BashSoft.Exceptions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using BashSoft.Exceptions;
 
     public class Student
     {
@@ -30,6 +30,7 @@
                 {
                     throw new InvalidStringException();
                 }
+
                 this.username = value;
             }
         }

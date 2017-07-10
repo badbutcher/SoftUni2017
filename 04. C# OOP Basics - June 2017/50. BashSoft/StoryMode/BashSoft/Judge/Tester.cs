@@ -1,8 +1,8 @@
 ﻿namespace BashSoft
 {
+    using BashSoft.Exceptions;
     using System;
     using System.IO;
-    using BashSoft.Exceptions;
 
     public class Tester
     {
