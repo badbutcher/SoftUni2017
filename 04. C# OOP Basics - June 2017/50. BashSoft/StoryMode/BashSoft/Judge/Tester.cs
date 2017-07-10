@@ -19,21 +19,21 @@
             {
                 OutputWriter.WriteMessageOnNewLine("Reading files...");
 
-                string mismatchesPath = GetMismatchPath(expectedOutputPath);
+                string mismatchesPath = this.GetMismatchPath(expectedOutputPath);
 
                 string[] actualOutputLines = File.ReadAllLines(userOutputPath);
                 string[] expectedOutputLines = File.ReadAllLines(expectedOutputPath);
 
                 bool hasMismatch;
                 string[] mismatches =
-                    GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
+                    this.GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
 
-                PrintOutput(mismatches, hasMismatch, mismatchesPath);
+                this.PrintOutput(mismatches, hasMismatch, mismatchesPath);
                 OutputWriter.WriteMessageOnNewLine("Files read!");
             }
-            catch (FileNotFoundException)
+            catch (IOException)
             {
-                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidPath);
+                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
             }
         }
 
@@ -83,14 +83,6 @@
                 foreach (var line in mismatches)
                 {
                     OutputWriter.WriteMessageOnNewLine(line);
-                }
-
-                try
-                {
-                }
-                catch (DirectoryNotFoundException)
-                {
-                    OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidPath);
                 }
 
                 File.WriteAllLines(mismatchesPath, mismatches);

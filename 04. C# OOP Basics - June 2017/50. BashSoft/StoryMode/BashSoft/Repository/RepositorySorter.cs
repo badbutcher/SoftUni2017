@@ -1,5 +1,6 @@
 ﻿namespace BashSoft
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -10,21 +11,21 @@
             comparison = comparison.ToLower();
             if (comparison == "ascending")
             {
-                PrintStudents(studentsWithMark
+                this.PrintStudents(studentsWithMark
                     .OrderBy(x => x.Value)
                     .Take(studentsToTake)
                     .ToDictionary(x => x.Key, x => x.Value));
             }
             else if (comparison == "descending")
             {
-                PrintStudents(studentsWithMark
+                this.PrintStudents(studentsWithMark
                     .OrderByDescending(x => x.Value)
                     .Take(studentsToTake)
                     .ToDictionary(x => x.Key, x => x.Value));
             }
             else
             {
-                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidQueryComparison);
+                throw new ArgumentOutOfRangeException(ExceptionMessages.InvalidQueryComparison);
             }
         }
 

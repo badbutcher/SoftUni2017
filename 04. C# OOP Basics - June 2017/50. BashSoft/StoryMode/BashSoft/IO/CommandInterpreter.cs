@@ -1,6 +1,8 @@
 ﻿namespace BashSoft
 {
+    using System;
     using System.Diagnostics;
+    using System.IO;
 
     public class CommandInterpreter
     {
@@ -19,40 +21,65 @@
         {
             string[] data = input.Split();
             string command = data[0];
+
+            try
+            {
+                this.ParseCommand(input, data, command);
+            }
+            catch (DirectoryNotFoundException aoore)
+            {
+                OutputWriter.DisplayException(aoore.Message);
+            }
+            catch (ArgumentOutOfRangeException aoore)
+            {
+                OutputWriter.DisplayException(aoore.Message);
+            }
+            catch (ArgumentException ae)
+            {
+                OutputWriter.DisplayException(ae.Message);
+            }
+            catch (Exception e)
+            {
+                OutputWriter.DisplayException(e.Message);
+            }
+        }
+
+        private void ParseCommand(string input, string[] data, string command)
+        {
             switch (command)
             {
                 case "open":
-                    TryOpenFile(input, data);
+                    this.TryOpenFile(input, data);
                     break;
                 case "mkdir":
-                    TryCreateDirectory(input, data);
+                    this.TryCreateDirectory(input, data);
                     break;
                 case "ls":
-                    TryTraverseFolders(input, data);
+                    this.TryTraverseFolders(input, data);
                     break;
                 case "cmp":
-                    TryCompareFiles(input, data);
+                    this.TryCompareFiles(input, data);
                     break;
                 case "cdRel":
-                    TryChangePathRelatively(input, data);
+                    this.TryChangePathRelatively(input, data);
                     break;
                 case "cdAbs":
-                    TryChangePathAbsolute(input, data);
+                    this.TryChangePathAbsolute(input, data);
                     break;
                 case "readDb":
-                    TryReadDatabaseFromFile(input, data);
+                    this.TryReadDatabaseFromFile(input, data);
                     break;
                 case "help":
-                    TryGetHelp(input, data);
+                    this.TryGetHelp(input, data);
                     break;
                 case "filter":
-                    TryFilterAndTake(input, data);
+                    this.TryFilterAndTake(input, data);
                     break;
                 case "order":
-                    TryOrderAndTake(input, data);
+                    this.TryOrderAndTake(input, data);
                     break;
                 case "dropdb":
-                    TryDtopDb(input, data);
+                    this.TryDtopDb(input, data);
                     break;
                 case "decOrder":
                     break;
@@ -61,10 +88,10 @@
                 case "downloadAsynch":
                     break;
                 case "show":
-                    TryShowWantedData(input, data);
+                    this.TryShowWantedData(input, data);
                     break;
                 default:
-                    DisplayInvalidCommandMessage(input);
+                    this.DisplayInvalidCommandMessage(input);
                     break;
             }
         }
@@ -83,7 +110,7 @@
 
         private void TryOrderAndTake(string input, string[] data)
         {
-            if (!IsDataValid(data, 5))
+            if (!this.IsDataValid(data, 5))
             {
                 return;
             }
@@ -93,7 +120,7 @@
             var takeCommand = data[3].ToLower();
             var takeQuantity = data[4].ToLower();
 
-            TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, comparison);
+            this.TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, comparison);
         }
 
         private void TryParseParametersForOrderAndTake(string takeCommand, string takeQuantity, string courseName, string comparison)
@@ -126,7 +153,7 @@
 
         private void TryFilterAndTake(string input, string[] data)
         {
-            if (!IsDataValid(data, 5))
+            if (!this.IsDataValid(data, 5))
             {
                 return;
             }
@@ -136,7 +163,7 @@
             var takeCommand = data[3].ToLower();
             var takeQuantity = data[4].ToLower();
 
-            TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
+            this.TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
         }
 
         private void TryParseParametersForFilterAndTake(string takeCommand, string takeQuantity, string courseName, string filter)
@@ -182,7 +209,7 @@
             }
             else
             {
-                DisplayInvalidCommandMessage(input);
+                this.DisplayInvalidCommandMessage(input);
             }
 
             return;
@@ -208,7 +235,7 @@
 
         private void TryReadDatabaseFromFile(string input, string[] data)
         {
-            if (!IsDataValid(data, 2))
+            if (!this.IsDataValid(data, 2))
             {
                 return;
             }
@@ -219,7 +246,7 @@
 
         private void TryChangePathRelatively(string input, string[] data)
         {
-            if (!IsDataValid(data, 2))
+            if (!this.IsDataValid(data, 2))
             {
                 return;
             }
@@ -230,7 +257,7 @@
 
         private void TryChangePathAbsolute(string input, string[] data)
         {
-            if (!IsDataValid(data, 2))
+            if (!this.IsDataValid(data, 2))
             {
                 return;
             }
@@ -241,7 +268,7 @@
 
         private void TryCompareFiles(string input, string[] data)
         {
-            if (!IsDataValid(data, 3))
+            if (!this.IsDataValid(data, 3))
             {
                 return;
             }
@@ -272,7 +299,7 @@
 
         private void TryCreateDirectory(string input, string[] data)
         {
-            if (!IsDataValid(data, 2))
+            if (!this.IsDataValid(data, 2))
             {
                 return;
             }
@@ -283,7 +310,7 @@
 
         private void TryOpenFile(string input, string[] data)
         {
-            if (!IsDataValid(data, 2))
+            if (!this.IsDataValid(data, 2))
             {
                 return;
             }
@@ -296,7 +323,7 @@
         {
             if (data.Length != neededLength)
             {
-                DisplayInvalidCommandMessage(string.Join(" ", data));
+                this.DisplayInvalidCommandMessage(string.Join(" ", data));
                 return false;
             }
 

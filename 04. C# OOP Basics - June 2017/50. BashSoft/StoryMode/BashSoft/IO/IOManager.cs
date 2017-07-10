@@ -55,7 +55,7 @@
             }
             catch (ArgumentException)
             {
-                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.ForbiddenSymbolsContainedInName);
+                throw new ArgumentException(ExceptionMessages.ForbiddenSymbolsContainedInName);
             }
         }
 
@@ -72,7 +72,7 @@
                 }
                 catch (ArgumentOutOfRangeException)
                 {
-                    OutputWriter.WriteMessageOnNewLine(ExceptionMessages.UnableToGoHigherInParitionHierarchy);
+                    throw new ArgumentOutOfRangeException("indexOfLastSlash", ExceptionMessages.InvalidPath);
                 }
             }
             else
@@ -87,8 +87,7 @@
         {
             if (!Directory.Exists(absolutePath))
             {
-                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
-                return;
+                throw new DirectoryNotFoundException(ExceptionMessages.InvalidPath);
             }
 
             SessionData.CurrentPath = absolutePath;

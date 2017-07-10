@@ -9,19 +9,19 @@
         {
             if (wantedFilters == "excellent")
             {
-                FilterAndTake(wantedData, x => x >= 5, studentsToTake);
+                this.FilterAndTake(wantedData, x => x >= 5, studentsToTake);
             }
             else if (wantedFilters == "average")
             {
-                FilterAndTake(wantedData, x => x >= 3.5 && x < 5, studentsToTake);
+                this.FilterAndTake(wantedData, x => x >= 3.5 && x < 5, studentsToTake);
             }
             else if (wantedFilters == "poor")
             {
-                FilterAndTake(wantedData, x => x < 3.5, studentsToTake);
+                this.FilterAndTake(wantedData, x => x < 3.5, studentsToTake);
             }
             else
             {
-                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidStudentFilter);
+                throw new ArgumentException(ExceptionMessages.InvalidStudentFilter);
             }
         }
 
