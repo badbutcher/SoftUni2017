@@ -13,14 +13,14 @@
                     return new Cram();
                 case "lembas":
                     return new Lembas();
-                case "apple":
-                    return new Apple();
                 case "melon":
                     return new Melon();
+                case "apple":
+                    return new Apple();
                 case "honeycake":
                     return new HoneyCake();
                 case "mushrooms":
-                    return new HoneyCake();
+                    return new Mushrooms();
                 default:
                     return new Junk();
             }

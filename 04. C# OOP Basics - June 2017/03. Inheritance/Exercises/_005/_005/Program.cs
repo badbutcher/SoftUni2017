@@ -24,7 +24,7 @@
             var currentMood = moodFactory.GetMood(totalHapinessPoints);
 
             Console.WriteLine(totalHapinessPoints);
-            Console.WriteLine(currentMood.ToString());
+            Console.WriteLine(currentMood);
         }
     }
 }
