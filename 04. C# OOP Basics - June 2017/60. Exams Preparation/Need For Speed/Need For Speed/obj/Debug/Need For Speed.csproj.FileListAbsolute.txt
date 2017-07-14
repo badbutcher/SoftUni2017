@@ -1,6 +1,0 @@
-D:\Github\SoftUni2017\04. C# OOP Basics - June 2017\60. Exams Preparation\Need For Speed\Need For Speed\bin\Debug\Need For Speed.exe.config
-D:\Github\SoftUni2017\04. C# OOP Basics - June 2017\60. Exams Preparation\Need For Speed\Need For Speed\bin\Debug\Need For Speed.exe
-D:\Github\SoftUni2017\04. C# OOP Basics - June 2017\60. Exams Preparation\Need For Speed\Need For Speed\bin\Debug\Need For Speed.pdb
-D:\Github\SoftUni2017\04. C# OOP Basics - June 2017\60. Exams Preparation\Need For Speed\Need For Speed\obj\Debug\Need For Speed.csprojResolveAssemblyReference.cache
-D:\Github\SoftUni2017\04. C# OOP Basics - June 2017\60. Exams Preparation\Need For Speed\Need For Speed\obj\Debug\Need For Speed.exe
-D:\Github\SoftUni2017\04. C# OOP Basics - June 2017\60. Exams Preparation\Need For Speed\Need For Speed\obj\Debug\Need For Speed.pdb
