@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _008
+namespace _008.Interfaces
 {
-    public class Program
+    public interface IPrivate : ISoldier
     {
-        public static void Main()
-        {
-            //Fix abstracts
-        }
+        double Salary { get; }
     }
 }

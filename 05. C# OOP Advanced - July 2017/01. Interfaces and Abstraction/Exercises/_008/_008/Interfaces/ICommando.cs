@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _008
+namespace _008.Interfaces
 {
-    public class Program
+    public interface ICommando : ISpecialisedSoldier
     {
-        public static void Main()
-        {
-            //Fix abstracts
-        }
+        IList<IMissions> Missions { get; }
     }
 }

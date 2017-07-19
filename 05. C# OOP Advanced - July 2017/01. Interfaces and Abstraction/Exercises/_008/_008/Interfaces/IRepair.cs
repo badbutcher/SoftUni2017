@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _008
+namespace _008.Interfaces
 {
-    public class Program
+    public interface IRepair
     {
-        public static void Main()
-        {
-            //Fix abstracts
-        }
+        string PartName { get; }
+
+        int HoursWorked { get; }
     }
 }

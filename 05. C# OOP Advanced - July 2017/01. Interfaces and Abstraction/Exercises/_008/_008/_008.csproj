@@ -42,11 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ICommando.cs" />
+    <Compile Include="Interfaces\IEngineer.cs" />
+    <Compile Include="Interfaces\ILeutenantGeneral.cs" />
+    <Compile Include="Interfaces\IMissions.cs" />
+    <Compile Include="Interfaces\IPrivate.cs" />
+    <Compile Include="Interfaces\IRepair.cs" />
+    <Compile Include="Interfaces\ISoldier.cs" />
+    <Compile Include="Interfaces\ISpecialisedSoldier.cs" />
+    <Compile Include="Interfaces\ISpy.cs" />
+    <Compile Include="Models\Commando.cs" />
+    <Compile Include="Models\Engineer.cs" />
+    <Compile Include="Models\LeutenantGeneral.cs" />
+    <Compile Include="Models\Private.cs" />
+    <Compile Include="Models\Soldier.cs" />
+    <Compile Include="Models\SpecialisedSoldier.cs" />
+    <Compile Include="Models\Spy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
