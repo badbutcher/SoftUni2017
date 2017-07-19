@@ -40,13 +40,13 @@
                     }
                     else
                     {
-                        OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidTakeQueryParamter);
+                        OutputWriter.DisplayException(ExceptionMessages.InvalidTakeQueryParamter);
                     }
                 }
             }
             else
             {
-                OutputWriter.WriteMessageOnNewLine(ExceptionMessages.InvalidTakeQueryParamter);
+                OutputWriter.DisplayException(ExceptionMessages.InvalidTakeQueryParamter);
             }
         }
     }

@@ -1,0 +1,6 @@
+readDb data.txt
+order C#_Jul_2016 ascending take all
+order C#_Jul_2016 descending take 3
+filter C#_Feb_2015 excellent take all
+filter C#_Feb_2015 average take all
+filter C#_Feb_2015 poor take all
