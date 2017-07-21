@@ -54,7 +54,9 @@
     <Compile Include="Models\Commando.cs" />
     <Compile Include="Models\Engineer.cs" />
     <Compile Include="Models\LeutenantGeneral.cs" />
+    <Compile Include="Models\Mission.cs" />
     <Compile Include="Models\Private.cs" />
+    <Compile Include="Models\Repair.cs" />
     <Compile Include="Models\Soldier.cs" />
     <Compile Include="Models\SpecialisedSoldier.cs" />
     <Compile Include="Models\Spy.cs" />
@@ -63,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

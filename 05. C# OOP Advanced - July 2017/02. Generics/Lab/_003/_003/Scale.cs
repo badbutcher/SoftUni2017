@@ -3,7 +3,7 @@
     using System;
 
     public class Scale<T>
-        where T : IComparable
+        where T : IComparable<T>
     {
         private T left;
         private T right;

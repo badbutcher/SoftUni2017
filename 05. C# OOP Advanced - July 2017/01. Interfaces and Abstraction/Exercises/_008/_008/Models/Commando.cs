@@ -1,34 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _008.Interfaces;
-
-namespace _008.Models
+﻿namespace _008.Models
 {
-    public class Commando : ICommando
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using _008.Interfaces;
+
+    public class Commando : SpecialisedSoldier, ICommando
     {
-        public Commando(int id, string firstName, string lastName, double salary, string corp, IList<IMissions> Missions)
+        public Commando(string id, string firstName, string lastName, double salary, string corp, IList<IMissions> missions)
+            : base(id, firstName, lastName, salary, corp)
         {
-            this.Id = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Salary = salary;
-            this.Corp = corp;
-            this.Missions = new List<IMissions>();
+            this.Missions = missions;
         }
 
         public IList<IMissions> Missions { get; private set; }
 
-        public string Corp { get;  set; }
+        public void CompleteMission()
+        {
+        }
 
-        public int Id { get; private set; }
-
-        public string FirstName { get; private set; }
-
-        public string LastName { get; private set; }
-
-        public double Salary { get; private set; }
+        public override string ToString()
+        {
+            var sb = new StringBuilder($"{base.ToString()}" + Environment.NewLine);
+            sb.AppendLine("Missions:");
+            sb.AppendLine($"  {string.Join(Environment.NewLine + "  ", this.Missions)}");
+            return sb.ToString().Trim();
+        }
     }
 }

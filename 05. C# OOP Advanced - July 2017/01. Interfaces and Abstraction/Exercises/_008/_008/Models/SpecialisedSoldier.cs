@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _008.Interfaces;
-
-namespace _008.Models
+﻿namespace _008.Models
 {
-    public abstract class SpecialisedSoldier : ISpecialisedSoldier
+    using System;
+    using _008.Interfaces;
+
+    public abstract class SpecialisedSoldier : Private, ISpecialisedSoldier
     {
+        public SpecialisedSoldier(string id, string firstName, string lastName, double salary, string corp)
+            : base(id, firstName, lastName, salary)
+        {
+            this.Corp = corp;
+        }
+
         public string Corp { get; set; }
 
-        public int Id { get; private set; }
-
-        public string FirstName { get; private set; }
-
-        public string LastName { get; private set; }
-
-        public double Salary => throw new NotImplementedException();
+        public override string ToString()
+        {
+            return $"{base.ToString()}" + Environment.NewLine + $"Corps: {this.Corp}";
+        }
     }
 }

@@ -10,7 +10,6 @@
 
     public class StudentsRepository
     {
-        private Dictionary<string, Dictionary<string, List<int>>> studentsByCourse;
         private bool isDataInilized;
         private RepositoryFilter filter;
         private RepositorySorter sorter;
@@ -21,7 +20,6 @@
         {
             this.filter = filter;
             this.sorter = sorter;
-            this.studentsByCourse = new Dictionary<string, Dictionary<string, List<int>>>();
         }
 
         public void FilterAndTake(string courseName, string givenFilter, int? studentsToTake = null)
@@ -102,7 +100,6 @@
             string path = SessionData.CurrentPath + "\\" + fileName;
             if (File.Exists(path))
             {
-                //([A-Z][A-Za-z+#]*_[A-Z][a-z]{2}_201[4-9])\s+([A-Z][a-z]{0,3}\d{2}_\d{2,4})\s+(\d{1,3})
                 var rgx = new Regex(@"([A-Z][a-zA-Z#\++]*_[A-Z][a-z]{2}_\d{4})\s+([A-Za-z]+\d{2}_\d{2,4})\s([\s0-9]+)");
                 var allInputLines = File.ReadAllLines(path);
                 for (int i = 0; i < allInputLines.Length; i++)
@@ -189,7 +186,6 @@
 
         private bool IsQueryForStudentPossible(string courseName, string studentUserName)
         {
-            //if (IsQueryForCoursePossible(courseName) && studentsByCourse[courseName].ContainsKey(studentUserName))
             if (this.IsQueryForCoursePossible(courseName) && this.courses[courseName].StudentsByName.ContainsKey(studentUserName))
             {
                 return true;

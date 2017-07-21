@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _001
+﻿namespace _001
 {
+    using System;
+
     public class Program
     {
         public static void Main()
         {
+            var value = Console.ReadLine();
+            Box<string> box = new Box<string>(value);
+            Console.WriteLine(box.ToString());
         }
     }
 }

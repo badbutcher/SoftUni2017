@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _008.Interfaces;
-
-namespace _008.Models
+﻿namespace _008.Models
 {
-    public class Spy : ISpy
+    using System;
+    using _008.Interfaces;
+
+    public class Spy : Soldier, ISpy
     {
-        public Spy(int id, string firstName, string lastName, int codeNumber)
+        public Spy(string id, string firstName, string lastName, int codeNumber)
+            : base(id, firstName, lastName)
         {
-            this.Id = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
             this.CodeNumber = codeNumber;
         }
 
         public int CodeNumber { get; private set; }
 
-        public int Id { get; private set; }
-
-        public string FirstName { get; private set; }
-
-        public string LastName { get; private set; }
+        public override string ToString()
+        {
+            return $"{base.ToString()}" + Environment.NewLine + $"Code Number: {this.CodeNumber}";
+        }
     }
 }

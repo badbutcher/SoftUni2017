@@ -1,31 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _008.Interfaces;
-
-namespace _008.Models
+﻿namespace _008.Models
 {
-    public class LeutenantGeneral : ILeutenantGeneral
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using _008.Interfaces;
+
+    public class LeutenantGeneral : Private, ILeutenantGeneral
     {
-        public LeutenantGeneral(int id, string firstName, string lastName, double salary, IList<IPrivate> privates)
+        public LeutenantGeneral(string id, string firstName, string lastName, double salary, IList<ISoldier> soldiers)
+            : base(id, firstName, lastName, salary)
         {
-            this.Id = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Salary = salary;
-            this.Privates = new List<IPrivate>();
+            this.Soldiers = soldiers;
         }
 
-        public IList<IPrivate> Privates { get; private set; }
+        public IList<ISoldier> Soldiers { get; private set; }
 
-        public int Id { get; private set; }
-
-        public string FirstName { get; private set; }
-
-        public string LastName { get; private set; }
-
-        public double Salary { get; private set; }
+        public override string ToString()
+        {
+            var sb = new StringBuilder($"{base.ToString()}" + Environment.NewLine);
+            sb.AppendLine("Privates:");
+            sb.AppendLine($"  {string.Join(Environment.NewLine + "  ", this.Soldiers)}");
+            return sb.ToString().Trim();
+        }
     }
 }
