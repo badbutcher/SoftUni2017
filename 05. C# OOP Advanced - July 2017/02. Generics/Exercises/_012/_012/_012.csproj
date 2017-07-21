@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADB3D532-6836-440A-A653-DF91F4105603}</ProjectGuid>
+    <ProjectGuid>{A8C019B6-C66D-48C2-8368-63D285D173A3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_008</RootNamespace>
-    <AssemblyName>_008</AssemblyName>
+    <RootNamespace>_012</RootNamespace>
+    <AssemblyName>_012</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threeuple.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

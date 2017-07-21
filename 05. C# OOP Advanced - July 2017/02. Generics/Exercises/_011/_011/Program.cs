@@ -1,15 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _011
+﻿namespace _011
 {
+    using System;
+
     public class Program
     {
         public static void Main()
         {
+            string[] inputOne = Console.ReadLine().Split();
+            Tuple<string, string> tupleOne = new Tuple<string, string>(inputOne[0] + " " + inputOne[1], inputOne[2]);
+
+            string[] inputTwo = Console.ReadLine().Split();
+            Tuple<string, int> tupleTwo = new Tuple<string, int>(inputTwo[0], int.Parse(inputTwo[1]));
+
+            string[] inputThree = Console.ReadLine().Split();
+            Tuple<int, double> tupleThree = new Tuple<int, double>(int.Parse(inputThree[0]), double.Parse(inputThree[1]));
+
+            Console.WriteLine(tupleOne.ToString());
+            Console.WriteLine(tupleTwo.ToString());
+            Console.WriteLine(tupleThree.ToString());
         }
     }
 }
