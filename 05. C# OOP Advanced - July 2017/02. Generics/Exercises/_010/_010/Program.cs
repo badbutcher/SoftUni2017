@@ -43,7 +43,7 @@
                             Console.WriteLine(list.Min());
                             break;
                         case "Print":
-                            list.Print();
+                            Console.WriteLine(list.ToString());
                             break;
                         case "Sort":
                             list.Sort();

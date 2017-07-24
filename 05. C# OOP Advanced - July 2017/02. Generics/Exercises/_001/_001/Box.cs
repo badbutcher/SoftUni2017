@@ -2,16 +2,16 @@
 {
     public class Box<T>
     {
-        private T value;
-
         public Box(T value)
         {
-            this.value = value;
+            this.Value = value;
         }
+
+        public T Value { get; private set; }
 
         public override string ToString()
         {
-            return $"{this.GetType().FullName}: {this.value}";
+            return $"{this.GetType().FullName}: {this.Value}";
         }
     }
 }

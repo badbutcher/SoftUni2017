@@ -4,6 +4,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
 
     public class MyList<T> : IEnumerable<T>
         where T : IComparable
@@ -76,9 +77,15 @@
             this.List = this.List.OrderBy(a => a).ToList();
         }
 
-        public void Print()
+        public override string ToString()
         {
-            this.List.ToList().ForEach(a => Console.WriteLine(a));
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in List)
+            {
+                sb.AppendLine(item.ToString());
+            }
+
+            return sb.ToString().Trim();
         }
 
         public IEnumerator<T> GetEnumerator()

@@ -1,6 +1,0 @@
-D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\01. Interfaces and Abstraction\Exercises\_008\_008\bin\Debug\_008.exe.config
-D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\01. Interfaces and Abstraction\Exercises\_008\_008\bin\Debug\_008.exe
-D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\01. Interfaces and Abstraction\Exercises\_008\_008\bin\Debug\_008.pdb
-D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\01. Interfaces and Abstraction\Exercises\_008\_008\obj\Debug\_008.csprojResolveAssemblyReference.cache
-D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\01. Interfaces and Abstraction\Exercises\_008\_008\obj\Debug\_008.exe
-D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\01. Interfaces and Abstraction\Exercises\_008\_008\obj\Debug\_008.pdb

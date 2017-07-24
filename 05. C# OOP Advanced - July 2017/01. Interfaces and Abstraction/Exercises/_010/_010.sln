@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_010", "_010\_010.csproj", "{49F3E09C-9C70-4329-8087-F36A0D8CCF66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explicit Interfaces", "Explicit Interfaces.csproj", "{B0BA8332-31B7-4B30-A36C-5485B8EACBD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{49F3E09C-9C70-4329-8087-F36A0D8CCF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49F3E09C-9C70-4329-8087-F36A0D8CCF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49F3E09C-9C70-4329-8087-F36A0D8CCF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49F3E09C-9C70-4329-8087-F36A0D8CCF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0BA8332-31B7-4B30-A36C-5485B8EACBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0BA8332-31B7-4B30-A36C-5485B8EACBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0BA8332-31B7-4B30-A36C-5485B8EACBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0BA8332-31B7-4B30-A36C-5485B8EACBD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
