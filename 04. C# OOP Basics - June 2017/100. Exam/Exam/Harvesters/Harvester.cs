@@ -1,6 +1,6 @@
 ﻿using System;
 
-public abstract class Harvester
+public abstract class Harvester : PressureProvider
 {
     private string id;
     private double oreOutput;

@@ -1,0 +1,6 @@
+C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\03. Iterators and Comparators\Exercises\_002\_002\bin\Debug\_002.exe.config
+C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\03. Iterators and Comparators\Exercises\_002\_002\bin\Debug\_002.exe
+C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\03. Iterators and Comparators\Exercises\_002\_002\bin\Debug\_002.pdb
+C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\03. Iterators and Comparators\Exercises\_002\_002\obj\Debug\_002.csprojResolveAssemblyReference.cache
+C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\03. Iterators and Comparators\Exercises\_002\_002\obj\Debug\_002.exe
+C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\03. Iterators and Comparators\Exercises\_002\_002\obj\Debug\_002.pdb
