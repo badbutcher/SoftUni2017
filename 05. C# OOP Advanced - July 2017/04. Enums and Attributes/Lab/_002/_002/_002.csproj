@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoffeeMachine.cs" />
+    <Compile Include="Enums\CoffeePrice.cs" />
+    <Compile Include="Enums\CoffeeType.cs" />
+    <Compile Include="Enums\Coin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
