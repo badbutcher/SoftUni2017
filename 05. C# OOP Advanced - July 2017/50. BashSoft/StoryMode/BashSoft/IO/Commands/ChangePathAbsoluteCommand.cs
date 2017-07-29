@@ -1,10 +1,11 @@
 ﻿namespace BashSoft.IO.Commands
 {
+    using Contracts;
     using Execptions;
 
-    public class ChangePathAbsoluteCommand : Command
+    public class ChangePathAbsoluteCommand : Command, IExecutable
     {
-        public ChangePathAbsoluteCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager) 
+        public ChangePathAbsoluteCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
             : base(input, data, judge, repository, inputOutputManager)
         {
         }

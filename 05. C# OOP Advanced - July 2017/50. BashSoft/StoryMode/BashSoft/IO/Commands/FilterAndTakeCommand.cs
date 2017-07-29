@@ -1,10 +1,11 @@
 ﻿namespace BashSoft.IO.Commands
 {
+    using Contracts;
     using Execptions;
 
-    public class FilterAndTakeCommand : Command
+    public class FilterAndTakeCommand : Command, IExecutable
     {
-        public FilterAndTakeCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager) 
+        public FilterAndTakeCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
             : base(input, data, judge, repository, inputOutputManager)
         {
         }

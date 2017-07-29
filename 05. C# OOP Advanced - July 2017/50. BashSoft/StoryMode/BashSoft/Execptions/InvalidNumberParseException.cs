@@ -6,12 +6,12 @@
     {
         public const string UnableToParseNumber = "The sequence you've written is not a valid number.";
 
-        public InvalidNumberParseException() 
+        public InvalidNumberParseException()
             : base(UnableToParseNumber)
         {
         }
 
-        public InvalidNumberParseException(string message) 
+        public InvalidNumberParseException(string message)
             : base(message)
         {
         }

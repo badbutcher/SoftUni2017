@@ -1,10 +1,11 @@
 ﻿namespace BashSoft.IO.Commands
 {
+    using Contracts;
     using Execptions;
 
-    public class ChangePathRelativelyCommand : Command
+    public class ChangePathRelativelyCommand : Command, IExecutable
     {
-        public ChangePathRelativelyCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        public ChangePathRelativelyCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
             : base(input, data, judge, repository, inputOutputManager)
         {
         }

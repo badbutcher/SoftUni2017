@@ -6,12 +6,12 @@
     {
         private const string NotEnrolledInCourse = "Student must be enrolled in a course before you set his mark.";
 
-        public CourseNotFoundException() 
+        public CourseNotFoundException()
             : base(NotEnrolledInCourse)
         {
         }
 
-        public CourseNotFoundException(string message) 
+        public CourseNotFoundException(string message)
             : base(message)
         {
         }

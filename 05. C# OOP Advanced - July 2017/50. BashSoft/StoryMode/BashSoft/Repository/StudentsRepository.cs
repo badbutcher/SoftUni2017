@@ -5,21 +5,22 @@
     using System.IO;
     using System.Linq;
     using System.Text.RegularExpressions;
+    using Contracts;
     using Execptions;
     using Models;
 
-    public class StudentsRepository
+    public class StudentsRepository : IDatabase
     {
         private bool isDataInilized;
-        private Dictionary<string, Course> courses;
-        private Dictionary<string, Student> students;
-        private RepositoryFilter filter;
-        private RepositorySorter sorter;
+        private Dictionary<string, ICourse> courses;
+        private Dictionary<string, IStudent> students;
+        private IDataFilter filter;
+        private IDataSorter sorter;
 
-        public StudentsRepository(RepositoryFilter filter, RepositorySorter sorter)
+        public StudentsRepository(IDataFilter filter, IDataSorter sorter)
         {
-            this.courses = new Dictionary<string, Course>();
-            this.students = new Dictionary<string, Student>();
+            this.courses = new Dictionary<string, ICourse>();
+            this.students = new Dictionary<string, IStudent>();
             this.filter = filter;
             this.sorter = sorter;
             this.isDataInilized = false;
@@ -62,8 +63,8 @@
                 throw new ArgumentException(ExceptionMessages.DataAlreadyInitialisedException);
             }
 
-            this.courses = new Dictionary<string, Course>();
-            this.students = new Dictionary<string, Student>();
+            this.courses = new Dictionary<string, ICourse>();
+            this.students = new Dictionary<string, IStudent>();
             OutputWriter.WriteMessageOnNewLine("Reading data...");
             this.ReadData(fileName);
         }

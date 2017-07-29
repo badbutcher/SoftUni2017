@@ -4,3 +4,9 @@ C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\Bas
 C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.csprojResolveAssemblyReference.cache
 C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.exe
 C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.pdb
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\bin\Debug\BashSoft.exe.config
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\bin\Debug\BashSoft.exe
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\bin\Debug\BashSoft.pdb
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.csprojResolveAssemblyReference.cache
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.exe
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\50. BashSoft\StoryMode\BashSoft\obj\Debug\BashSoft.pdb

@@ -2,8 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+    using Contracts;
 
-    public class RepositoryFilter
+    public class RepositoryFilter : IDataFilter
     {
         public void FilterAndTake(Dictionary<string, double> studentsWithMarks, string wantedFilters, int studentsToTake)
         {
