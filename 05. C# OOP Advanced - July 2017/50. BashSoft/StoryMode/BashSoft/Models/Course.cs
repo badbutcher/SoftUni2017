@@ -41,6 +41,11 @@
             get { return this.studentsByName; }
         }
 
+        public int CompareTo(ICourse other)
+        {
+            return this.Name.CompareTo(other.Name);
+        }
+
         public void EnrollStudent(IStudent student)
         {
             if (this.studentsByName.ContainsKey(student.Username))
@@ -49,6 +54,11 @@
             }
 
             this.studentsByName.Add(student.Username, student);
+        }
+
+        public override string ToString()
+        {
+            return this.Name;
         }
     }
 }

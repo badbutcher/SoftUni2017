@@ -46,6 +46,11 @@
             get { return this.marksByCourseName; }
         }
 
+        public int CompareTo(IStudent other)
+        {
+            return this.Username.CompareTo(other.Username);
+        }
+
         public void EnrollInCourse(ICourse course)
         {
             if (this.enrolledCourses.ContainsKey(course.Name))
@@ -77,6 +82,11 @@
             var mark = percentageOfSolvedExam * 4 + 2;
 
             return mark;
+        }
+
+        public override string ToString()
+        {
+            return this.Username;
         }
     }
 }

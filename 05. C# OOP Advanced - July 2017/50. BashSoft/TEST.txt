@@ -1,0 +1,5 @@
+readDb data.txt
+display courses ascending
+display courses ascending
+display courses
+display students descending
