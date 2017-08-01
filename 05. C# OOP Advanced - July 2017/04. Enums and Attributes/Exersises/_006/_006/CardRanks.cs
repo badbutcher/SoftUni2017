@@ -1,6 +1,6 @@
 ﻿namespace _006
 {
-    [TypeAttribute("Enumeration", "Rank", "Provides rank constants for a Card class.")]
+    [Type("Enumeration", "Rank", "Provides rank constants for a Card class.")]
     public enum CardRanks
     {
         Ace = 14,

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace _006
+﻿namespace _006
 {
+    using System;
+
     [AttributeUsage(AttributeTargets.Enum)]
     public class TypeAttribute : Attribute
     {
@@ -17,5 +17,10 @@ namespace _006
         public string Category { get; private set; }
 
         public string Description { get; private set; }
+
+        public override string ToString()
+        {
+            return $"Type = {this.Type}, Description = {this.Description}";
+        }
     }
 }

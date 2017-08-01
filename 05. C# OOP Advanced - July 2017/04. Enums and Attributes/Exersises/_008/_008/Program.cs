@@ -1,55 +1,83 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _008
 {
     public class Program
     {
+        private static Card biggest;
+        private static string winner;
+
         public static void Main()
         {
-            List<Card> cards = new List<Card>();
+            Game();
+        }
 
-            foreach (CardSuits suit in Enum.GetValues(typeof(CardSuits)))
+        private static void Game()
+        {
+            List<Card> deck = GenerateDeck();
+
+            string firstPlayer = Console.ReadLine();
+            string secondPlayer = Console.ReadLine();
+            List<Card> firstDeck = new List<Card>();
+            List<Card> secondDeck = new List<Card>();
+
+            while (firstDeck.Count < 5 || secondDeck.Count < 5)
             {
-                foreach (CardRanks rank in Enum.GetValues(typeof(CardRanks)))
+                var inputArgs = Console.ReadLine().Split();
+                try
                 {
-                    Card card = new Card(rank, suit);
-                    cards.Add(card);
+                    var card = new Card(inputArgs[0], inputArgs[inputArgs.Length - 1]);
+                    if (deck.Contains(card))
+                    {
+                        deck.Remove(card);
+                        if (firstDeck.Count < 5)
+                        {
+                            firstDeck.Add(card);
+                            WinnerCheck(card, firstPlayer);
+                        }
+                        else
+                        {
+                            secondDeck.Add(card);
+                            WinnerCheck(card, secondPlayer);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Card is not in the deck.");
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("No such card exists.");
                 }
             }
 
-            string playerOne = Console.ReadLine();
-            string playerTwo = Console.ReadLine();
-            List<Card> playerOneCards = new List<Card>();
-            List<Card> playerTwoCards = new List<Card>();
+            Console.WriteLine($"{winner} wins with {biggest.Name}.");
+        }
 
-            while (playerOneCards.Count < 5 && playerTwoCards.Count < 5)
+        public static void WinnerCheck(Card card, string player)
+        {
+            if (card.CompareTo(biggest) > 0)
             {
-                string[] cardInfo = Console.ReadLine().Split();
-                CardRanks cardRank;
-                CardSuits cardSuit;
-                
-                if (!(Enum.TryParse(cardInfo[0], out cardRank)))
-                {
-                    Console.WriteLine("No such card exists");
-                    continue;
-                }
+                biggest = card;
+                winner = player;
+            }
+        }
 
-                if (!(Enum.TryParse(cardInfo[2], out cardSuit)))
-                {
-                    Console.WriteLine("No such card exists");
-                    continue;
-                }
+        public static List<Card> GenerateDeck()
+        {
+            List<Card> deck = new List<Card>();
 
-                Card card = new Card(cardRank, cardSuit);
-                if (cards.Any(c => c.Equals(card)))
+            foreach (var suit in Enum.GetNames(typeof(CardSuits)))
+            {
+                foreach (var rank in Enum.GetNames(typeof(CardRanks)))
                 {
-
+                    deck.Add(new Card(rank, suit));
                 }
             }
+
+            return deck;
         }
     }
 }

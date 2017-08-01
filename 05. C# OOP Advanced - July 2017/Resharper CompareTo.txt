@@ -1,0 +1,18 @@
+if (ReferenceEquals(this, other))
+            {
+                return 0;
+            }
+
+            if (ReferenceEquals(null, other))
+            {
+                return 1;
+            }
+
+            var rankComparion = this.Rank.CompareTo(other.Rank);
+
+            if (rankComparion != 0)
+            {
+                return rankComparion;
+            }
+
+            return this.Suit.CompareTo(other.Suit);

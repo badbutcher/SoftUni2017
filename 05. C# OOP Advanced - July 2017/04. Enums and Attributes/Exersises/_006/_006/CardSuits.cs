@@ -1,6 +1,6 @@
 ﻿namespace _006
 {
-    [TypeAttribute("Enumeration", "Suit", "Provides suit constants for a Card class.")]
+    [Type("Enumeration", "Suit", "Provides suit constants for a Card class.")]
     public enum CardSuits
     {
         Clubs = 0,
