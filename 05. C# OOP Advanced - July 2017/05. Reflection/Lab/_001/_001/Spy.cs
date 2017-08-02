@@ -13,9 +13,9 @@ public class Spy
 
         StringBuilder sb = new StringBuilder();
 
-        object classInstance = Activator.CreateInstance(classType, new object[] { });
+        Object classInstance = Activator.CreateInstance(classType, new object[] { });
 
-        sb.AppendLine($"Class under investigation: {classInstance}");  
+        sb.AppendLine($"Class under investigation: {className}");  
 
         foreach (var item in publicFields.Where(a => fields.Contains(a.Name))) //.GetCustomAttribute<CompilerGeneratedAttribute>() == null)
         {

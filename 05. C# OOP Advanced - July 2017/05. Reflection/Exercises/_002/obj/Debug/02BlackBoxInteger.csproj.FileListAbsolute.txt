@@ -1,0 +1,6 @@
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\05. Reflection\Exercises\_002\bin\Debug\02BlackBoxInteger.exe.config
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\05. Reflection\Exercises\_002\bin\Debug\02BlackBoxInteger.exe
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\05. Reflection\Exercises\_002\bin\Debug\02BlackBoxInteger.pdb
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\05. Reflection\Exercises\_002\obj\Debug\02BlackBoxInteger.csprojResolveAssemblyReference.cache
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\05. Reflection\Exercises\_002\obj\Debug\02BlackBoxInteger.exe
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\05. Reflection\Exercises\_002\obj\Debug\02BlackBoxInteger.pdb

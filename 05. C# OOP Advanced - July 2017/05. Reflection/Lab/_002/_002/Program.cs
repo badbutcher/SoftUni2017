@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _002
+public class Program
 {
-    public class Program
+    public static void Main()
     {
-        public static void Main()
-        {
-        }
+        Spy spy = new Spy();
+        string result = spy.AnalyzeAcessModifiers("Hacker");
+        Console.WriteLine(result);
     }
 }

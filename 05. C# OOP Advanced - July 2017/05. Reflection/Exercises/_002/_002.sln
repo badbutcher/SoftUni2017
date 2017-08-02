@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_002", "_002\_002.csproj", "{71B4512F-F698-47FF-B3EB-E1374F9BC4A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02BlackBoxInteger", "02BlackBoxInteger.csproj", "{56403F2F-210D-4F01-AC6C-A31B8CBB305B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71B4512F-F698-47FF-B3EB-E1374F9BC4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71B4512F-F698-47FF-B3EB-E1374F9BC4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71B4512F-F698-47FF-B3EB-E1374F9BC4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71B4512F-F698-47FF-B3EB-E1374F9BC4A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56403F2F-210D-4F01-AC6C-A31B8CBB305B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56403F2F-210D-4F01-AC6C-A31B8CBB305B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56403F2F-210D-4F01-AC6C-A31B8CBB305B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56403F2F-210D-4F01-AC6C-A31B8CBB305B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
