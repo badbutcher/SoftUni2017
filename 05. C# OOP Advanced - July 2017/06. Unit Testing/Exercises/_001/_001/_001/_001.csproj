@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4F6F692C-9DC0-4EA4-8C37-409EFB109C1F}</ProjectGuid>
+    <ProjectGuid>{D1DF1415-7451-40FC-AEE7-0E71C4FFDE48}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_002</RootNamespace>
-    <AssemblyName>_002</AssemblyName>
+    <RootNamespace>_001</RootNamespace>
+    <AssemblyName>_001</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Person.cs" />
-    <Compile Include="PersonDataBase.cs" />
+    <Compile Include="DataBaseClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

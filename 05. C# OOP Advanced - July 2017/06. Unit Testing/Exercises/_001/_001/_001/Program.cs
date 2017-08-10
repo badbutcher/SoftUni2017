@@ -1,4 +1,4 @@
-﻿namespace _002
+﻿namespace _001
 {
     public class Program
     {
