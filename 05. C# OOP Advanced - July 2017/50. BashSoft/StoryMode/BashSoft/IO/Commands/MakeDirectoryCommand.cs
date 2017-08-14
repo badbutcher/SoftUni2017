@@ -18,7 +18,8 @@
             }
 
             var folderName = this.Data[1];
-            base.InputOutputManager.CreateDirectoryInCurrentFolder(folderName);
+            ////base.
+            this.InputOutputManager.CreateDirectoryInCurrentFolder(folderName);
         }
     }
 }

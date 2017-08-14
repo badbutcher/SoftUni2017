@@ -25,6 +25,7 @@
             {
                 return this.name;
             }
+
             set
             {
                 if (string.IsNullOrEmpty(value))

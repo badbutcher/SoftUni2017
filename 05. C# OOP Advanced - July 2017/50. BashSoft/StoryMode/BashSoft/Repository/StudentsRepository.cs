@@ -100,6 +100,22 @@
             }
         }
 
+        public ISimpleOrderedBag<ICourse> GetAllCoursesSorted(IComparer<ICourse> cmp)
+        {
+            SimpleSortedList<ICourse> sortedCourses = new SimpleSortedList<ICourse>(cmp);
+            sortedCourses.AddAll(this.courses.Values);
+
+            return sortedCourses;
+        }
+
+        public ISimpleOrderedBag<IStudent> GetAllStudentsSorted(IComparer<IStudent> cmp)
+        {
+            SimpleSortedList<IStudent> sortedStudents = new SimpleSortedList<IStudent>(cmp);
+            sortedStudents.AddAll(this.students.Values);
+
+            return sortedStudents;
+        }
+
         private bool IsQueryForCoursePossible(string courseName)
         {
             if (this.isDataInilized)
@@ -200,22 +216,6 @@
 
             this.isDataInilized = true;
             OutputWriter.WriteMessageOnNewLine("Data read!");
-        }
-
-        public ISimpleOrderedBag<ICourse> GetAllCoursesSorted(IComparer<ICourse> cmp)
-        {
-            SimpleSortedList<ICourse> sortedCourses = new SimpleSortedList<ICourse>(cmp);
-            sortedCourses.AddAll(this.courses.Values);
-
-            return sortedCourses;
-        }
-
-        public ISimpleOrderedBag<IStudent> GetAllStudentsSorted(IComparer<IStudent> cmp)
-        {
-            SimpleSortedList<IStudent> sortedStudents = new SimpleSortedList<IStudent>(cmp);
-            sortedStudents.AddAll(this.students.Values);
-
-            return sortedStudents;
         }
     }
 }

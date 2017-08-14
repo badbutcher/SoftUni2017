@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using BashSoft.Contracts;
-using BashSoft.Execptions;
-
-namespace BashSoft.IO.Commands
+﻿namespace BashSoft.IO.Commands
 {
+    using System;
+    using System.Collections.Generic;
+    using BashSoft.Contracts;
+    using BashSoft.Execptions;
+
     public class DisplayCommand : Command
     {
         public DisplayCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)

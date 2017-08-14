@@ -46,21 +46,11 @@
             }
         }
 
-        private void InitializeInnerCollecction(int capacity)
-        {
-            if (capacity < 0)
-            {
-                throw new ArgumentException("Capacity cannot be negative!");
-            }
-
-            this.innerCollection = new T[capacity];
-        }
-
         public void Add(T element)
         {
             if (this.innerCollection.Length <= this.size)
             {
-                Resize();
+                this.Resize();
             }
 
             this.innerCollection[this.size] = element;
@@ -113,8 +103,8 @@
         private void Resize()
         {
             T[] newCollection = new T[this.Size * 2];
-            Array.Copy(innerCollection, newCollection, Size);
-            innerCollection = newCollection;
+            Array.Copy(this.innerCollection, newCollection, this.Size);
+            this.innerCollection = newCollection;
         }
 
         private void MultiResize(ICollection<T> collection)
@@ -128,6 +118,16 @@
             T[] newCollection = new T[newSize];
             Array.Copy(this.innerCollection, newCollection, this.size);
             this.innerCollection = newCollection;
+        }
+
+        private void InitializeInnerCollecction(int capacity)
+        {
+            if (capacity < 0)
+            {
+                throw new ArgumentException("Capacity cannot be negative!");
+            }
+
+            this.innerCollection = new T[capacity];
         }
     }
 }

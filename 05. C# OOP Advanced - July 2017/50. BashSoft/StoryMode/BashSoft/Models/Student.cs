@@ -25,6 +25,7 @@
             {
                 return this.username;
             }
+
             private set
             {
                 if (string.IsNullOrEmpty(value))
@@ -76,17 +77,17 @@
             this.marksByCourseName.Add(courseName, this.CalculateMark(scores));
         }
 
-        private double CalculateMark(int[] scores)
-        {
-            var percentageOfSolvedExam = scores.Sum() / (double)(Course.NumberOfTasksOnExam * Course.MaxScoreOnExamTask);
-            var mark = percentageOfSolvedExam * 4 + 2;
-
-            return mark;
-        }
-
         public override string ToString()
         {
             return this.Username;
+        }
+
+        private double CalculateMark(int[] scores)
+        {
+            var percentageOfSolvedExam = scores.Sum() / (double)(Course.NumberOfTasksOnExam * Course.MaxScoreOnExamTask);
+            var mark = (percentageOfSolvedExam * 4) + 2;
+
+            return mark;
         }
     }
 }

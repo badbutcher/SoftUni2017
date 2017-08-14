@@ -28,6 +28,7 @@
             {
                 return this.data;
             }
+
             private set
             {
                 if (value == null || value.Length == 0)
@@ -45,6 +46,7 @@
             {
                 return this.input;
             }
+
             private set
             {
                 if (string.IsNullOrEmpty(value))
