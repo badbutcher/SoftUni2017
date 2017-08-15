@@ -14,7 +14,7 @@
 
         public const string ComparisonOfFilesWithDifferentSizes = "Files not of equal size, certain mismatch.";
 
-        //// public const string UnableToParseNumber = "The sequence you've written is not a valid number.";
+        ////public const string UnableToParseNumber = "The sequence you've written is not a valid number.";
 
         public const string InvalidStudentFilter = "The given filter is not one of the following: excellent/average/poor";
 

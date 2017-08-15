@@ -1,12 +1,17 @@
 ﻿namespace BashSoft.IO.Commands
 {
+    using BashSoft.Attributes;
     using Contracts;
     using Execptions;
 
-    public class ShowWantedDataCommand : Command, IExecutable
+    [Alias("show")]
+    public class ShowWantedDataCommand : Command
     {
-        public ShowWantedDataCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
-            : base(input, data, judge, repository, inputOutputManager)
+        [Inject]
+        private IDatabase repository;
+
+        public ShowWantedDataCommand(string input, string[] data)
+            : base(input, data)
         {
         }
 
@@ -15,13 +20,13 @@
             if (this.Data.Length == 2)
             {
                 var course = this.Data[1];
-                this.Repository.GetAllStudentsFromCourse(course);
+                this.repository.GetAllStudentsFromCourse(course);
             }
             else if (this.Data.Length == 3)
             {
                 var course = this.Data[1];
                 var username = this.Data[2];
-                this.Repository.GetStudentScoresFromCourse(course, username);
+                this.repository.GetStudentScoresFromCourse(course, username);
             }
             else
             {

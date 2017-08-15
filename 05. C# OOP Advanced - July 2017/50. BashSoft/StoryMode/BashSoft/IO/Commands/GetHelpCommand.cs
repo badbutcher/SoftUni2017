@@ -1,12 +1,13 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Contracts;
+    using BashSoft.Attributes;
     using Execptions;
 
-    public class GetHelpCommand : Command, IExecutable
+    [Alias("help")]
+    public class GetHelpCommand : Command
     {
-        public GetHelpCommand(string input, string[] data, IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
-            : base(input, data, judge, repository, inputOutputManager)
+        public GetHelpCommand(string input, string[] data)
+            : base(input, data)
         {
         }
 
