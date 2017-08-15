@@ -46,8 +46,21 @@
             }
         }
 
+        public int Capacity
+        {
+            get
+            {
+                return this.innerCollection.Length;
+            }
+        }
+
         public void Add(T element)
         {
+            if (element == null)
+            {
+                throw new ArgumentException("Cant add nulls");
+            }
+
             if (this.innerCollection.Length <= this.size)
             {
                 this.Resize();
@@ -67,6 +80,11 @@
 
             foreach (var element in collection)
             {
+                if (element == null)
+                {
+                    throw new ArgumentException("Cant add nulls");
+                }
+
                 this.innerCollection[this.Size] = element;
                 this.size++;
             }
@@ -76,6 +94,11 @@
 
         public string JoinWith(string joiner)
         {
+            if (joiner == null)
+            {
+                throw new ArgumentException("Cant join with null");
+            }
+
             StringBuilder builder = new StringBuilder();
             foreach (var element in this)
             {
@@ -83,7 +106,7 @@
                 builder.Append(joiner);
             }
 
-            builder.Remove(builder.Length - 1, 1);
+            builder.Remove(builder.Length - joiner.Length, joiner.Length);
             return builder.ToString();
         }
 
@@ -128,6 +151,40 @@
             }
 
             this.innerCollection = new T[capacity];
+        }
+
+        public bool Remove(T element)
+        {
+            if (element == null)
+            {
+                throw new ArgumentException("Cant remove nulls");
+            }
+
+            bool hasBeenRemoved = false;
+            int indexOfRemovedElement = 0;
+            for (int i = 0; i < this.Size; i++)
+            {
+                if (this.innerCollection[i].Equals(element))
+                {
+                    indexOfRemovedElement = i;
+                    this.innerCollection[i] = default(T);
+                    hasBeenRemoved = true;
+                    break;
+                }
+            }
+
+            if (hasBeenRemoved)
+            {
+                for (int i = indexOfRemovedElement; i < this.Size - 1; i++)
+                {
+                    this.innerCollection[i] = this.innerCollection[i + 1];
+                }
+
+                this.innerCollection[this.size - 1] = default(T);
+                this.size--;
+            }
+
+            return hasBeenRemoved;
         }
     }
 }
