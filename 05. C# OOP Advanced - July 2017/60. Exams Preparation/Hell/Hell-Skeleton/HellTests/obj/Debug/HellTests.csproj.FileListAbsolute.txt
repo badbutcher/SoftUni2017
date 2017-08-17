@@ -9,3 +9,14 @@ C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell
 C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\obj\Debug\HellTests.csproj.CoreCompileInputs.cache
 C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\obj\Debug\HellTests.dll
 C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\obj\Debug\HellTests.pdb
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\bin\Debug\HellTests.dll
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\bin\Debug\HellTests.pdb
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\bin\Debug\Hell.exe
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\bin\Debug\nunit.framework.dll
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\bin\Debug\Hell.pdb
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\bin\Debug\Hell.exe.config
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\bin\Debug\nunit.framework.xml
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\obj\Debug\HellTests.csprojResolveAssemblyReference.cache
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\obj\Debug\HellTests.csproj.CoreCompileInputs.cache
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\obj\Debug\HellTests.dll
+D:\Github\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\HellTests\obj\Debug\HellTests.pdb

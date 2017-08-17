@@ -1,10 +1,8 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
+using NUnit.Framework;
 
 namespace HellTests
 {
@@ -35,7 +33,6 @@ namespace HellTests
             CommonItem item = new CommonItem("Laptop", 50, 50, 50, 50, 50);
             inv.AddCommonItem(item);
 
-
             //Type type = typeof(HeroInventory);
             //HeroInventory testInstance = (HeroInventory)Activator.CreateInstance(type);
             //testInstance.AddCommonItem(item);
@@ -61,7 +58,6 @@ namespace HellTests
             inv.AddRecipeItem(recipe);
             inv.AddCommonItem(item);
             inv.AddCommonItem(item2);
-
 
             Type type = typeof(HeroInventory);
             HeroInventory testInstance = (HeroInventory)Activator.CreateInstance(type);

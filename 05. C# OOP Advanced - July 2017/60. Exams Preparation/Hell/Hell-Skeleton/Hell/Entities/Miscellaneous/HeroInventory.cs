@@ -3,7 +3,8 @@ using System.Linq;
 
 public class HeroInventory : IInventory
 {
-    ///ne pipai
+    /// ne pipai
+
     [Item]
     private Dictionary<string, IItem> commonItems;
 

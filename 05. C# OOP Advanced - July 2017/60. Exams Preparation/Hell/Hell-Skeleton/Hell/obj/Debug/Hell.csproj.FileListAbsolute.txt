@@ -1,7 +1,0 @@
-C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\Hell\obj\Debug\Hell.csprojResolveAssemblyReference.cache
-C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\Hell\obj\Debug\Hell.csproj.CoreCompileInputs.cache
-C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\Hell\bin\Debug\Hell.exe.config
-C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\Hell\bin\Debug\Hell.exe
-C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\Hell\bin\Debug\Hell.pdb
-C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\Hell\obj\Debug\Hell.exe
-C:\GitHub\SoftUni2017\05. C# OOP Advanced - July 2017\60. Exams Preparation\Hell\Hell-Skeleton\Hell\obj\Debug\Hell.pdb

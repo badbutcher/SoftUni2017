@@ -5,9 +5,9 @@ using System.Text;
 
 public class HeroManager
 {
-    public Dictionary<string, IHero> heroes;
+    private Dictionary<string, IHero> heroes;
 
-    public string AddHero(List<String> arguments)
+    public string AddHero(List<string> arguments)
     {
         string result = null;
 
@@ -30,11 +30,11 @@ public class HeroManager
         return result;
     }
 
-    public string AddItemToHero(List<String> arguments, AbstractHero abstractHero)
+    public string AddItemToHero(List<string> arguments, AbstractHero abstractHero)
     {
         string result = null;
 
-        //Ма те много бе!
+        /// Ма те много бе!
         string itemName = arguments[0];
         string heroName = arguments[1];
         int strengthBonus = int.Parse(arguments[2]);
@@ -43,9 +43,8 @@ public class HeroManager
         int hitPointsBonus = int.Parse(arguments[5]);
         int damageBonus = int.Parse(arguments[6]);
 
-        CommonItem newItem = new CommonItem(itemName, strengthBonus, agilityBonus, intelligenceBonus, hitPointsBonus,
-            damageBonus);
-        //тука трябваше да добавя към abstractHero ама промених едно нещо и то много неща се счупиха и реших просто да не добавям
+        CommonItem newItem = new CommonItem(itemName, strengthBonus, agilityBonus, intelligenceBonus, hitPointsBonus, damageBonus);
+        /// тука трябваше да добавя към abstractHero ама промених едно нещо и то много неща се счупиха и реших просто да не добавям
 
         result = string.Format(Constants.ItemCreateMessage, newItem.Name, heroName);
         return result;
@@ -63,14 +62,14 @@ public class HeroManager
         return result.ToString();
     }
 
-    public string Inspect(List<String> arguments)
+    public string Inspect(List<string> arguments)
     {
         string heroName = arguments[0];
 
         return this.heroes[heroName].ToString();
     }
 
-    //Само Батман знае как работи това
+    /// Само Батман знае как работи това
     public void GenerateResult()
     {
         const string PropName = "_connectionString";
@@ -84,21 +83,20 @@ public class HeroManager
             fieldInfo = type.GetField(PropName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
             if (fieldInfo == null)
             {
-                propertyInfo = type.GetProperty(PropName,
-                    BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                propertyInfo = type.GetProperty(PropName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
             }
 
             type = type.BaseType;
         }
     }
 
-    //public static void DontTouchThisMethod()
-    //{
-    //    //това не трябва да го пипаме, че ако го махнем ще ни счупи цялата логика
-    //    var l = new List<string>();
-    //    var m = new Manager();
-    //    HeroCommand cmd = new HeroCommand(l, m);
-    //    var str = "Execute";
-    //    Console.WriteLine(str);
-    //}
+    ////public static void DontTouchThisMethod()
+    ////{
+    ////    //това не трябва да го пипаме, че ако го махнем ще ни счупи цялата логика
+    ////    var l = new List<string>();
+    ////    var m = new Manager();
+    ////    HeroCommand cmd = new HeroCommand(l, m);
+    ////    var str = "Execute";
+    ////    Console.WriteLine(str);
+    ////}
 }

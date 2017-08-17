@@ -10,14 +10,14 @@ public class AbstractHero : IHero, IComparable<AbstractHero>
     private long hitPoints;
     private long damage;
 
-    public AbstractHero(string name, int strength, int agility, int intelligence, int hitPoints, int damage)
+    public AbstractHero(string name, long strength, long agility, long intelligence, long hitPoints, long damage)
     {
         this.Name = name;
-        this.strength = strength;
-        this.agility = agility;
-        this.intelligence = intelligence;
-        this.hitPoints = hitPoints;
-        this.damage = damage;
+        this.Strength = strength;
+        this.Agility = agility;
+        this.Intelligence = intelligence;
+        this.HitPoints = hitPoints;
+        this.Damage = damage;
         this.inventory = new HeroInventory();
     }
 
@@ -63,7 +63,7 @@ public class AbstractHero : IHero, IComparable<AbstractHero>
         get { return this.Strength + this.Agility + this.Intelligence; }
     }
 
-    //REFLECTION
+    // REFLECTION
     public ICollection<IItem> Items { get; }
 
     public void AddRecipe(Recipe recipe)
