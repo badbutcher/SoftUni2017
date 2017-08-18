@@ -1,14 +1,13 @@
-﻿public class HeroCommand : Command
+﻿using System;
+
+public class InspectCommand : Command
 {
-    public HeroCommand(string name, string type)
+    public InspectCommand(string name)
     {
         Name = name;
-        Type = type;
     }
 
     public string Name { get; private set; }
-
-    public string Type { get; private set; }
 
     public override string Execute()
     {

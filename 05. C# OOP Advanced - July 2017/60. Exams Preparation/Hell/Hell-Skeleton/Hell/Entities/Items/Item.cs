@@ -1,6 +1,6 @@
 ﻿public abstract class Item : IItem
 {
-    public Item(string name, long strengthBonus, long agilityBonus, long intelligenceBonus, long hitPointsBonus, long damageBonus)
+    protected Item(string name, long strengthBonus, long agilityBonus, long intelligenceBonus, long hitPointsBonus, long damageBonus)
     {
         this.Name = name;
         this.StrengthBonus = strengthBonus;

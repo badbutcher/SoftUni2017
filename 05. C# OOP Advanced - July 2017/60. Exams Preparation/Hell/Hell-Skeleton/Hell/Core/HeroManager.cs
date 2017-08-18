@@ -1,11 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
 public class HeroManager
 {
-    private Dictionary<string, IHero> heroes;
+    private IDictionary<string, IHero> heroes;
+
+    public HeroManager()
+    {
+        heroes = new Dictionary<string, IHero>();
+    }
+
+    //public IDictionary<string, IHero> Heroes { get; private set; }
 
     public string AddHero(List<string> arguments)
     {
@@ -20,7 +28,8 @@ public class HeroManager
             var constructors = clazz.GetConstructors();
             IHero hero = (IHero)constructors[0].Invoke(new object[] { heroName });
 
-            result = string.Format($"Created {heroType} - {hero.GetType().Name}");
+            result = string.Format($"Created {heroType} - {heroName}");
+            heroes.Add(heroType, hero);
         }
         catch (Exception e)
         {
@@ -66,7 +75,9 @@ public class HeroManager
     {
         string heroName = arguments[0];
 
-        return this.heroes[heroName].ToString();
+        var result = this.heroes.FirstOrDefault(a => a.Value.Name == heroName).ToString();
+
+        return result;
     }
 
     /// Само Батман знае как работи това

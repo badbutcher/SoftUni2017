@@ -1,4 +1,4 @@
-﻿public class AbstractCommand
-{
-    public Manager Manager { get; set; }
-}
+﻿//public class AbstractCommand
+//{
+//    public IManager Manager { get; private set; }
+//}

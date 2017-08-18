@@ -1,9 +1,4 @@
-﻿using System;
-
-public class Command
+﻿public abstract class Command : ICommand
 {
-    public string Execute()
-    {
-        throw new NotImplementedException();
-    }
+    public abstract string Execute();
 }

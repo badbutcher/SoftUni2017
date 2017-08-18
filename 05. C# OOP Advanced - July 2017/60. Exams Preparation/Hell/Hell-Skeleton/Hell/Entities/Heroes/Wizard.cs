@@ -1,7 +1,12 @@
 ﻿public class Wizard : AbstractHero
 {
-    public Wizard(string name, long strength, long agility, long intelligence, long hitPoints, long damage)
-        : base(name, strength, agility, intelligence, hitPoints, damage)
+    private const int StrengthPointsCreate = 25;
+    private const int AgilityPointsCreate = 25;
+    private const int IntelligencePointsCreate = 100;
+    private const int HitPointsCreate = 100;
+    private const int DamagePointsCreate = 250;
+    public Wizard(string name)
+        : base(name, StrengthPointsCreate, AgilityPointsCreate, IntelligencePointsCreate, HitPointsCreate, DamagePointsCreate)
     {
     }
 }

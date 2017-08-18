@@ -43,13 +43,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\AbstractCommand.cs" />
+    <Compile Include="Commands\InspectCommand.cs" />
+    <Compile Include="Commands\ItemCommand.cs" />
     <Compile Include="Commands\QuitCommand.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\HeroCommand.cs" />
+    <Compile Include="Commands\RecipeCommand.cs" />
     <Compile Include="Core\Engine.cs" />
     <Compile Include="Core\HeroManager.cs" />
     <Compile Include="Core\IO\IInputReader.cs" />
     <Compile Include="Core\IO\IOutputWriter.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Manager\Manager.cs" />
     <Compile Include="Entities\Heroes\AbstractHero.cs" />
     <Compile Include="Entities\Heroes\Assassin.cs" />

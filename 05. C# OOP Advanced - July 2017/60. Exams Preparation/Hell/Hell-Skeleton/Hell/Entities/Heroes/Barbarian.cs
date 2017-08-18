@@ -1,7 +1,13 @@
 ﻿public class Barbarian : AbstractHero
 {
-    public Barbarian(string name, long strength, long agility, long intelligence, long hitPoints, long damage)
-        : base(name, strength, agility, intelligence, hitPoints, damage)
+    private const int StrengthPointsCreate = 90;
+    private const int AgilityPointsCreate = 25;
+    private const int IntelligencePointsCreate = 10;
+    private const int HitPointsCreate = 350;
+    private const int DamagePointsCreate = 150;
+
+    public Barbarian(string name)
+        : base(name, StrengthPointsCreate, AgilityPointsCreate, IntelligencePointsCreate, HitPointsCreate, DamagePointsCreate)
     {
     }
 }

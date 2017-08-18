@@ -10,5 +10,7 @@
 
     long TotalDamageBonus { get; }
 
+    void AddCommonItem(IItem item);
+
     void AddRecipeItem(IRecipe recipe);
 }

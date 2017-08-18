@@ -1,19 +1,24 @@
-﻿using System.Collections.Generic;
-
-public class QuitCommand : AbstractCommand
+﻿public class QuitCommand : Command
 {
-    public QuitCommand()
+    //public QuitCommand()
+    //{
+    //}
+
+    //public QuitCommand(List<string> args, IManager manager)
+    //{
+    //}
+
+    //public string Execute()
+    //{
+    //    //return this.Manager.Quit(this.ArgsList);
+    //}
+
+    public override string Execute()
     {
+        throw new System.NotImplementedException();
     }
 
-    public QuitCommand(List<string> args, IManager manager)
-    {
-    }
+    public IManager Manager { get; private set; }
 
-    public virtual string Execute()
-    {
-        return base.Manager.Quit(this.ArgsList);
-    }
-
-    public string ArgsList { get; set; }
+    public string ArgsList { get; private set; }
 }
