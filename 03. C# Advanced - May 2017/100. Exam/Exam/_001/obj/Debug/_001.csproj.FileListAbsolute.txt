@@ -1,6 +1,0 @@
-C:\Users\badbutcherbg\Desktop\Exam\_001\bin\Debug\_001.exe.config
-C:\Users\badbutcherbg\Desktop\Exam\_001\bin\Debug\_001.exe
-C:\Users\badbutcherbg\Desktop\Exam\_001\bin\Debug\_001.pdb
-C:\Users\badbutcherbg\Desktop\Exam\_001\obj\Debug\_001.csprojResolveAssemblyReference.cache
-C:\Users\badbutcherbg\Desktop\Exam\_001\obj\Debug\_001.exe
-C:\Users\badbutcherbg\Desktop\Exam\_001\obj\Debug\_001.pdb
