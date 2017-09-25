@@ -17,11 +17,13 @@
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             builder.UseSqlServer(@"Server=.;Database=_001;Integrated Security=True;");
+
+            base.OnConfiguring(builder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<StudentsCourses>()
+            modelBuilder.Entity<StudentCourse>()
                 .HasKey(c => new { c.CourseId, c.StudentId });
 
             modelBuilder.Entity<Student>()
@@ -40,13 +42,13 @@
                 .HasForeignKey(a => a.CourseId);
 
             modelBuilder.Entity<Course>()
-               .HasMany(a => a.Homework)
+               .HasMany(a => a.Homeworks)
                .WithOne(a => a.Course)
                .HasForeignKey(a => a.CourseId);
 
             modelBuilder.Entity<Homework>()
                 .HasOne(a => a.Student)
-                .WithMany(a => a.Homework)
+                .WithMany(a => a.Homeworks)
                 .HasForeignKey(a => a.StudentId);
         }
     }

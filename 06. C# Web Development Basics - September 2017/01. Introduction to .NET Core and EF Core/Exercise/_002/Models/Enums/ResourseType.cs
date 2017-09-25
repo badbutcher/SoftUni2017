@@ -2,9 +2,9 @@
 {
     public enum ResourseType
     {
-        Video,
-        Presentation,
-        Document,
-        Other
+        Video = 0,
+        Presentation = 1,
+        Document = 2,
+        Other = 999
     }
 }

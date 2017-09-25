@@ -1,17 +1,19 @@
 ﻿namespace _002.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     using _002.Models.Enums;
 
     public class Homework
     {
         public int Id { get; set; }
 
+        [Required]
         public string Content { get; set; }
 
         public ContentType ContentType { get; set; }
 
-        public DateTime? SubmissionDate { get; set; }
+        public DateTime SubmissionDate { get; set; }
 
         public int CourseId { get; set; }
 

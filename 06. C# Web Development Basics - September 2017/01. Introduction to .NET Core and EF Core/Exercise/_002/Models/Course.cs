@@ -2,12 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using _002.Models.ManyToMany;
 
     public class Course
     {
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
         public string Description { get; set; }
@@ -18,10 +20,10 @@
 
         public decimal Price { get; set; }
 
-        public ICollection<StudentsCourses> Students { get; set; } = new List<StudentsCourses>();
+        public ICollection<StudentCourse> Students { get; set; } = new List<StudentCourse>();
 
         public ICollection<Resource> Resources { get; set; } = new List<Resource>();
 
-        public ICollection<Homework> Homework { get; set; } = new List<Homework>();
+        public ICollection<Homework> Homeworks { get; set; } = new List<Homework>();
     }
 }

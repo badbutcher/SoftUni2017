@@ -1,12 +1,14 @@
 ﻿namespace _001.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     using _001.Models.Enums;
 
     public class Homework
     {
         public int Id { get; set; }
 
+        [Required]
         public string Content { get; set; }
 
         public ContentType ContentType { get; set; }

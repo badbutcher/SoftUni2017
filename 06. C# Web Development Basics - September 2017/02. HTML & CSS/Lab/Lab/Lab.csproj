@@ -75,6 +75,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\_010.css" />
+    <Content Include="CSS\_011.css" />
+    <Content Include="CSS\_012.css" />
+    <Content Include="CSS\_013.css" />
     <Content Include="Images\Ball1.png" />
     <Content Include="Images\Ball2.jpg" />
     <Content Include="Images\Ball3.jpg" />
@@ -89,6 +93,11 @@
     <Content Include="_007_fruits.html" />
     <Content Include="_0085_contact.html" />
     <Content Include="_008_receipt.html" />
+    <Content Include="_009_colors.html" />
+    <Content Include="_010_borders.html" />
+    <Content Include="_011_rectangles.html" />
+    <Content Include="_012_langs.html" />
+    <Content Include="_013_contact-us-form.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
