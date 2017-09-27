@@ -1,8 +1,9 @@
-﻿namespace _004.Models
+﻿namespace _005.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using _004.Validations;
+    using _005.Validations;
 
     public class User
     {
@@ -33,5 +34,9 @@
         public int? Age { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        public List<Friendship> FromFriends { get; set; } = new List<Friendship>();
+
+        public List<Friendship> ToFriends { get; set; } = new List<Friendship>();
     }
 }

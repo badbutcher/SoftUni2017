@@ -1,6 +1,8 @@
 ﻿namespace _002
 {
     using System;
+    using System.Net;
+    using System.Text.RegularExpressions;
     using System.Web;
 
     public class Program
@@ -10,7 +12,7 @@
             string input = Console.ReadLine();
 
             string decodedUrl = HttpUtility.UrlDecode(input);
-          
+
             Uri uri = new Uri(decodedUrl);
 
             if (Uri.IsWellFormedUriString(decodedUrl, UriKind.Absolute))
@@ -25,7 +27,7 @@
             else
             {
                 Console.WriteLine("Invalid URL");
-            }         
+            }
         }
     }
 }

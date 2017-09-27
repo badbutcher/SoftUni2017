@@ -1,10 +1,10 @@
-﻿namespace _004
+﻿namespace _006
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
-    using _004.Models;
+    using _006.Models;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Infrastructure;
 
@@ -12,9 +12,46 @@
     {
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Friendship> Friendship { get; set; }
+
+        public DbSet<Album> Albums { get; set; }
+
+        public DbSet<Picture> Pictures { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer(@"Server=.;Database=_004;Integrated Security=True;");
+            builder.UseSqlServer(@"Server=.;Database=_006;Integrated Security=True;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Friendship>()
+                .HasKey(a => new { a.FromUserId, a.ToUserId });
+
+            modelBuilder.Entity<User>()
+                .HasMany(a => a.FromFriends)
+                .WithOne(a => a.FromUser)
+                .HasForeignKey(a => a.FromUserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<User>()
+                .HasMany(a => a.ToFriends)
+                .WithOne(a => a.ToUser)
+                .HasForeignKey(a => a.ToUserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<AlbumPicture>()
+               .HasKey(a => new { a.AlbumId, a.PictureId });
+
+            modelBuilder.Entity<Album>()
+                .HasMany(a => a.Pictures)
+                .WithOne(a => a.Album)
+                .HasForeignKey(a => a.AlbumId);
+
+            modelBuilder.Entity<Album>()
+                .HasOne(a => a.User)
+                .WithMany(a => a.Albums)
+                .HasForeignKey(a => a.UserId);
         }
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
