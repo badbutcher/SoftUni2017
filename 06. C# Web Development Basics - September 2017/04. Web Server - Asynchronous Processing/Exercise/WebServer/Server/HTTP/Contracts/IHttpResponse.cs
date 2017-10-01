@@ -7,6 +7,8 @@
     {
         string Response { get; }
 
-        void AddHeader(HttpStatusCode responseCode, IView view);
+        void AddHeader();
+
+        //IView View { get; }
     }
 }

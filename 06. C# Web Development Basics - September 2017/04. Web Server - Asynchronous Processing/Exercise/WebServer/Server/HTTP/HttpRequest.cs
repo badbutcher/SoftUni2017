@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Net;
     using WebServer.Server.Enums;
     using WebServer.Server.Exceptions;
     using WebServer.Server.HTTP.Contracts;
@@ -83,23 +84,34 @@
                 return;
             }
 
-            //TODO ????
-            var queryPairs = query.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
-
-            foreach (var queryPair in queryPairs)
+            string[] queryPairs = query.Split('&');
+            foreach (string queryPair in queryPairs)
             {
-                var queryKvp = queryPair.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
-
-                if (query.Length != 2)
+                string[] queryArgs = queryPair.Split('=');
+                if (queryArgs.Length != 2)
                 {
-                    return;
+                    continue;
                 }
 
-                var queryKey = queryKvp[0];
-                var queryValue = queryKvp[1];
-
-                this.AddUrlParameter(queryKey, queryValue);
+                queryParameters.Add(WebUtility.UrlDecode(queryArgs[0]), WebUtility.UrlDecode(queryArgs[1]));
             }
+
+            //var queryPairs = query.Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+
+            //foreach (var queryPair in queryPairs)
+            //{
+            //    var queryKvp = queryPair.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries);
+
+            //    if (query.Length != 2)
+            //    {
+            //        return;
+            //    }
+
+            //    var queryKey = queryKvp[0];
+            //    var queryValue = queryKvp[1];
+
+            //    this.AddUrlParameter(queryKey, queryValue);
+            //}
         }
 
         private void ParseHeaders(string[] requestLines)

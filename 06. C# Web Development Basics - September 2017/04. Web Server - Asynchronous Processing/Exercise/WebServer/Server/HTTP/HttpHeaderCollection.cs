@@ -15,7 +15,6 @@
 
         public void Add(HttpHeader header)
         {
-            //TODO: fix
             string key = header.Key;
 
             this.headers[key] = header;
