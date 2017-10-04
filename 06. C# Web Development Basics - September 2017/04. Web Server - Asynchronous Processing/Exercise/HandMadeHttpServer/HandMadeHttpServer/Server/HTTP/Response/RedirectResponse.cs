@@ -2,7 +2,7 @@
 {
     public class RedirectResponse : HttpResponse
     {
-        protected RedirectResponse(string redirectUrl)
+        public RedirectResponse(string redirectUrl)
             : base(redirectUrl)
         {
         }
