@@ -9,6 +9,8 @@
     {
         public void Start(IAppRouteConfig appRouteConfig)
         {
+            appRouteConfig.AddRoute("/", new GetHandler(httpContext => new HomeController().Index()));
+
             appRouteConfig.AddRoute(
                 "/register",
                 new PostHandler(
@@ -18,6 +20,7 @@
             appRouteConfig.AddRoute(
                 "/register",
                 new GetHandler(httpContext => new UserController().RegisterGet()));
+
             appRouteConfig.AddRoute(
                 "/user/{(?<name>[a-z]+)}",
                 new GetHandler(httpContext => new UserController()
