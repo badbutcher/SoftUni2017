@@ -10,6 +10,7 @@
         public void Start(IAppRouteConfig appRouteConfig)
         {
             appRouteConfig.AddRoute("/", new GetHandler(httpContext => new HomeController().Index()));
+<<<<<<< HEAD
 
             appRouteConfig.AddRoute(
                 "/register",
@@ -50,6 +51,8 @@
             appRouteConfig.AddRoute(
                 "/stores",
                 new GetHandler(httpContext => new HomeController().Index()));
+=======
+>>>>>>> parent of c0412fc... Commit
         }
     }
 }

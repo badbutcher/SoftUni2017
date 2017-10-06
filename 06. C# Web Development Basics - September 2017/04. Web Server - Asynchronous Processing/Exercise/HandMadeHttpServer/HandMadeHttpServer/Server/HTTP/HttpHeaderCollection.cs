@@ -38,7 +38,7 @@
 
         public override string ToString()
         {
-            string returnValue = string.Join(Environment.NewLine, this.headers.Values);
+            string returnValue = string.Join(Environment.NewLine, this.headers);
 
             return returnValue;
         }
