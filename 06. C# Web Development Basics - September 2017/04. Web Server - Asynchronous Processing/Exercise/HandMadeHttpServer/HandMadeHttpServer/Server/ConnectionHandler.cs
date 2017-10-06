@@ -25,20 +25,17 @@
         {
             string request = await this.ReadRequest();
 
-            if (request != null)
-            {
-                IHttpContext httpContext = new HttpContext(request);
+            IHttpContext httpContext = new HttpContext(request);
 
-                IHttpResponse response = new HttpHandler(this.serverRouteConfig).Handle(httpContext);
+            IHttpResponse response = new HttpHandler(this.serverRouteConfig).Handle(httpContext);
 
-                ArraySegment<byte> toBytes = new ArraySegment<byte>(Encoding.ASCII.GetBytes(response.Response));
+            ArraySegment<byte> toBytes = new ArraySegment<byte>(Encoding.ASCII.GetBytes(response.Response));
 
-                await this.client.SendAsync(toBytes, SocketFlags.None);
+            await this.client.SendAsync(toBytes, SocketFlags.None);
 
-                Console.WriteLine(request);
+            Console.WriteLine(request);
 
-                Console.WriteLine(response.Response);
-            }
+            Console.WriteLine(response.Response);
 
             this.client.Shutdown(SocketShutdown.Both);
         }
@@ -57,11 +54,6 @@
                 {
                     break;
                 }
-            }
-
-            if (request.Length == 0)
-            {
-                return null;
             }
 
             return request;
