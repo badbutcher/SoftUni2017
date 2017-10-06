@@ -11,6 +11,7 @@
         {
             appRouteConfig.AddRoute("/", new GetHandler(httpContext => new HomeController().Index()));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             appRouteConfig.AddRoute(
                 "/register",
@@ -51,6 +52,8 @@
             appRouteConfig.AddRoute(
                 "/stores",
                 new GetHandler(httpContext => new HomeController().Index()));
+=======
+>>>>>>> parent of c0412fc... Commit
 =======
 >>>>>>> parent of c0412fc... Commit
         }
