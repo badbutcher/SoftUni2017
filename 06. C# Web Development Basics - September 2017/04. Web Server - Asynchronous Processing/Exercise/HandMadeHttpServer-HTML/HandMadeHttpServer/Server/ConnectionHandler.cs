@@ -25,26 +25,29 @@
         {
             string request = await this.ReadRequest();
 
-            if (request != null)
+            if (string.IsNullOrEmpty(request) || string.IsNullOrWhiteSpace(request))
             {
-                IHttpContext httpContext = new HttpContext(request);
-
-                IHttpResponse response = new HttpHandler(this.serverRouteConfig).Handle(httpContext);
-
-                if (response == null)
-                {
-                    this.client.Shutdown(SocketShutdown.Both);
-                    return;
-                }
-
-                ArraySegment<byte> toBytes = new ArraySegment<byte>(Encoding.ASCII.GetBytes(response.Response));
-
-                await this.client.SendAsync(toBytes, SocketFlags.None);
-
-                Console.WriteLine(request);
-
-                Console.WriteLine(response.Response);
+                this.client.Shutdown(SocketShutdown.Both);
+                return;
             }
+
+            HttpContext httpContext = new HttpContext(request);
+
+            IHttpResponse response = new HttpHandler(this.serverRouteConfig).Handle(httpContext);
+
+            if (response == null)
+            {
+                this.client.Shutdown(SocketShutdown.Both);
+                return;
+            }
+
+            ArraySegment<byte> toBytes = new ArraySegment<byte>(Encoding.ASCII.GetBytes(response.Response));
+
+            await this.client.SendAsync(toBytes, SocketFlags.None);
+
+            Console.WriteLine(request);
+
+            Console.WriteLine(response.Response);
 
             this.client.Shutdown(SocketShutdown.Both);
         }
