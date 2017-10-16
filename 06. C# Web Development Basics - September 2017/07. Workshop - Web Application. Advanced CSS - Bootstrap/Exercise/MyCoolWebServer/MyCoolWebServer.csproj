@@ -10,13 +10,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="GameStoreApplication\Controllers\" />
-    <Folder Include="GameStoreApplication\Infrastructure\" />
-    <Folder Include="GameStoreApplication\Views\" />
-    <Folder Include="GameStoreApplication\ViewModels\" />
-    <Folder Include="GameStoreApplication\Services\" />
-    <Folder Include="GameStoreApplication\Resources\" />
-  </ItemGroup>
-
 </Project>

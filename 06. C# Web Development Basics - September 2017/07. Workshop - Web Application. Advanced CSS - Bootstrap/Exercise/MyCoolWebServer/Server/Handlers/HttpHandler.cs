@@ -26,12 +26,13 @@
             try
             {
                 // Check if user is authenticated
-                string[] anonymousPaths = new[] { "/login", "/register" };
+                //string[] anonymousPathsCake = new[] { "/login", "/register" };
+                string[] anonymousPathsGames = new[] { "/account/login", "/account/register" };
 
-                if (!anonymousPaths.Contains(context.Request.Path) &&
+                if (!anonymousPathsGames.Contains(context.Request.Path) &&
                     (context.Request.Session == null || !context.Request.Session.Contains(SessionStore.CurrentUserKey)))
                 {
-                    return new RedirectResponse(anonymousPaths.First());
+                    return new RedirectResponse(anonymousPathsGames.First());
                 }
 
                 var requestMethod = context.Request.Method;
