@@ -20,6 +20,8 @@
 
         public void Configure(IAppRouteConfig appRouteConfig)
         {
+            appRouteConfig.Get("/", req => new HomeController().Index());
+
             appRouteConfig.Get("account/register", req => new AccountController().Register());
 
             appRouteConfig.Post("account/register",

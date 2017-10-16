@@ -27,7 +27,7 @@
             {
                 // Check if user is authenticated
                 //string[] anonymousPathsCake = new[] { "/login", "/register" };
-                string[] anonymousPathsGames = new[] { "/account/login", "/account/register" };
+                string[] anonymousPathsGames = new[] { "/account/login", "/account/register", "/" };
 
                 if (!anonymousPathsGames.Contains(context.Request.Path) &&
                     (context.Request.Session == null || !context.Request.Session.Contains(SessionStore.CurrentUserKey)))
