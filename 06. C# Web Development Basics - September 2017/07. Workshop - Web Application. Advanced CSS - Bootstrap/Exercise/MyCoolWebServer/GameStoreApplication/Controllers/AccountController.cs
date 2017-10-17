@@ -21,7 +21,7 @@
 
         public IHttpResponse Register()
         {
-            this.SetDefaultViewData();
+            //this.SetDefaultViewData();
             return this.FileViewResponse("account/register");
         }
 
@@ -57,7 +57,7 @@
 
         public IHttpResponse Login()
         {
-            this.SetDefaultViewData();
+            //this.SetDefaultViewData();
             return this.FileViewResponse("account/login");
         }
 
@@ -67,9 +67,24 @@
 
             if (success)
             {
+                bool isAdmin = this.users.IsAdmin(model.Email);
+
+                if (isAdmin)
+                {
+                    this.ViewData["anonymousDisplay"] = "none";
+                    this.ViewData["authDisplay"] = "flex";
+                    this.ViewData["adminDisplay"] = "flex";
+                }
+                else
+                {
+                    this.ViewData["anonymousDisplay"] = "none";
+                    this.ViewData["authDisplay"] = "flex";
+                    this.ViewData["adminDisplay"] = "none";
+                }
+
                 this.LoginUser(req, model.Email);
 
-                return new RedirectResponse("/");
+                return this.FileViewResponse("/home/index");
             }
             else
             {

@@ -49,5 +49,22 @@ namespace MyCoolWebServer.GameStoreApplication.Services
                 }
             }
         }
+
+        public bool IsAdmin(string email)
+        {
+            using (GameStoreDbContext db = new GameStoreDbContext())
+            {
+                var user = db.Users.FirstOrDefault(a => a.Email == email && a.IsAdmin == true);
+
+                if (user != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

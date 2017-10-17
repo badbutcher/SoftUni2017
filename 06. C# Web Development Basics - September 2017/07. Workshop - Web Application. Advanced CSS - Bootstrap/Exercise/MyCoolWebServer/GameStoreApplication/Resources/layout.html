@@ -22,12 +22,27 @@
                             <a class="nav-link" href="#">Cart</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav" style="display: {{{anonymousDisplay}}}">
                         <li class="nav-item">
                             <a class="nav-link" href="/account/login">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/account/register">Register</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav" style="display: {{{authDisplay}}}">
+                        <li class="nav-item dropdown" style="display: {{{adminDisplay}}}">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="AdminDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Admin
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="/admin/games/add">Add Game</a>
+                                <a class="dropdown-item" href="/admin/games/list">All Games</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Logout</a>
                         </li>
                     </ul>
                 </div>

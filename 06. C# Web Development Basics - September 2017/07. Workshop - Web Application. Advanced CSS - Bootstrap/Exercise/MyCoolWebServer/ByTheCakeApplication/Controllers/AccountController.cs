@@ -60,7 +60,6 @@
 
         public IHttpResponse Login()
         {
-            this.SetDefaultViewData();
             return this.FileViewResponse(LoginView);
         }
 
@@ -82,6 +81,7 @@
             {
                 this.LoginUser(req, model.Username);
 
+                this.SetDefaultViewData();
                 return new RedirectResponse("/");
             }
             else

@@ -18,7 +18,9 @@
         {
             this.ViewData = new Dictionary<string, string>
             {
-                ["authDisplay"] = "block",
+                ["anonymousDisplay"] = "flex",
+                ["authDisplay"] = "none",
+                ["adminDisplay"] = "none",
                 ["showError"] = "none"
             };
         }
@@ -42,7 +44,7 @@
 
         protected void AddError(string errorMessage)
         {
-            this.ViewData["showError"] = "block";
+            this.ViewData["showError"] = "flex";
             this.ViewData["error"] = errorMessage;
         }
 
