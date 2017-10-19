@@ -5,6 +5,7 @@
     using MyCoolWebServer.GameStoreApplication.Controllers;
     using MyCoolWebServer.GameStoreApplication.Data;
     using MyCoolWebServer.GameStoreApplication.ViewModels.Account;
+    using MyCoolWebServer.GameStoreApplication.ViewModels.Admin;
     using MyCoolWebServer.Server.Contracts;
     using MyCoolWebServer.Server.Routing.Contracts;
 
@@ -45,6 +46,23 @@
                             Password = req.FormData["password"],
                             Email = req.FormData["email"]
                         }));
+
+            appRouteConfig.Get("/admin/add-game",
+                   req => new AdminController().AddGame());
+
+            appRouteConfig.Post("/admin/add-game",
+                   req => new AdminController().AddGame(
+                       req,
+                       new AddGameViewModel
+                       {
+                           Title = req.FormData["title"],
+                           Description = req.FormData["description"],
+                           Image = req.FormData["image-url"],
+                           Price = decimal.Parse(req.FormData["price"]),
+                           Size = double.Parse(req.FormData["size"]),
+                           VideoId = req.FormData["video-url"],
+                           ReleaseDate = DateTime.Parse(req.FormData["release-date"]),
+                       }));
         }
     }
 }
