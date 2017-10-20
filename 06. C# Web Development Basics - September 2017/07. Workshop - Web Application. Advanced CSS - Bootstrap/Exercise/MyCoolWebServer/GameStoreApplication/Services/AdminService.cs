@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MyCoolWebServer.GameStoreApplication.Data;
-using MyCoolWebServer.GameStoreApplication.Data.Models;
-using MyCoolWebServer.GameStoreApplication.ViewModels.Admin;
-
-namespace MyCoolWebServer.GameStoreApplication.Services
+﻿namespace MyCoolWebServer.GameStoreApplication.Services
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using MyCoolWebServer.GameStoreApplication.Data;
+    using MyCoolWebServer.GameStoreApplication.Data.Models;
+    using MyCoolWebServer.GameStoreApplication.ViewModels.Admin;
+
     public class AdminService : IAdminService
     {
         public void Add(string title, string description, string image, decimal price, double size, string videoId, DateTime releaseDate)

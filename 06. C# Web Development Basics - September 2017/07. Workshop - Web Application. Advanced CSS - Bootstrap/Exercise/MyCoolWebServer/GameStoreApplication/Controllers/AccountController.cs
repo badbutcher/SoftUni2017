@@ -1,28 +1,24 @@
 ﻿namespace MyCoolWebServer.GameStoreApplication.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-    using MyCoolWebServer.GameStoreApplication.Infrastructure;
     using MyCoolWebServer.GameStoreApplication.Services;
     using MyCoolWebServer.GameStoreApplication.ViewModels.Account;
     using MyCoolWebServer.Server.Http;
     using MyCoolWebServer.Server.Http.Contracts;
     using MyCoolWebServer.Server.Http.Response;
 
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private readonly IUserService users;
 
-        public AccountController()
+        public AccountController(IHttpRequest request)
+            : base(request)
         {
             this.users = new UserService();
         }
 
         public IHttpResponse Register()
         {
-            //this.SetDefaultViewData();
-            return this.FileViewResponse("account/register");
+            return this.FileViewResponse("/account/register");
         }
 
         public IHttpResponse Register(IHttpRequest req, RegisterUserViewModel model)
@@ -36,7 +32,7 @@
             {
                 this.AddError("Invalid user details");
 
-                return this.FileViewResponse("account/register");
+                return this.Register();
             }
 
             bool success = this.users.Create(model.Email, model.FullName, model.Password);
@@ -45,7 +41,7 @@
             {
                 this.LoginUser(req, model.Email);
 
-                return new RedirectResponse("/");
+                return new RedirectResponse("/account/login");
             }
             else
             {
@@ -57,8 +53,7 @@
 
         public IHttpResponse Login()
         {
-            //this.SetDefaultViewData();
-            return this.FileViewResponse("account/login");
+            return this.FileViewResponse("/account/login");
         }
 
         public IHttpResponse Login(IHttpRequest req, LoginViewModel model)
@@ -69,22 +64,9 @@
             {
                 bool isAdmin = this.users.IsAdmin(model.Email);
 
-                if (isAdmin)
-                {
-                    this.ViewData["anonymousDisplay"] = "none";
-                    this.ViewData["authDisplay"] = "flex";
-                    this.ViewData["adminDisplay"] = "flex";
-                }
-                else
-                {
-                    this.ViewData["anonymousDisplay"] = "none";
-                    this.ViewData["authDisplay"] = "flex";
-                    this.ViewData["adminDisplay"] = "none";
-                }
-
                 this.LoginUser(req, model.Email);
 
-                return this.FileViewResponse("/home/index");
+                return new RedirectResponse("/home/index");
             }
             else
             {
@@ -94,11 +76,16 @@
             }
         }
 
+        public IHttpResponse Logout(IHttpRequest req)
+        {
+            req.Session.Clear();
+
+            return new RedirectResponse("/home/index");
+        }
+
         private void LoginUser(IHttpRequest req, string email)
         {
             req.Session.Add(SessionStore.CurrentUserKey, email);
         }
-
-        private void SetDefaultViewData() => this.ViewData["authDisplay"] = "none";
     }
 }

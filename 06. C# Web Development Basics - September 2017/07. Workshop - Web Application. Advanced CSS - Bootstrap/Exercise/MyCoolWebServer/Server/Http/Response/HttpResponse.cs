@@ -6,7 +6,7 @@
 
     public abstract class HttpResponse : IHttpResponse
     {
-        private string statusCodeMessage => this.StatusCode.ToString();
+        private string StatusCodeMessage => this.StatusCode.ToString();
 
         protected HttpResponse()
         {
@@ -25,7 +25,7 @@
             StringBuilder response = new StringBuilder();
 
             int statusCodeNumber = (int)this.StatusCode;
-            response.AppendLine($"HTTP/1.1 {statusCodeNumber} {this.statusCodeMessage}");
+            response.AppendLine($"HTTP/1.1 {statusCodeNumber} {this.StatusCodeMessage}");
 
             response.AppendLine(this.Headers.ToString());
 

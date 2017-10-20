@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace MyCoolWebServer.GameStoreApplication.ViewModels.Account
+﻿namespace MyCoolWebServer.GameStoreApplication.ViewModels.Account
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class RegisterUserViewModel
     {
         public string Email { get; set; }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyCoolWebServer.GameStoreApplication.Services
+﻿namespace MyCoolWebServer.GameStoreApplication.Services
 {
     public interface IUserService
     {

@@ -10,7 +10,7 @@
 
     public class WebServer : IRunnable
     {
-        private const string localHostIpAddress = "127.0.0.1";
+        private const string LocalHostIpAddress = "127.0.0.1";
 
         private readonly int port;
 
@@ -23,7 +23,7 @@
         public WebServer(int port, IAppRouteConfig appRouteConfig)
         {
             this.port = port;
-            this.listener = new TcpListener(IPAddress.Parse(localHostIpAddress), port);
+            this.listener = new TcpListener(IPAddress.Parse(LocalHostIpAddress), port);
 
             this.serverRouteConfig = new ServerRouteConfig(appRouteConfig);
         }
@@ -33,7 +33,7 @@
             this.listener.Start();
             this.isRunning = true;
 
-            Console.WriteLine($"Server running on {localHostIpAddress}:{this.port}");
+            Console.WriteLine($"Server running on {LocalHostIpAddress}:{this.port}");
 
             Task.Run(this.ListenLoop).Wait();
         }

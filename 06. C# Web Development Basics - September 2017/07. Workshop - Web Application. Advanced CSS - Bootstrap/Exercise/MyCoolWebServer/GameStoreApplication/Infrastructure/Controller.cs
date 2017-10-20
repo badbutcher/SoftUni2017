@@ -4,6 +4,7 @@
     using System.IO;
     using System.Linq;
     using MyCoolWebServer.GameStoreApplication.Views;
+
     //using MyCoolWebServer.ByTheCakeApplication.Views.Home;
     using Server.Enums;
     using Server.Http.Contracts;
@@ -24,6 +25,8 @@
                 ["showError"] = "none"
             };
         }
+
+        protected abstract string ApplicationDirectory { get; }
 
         protected IDictionary<string, string> ViewData { get; private set; }
 

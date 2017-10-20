@@ -22,12 +22,12 @@
 
         public void Configure(IAppRouteConfig appRouteConfig)
         {
-            appRouteConfig.Get("/", req => new HomeController().Index());
+            appRouteConfig.Get("/home/index", req => new HomeController(req).Index());
 
-            appRouteConfig.Get("account/register", req => new AccountController().Register());
+            appRouteConfig.Get("/account/register", req => new AccountController(req).Register());
 
-            appRouteConfig.Post("account/register",
-                    req => new AccountController().Register(
+            appRouteConfig.Post("/account/register",
+                    req => new AccountController(req).Register(
                         req,
                         new RegisterUserViewModel
                         {
@@ -37,10 +37,10 @@
                             ConfirmPassword = req.FormData["confirm-password"]
                         }));
 
-            appRouteConfig.Get("account/login", req => new AccountController().Login());
+            appRouteConfig.Get("/account/login", req => new AccountController(req).Login());
 
-            appRouteConfig.Post("account/login",
-                    req => new AccountController().Login(
+            appRouteConfig.Post("/account/login",
+                    req => new AccountController(req).Login(
                         req,
                         new LoginViewModel
                         {
@@ -48,10 +48,10 @@
                             Email = req.FormData["email"]
                         }));
 
-            appRouteConfig.Get("/admin/add-game", req => new AdminController().AddGame());
+            appRouteConfig.Get("/admin/add-game", req => new AdminController(req).AddGame());
 
             appRouteConfig.Post("/admin/add-game",
-                   req => new AdminController().AddGame(
+                   req => new AdminController(req).AddGame(
                        req,
                        new AddGameViewModel
                        {
@@ -65,19 +65,19 @@
                        }));
 
             appRouteConfig.Get("/admin/list-games",
-                   req => new AdminController().ListGames());
+                   req => new AdminController(req).ListGames());
 
             appRouteConfig.Get("/admin/delete-game/{(?<id>[0-9]+)}",
-                  req => new AdminController().GetGameById(int.Parse(req.UrlParameters["id"]), "delete"));
+                  req => new AdminController(req).GetGameById(int.Parse(req.UrlParameters["id"]), "delete"));
 
             appRouteConfig.Post("/admin/delete-game/{(?<id>[0-9]+)}",
-                  req => new AdminController().DeleteGame(int.Parse(req.UrlParameters["id"])));
+                  req => new AdminController(req).DeleteGame(int.Parse(req.UrlParameters["id"])));
 
             appRouteConfig.Get("/admin/edit-game/{(?<id>[0-9]+)}",
-                  req => new AdminController().GetGameById(int.Parse(req.UrlParameters["id"]), "edit"));
+                  req => new AdminController(req).GetGameById(int.Parse(req.UrlParameters["id"]), "edit"));
 
             appRouteConfig.Post("/admin/edit-game/{(?<id>[0-9]+)}",
-                 req => new AdminController().EditGame(int.Parse(req.UrlParameters["id"]), new Game
+                 req => new AdminController(req).EditGame(int.Parse(req.UrlParameters["id"]), new Game
                  {
                      Title = req.FormData["title"],
                      Description = req.FormData["description"],
@@ -87,6 +87,11 @@
                      VideoId = req.FormData["video-url"],
                      ReleaseDate = DateTime.Parse(req.FormData["release-date"]),
                  }));
+
+            appRouteConfig
+                .Get(
+                    "/account/logout",
+                    req => new AccountController(req).Logout(req));
         }
     }
 }

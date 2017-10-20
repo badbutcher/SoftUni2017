@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyCoolWebServer.GameStoreApplication.ViewModels.Home
+﻿namespace MyCoolWebServer.GameStoreApplication.ViewModels.Home
 {
     public class HomeGameInfoViewModel
     {

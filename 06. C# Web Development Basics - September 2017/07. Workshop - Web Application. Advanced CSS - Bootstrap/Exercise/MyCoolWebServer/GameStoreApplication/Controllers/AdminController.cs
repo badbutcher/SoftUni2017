@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MyCoolWebServer.GameStoreApplication.Data.Models;
-using MyCoolWebServer.GameStoreApplication.Infrastructure;
-using MyCoolWebServer.GameStoreApplication.Services;
-using MyCoolWebServer.GameStoreApplication.ViewModels.Admin;
-using MyCoolWebServer.Server.Http.Contracts;
-using MyCoolWebServer.Server.Http.Response;
-
-namespace MyCoolWebServer.GameStoreApplication.Controllers
+﻿namespace MyCoolWebServer.GameStoreApplication.Controllers
 {
-    public class AdminController : Controller
+    using System;
+    using System.Linq;
+    using MyCoolWebServer.GameStoreApplication.Data.Models;
+    using MyCoolWebServer.GameStoreApplication.Services;
+    using MyCoolWebServer.GameStoreApplication.ViewModels.Admin;
+    using MyCoolWebServer.Server.Http.Contracts;
+    using MyCoolWebServer.Server.Http.Response;
+
+    public class AdminController : BaseController
     {
         private readonly IAdminService games;
 
-        public AdminController()
+        public AdminController(IHttpRequest request)
+            : base(request)
         {
             this.games = new AdminService();
         }
@@ -79,7 +77,7 @@ namespace MyCoolWebServer.GameStoreApplication.Controllers
             this.ViewData["authDisplay"] = "flex";
             this.ViewData["adminDisplay"] = "flex";
 
-            games.DeleteGameById(id);
+            this.games.DeleteGameById(id);
 
             return new RedirectResponse($"/admin/list-games");
         }
@@ -90,7 +88,7 @@ namespace MyCoolWebServer.GameStoreApplication.Controllers
             this.ViewData["authDisplay"] = "flex";
             this.ViewData["adminDisplay"] = "flex";
 
-            var result = games.GetGameById(id);
+            var result = this.games.GetGameById(id);
 
             this.ViewData["title"] = result.Title;
             this.ViewData["description"] = result.Description;
@@ -105,8 +103,8 @@ namespace MyCoolWebServer.GameStoreApplication.Controllers
 
         public IHttpResponse EditGame(int id, Game g)
         {
-            var game = games.GetGameById(id);
-            games.EditGameById(id, g.Title, g.Description, g.Image, g.Price, g.Size, g.VideoId, g.ReleaseDate);
+            var game = this.games.GetGameById(id);
+            this.games.EditGameById(id, g.Title, g.Description, g.Image, g.Price, g.Size, g.VideoId, g.ReleaseDate);
 
             return new RedirectResponse($"/admin/list-games");
         }

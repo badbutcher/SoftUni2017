@@ -1,22 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyCoolWebServer.GameStoreApplication.Controllers
+﻿namespace MyCoolWebServer.GameStoreApplication.Controllers
 {
-    using System.Linq;
-    using Infrastructure;
+    using System.Text;
     using MyCoolWebServer.GameStoreApplication.Services;
     using Server.Http.Contracts;
 
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly IAdminService games;
 
-        public HomeController()
+        public HomeController(IHttpRequest request)
+            : base(request)
         {
             this.games = new AdminService();
         }
+
         public IHttpResponse Index()
         {
             StringBuilder sb = new StringBuilder();
@@ -63,7 +60,7 @@ namespace MyCoolWebServer.GameStoreApplication.Controllers
 
             this.ViewData["big-table"] = sb.ToString();
 
-            return this.FileViewResponse(@"home\index");
+            return this.FileViewResponse(@"\home\index");
         }
     }
 }

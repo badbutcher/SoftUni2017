@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MyCoolWebServer.GameStoreApplication.Data;
-using MyCoolWebServer.GameStoreApplication.Data.Models;
-using MyCoolWebServer.GameStoreApplication.ViewModels.Home;
-
-namespace MyCoolWebServer.GameStoreApplication.Services
+﻿namespace MyCoolWebServer.GameStoreApplication.Services
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using MyCoolWebServer.GameStoreApplication.Data;
+    using MyCoolWebServer.GameStoreApplication.ViewModels.Home;
+
     public class HomeService : IHomeSerice
     {
         public IEnumerable<HomeGameInfoViewModel> GetAllGames()

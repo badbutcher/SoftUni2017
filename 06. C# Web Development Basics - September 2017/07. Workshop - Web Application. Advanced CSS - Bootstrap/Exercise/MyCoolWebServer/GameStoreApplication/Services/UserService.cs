@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using MyCoolWebServer.GameStoreApplication.Data;
-using MyCoolWebServer.GameStoreApplication.Data.Models;
-
-namespace MyCoolWebServer.GameStoreApplication.Services
+﻿namespace MyCoolWebServer.GameStoreApplication.Services
 {
+    using System.Linq;
+    using MyCoolWebServer.GameStoreApplication.Data;
+    using MyCoolWebServer.GameStoreApplication.Data.Models;
+
     public class UserService : IUserService
     {
         public bool Create(string email, string username, string password)

@@ -38,11 +38,11 @@
 
             string redirectUrl = "/search";
 
-            const string searchTermKey = "searchTerm";
+            const string SearchTermKey = "searchTerm";
 
-            if (req.UrlParameters.ContainsKey(searchTermKey))
+            if (req.UrlParameters.ContainsKey(SearchTermKey))
             {
-                redirectUrl = $"{redirectUrl}?{searchTermKey}={req.UrlParameters[searchTermKey]}";
+                redirectUrl = $"{redirectUrl}?{SearchTermKey}={req.UrlParameters[SearchTermKey]}";
             }
 
             return new RedirectResponse(redirectUrl);

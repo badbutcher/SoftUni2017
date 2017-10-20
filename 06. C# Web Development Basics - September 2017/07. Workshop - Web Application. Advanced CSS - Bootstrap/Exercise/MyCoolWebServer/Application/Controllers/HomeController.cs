@@ -22,16 +22,16 @@
         {
             IHttpSession session = req.Session;
 
-            const string sessionDateKey = "saved_date";
+            const string SessionDateKey = "saved_date";
 
-            if (session.Get(sessionDateKey) == null)
+            if (session.Get(SessionDateKey) == null)
             {
-                session.Add(sessionDateKey, DateTime.UtcNow);
+                session.Add(SessionDateKey, DateTime.UtcNow);
             }
 
             return new ViewResponse(
                 HttpStatusCode.Ok,
-                new SessionTestView(session.Get<DateTime>(sessionDateKey)));
+                new SessionTestView(session.Get<DateTime>(SessionDateKey)));
         }
     }
 }

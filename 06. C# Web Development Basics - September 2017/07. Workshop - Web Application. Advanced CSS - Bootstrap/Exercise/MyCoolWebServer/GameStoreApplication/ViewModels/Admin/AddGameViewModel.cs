@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace MyCoolWebServer.GameStoreApplication.ViewModels.Admin
+﻿namespace MyCoolWebServer.GameStoreApplication.ViewModels.Admin
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
     public class AddGameViewModel
     {
         [Required]

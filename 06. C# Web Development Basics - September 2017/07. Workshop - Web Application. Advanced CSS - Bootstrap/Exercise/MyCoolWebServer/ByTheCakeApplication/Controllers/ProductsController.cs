@@ -51,14 +51,14 @@
 
         public IHttpResponse Search(IHttpRequest req)
         {
-            const string searchTermKey = "searchTerm";
+            const string SearchTermKey = "searchTerm";
 
             var urlParameters = req.UrlParameters;
 
             this.ViewData["results"] = string.Empty;
 
-            string searchTerm = urlParameters.ContainsKey(searchTermKey)
-                ? urlParameters[searchTermKey]
+            string searchTerm = urlParameters.ContainsKey(SearchTermKey)
+                ? urlParameters[SearchTermKey]
                 : null;
 
             this.ViewData["searchTerm"] = searchTerm;
