@@ -7,7 +7,7 @@
 
     public class HomeService : IHomeSerice
     {
-        public IEnumerable<HomeGameInfoViewModel> GetAllGames()
+        public List<HomeGameInfoViewModel> GetAllGames()
         {
             using (GameStoreDbContext db = new GameStoreDbContext())
             {

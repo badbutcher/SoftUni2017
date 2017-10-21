@@ -5,7 +5,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using Common;
-    using global::WebServer.Contracts;//???
+    using global::WebServer.Contracts;
     using Http;
     using Http.Contracts;
 
@@ -26,7 +26,7 @@
 
         public async Task ProcessRequestAsync()
         {
-            var httpRequest = await this.ReadRequest();
+            var httpRequest = this.ReadRequest();
 
             if (httpRequest != null)
             {
@@ -48,7 +48,7 @@
             this.client.Shutdown(SocketShutdown.Both);
         }
 
-        private async Task<IHttpRequest> ReadRequest()
+        private IHttpRequest ReadRequest()
         {
             var result = new StringBuilder();
 
@@ -56,7 +56,7 @@
 
             while (true)
             {
-                int numberOfBytesRead = await this.client.ReceiveAsync(data.Array, SocketFlags.None);
+                int numberOfBytesRead = this.client.Receive(data.Array, SocketFlags.None);
 
                 if (numberOfBytesRead == 0)
                 {

@@ -5,6 +5,6 @@
 
     public interface IHomeSerice
     {
-        IEnumerable<HomeGameInfoViewModel> GetAllGames();
+        List<HomeGameInfoViewModel> GetAllGames();
     }
 }

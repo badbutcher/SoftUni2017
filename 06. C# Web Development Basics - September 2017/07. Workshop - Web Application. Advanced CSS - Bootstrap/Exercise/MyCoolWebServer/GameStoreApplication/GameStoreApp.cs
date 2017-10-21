@@ -88,10 +88,7 @@
                      ReleaseDate = DateTime.Parse(req.FormData["release-date"]),
                  }));
 
-            appRouteConfig
-                .Get(
-                    "/account/logout",
-                    req => new AccountController(req).Logout(req));
+            appRouteConfig.Get("/account/logout", req => new AccountController(req).Logout(req));
         }
     }
 }

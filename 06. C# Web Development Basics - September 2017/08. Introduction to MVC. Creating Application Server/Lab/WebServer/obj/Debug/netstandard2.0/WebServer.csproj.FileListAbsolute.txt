@@ -1,0 +1,9 @@
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\obj\Debug\netstandard2.0\WebServer.csproj.CoreCompileInputs.cache
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\obj\Debug\netstandard2.0\WebServer.AssemblyInfoInputs.cache
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\obj\Debug\netstandard2.0\WebServer.AssemblyInfo.cs
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\obj\Debug\netstandard2.0\WebServer.csprojResolveAssemblyReference.cache
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\bin\Debug\netstandard2.0\WebServer.deps.json
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\bin\Debug\netstandard2.0\WebServer.dll
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\bin\Debug\netstandard2.0\WebServer.pdb
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\obj\Debug\netstandard2.0\WebServer.dll
+D:\Github\SoftUni2017\06. C# Web Development Basics - September 2017\08. Introduction to MVC. Creating Application Server\Lab\WebServer\obj\Debug\netstandard2.0\WebServer.pdb

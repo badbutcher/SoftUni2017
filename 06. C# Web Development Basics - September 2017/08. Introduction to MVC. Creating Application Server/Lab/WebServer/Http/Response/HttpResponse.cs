@@ -6,6 +6,8 @@
 
     public abstract class HttpResponse : IHttpResponse
     {
+        private string StatusCodeMessage => this.StatusCode.ToString();
+
         protected HttpResponse()
         {
             this.Headers = new HttpHeaderCollection();
@@ -17,8 +19,6 @@
         public IHttpCookieCollection Cookies { get; }
 
         public HttpStatusCode StatusCode { get; protected set; }
-
-        private string StatusCodeMessage => this.StatusCode.ToString();
 
         public override string ToString()
         {

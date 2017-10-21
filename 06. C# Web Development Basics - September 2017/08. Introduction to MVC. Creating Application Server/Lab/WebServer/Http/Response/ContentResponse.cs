@@ -17,19 +17,19 @@
             this.Headers.Add(HttpHeader.ContentType, "text/html");
         }
 
-        public override string ToString()
-        {
-            return $"{base.ToString()}{this.content}";
-        }
-
         private void ValidateStatusCode(HttpStatusCode statusCode)
         {
             var statusCodeNumber = (int)statusCode;
 
-            if (statusCodeNumber > 299 && statusCodeNumber < 400)
+            if (299 < statusCodeNumber && statusCodeNumber < 400)
             {
                 throw new InvalidResponseException("View responses need a status code below 300 and above 400 (inclusive).");
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}{this.content}";
         }
     }
 }

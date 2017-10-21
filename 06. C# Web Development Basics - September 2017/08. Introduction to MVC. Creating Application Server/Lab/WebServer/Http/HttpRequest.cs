@@ -51,11 +51,9 @@
             this.UrlParameters[key] = value;
         }
 
-        public override string ToString() => this.requestText;
-
         private void ParseRequest(string requestText)
         {
-            var requestLines = requestText.Split(Environment.NewLine);
+            var requestLines = requestText.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
 
             if (!requestLines.Any())
             {
@@ -95,7 +93,8 @@
             return parsedMethod;
         }
 
-        private string ParsePath(string url) => url.Split(new[] { '?', '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
+        private string ParsePath(string url)
+            => url.Split(new[] { '?', '#' }, StringSplitOptions.RemoveEmptyEntries)[0];
 
         private void ParseHeaders(string[] requestLines)
         {
@@ -224,5 +223,7 @@
                 this.Session = SessionStore.Get(sessionId);
             }
         }
+
+        public override string ToString() => this.requestText;
     }
 }

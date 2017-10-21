@@ -1,18 +1,18 @@
 ﻿namespace SimpleMvc.Framework.ViewEngine.Generic
 {
     using System;
-    using SimpleMvc.Framework.Interfaces.Generic;
+    using SimpleMvc.Framework.Contracts.Generic;
 
-    public class ActionResult<T> : IActionResult<T>
+    public class ActionResult<TModel> : IActionResult<TModel>
     {
-        public ActionResult(string viewQualifedName, T model)
+        public ActionResult(string viewFullQualifedName, TModel model)
         {
-            this.Action = (IRenderable<T>)Activator.CreateInstance(Type.GetType(viewQualifedName));
+            this.Action = (IRenderable<TModel>)Activator.CreateInstance(Type.GetType(viewFullQualifedName));
 
             this.Action.Model = model;
         }
 
-        public IRenderable<T> Action { get; set; }
+        public IRenderable<TModel> Action { get; set; }
 
         public string Invoke()
         {

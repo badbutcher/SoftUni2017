@@ -6,12 +6,13 @@
 
         private MvcContext()
         {
-
         }
 
         public static MvcContext Get => Instance == null ? (Instance = new MvcContext()) : Instance;
 
         public string AssemblyName { get; set; }
+
+        public string ResourcesFolder { get; set; }
 
         public string ControllersFolder { get; set; }
 
