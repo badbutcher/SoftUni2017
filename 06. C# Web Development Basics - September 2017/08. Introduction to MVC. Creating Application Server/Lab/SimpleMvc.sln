@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvc.Framework", "SimpleMvc.Framework\SimpleMvc.Framework.csproj", "{B554E481-62D7-4F6D-94C4-CED436B98515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMvc.Framework", "SimpleMvc.Framework\SimpleMvc.Framework.csproj", "{B554E481-62D7-4F6D-94C4-CED436B98515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "WebServer\WebServer.csproj", "{6C933322-84DF-4046-AAE8-19273C4C8CDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServer", "WebServer\WebServer.csproj", "{6C933322-84DF-4046-AAE8-19273C4C8CDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvc.App", "SimpleMvc.App\SimpleMvc.App.csproj", "{C14420A7-6488-4905-95E8-A58684D6C515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMvc.App", "SimpleMvc.App\SimpleMvc.App.csproj", "{C14420A7-6488-4905-95E8-A58684D6C515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvc.Domain", "SimpleMvc.Domain\SimpleMvc.Domain.csproj", "{3D9EEB53-9A1F-483C-880D-3C4A257D5727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvc.Data", "SimpleMvc.Data\SimpleMvc.Data.csproj", "{1ECDD29E-0F18-495D-9E79-F58C666F7C99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{C14420A7-6488-4905-95E8-A58684D6C515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C14420A7-6488-4905-95E8-A58684D6C515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C14420A7-6488-4905-95E8-A58684D6C515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9EEB53-9A1F-483C-880D-3C4A257D5727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9EEB53-9A1F-483C-880D-3C4A257D5727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9EEB53-9A1F-483C-880D-3C4A257D5727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9EEB53-9A1F-483C-880D-3C4A257D5727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECDD29E-0F18-495D-9E79-F58C666F7C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECDD29E-0F18-495D-9E79-F58C666F7C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECDD29E-0F18-495D-9E79-F58C666F7C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECDD29E-0F18-495D-9E79-F58C666F7C99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

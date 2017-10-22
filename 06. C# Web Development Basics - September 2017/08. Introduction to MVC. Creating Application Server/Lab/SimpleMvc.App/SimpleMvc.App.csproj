@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SimpleMvc.Data\SimpleMvc.Data.csproj" />
+    <ProjectReference Include="..\SimpleMvc.Domain\SimpleMvc.Domain.csproj" />
     <ProjectReference Include="..\SimpleMvc.Framework\SimpleMvc.Framework.csproj" />
   </ItemGroup>
 

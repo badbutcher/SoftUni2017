@@ -6,10 +6,10 @@
     using System.Reflection;
     using SimpleMvc.Framework.Attributes.Methods;
     using SimpleMvc.Framework.Contracts;
+    using SimpleMvc.Framework.Controllers;
     using SimpleMvc.Framework.Helpers;
     using WebServer.Contracts;
     using WebServer.Enums;
-    using WebServer.Exceptions;
     using WebServer.Http.Contracts;
     using WebServer.Http.Response;
 
@@ -18,7 +18,7 @@
         private IDictionary<string, string> getParameters;
         private IDictionary<string, string> postParameters;
         private string requestMethod;
-        private object controllerInstance;
+        private Controller controllerInstance;
         private string controllerName;
         private string actionName;
         private object[] methodParameters;
@@ -29,7 +29,15 @@
             this.postParameters = new Dictionary<string, string>(request.FormData);
             this.requestMethod = request.Method.ToString().ToUpper();
 
-            this.PrepareControllerAndACtionNames(request);
+            var pathParts = request.Path.Split(new[] { '?', '/' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (pathParts.Length < 2)
+            {
+                return new NotFoundResponse();
+            }
+
+            this.controllerName = $"{pathParts[0].Captialize()}{MvcContext.Get.ControllersSuffix}";
+            this.actionName = pathParts[1].Captialize();
 
             var methodInfo = this.GetActionForExecution();
 
@@ -125,12 +133,12 @@
             return controller.GetType().GetMethods().Where(m => m.Name == actionName);
         }
 
-        private object GetControllerInstance()
+        private Controller GetControllerInstance()
         {
-            if (controllerInstance != null)
-            {
-                return controllerInstance;
-            }
+            //if (this.controllerInstance != null)
+            //{
+            //    return this.controllerInstance;
+            //}
 
             var controllerFullQualifedName = string.Format(
                 "{0}.{1}.{2}, {0}",
@@ -145,22 +153,9 @@
                 return null;
             }
 
-            controllerInstance = Activator.CreateInstance(controllerType);
+            controllerInstance = (Controller)Activator.CreateInstance(controllerType);
 
             return controllerInstance;
-        }
-
-        private void PrepareControllerAndACtionNames(IHttpRequest request)
-        {
-            var pathParts = request.Path.Split(new[] { '?', '/' }, StringSplitOptions.RemoveEmptyEntries);
-
-            if (pathParts.Length < 2)
-            {
-                BadRequestException.ThrowFromInvalidRequest();
-            }
-
-            this.controllerName = $"{pathParts[0].Captialize()}{MvcContext.Get.ControllersSuffix}";
-            this.actionName = pathParts[1].Captialize();
         }
     }
 }
