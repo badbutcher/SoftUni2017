@@ -2,8 +2,9 @@
 {
     using System.Text;
     using SimpleMvc.App.ViewModels;
+    using SimpleMvc.Framework.Contracts;
 
-    public class Profile : IRenderable<UserProfileViewModel>
+    public class Profile : IRenderable
     {
         public UserProfileViewModel Model { get; set; }
 

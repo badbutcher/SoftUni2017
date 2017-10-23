@@ -2,8 +2,9 @@
 {
     using System.Text;
     using SimpleMvc.App.ViewModels;
+    using SimpleMvc.Framework.Contracts;
 
-    public class All : IRenderable<AllUsernamesViewModel>
+    public class All : IRenderable//!!!!!!!!!
     {
         public AllUsernamesViewModel Model { get; set; }
 

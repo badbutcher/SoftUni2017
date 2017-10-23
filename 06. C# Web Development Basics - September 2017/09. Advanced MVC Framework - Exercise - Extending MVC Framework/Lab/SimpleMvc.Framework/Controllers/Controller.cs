@@ -68,36 +68,36 @@
             return true;
         }
 
-        protected IActionResult View([CallerMemberName] string caller = "")
-        {
-            string controllerName = ControllerHelpers.GetControllerName(this);
+        //protected IActionResult View([CallerMemberName] string caller = "")
+        //{
+        //    string controllerName = ControllerHelpers.GetControllerName(this);
 
-            string fullQualifiedName = ControllerHelpers.GetViewFullQualifedName(controllerName, caller);
+        //    string fullQualifiedName = ControllerHelpers.GetViewFullQualifedName(controllerName, caller);
 
-            return new ActionResult(fullQualifiedName);
-        }
+        //    return new ActionResult(fullQualifiedName);
+        //}
 
-        protected IActionResult View(string controller, string action)
-        {
-            string fullQualifiedName = ControllerHelpers.GetViewFullQualifedName(controller, action);
+        //protected IActionResult View(string controller, string action)
+        //{
+        //    string fullQualifiedName = ControllerHelpers.GetViewFullQualifedName(controller, action);
 
-            return new ActionResult(fullQualifiedName);
-        }
+        //    return new ActionResult(fullQualifiedName);
+        //}
 
-        protected IActionResult<TModel> View<TModel>(TModel model, [CallerMemberName]string caller = "")
-        {
-            string controllerName = ControllerHelpers.GetControllerName(this);
+        //protected IActionResult<TModel> View<TModel>(TModel model, [CallerMemberName]string caller = "")
+        //{
+        //    string controllerName = ControllerHelpers.GetControllerName(this);
 
-            string viewFullQualifedName = ControllerHelpers.GetViewFullQualifedName(controllerName, caller);
+        //    string viewFullQualifedName = ControllerHelpers.GetViewFullQualifedName(controllerName, caller);
 
-            return new ActionResult<TModel>(viewFullQualifedName, model);
-        }
+        //    return new ActionResult<TModel>(viewFullQualifedName, model);
+        //}
 
-        protected IActionResult<TModel> View<TModel>(TModel model, string controller, string action)
-        {
-            string viewFullQualifedName = ControllerHelpers.GetViewFullQualifedName(controller, action);
+        //protected IActionResult<TModel> View<TModel>(TModel model, string controller, string action)
+        //{
+        //    string viewFullQualifedName = ControllerHelpers.GetViewFullQualifedName(controller, action);
 
-            return new ActionResult<TModel>(viewFullQualifedName, model);
-        }
+        //    return new ActionResult<TModel>(viewFullQualifedName, model);
+        //}
     }
 }

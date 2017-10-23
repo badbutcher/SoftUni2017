@@ -37,67 +37,67 @@
             return this.View();
         }
 
-        [HttpGet]
-        public IActionResult<AllUsernamesViewModel> All()
-        {
-            Dictionary<int, string> users = null;
-            using (SimpleMvcDbContext context = new SimpleMvcDbContext())
-            {
-                users = context.Users.Select(a => new KeyValuePair<int, string>(a.Id, a.Username)).ToDictionary(b => b.Key, b => b.Value);
-            }
+        //[HttpGet]
+        //public IActionResult<AllUsernamesViewModel> All()
+        //{
+        //    Dictionary<int, string> users = null;
+        //    using (SimpleMvcDbContext context = new SimpleMvcDbContext())
+        //    {
+        //        users = context.Users.Select(a => new KeyValuePair<int, string>(a.Id, a.Username)).ToDictionary(b => b.Key, b => b.Value);
+        //    }
 
-            var viewModel = new AllUsernamesViewModel()
-            {
-                Users = users
-            };
+        //    var viewModel = new AllUsernamesViewModel()
+        //    {
+        //        Users = users
+        //    };
 
-            return this.View(viewModel);
-        }
+        //    return this.View(viewModel);
+        //}
 
-        [HttpGet]
-        public IActionResult<UserProfileViewModel> Profile(int id)
-        {
-            using (SimpleMvcDbContext context = new SimpleMvcDbContext())
-            {
-                var user = context.Users
-                    .Include(u => u.Notes)
-                    .FirstOrDefault(u => u.Id == id);
+        //[HttpGet]
+        //public IActionResult<UserProfileViewModel> Profile(int id)
+        //{
+        //    using (SimpleMvcDbContext context = new SimpleMvcDbContext())
+        //    {
+        //        var user = context.Users
+        //            .Include(u => u.Notes)
+        //            .FirstOrDefault(u => u.Id == id);
 
-                var viewModel = new UserProfileViewModel()
-                {
-                    UserId = user.Id,
-                    Username = user.Username,
-                    Notes = user.Notes
-                    .Select(a => new NoteViewModel()
-                    {
-                        Title = a.Title,
-                        Content = a.Content
-                    })
-                };
+        //        var viewModel = new UserProfileViewModel()
+        //        {
+        //            UserId = user.Id,
+        //            Username = user.Username,
+        //            Notes = user.Notes
+        //            .Select(a => new NoteViewModel()
+        //            {
+        //                Title = a.Title,
+        //                Content = a.Content
+        //            })
+        //        };
 
-                return this.View(viewModel);
-            }
-        }
+        //        return this.View(viewModel);
+        //    }
+        //}
 
-        [HttpPost]
-        public IActionResult<UserProfileViewModel> Profile(AddNoteBindingModel model)
-        {
-            using (SimpleMvcDbContext context = new SimpleMvcDbContext())
-            {
-                var user = context.Users
-                    .Find(model.UserId);
+        //[HttpPost]
+        //public IActionResult<UserProfileViewModel> Profile(AddNoteBindingModel model)
+        //{
+        //    using (SimpleMvcDbContext context = new SimpleMvcDbContext())
+        //    {
+        //        var user = context.Users
+        //            .Find(model.UserId);
 
-                Note note = new Note
-                {
-                    Title = model.Title,
-                    Content = model.Content
-                };
+        //        Note note = new Note
+        //        {
+        //            Title = model.Title,
+        //            Content = model.Content
+        //        };
 
-                user.Notes.Add(note);
-                context.SaveChanges();
-            }
+        //        user.Notes.Add(note);
+        //        context.SaveChanges();
+        //    }
 
-            return this.Profile(model.UserId);
-        }
+        //    return this.Profile(model.UserId);
+        //}
     }
 }
