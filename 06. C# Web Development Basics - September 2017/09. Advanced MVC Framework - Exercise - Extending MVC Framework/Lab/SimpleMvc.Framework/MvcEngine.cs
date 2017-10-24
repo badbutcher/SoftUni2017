@@ -20,7 +20,6 @@
             }
             catch (Exception e)
             {
-                //Log errors
                 Console.WriteLine(e.Message);
             }
         }

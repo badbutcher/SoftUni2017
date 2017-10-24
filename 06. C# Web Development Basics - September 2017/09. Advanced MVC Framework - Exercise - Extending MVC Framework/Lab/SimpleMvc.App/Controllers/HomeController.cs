@@ -9,7 +9,7 @@
         [HttpGet]
         public IActionResult Index()
         {
-            return RedirectToAction("/home/about");
+            return this.View();
         }
     }
 }

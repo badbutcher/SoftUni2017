@@ -7,40 +7,47 @@
     using System.Runtime.CompilerServices;
     using SimpleMvc.Framework.Attributes.Property;
     using SimpleMvc.Framework.Contracts;
-    using SimpleMvc.Framework.Helpers;
     using SimpleMvc.Framework.Models;
+    using SimpleMvc.Framework.Security;
     using SimpleMvc.Framework.ViewEngine.ActionResults;
     using SimpleMvc.Framework.Views;
+    using WebServer.Http;
+    using WebServer.Http.Contracts;
 
     public abstract class Controller
     {
         protected Controller()
         {
             this.Model = new ViewModel();
+            this.User = new Authentication();
         }
 
         protected ViewModel Model { get; }
 
-        protected IViewable View([CallerMemberName] string caller = "")
+        protected internal IHttpRequest Request { get; internal set; }
+
+        protected internal Authentication User { get; private set; }
+
+        protected internal void InitializeController()
         {
-            string controllerName = this.GetType()
-                .Name
-                .Replace(MvcContext.Get.ControllersSuffix, string.Empty);
+            var user = this.Request
+                .Session
+                .Get<string>(SessionStore.CurrentUserKey);
 
-            string fullQualifedName = string.Format(
-                "{0}\\{1}\\{2}",
-                MvcContext.Get.ViewsFolder,
-                controllerName,
-                caller);
-
-            IRenderable view = new View(fullQualifedName, this.Model.Data);
-
-            return new ViewResult(view);
+            if (user != null)
+            {
+                this.User = new Authentication(user);
+            }
         }
 
-        protected IRedirectable RedirectToAction(string redirectUrl)
+        protected void SignIn(string name)
         {
-            return new RedirectResult(redirectUrl);
+            this.Request.Session.Add(SessionStore.CurrentUserKey, name);
+        }
+
+        protected void SignOut()
+        {
+            this.Request.Session.Clear();
         }
 
         protected bool IsValidModel(object bindingModel)
@@ -68,36 +75,33 @@
             return true;
         }
 
-        //protected IActionResult View([CallerMemberName] string caller = "")
-        //{
-        //    string controllerName = ControllerHelpers.GetControllerName(this);
+        private void InitializeViewModelData()
+        {
+            this.Model["displayType"] = this.User.IsAuthenticated ? "block" : "none";
+        }
 
-        //    string fullQualifiedName = ControllerHelpers.GetViewFullQualifedName(controllerName, caller);
+        protected IViewable View([CallerMemberName] string caller = "")
+        {
+            this.InitializeViewModelData();
 
-        //    return new ActionResult(fullQualifiedName);
-        //}
+            string controllerName = this.GetType()
+                .Name
+                .Replace(MvcContext.Get.ControllersSuffix, string.Empty);
 
-        //protected IActionResult View(string controller, string action)
-        //{
-        //    string fullQualifiedName = ControllerHelpers.GetViewFullQualifedName(controller, action);
+            string fullQualifiedName = string.Format(
+                "{0}\\{1}\\{2}",
+                MvcContext.Get.ViewsFolder,
+                controllerName,
+                caller);
 
-        //    return new ActionResult(fullQualifiedName);
-        //}
+            IRenderable view = new View(fullQualifiedName, this.Model.Data);
 
-        //protected IActionResult<TModel> View<TModel>(TModel model, [CallerMemberName]string caller = "")
-        //{
-        //    string controllerName = ControllerHelpers.GetControllerName(this);
+            return new ViewResult(view);
+        }
 
-        //    string viewFullQualifedName = ControllerHelpers.GetViewFullQualifedName(controllerName, caller);
-
-        //    return new ActionResult<TModel>(viewFullQualifedName, model);
-        //}
-
-        //protected IActionResult<TModel> View<TModel>(TModel model, string controller, string action)
-        //{
-        //    string viewFullQualifedName = ControllerHelpers.GetViewFullQualifedName(controller, action);
-
-        //    return new ActionResult<TModel>(viewFullQualifedName, model);
-        //}
+        protected IRedirectable RedirectToAction(string redirectUrl)
+        {
+            return new RedirectResult(redirectUrl);
+        }
     }
 }

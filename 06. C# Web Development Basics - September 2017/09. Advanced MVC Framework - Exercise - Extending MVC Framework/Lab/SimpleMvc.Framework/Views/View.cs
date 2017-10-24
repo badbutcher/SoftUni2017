@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using SimpleMvc.Framework.Contracts;
-
-namespace SimpleMvc.Framework.Views
+﻿namespace SimpleMvc.Framework.Views
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using SimpleMvc.Framework.Contracts;
+
     public class View : IRenderable
     {
         public const string BaseLayoutFileName = "Layout";
@@ -44,12 +44,17 @@ namespace SimpleMvc.Framework.Views
         {
             string layoutHtml = this.RenderLayoutHtml();
 
+            if (layoutHtml.Contains("error"))
+            {
+                return layoutHtml;
+            }
+
             string templateFullQualifiedNameWithExtension = this.templateFullQualifedName + HtmlExtension;
             if (!File.Exists(templateFullQualifiedNameWithExtension))
             {
                 string errorPath = this.GetErrorPath();
                 string errorHtml = File.ReadAllText(errorPath);
-                viewData.Add("error", "Requested view does not exist!");
+                this.viewData.Add("error", "Requested view does not exist!");
                 return errorHtml;
             }
 

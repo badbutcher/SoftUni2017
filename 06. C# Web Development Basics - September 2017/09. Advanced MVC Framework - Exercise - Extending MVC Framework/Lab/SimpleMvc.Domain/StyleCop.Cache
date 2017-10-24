@@ -4,6 +4,10 @@
     <configuration>
     </configuration>
   </project>
+  <project key="79948852">
+    <configuration>
+    </configuration>
+  </project>
   <sourcecode name="Note.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 18:15:22.012</styleCop>

@@ -4,7 +4,6 @@
     using System.Linq;
     using Microsoft.EntityFrameworkCore;
     using SimpleMvc.App.BindingModels;
-    using SimpleMvc.App.ViewModels;
     using SimpleMvc.Data;
     using SimpleMvc.Domain.Models;
     using SimpleMvc.Framework.Attributes.Methods;
@@ -22,6 +21,11 @@
         [HttpPost]
         public IActionResult Register(RegisterUserBindingModel registerUserBinding)
         {
+            if (!this.IsValidModel(registerUserBinding))
+            {
+                return this.View();
+            }
+
             User user = new User()
             {
                 Username = registerUserBinding.Username,
@@ -34,70 +38,102 @@
                 context.SaveChanges();
             }
 
+            return this.RedirectToAction("/users/login");
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
             return this.View();
         }
 
-        //[HttpGet]
-        //public IActionResult<AllUsernamesViewModel> All()
-        //{
-        //    Dictionary<int, string> users = null;
-        //    using (SimpleMvcDbContext context = new SimpleMvcDbContext())
-        //    {
-        //        users = context.Users.Select(a => new KeyValuePair<int, string>(a.Id, a.Username)).ToDictionary(b => b.Key, b => b.Value);
-        //    }
+        [HttpPost]
+        public IActionResult Login(LoginUserBindingModel loginUserBinding)
+        {
+            using (var context = new SimpleMvcDbContext())
+            {
+                var foundUser = context.Users.FirstOrDefault(a => a.Username == loginUserBinding.Username);
 
-        //    var viewModel = new AllUsernamesViewModel()
-        //    {
-        //        Users = users
-        //    };
+                if (foundUser == null)
+                {
+                    return this.RedirectToAction("/home/login");
+                }
 
-        //    return this.View(viewModel);
-        //}
+                context.SaveChanges();
+                this.SignIn(foundUser.Username);
+            }
 
-        //[HttpGet]
-        //public IActionResult<UserProfileViewModel> Profile(int id)
-        //{
-        //    using (SimpleMvcDbContext context = new SimpleMvcDbContext())
-        //    {
-        //        var user = context.Users
-        //            .Include(u => u.Notes)
-        //            .FirstOrDefault(u => u.Id == id);
+            return this.RedirectToAction("/home/index");
+        }
 
-        //        var viewModel = new UserProfileViewModel()
-        //        {
-        //            UserId = user.Id,
-        //            Username = user.Username,
-        //            Notes = user.Notes
-        //            .Select(a => new NoteViewModel()
-        //            {
-        //                Title = a.Title,
-        //                Content = a.Content
-        //            })
-        //        };
+        [HttpGet]
+        public IActionResult All()
+        {
+            if (!this.User.IsAuthenticated)
+            {
+                return this.RedirectToAction("/users/login");
+            }
 
-        //        return this.View(viewModel);
-        //    }
-        //}
+            Dictionary<int, string> users = new Dictionary<int, string>();
 
-        //[HttpPost]
-        //public IActionResult<UserProfileViewModel> Profile(AddNoteBindingModel model)
-        //{
-        //    using (SimpleMvcDbContext context = new SimpleMvcDbContext())
-        //    {
-        //        var user = context.Users
-        //            .Find(model.UserId);
+            using (var context = new SimpleMvcDbContext())
+            {
+                users = context.Users.ToDictionary(u => u.Id, u => u.Username);
+            }
 
-        //        Note note = new Note
-        //        {
-        //            Title = model.Title,
-        //            Content = model.Content
-        //        };
+            this.Model["users"] =
+            users.Any() ? string.Join(string.Empty, users
+            .Select(u => $"<li><a href=\"/users/profile?id={u.Key}\">{u.Value}</a></li>"))
+            : string.Empty;
 
-        //        user.Notes.Add(note);
-        //        context.SaveChanges();
-        //    }
+            return this.View();
+        }
 
-        //    return this.Profile(model.UserId);
-        //}
+        [HttpGet]
+        public IActionResult Profile(int id)
+        {
+            using (SimpleMvcDbContext context = new SimpleMvcDbContext())
+            {
+                var user = context.Users
+                    .Include(u => u.Notes)
+                    .FirstOrDefault(u => u.Id == id);
+
+                this.Model["username"] = user.Username;
+                this.Model["userid"] = user.Id.ToString();
+                this.Model["notes"] = string.Join(string.Empty, user.Notes
+            .Select(u => $"<div>{u.Title}--{u.Content}</div>"));
+
+                return this.View();
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Profile(AddNoteBindingModel model)
+        {
+            using (SimpleMvcDbContext context = new SimpleMvcDbContext())
+            {
+                var user = context.Users
+                    .Find(model.UserId);
+
+                Note note = new Note
+                {
+                    Title = model.Title,
+                    Content = model.Content
+                };
+
+                user.Notes.Add(note);
+                context.SaveChanges();
+            }
+
+            return this.Profile(model.UserId);
+        }
+
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            this.SignOut();
+
+            return this.RedirectToAction("/home/index");
+        }
     }
 }

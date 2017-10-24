@@ -1,7 +1,7 @@
-﻿using System.Text.RegularExpressions;
-
-namespace SimpleMvc.Framework.Attributes.Property
+﻿namespace SimpleMvc.Framework.Attributes.Property
 {
+    using System.Text.RegularExpressions;
+
     public class RegexAttribute : PropertyAttribute
     {
         private readonly string pattern;

@@ -1,7 +1,7 @@
-﻿namespace SimpleMvc.App.ViewModels
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace SimpleMvc.App.BindingModels
+{
     public class UserProfileViewModel
     {
         public string Username { get; set; }

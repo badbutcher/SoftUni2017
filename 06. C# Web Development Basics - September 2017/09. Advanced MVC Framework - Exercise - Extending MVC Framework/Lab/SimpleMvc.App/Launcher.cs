@@ -6,7 +6,6 @@
 
     public class Launcher
     {
-        public static void Main() =>
-            MvcEngine.Run(new WebServer(8230, new ControllerRouter()));
+        public static void Main() => MvcEngine.Run(new WebServer(8230, new ControllerRouter(), new ResourceRouter()));
     }
 }

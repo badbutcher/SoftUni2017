@@ -1,4 +1,4 @@
-﻿namespace SimpleMvc.App.ViewModels
+﻿namespace SimpleMvc.App.BindingModels
 {
     public class NoteViewModel
     {

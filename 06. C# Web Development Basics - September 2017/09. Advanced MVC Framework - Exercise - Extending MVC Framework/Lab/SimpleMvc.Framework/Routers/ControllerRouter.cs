@@ -33,6 +33,12 @@
 
             Controller controller = this.GetController(controllerName);
 
+            if (controller != null)
+            {
+                controller.Request = request;
+                controller.InitializeController();
+            }
+
             MethodInfo method = this.GetMethod(controller, requestMethod, actionName);
 
             if (method == null)
@@ -53,14 +59,6 @@
             {
                 return new InternalServerErrorResponse(e);
             }
-
-            //this.PrepareMethodParameters(methodInfo);
-
-            //var actionResult = (IInvocable)methodInfo.Invoke(this.GetController(), this.methodParameters);
-
-            //var content = actionResult.Invoke();
-
-            //return new ContentResponse(HttpStatusCode.Ok, content);
         }
 
         private IHttpResponse GetResponse(MethodInfo method, Controller controller, object[] methodParams)
@@ -129,46 +127,6 @@
             object value = getParams[parameter.Name];
             return Convert.ChangeType(value, parameter.ParameterType);
         }
-
-        //private void PrepareMethodParameters(MethodInfo methodInfo)
-        //{
-        //    var parameters = methodInfo.GetParameters();
-
-        //    this.methodParameters = new object[parameters.Length];
-
-        //    for (int i = 0; i < parameters.Length; i++)
-        //    {
-        //        var parameter = parameters[i];
-
-        //        if (parameter.ParameterType.IsPrimitive || parameter.ParameterType == typeof(string))
-        //        {
-        //            var getParameterValue = this.getParameters[parameter.Name];
-
-        //            var value = Convert.ChangeType(getParameterValue, parameter.ParameterType);
-
-        //            this.methodParameters[i] = value;
-        //        }
-        //        else
-        //        {
-        //            var modelType = parameter.ParameterType;
-
-        //            var modelInstance = Activator.CreateInstance(modelType);
-
-        //            var modelProperties = modelType.GetProperties();
-
-        //            foreach (var modelProperty in modelProperties)
-        //            {
-        //                var postParameterValue = this.postParameters[modelProperty.Name];
-
-        //                var value = Convert.ChangeType(postParameterValue, modelProperty.PropertyType);
-
-        //                modelProperty.SetValue(modelInstance, value);
-
-        //                this.methodParameters[i] = Convert.ChangeType(modelInstance, modelType);
-        //            }
-        //        }
-        //    }
-        //}
 
         private MethodInfo GetMethod(Controller controller, string requestMethod, string actionName)
         {
