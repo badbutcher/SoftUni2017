@@ -1,6 +1,5 @@
 ﻿namespace Exam.App.Services.Contracts
 {
-    using System.Collections.Generic;
     using Exam.App.Data.Model;
 
     public interface IUserService
@@ -10,7 +9,5 @@
         bool UserExists(string email, string password);
 
         bool IsAproved(string email);
-
-        IEnumerable<object> AllUsers();//~!!!!!!!!!!
     }
 }

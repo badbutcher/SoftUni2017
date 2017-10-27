@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <main class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center"><h1 class="display-3">Delete Post</h1></div>
+                        <br />
+                        <form method="post" action="/admin/delete?id={{{id}}}">
+                            <div class="form-group row">
+                                <label class="form-control-label">Title</label>
+                                <input required disabled name="Title" pattern="[A-Z].{3,100}" class="form-control" value="{{{title}}}" />
+                            </div>
+                            <div class="form-group row">
+                                <label class="form-control-label">Content</label>
+                                <textarea required disabled name="Content" class="form-control" minlength="20">{{{content}}}</textarea>
+                            </div>
+                            <input type="submit" id="btn-delete-post" class="btn btn-outline-danger btn-lg btn-block" value="Delete" />
+                        </form>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

@@ -19,6 +19,6 @@
 
         public Position Position { get; set; }
 
-        public List<Post> Posts = new List<Post>();
+        public IList<Post> Posts = new List<Post>();
     }
 }

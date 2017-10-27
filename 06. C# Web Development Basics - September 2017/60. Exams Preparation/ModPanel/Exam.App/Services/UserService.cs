@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using Exam.App.Data;
-using Exam.App.Data.Model;
-using Exam.App.Services.Contracts;
-
-namespace Exam.App.Services
+﻿namespace Exam.App.Services
 {
+    using System.Linq;
+    using Exam.App.Data;
+    using Exam.App.Data.Model;
+    using Exam.App.Services.Contracts;
+
     public class UserService : IUserService
     {
         public bool Create(string email, string password, Position position)

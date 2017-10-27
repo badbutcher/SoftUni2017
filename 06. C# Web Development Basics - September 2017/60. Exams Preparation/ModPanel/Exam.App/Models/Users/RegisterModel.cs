@@ -1,9 +1,5 @@
 ﻿namespace Exam.App.Models.Users
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-    using Exam.App.Data.Model;
     using Exam.App.Infrastructure.Users;
     using Exam.App.Infrastructure.Validation;
 

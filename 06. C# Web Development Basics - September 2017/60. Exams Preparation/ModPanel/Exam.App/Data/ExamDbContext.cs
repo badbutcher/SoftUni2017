@@ -18,10 +18,14 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder
-                .Entity<User>()
+            builder.Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
+
+            //builder.Entity<User>()
+            //    .HasMany(t => t.Posts)
+            //    .WithOne(a => a.User)
+            //    .HasForeignKey(a => a.UserId);
         }
     }
 }
