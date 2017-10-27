@@ -7,6 +7,10 @@
     {
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Post> Posts { get; set; }
+
+        public DbSet<Log> Logs { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             builder.UseSqlServer("Server=.;Database=ExamDb;Integrated Security=True;");

@@ -1,5 +1,6 @@
 ﻿namespace Exam.App.Data.Model
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     public class User
@@ -13,5 +14,11 @@
         public string Password { get; set; }
 
         public bool IsAdmin { get; set; }
+
+        public bool IsApproved { get; set; }
+
+        public Position Position { get; set; }
+
+        public List<Post> Posts = new List<Post>();
     }
 }
