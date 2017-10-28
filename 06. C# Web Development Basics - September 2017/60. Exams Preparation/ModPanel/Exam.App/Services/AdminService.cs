@@ -27,7 +27,7 @@
             }
         }
 
-        public void Approve(int id)
+        public string Approve(int id)
         {
             using (ExamDbContext db = new ExamDbContext())
             {
@@ -36,6 +36,8 @@
                 user.IsApproved = true;
 
                 db.SaveChanges();
+
+                return user?.Email;
             }
         }
     }

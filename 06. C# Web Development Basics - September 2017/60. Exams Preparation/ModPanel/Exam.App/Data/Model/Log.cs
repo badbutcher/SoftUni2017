@@ -6,6 +6,8 @@
 
         public string Admin { get; set; }
 
-        public string Activity { get; set; }
+        public LogType Type { get; set; }
+
+        public string AdditionalInformation { get; set; }
     }
 }

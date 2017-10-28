@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using Exam.App.Data.Model;
+    using Exam.App.Models.Home;
     using Exam.App.Models.Posts;
 
     public interface IPostService
@@ -10,8 +11,12 @@
 
         IEnumerable<PostAdminViewModel> AllPosts();
 
-        void Delete(int id);
+        string Delete(int id);
 
         Post GetPostById(int id);
+
+        void EditPost(int id, NewPostViewModel model);
+
+        IEnumerable<HomeUserPostsViewModel> AllPostsForUser(string search = null);
     }
 }

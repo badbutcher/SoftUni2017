@@ -7,6 +7,6 @@
     {
         IEnumerable<UsersInfoViewModel> AllUsers();
 
-        void Approve(int id);
+        string Approve(int id);
     }
 }

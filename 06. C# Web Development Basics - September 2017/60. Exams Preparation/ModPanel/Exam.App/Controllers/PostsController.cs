@@ -1,5 +1,6 @@
 ﻿namespace Exam.App.Controllers
 {
+    using Exam.App.Data.Model;
     using Exam.App.Models.Posts;
     using Exam.App.Services;
     using Exam.App.Services.Contracts;
@@ -24,7 +25,17 @@
         [HttpPost]
         public IActionResult Add(NewPostViewModel post)
         {
+            if (!this.User.IsAuthenticated)
+            {
+                return this.Redirect("/users/login");
+            }
+
             this.posts.CreatePost(Capitalize(post.Title), post.Content, this.Profile.Id);
+
+            if (this.IsAdmin)
+            {
+                this.Log(LogType.CreatePost, post.Title);
+            }
 
             return this.Redirect("/home/index");
         }

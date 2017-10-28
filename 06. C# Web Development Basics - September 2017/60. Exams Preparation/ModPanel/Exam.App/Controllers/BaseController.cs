@@ -3,12 +3,18 @@
     using System.Linq;
     using Exam.App.Data;
     using Exam.App.Data.Model;
+    using Exam.App.Services;
+    using Exam.App.Services.Contracts;
     using SimpleMvc.Framework.Controllers;
 
     public abstract class BaseController : Controller
     {
+        private readonly ILogService logs;
+
         protected BaseController()
         {
+            this.logs = new LogService();
+
             this.ViewModel["anonymousDisplay"] = "flex";
             this.ViewModel["userDisplay"] = "none";
             this.ViewModel["adminDisplay"] = "none";
@@ -22,6 +28,12 @@
             this.ViewModel["show-error"] = "block";
             this.ViewModel["error"] = error;
         }
+
+        protected void Log(LogType type, string additionalInformation)
+            => this.logs.Create(
+                this.Profile.Email,
+                type,
+                additionalInformation);
 
         protected override void InitializeController()
         {

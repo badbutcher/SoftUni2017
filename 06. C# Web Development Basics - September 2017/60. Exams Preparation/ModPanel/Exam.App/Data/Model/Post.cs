@@ -1,5 +1,6 @@
 ﻿namespace Exam.App.Data.Model
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
 
     public class Post
@@ -11,6 +12,8 @@
 
         [Required]
         public string Content { get; set; }
+
+        public DateTime? CreatedOn { get; set; }
 
         public int UserId { get; set; }
 

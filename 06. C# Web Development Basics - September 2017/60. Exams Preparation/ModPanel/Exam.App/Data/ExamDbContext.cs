@@ -22,10 +22,10 @@
                 .HasIndex(u => u.Email)
                 .IsUnique();
 
-            //builder.Entity<User>()
-            //    .HasMany(t => t.Posts)
-            //    .WithOne(a => a.User)
-            //    .HasForeignKey(a => a.UserId);
+            builder.Entity<User>()
+                .HasMany(t => t.Posts)
+                .WithOne(a => a.User)
+                .HasForeignKey(a => a.UserId);
         }
     }
 }

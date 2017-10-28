@@ -12,9 +12,10 @@ using System;
 namespace Exam.App.Data.Migrations
 {
     [DbContext(typeof(ExamDbContext))]
-    partial class ExamDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171028070405_PostPostDate")]
+    partial class PostPostDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,11 +27,9 @@ namespace Exam.App.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("AdditionalInformation");
+                    b.Property<string>("Activity");
 
                     b.Property<string>("Admin");
-
-                    b.Property<int>("Type");
 
                     b.HasKey("Id");
 

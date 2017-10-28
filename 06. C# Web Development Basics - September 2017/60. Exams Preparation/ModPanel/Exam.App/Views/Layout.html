@@ -39,10 +39,16 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="log.html">Log</a>
+                                <a class="dropdown-item" href="/admin/log">Log</a>
                                 <a class="dropdown-item" href="/admin/viewPosts">Posts</a>
                                 <a class="dropdown-item" href="/admin/users">Users</a>
                             </div>
+                        </li>
+                        <li class="navbar-nav">
+                            <form method="get" action="/" class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-dark mr-3 my-2 my-sm-0" type="submit">Search</button>
+                            </form>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/posts/add">New Post</a>
@@ -53,8 +59,8 @@
                     </ul>
                     <ul class="navbar-nav" style="display: {{{userDisplay}}}">
                         <li class="navbar-nav">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
+                            <form method="get" action="/" class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-dark mr-3 my-2 my-sm-0" type="submit">Search</button>
                             </form>
                         </li>
