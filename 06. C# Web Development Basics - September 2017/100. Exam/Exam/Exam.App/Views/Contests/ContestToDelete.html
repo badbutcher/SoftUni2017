@@ -1,0 +1,29 @@
+﻿<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-md-6">
+                <div class="text-center">
+                    <h1 class="display-3">{{{name}}}</h1>
+                </div>
+                <hr />
+
+                <form method="post" action="/contests/delete?name={{{name}}}">
+                    <div class="form-group row">
+                        <label class="col-form-label" for="contest-name">Contest Name</label>
+                        <input disabled required type="text" pattern="^[a-zA-Z -.]+$" name="Name" class="form-control" id="contest" value="{{{name}}}" />
+                    </div>
+
+                    <div class="form-group row">
+                        <label>
+                            <input type="submit" class="btn btn-lg btn-block btn-outline-danger" value="Delete" />
+                        </label>
+                        <label>
+                            <input type="submit" class="btn btn-lg btn-block btn-outline-dark" value="Back" />
+                        </label>
+                    </div>
+                </form>
+                <br />
+            </div>
+        </div>
+    </div>
+</main>

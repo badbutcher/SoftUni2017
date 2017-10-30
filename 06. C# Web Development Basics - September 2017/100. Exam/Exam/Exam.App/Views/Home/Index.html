@@ -1,0 +1,32 @@
+﻿<main>
+    <div class="row justify-content-center" style="display: {{{anonymousDisplay}}}">
+        <div class="container text-center">
+            <br />
+            <div class="jumbotron">
+                <h1 class="display-3">Hello, guest!</h1>
+                <p class="lead">Please login in out system in order to use it</p>
+                <hr />
+                <p>
+                    If you don't have a registration yet, you can register <a href="/users/register">here</a>
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="/users/login" role="button">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" style="display: {{{adminDisplay}}}; display: {{{userDisplay}}}">
+        <div class="container text-center">
+            <br />
+            <div class="jumbotron">
+                <h1 class="display-3">Hello, {{{name}}}!</h1>
+                <p class="lead">You can view all contests or review your submissions.</p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="/contests/contestsHome" role="button">Contests</a>
+                    <a class="btn btn-primary btn-lg" href="submissions.html" role="button">Submissions</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
