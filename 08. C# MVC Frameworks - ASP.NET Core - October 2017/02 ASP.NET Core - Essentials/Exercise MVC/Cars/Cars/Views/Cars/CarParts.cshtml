@@ -1,0 +1,32 @@
+﻿@model CarsPartsModel
+@{
+    ViewData["Title"] = "All cars by make";
+}
+<h2>All cars by make</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Travlled distance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CarsParts)
+        {
+            <tr>
+                <td>@item.Make</td>
+                <td>@item.Model</td>
+                <td>@item.TravlledDistance</td>
+                <td>
+                <ul>
+                    @foreach (var part in item.Parts)
+                    {
+                        <li>@part.Name - @part.Price</li>
+                    }
+                </ul>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

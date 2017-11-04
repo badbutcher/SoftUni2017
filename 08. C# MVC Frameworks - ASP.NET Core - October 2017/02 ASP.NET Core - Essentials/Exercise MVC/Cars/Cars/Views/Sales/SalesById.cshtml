@@ -1,0 +1,30 @@
+﻿@model AllSalesModel
+@{
+    ViewData["Title"] = "All sales";
+}
+<h2>All sales</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>TravlledDistance</th>
+            <th>Customer name</th>
+            <th>Price</th>
+            <th>Price With Sale</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Sales)
+        {
+            <tr>
+                <td>@item.Make</td>
+                <td>@item.Model</td>
+                <td>@item.TravlledDistance</td>
+                <td>@item.CustomerName</td>
+                <td>@item.Price</td>
+                <td>@item.PriceWithSale</td>
+            </tr>
+        }
+    </tbody>
+</table>

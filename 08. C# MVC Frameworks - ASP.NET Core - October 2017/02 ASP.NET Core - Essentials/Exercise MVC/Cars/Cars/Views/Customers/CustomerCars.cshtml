@@ -1,0 +1,21 @@
+﻿@model CustomerCarsModel
+@{
+    ViewData["Title"] = "Customer cars";
+}
+<h2>Customer cars</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cars Bought</th>
+            <th>Money Spend</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>@Model.Customer.Name</td>
+                <td>@Model.Customer.CarsBought</td>
+                <td>@Model.Customer.MoneySpend</td>
+            </tr>
+    </tbody>
+</table>

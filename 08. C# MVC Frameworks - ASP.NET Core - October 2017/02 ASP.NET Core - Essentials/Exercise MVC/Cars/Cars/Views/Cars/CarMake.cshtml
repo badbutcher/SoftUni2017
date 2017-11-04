@@ -1,0 +1,24 @@
+﻿@model CarsMakeModel
+@{
+    ViewData["Title"] = "All cars by make";
+}
+<h2>All cars by make</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Travlled distance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Cars)
+        {
+            <tr>
+                <td>@item.Make</td>
+                <td>@item.Model</td>
+                <td>@item.TravlledDistance</td>
+            </tr>
+        }
+    </tbody>
+</table>

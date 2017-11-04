@@ -1,0 +1,24 @@
+﻿@model AllCustomersModel
+@{
+    ViewData["Title"] = "All Customers";
+}
+<h2>All Customers</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Birth Day</th>
+            <th>Is Young Driver</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Customers)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.BirthDate.ToShortDateString()</td>
+                <td>@(item.IsYoungDriver ? "YES" : "NO")</td>
+            </tr>
+        }
+    </tbody>
+</table>
