@@ -1,9 +1,9 @@
-﻿using Car.Services;
-using Cars.Models.Sales;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Cars.Controllers
+﻿namespace Cars.Controllers
 {
+    using Car.Services;
+    using Cars.Models.Sales;
+    using Microsoft.AspNetCore.Mvc;
+
     public class SalesController : Controller
     {
         private readonly ISaleService sale;

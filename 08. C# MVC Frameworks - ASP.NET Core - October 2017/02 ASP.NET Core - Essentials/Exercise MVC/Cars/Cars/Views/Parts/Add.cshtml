@@ -1,0 +1,33 @@
+﻿@model ListOfSuppliers
+@{
+    ViewData["Title"] = "Add parts";
+}
+<h2>Add parts</h2>
+<form method="post">
+    <div class="form-group row">
+        <label class="col-form-label" for="name">Name</label>
+        <input required type="text" name="Name" class="form-control" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="price">Price</label>
+        <input required type="number" name="Price" class="form-control" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="quantity">Quantity</label>
+        <input required type="number" name="Quantity" class="form-control" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="supplier">Supplier</label>
+        <select class="col-form-label" name="Supplier">
+            @foreach (var item in Model.Suppliers)
+            {
+                <option class="form-control" value="@item.Name">@item.Name</option>
+            }
+        </select>
+    </div>
+
+    <input type="submit" class="btn btn-lg btn-block btn-outline-dark" value="Add" />
+</form>

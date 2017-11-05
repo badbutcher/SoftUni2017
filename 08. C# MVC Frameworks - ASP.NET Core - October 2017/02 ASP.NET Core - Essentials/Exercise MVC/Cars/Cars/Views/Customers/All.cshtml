@@ -3,12 +3,16 @@
     ViewData["Title"] = "All Customers";
 }
 <h2>All Customers</h2>
+<a href="/customers/add" class="btn btn-success m-1">
+    <strong>+</strong> Add customer
+</a>
 <table class="table">
     <thead>
         <tr>
             <th>Name</th>
             <th>Birth Day</th>
             <th>Is Young Driver</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +22,11 @@
                 <td>@item.Name</td>
                 <td>@item.BirthDate.ToShortDateString()</td>
                 <td>@(item.IsYoungDriver ? "YES" : "NO")</td>
+                <td>
+                    <a href="/customers/edit/@item.Name/@item.BirthDate" class="btn btn-warning m-1">
+                        <strong>+</strong> Edit customer
+                    </a>
+                </td>
             </tr>
         }
     </tbody>

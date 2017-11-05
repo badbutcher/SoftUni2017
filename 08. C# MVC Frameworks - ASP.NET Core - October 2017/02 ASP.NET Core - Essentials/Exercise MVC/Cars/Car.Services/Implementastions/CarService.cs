@@ -55,7 +55,8 @@
                     Parts = a.Parts.Select(p => new PartModel
                     {
                         Name = p.Part.Name,
-                        Price = p.Part.Price
+                        Price = p.Part.Price,
+                        Supplier = p.Part.Supplier.Name
                     })
                 })
                 .ToList();

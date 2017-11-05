@@ -3,8 +3,8 @@
     using System.Collections.Generic;
     using Car.Services.Models;
 
-    public class SuppliersTypeModel
+    public class ListOfSuppliers
     {
-        public IEnumerable<SupplierModel> Suppliers { get; set; }
+        public IEnumerable<SuppliersNameModel> Suppliers { get; set; }
     }
 }

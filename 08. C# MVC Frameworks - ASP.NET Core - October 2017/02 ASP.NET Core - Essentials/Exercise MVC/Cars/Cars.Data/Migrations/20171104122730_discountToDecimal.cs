@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace Cars.Data.Migrations
+﻿namespace Cars.Data.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class discountToDecimal : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

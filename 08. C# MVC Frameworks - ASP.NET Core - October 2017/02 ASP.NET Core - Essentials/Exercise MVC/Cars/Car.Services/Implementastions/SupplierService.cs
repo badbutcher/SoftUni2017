@@ -14,6 +14,15 @@
             this.db = db;
         }
 
+        public IEnumerable<SuppliersNameModel> GetSuppliers()
+        {
+            return this.db.Suppliers
+                     .Select(a => new SuppliersNameModel
+                     {
+                         Name = a.Name
+                     }).ToList();
+        }
+
         public IEnumerable<SupplierModel> Supplier(string type)
         {
             if (type == "local")

@@ -1,5 +1,6 @@
 ﻿namespace Cars.Controllers
 {
+    using System;
     using Car.Services;
     using Car.Services.Models;
     using Cars.Models.Customers;
@@ -12,6 +13,40 @@
         public CustomersController(ICustomerService customers)
         {
             this.customers = customers;
+        }
+
+        [Route("customers/add")]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("customers/add")]
+        public IActionResult Add(string name, DateTime birthdate)
+        {
+            this.customers.Add(name, birthdate);
+
+            return View();
+        }
+
+        [Route("customers/edit/{name}/{birthDate}")]
+        public IActionResult Edit(string name, DateTime birthDate)
+        {
+            return View(new CustomerViewModel
+            {
+                NewName = name,
+                BirthDate = birthDate
+            });
+        }
+
+        [HttpPost]
+        [Route("customers/edit/{name}/{birthDate}")]
+        public IActionResult Edit(string name, CustomerViewModel model)
+        {
+            this.customers.Edit(name, model.NewName, model.BirthDate);
+
+            return Redirect("/customers/all");
         }
 
         [Route("customers/all/{order?}")]

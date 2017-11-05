@@ -1,0 +1,33 @@
+﻿@model AllPartsModel
+@{
+    ViewData["Title"] = "All";
+}
+<h2>All</h2>
+<a href="/parts/add" class="btn btn-success m-1">
+    <strong>+</strong> Add part
+</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Supplier</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Parts)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Supplier</td>
+                <td>
+                    <a href="/parts/delete/@item.Name" class="btn btn-danger m-1">
+                        Delete part
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

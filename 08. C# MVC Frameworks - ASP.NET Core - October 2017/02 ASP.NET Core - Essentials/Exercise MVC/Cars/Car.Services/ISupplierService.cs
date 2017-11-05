@@ -6,5 +6,7 @@
     public interface ISupplierService
     {
         IEnumerable<SupplierModel> Supplier(string type);
+
+        IEnumerable<SuppliersNameModel> GetSuppliers();
     }
 }

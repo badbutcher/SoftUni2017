@@ -5,6 +5,7 @@
     using System.Linq;
     using Car.Services.Models;
     using Cars.Data;
+    using Cars.Data.Models;
 
     public class CustomerService : ICustomerService
     {
@@ -13,6 +14,19 @@
         public CustomerService(CarDbContext db)
         {
             this.db = db;
+        }
+
+        public void Add(string name, DateTime birthdate)
+        {
+            Customer customer = new Customer
+            {
+                Name = name,
+                BirthDate = birthdate,
+                IsYoungDriver = (DateTime.Now - birthdate).Days < 730 ? true : false
+            };
+
+            this.db.Add(customer);
+            this.db.SaveChanges();
         }
 
         public CustomerCars CustomerCars(int id)
@@ -27,6 +41,17 @@
                  }).FirstOrDefault();
 
             return result;
+        }
+
+        public void Edit(string oldName, string newName, DateTime birthdate)
+        {
+            Customer customer = this.db.Customers.FirstOrDefault(a => a.Name == oldName);
+
+            customer.Name = newName;
+            customer.BirthDate = birthdate;
+            customer.IsYoungDriver = (DateTime.Now - birthdate).Days < 730 ? true : false;
+
+            this.db.SaveChanges();
         }
 
         public IEnumerable<CustomerModel> OrderCustomers(OrderDirection order)
