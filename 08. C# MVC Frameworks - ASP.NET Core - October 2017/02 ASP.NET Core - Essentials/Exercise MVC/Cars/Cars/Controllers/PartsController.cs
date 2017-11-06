@@ -32,7 +32,7 @@
         {
             var allSuppliers = suppliers.GetSuppliers();
 
-            return View(new ListOfSuppliers
+            return View(new ListOfSuppliersModel
             {
                 Suppliers = allSuppliers
             });

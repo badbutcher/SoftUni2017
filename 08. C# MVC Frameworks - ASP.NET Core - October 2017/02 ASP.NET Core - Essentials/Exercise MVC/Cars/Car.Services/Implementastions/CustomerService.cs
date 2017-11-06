@@ -29,6 +29,19 @@
             this.db.SaveChanges();
         }
 
+        public IEnumerable<CustomerModel> All()
+        {
+            var result = this.db.Customers
+                 .Select(a => new CustomerModel
+                 {
+                     Name = a.Name,
+                     BirthDate = a.BirthDate,
+                     IsYoungDriver = a.IsYoungDriver
+                 }).ToList();
+
+            return result;
+        }
+
         public CustomerCars CustomerCars(int id)
         {
             var result = this.db.Sales

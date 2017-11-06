@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
     using Car.Services.Models;
-    using Cars.Data.Models;
 
     public interface ICarService
     {

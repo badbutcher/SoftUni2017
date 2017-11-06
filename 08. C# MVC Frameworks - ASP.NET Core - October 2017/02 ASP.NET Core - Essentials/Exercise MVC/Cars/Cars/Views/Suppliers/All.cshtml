@@ -1,0 +1,34 @@
+﻿@model AllSuppliersModel
+@{
+    ViewData["Title"] = "All";
+}
+<h2>All</h2>
+<a href="/suppliers/add" class="btn btn-success m-1">
+    <strong>+</strong> New Supplier
+</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Importer</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Suppliers)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.IsImporter</td>
+                <td>
+                    <a href="/suppliers/edit/@item.Name/@item.IsImporter" class="btn btn-warning m-1">
+                        Edit
+                    </a>
+                    <a href="/suppliers/delete/@item.Name/@item.IsImporter" class="btn btn-danger m-1">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

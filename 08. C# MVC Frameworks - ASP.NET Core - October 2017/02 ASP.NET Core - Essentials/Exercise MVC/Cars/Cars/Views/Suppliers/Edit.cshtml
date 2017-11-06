@@ -1,0 +1,18 @@
+﻿@model SingleSupplierModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<h2>Edit</h2>
+<form method="post">
+    <div class="form-group row">
+        <label class="col-form-label" for="newName">Name</label>
+        <input required type="text" name="NewName" value="@Model.NewName" class="form-control" />
+    </div>
+    <div class="form-group row">
+        <label class="col-form-label" for="isImporter">Importer</label>
+        <input type="checkbox" id="IsImporter" name="IsImporter" value="true" class="form-control" />
+        <input type="hidden" name="IsImporter" value="false" class="form-control" />
+    </div>
+
+    <input type="submit" class="btn btn-lg btn-block btn-outline-dark" value="Edit" />
+</form>

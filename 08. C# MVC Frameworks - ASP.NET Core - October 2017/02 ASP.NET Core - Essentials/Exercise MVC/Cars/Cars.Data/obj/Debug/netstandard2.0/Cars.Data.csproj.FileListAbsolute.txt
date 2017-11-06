@@ -1,9 +1,0 @@
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\bin\Debug\netstandard2.0\Cars.Data.deps.json
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\bin\Debug\netstandard2.0\Cars.Data.dll
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\bin\Debug\netstandard2.0\Cars.Data.pdb
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.csprojResolveAssemblyReference.cache
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.csproj.CoreCompileInputs.cache
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.AssemblyInfoInputs.cache
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.AssemblyInfo.cs
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.dll
-D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\02 ASP.NET Core - Essentials\Exercise MVC\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.pdb

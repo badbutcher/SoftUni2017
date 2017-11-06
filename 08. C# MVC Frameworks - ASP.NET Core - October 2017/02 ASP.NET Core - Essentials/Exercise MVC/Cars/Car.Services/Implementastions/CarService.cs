@@ -24,8 +24,8 @@
                 TravelledDistance = travelledDistance
             };
 
-            db.Cars.Add(car);
-            db.SaveChanges();
+            this.db.Cars.Add(car);
+            this.db.SaveChanges();
         }
 
         public IEnumerable<CarModel> All()

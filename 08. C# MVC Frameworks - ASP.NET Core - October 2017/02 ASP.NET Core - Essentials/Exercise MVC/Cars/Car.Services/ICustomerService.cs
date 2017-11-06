@@ -13,5 +13,7 @@
         void Add(string name, DateTime birthdate);
 
         void Edit(string oldName, string newName, DateTime birthdate);
+
+        IEnumerable<CustomerModel> All();
     }
 }

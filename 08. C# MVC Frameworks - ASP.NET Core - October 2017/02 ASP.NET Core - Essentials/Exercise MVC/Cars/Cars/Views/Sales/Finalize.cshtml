@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Finalize";
+}
+<h2>Finalize</h2>
+<form method="post" action="/sales/add">
+    <div class="form-group row">
+        <label class="col-form-label" for="customer">Customer</label>
+        <input readonly required type="text" name="Customer" class="form-control" value="@Model.Part.Name" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="car">Car</label>
+        <input required type="number" name="Car" class="form-control" value="@Model.Part.Price" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="discount">Discount</label>
+        <input required type="number" name="Discount" class="form-control" value="@Model.Part.Quantity" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="carPrice">Car Price</label>
+        <input readonly required type="text" name="CarPrice" class="form-control" value="@Model.Part.Supplier" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="finalCarPrice">Final Car Price</label>
+        <input readonly required type="text" name="FinalCarPrice" class="form-control" value="@Model.Part.Supplier" />
+    </div>
+
+    <input type="submit" class="btn btn-lg btn-block btn-warning" value="Cancel" />
+    <input type="submit" class="btn btn-lg btn-default" value="Finalize" />
+</form>

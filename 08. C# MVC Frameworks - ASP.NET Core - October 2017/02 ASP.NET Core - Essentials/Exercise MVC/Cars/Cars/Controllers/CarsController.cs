@@ -1,9 +1,6 @@
 ﻿namespace Cars.Controllers
 {
-    using System.Collections.Generic;
     using Car.Services;
-    using Car.Services.Models;
-    using Cars.Data.Models;
     using Cars.Models.Cars;
     using Cars.Models.Parts;
     using Microsoft.AspNetCore.Mvc;

@@ -4,6 +4,7 @@
     using System.Linq;
     using Car.Services.Models;
     using Cars.Data;
+    using Cars.Data.Models;
 
     public class SaleService : ISaleService
     {
@@ -12,6 +13,19 @@
         public SaleService(CarDbContext db)
         {
             this.db = db;
+        }
+
+        public void Add(Customer customer, Car car, decimal discount)
+        {
+            Sale sale = new Sale
+            {
+                Customer = customer,
+                Car = car,
+                Discount = discount
+            };
+
+            this.db.Sales.Add(sale);
+            this.db.SaveChanges();
         }
 
         public IEnumerable<SalesModel> AllSales()
