@@ -1,0 +1,29 @@
+﻿@model SinglePartModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+<form method="post">
+    <div class="form-group row">
+        <label class="col-form-label" for="name">Name</label>
+        <input readonly required type="text" name="Name" class="form-control" value="@Model.Part.Name" />
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="price">Price</label>
+        <input required type="number" name="Price" class="form-control" value="@Model.Part.Price"/>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="quantity">Quantity</label>
+        <input required type="number" name="Quantity" class="form-control" value="@Model.Part.Quantity"/>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label" for="supplier">Supplier</label>
+        <input readonly required type="text" name="Supplier" class="form-control" value="@Model.Part.Supplier" />
+    </div>
+
+    <input type="submit" class="btn btn-lg btn-block btn-warning" value="Edit" />
+</form>

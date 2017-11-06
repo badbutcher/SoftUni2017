@@ -36,7 +36,8 @@
                 {
                     Name = a.Name,
                     Price = a.Price,
-                    Supplier = a.Supplier.Name
+                    Supplier = a.Supplier.Name,
+                    Quantity = a.Quantity
                 }).ToList();
 
             return result;
@@ -56,6 +57,16 @@
             this.db.SaveChanges();
         }
 
+        public void Edit(string name, decimal price, int quantity)
+        {
+            var part = this.db.Parts.FirstOrDefault(a => a.Name == name);
+
+            part.Price = price;
+            part.Quantity = quantity;
+
+            this.db.SaveChanges();
+        }
+
         public PartModel GetPart(string name)
         {
             var part = this.db.Parts
@@ -63,7 +74,8 @@
                 {
                     Name = a.Name,
                     Price = a.Price,
-                    Supplier = a.Supplier.Name
+                    Supplier = a.Supplier.Name,
+                    Quantity = a.Quantity
                 }).FirstOrDefault(a => a.Name == name);
 
             return part;

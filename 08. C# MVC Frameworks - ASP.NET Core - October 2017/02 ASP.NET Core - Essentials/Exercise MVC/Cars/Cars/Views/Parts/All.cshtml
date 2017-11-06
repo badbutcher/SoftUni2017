@@ -12,6 +12,7 @@
             <th>Name</th>
             <th>Price</th>
             <th>Supplier</th>
+            <th>Quantity</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -22,9 +23,15 @@
                 <td>@item.Name</td>
                 <td>@item.Price</td>
                 <td>@item.Supplier</td>
+                <td>@item.Quantity</td>
                 <td>
                     <a href="/parts/delete/@item.Name" class="btn btn-danger m-1">
                         Delete part
+                    </a>
+                </td>
+                <td>
+                    <a href="/parts/edit/@item.Name" class="btn btn-warning m-1">
+                        Edit part
                     </a>
                 </td>
             </tr>

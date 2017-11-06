@@ -2,7 +2,7 @@
 {
     using Car.Services.Models;
 
-    public class DeletePartModel
+    public class SinglePartModel
     {
         public PartModel Part { get; set; }
     }

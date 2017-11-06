@@ -1,16 +1,22 @@
 ﻿namespace Cars.Controllers
 {
+    using System.Collections.Generic;
     using Car.Services;
+    using Car.Services.Models;
+    using Cars.Data.Models;
     using Cars.Models.Cars;
+    using Cars.Models.Parts;
     using Microsoft.AspNetCore.Mvc;
 
     public class CarsController : Controller
     {
         private readonly ICarService cars;
+        private readonly IPartService parts;
 
-        public CarsController(ICarService cars)
+        public CarsController(ICarService cars, IPartService parts)
         {
             this.cars = cars;
+            this.parts = parts;
         }
 
         [Route("cars/all")]
@@ -22,6 +28,33 @@
             {
                 Cars = cars
             });
+        }
+
+        [Route("cars/add")]
+        public IActionResult Add()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var parts = this.parts.AllParts();
+
+                return View(new AllPartsModel
+                {
+                    Parts = parts
+                });
+            }
+            else
+            {
+                return Redirect("/account/login");
+            }
+        }
+
+        [HttpPost]
+        [Route("cars/add")]
+        public IActionResult Add(string make, string model, long travelledDistance)
+        {
+            this.cars.AddCar(make, model, travelledDistance);
+
+            return Redirect("/cars/all");
         }
 
         [Route("cars/{make}")]

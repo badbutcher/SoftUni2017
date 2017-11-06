@@ -4,6 +4,7 @@
     using System.Linq;
     using Car.Services.Models;
     using Cars.Data;
+    using Cars.Data.Models;
 
     public class CarService : ICarService
     {
@@ -12,6 +13,19 @@
         public CarService(CarDbContext db)
         {
             this.db = db;
+        }
+
+        public void AddCar(string make, string model, long travelledDistance)
+        {
+            Car car = new Car
+            {
+                Make = make,
+                Model = model,
+                TravelledDistance = travelledDistance
+            };
+
+            db.Cars.Add(car);
+            db.SaveChanges();
         }
 
         public IEnumerable<CarModel> All()
@@ -56,7 +70,8 @@
                     {
                         Name = p.Part.Name,
                         Price = p.Part.Price,
-                        Supplier = p.Part.Supplier.Name
+                        Supplier = p.Part.Supplier.Name,
+                        Quantity = p.Part.Quantity
                     })
                 })
                 .ToList();

@@ -12,5 +12,7 @@
         void DeletePart(string name);
 
         PartModel GetPart(string name);
+
+        void Edit(string name, decimal price, int quantity);
     }
 }

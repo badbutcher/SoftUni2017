@@ -52,7 +52,7 @@
         {
             var part = parts.GetPart(name);
 
-            return this.View(new DeletePartModel
+            return this.View(new SinglePartModel
             {
                 Part = part
             });
@@ -63,6 +63,26 @@
         public IActionResult Delete(string name)
         {
             this.parts.DeletePart(name);
+
+            return Redirect("/parts/all");
+        }
+
+        [Route("parts/edit/{name}")]
+        public IActionResult Edit(string name)
+        {
+            var part = parts.GetPart(name);
+
+            return View(new SinglePartModel
+            {
+                Part = part
+            });
+        }
+
+        [HttpPost]
+        [Route("parts/edit/{name}")]
+        public IActionResult Edit(string name, decimal price, int quantity)
+        {
+            this.parts.Edit(name, price, quantity);
 
             return Redirect("/parts/all");
         }
