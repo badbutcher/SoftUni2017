@@ -38,7 +38,7 @@
                     TravlledDistance = a.Car.TravelledDistance,
                     CustomerName = a.Customer.Name,
                     Price = a.Car.Parts.Sum(c => c.Part.Price),
-                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price)
+                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price) * a.Discount
                 }).ToList();
 
             return result;
@@ -55,7 +55,7 @@
                     TravlledDistance = a.Car.TravelledDistance,
                     CustomerName = a.Customer.Name,
                     Price = a.Car.Parts.Sum(c => c.Part.Price),
-                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price)
+                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price) * a.Discount
                 }).ToList();
 
             return result;
@@ -72,7 +72,7 @@
                     TravlledDistance = a.Car.TravelledDistance,
                     CustomerName = a.Customer.Name,
                     Price = a.Car.Parts.Sum(c => c.Part.Price),
-                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price)
+                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price) * a.Discount
                 }).ToList();
 
             return result;
@@ -89,7 +89,7 @@
                     TravlledDistance = a.Car.TravelledDistance,
                     CustomerName = a.Customer.Name,
                     Price = a.Car.Parts.Sum(c => c.Part.Price),
-                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price)
+                    PriceWithSale = a.Car.Parts.Sum(c => c.Part.Price) * a.Discount
                 }).ToList();
 
             return result;

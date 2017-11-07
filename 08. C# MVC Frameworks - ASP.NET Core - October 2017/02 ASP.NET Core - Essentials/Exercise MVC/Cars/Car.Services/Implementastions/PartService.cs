@@ -80,5 +80,26 @@
 
             return part;
         }
+
+        public List<PartCars> GetPartsByName(List<string> parts, string make, string model, long travelledDistance)
+        {
+            List<PartCars> result = new List<PartCars>();
+
+            foreach (var name in parts)
+            {
+                PartCars partCar = new PartCars();
+                Part part = this.db.Parts.FirstOrDefault(a => a.Name == name);
+                Car car = this.db.Cars.FirstOrDefault(a => a.Make == make && a.Model == model);
+
+                partCar.PartId = part.Id;
+                partCar.Part = part;
+                partCar.CarId = car.Id;
+                partCar.Car = car;
+
+                result.Add(partCar);
+            }
+
+            return result;
+        }
     }
 }

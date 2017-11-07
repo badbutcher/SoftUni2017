@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using Car.Services.Models;
+    using Cars.Data.Models;
 
     public interface IPartService
     {
@@ -14,5 +15,7 @@
         PartModel GetPart(string name);
 
         void Edit(string name, decimal price, int quantity);
+
+        List<PartCars> GetPartsByName(List<string> parts, string make, string model, long travelledDistance);
     }
 }

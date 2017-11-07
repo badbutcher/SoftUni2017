@@ -28,6 +28,19 @@
             this.db.SaveChanges();
         }
 
+        public void AddCarParts(string make, string model, long travelledDistance, List<PartCars> parts)
+        {
+            Car car = this.db.Cars.FirstOrDefault(a => a.Make == make && a.Model == model && a.TravelledDistance == travelledDistance);
+
+            foreach (var item in parts)
+            {
+                car.Parts.Add(item);
+            }
+
+            this.db.Cars.Update(car);
+            this.db.SaveChanges();
+        }
+
         public IEnumerable<CarModel> All()
         {
             var cars = this.db.Cars

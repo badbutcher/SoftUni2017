@@ -16,13 +16,13 @@
             this.db = db;
         }
 
-        public void Add(string name, DateTime birthdate)
+        public void Add(string name, DateTime birthdate, bool isYoungDriver)
         {
             Customer customer = new Customer
             {
                 Name = name,
                 BirthDate = birthdate,
-                IsYoungDriver = (DateTime.Now - birthdate).Days < 730 ? true : false
+                IsYoungDriver = isYoungDriver
             };
 
             this.db.Add(customer);

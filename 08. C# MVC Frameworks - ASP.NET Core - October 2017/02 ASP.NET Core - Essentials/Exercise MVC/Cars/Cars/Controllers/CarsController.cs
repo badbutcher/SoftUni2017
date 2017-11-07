@@ -1,6 +1,9 @@
 ﻿namespace Cars.Controllers
 {
+    using System;
+    using System.Collections.Generic;
     using Car.Services;
+    using Cars.Data.Models;
     using Cars.Models.Cars;
     using Cars.Models.Parts;
     using Microsoft.AspNetCore.Mvc;
@@ -47,9 +50,13 @@
 
         [HttpPost]
         [Route("cars/add")]
-        public IActionResult Add(string make, string model, long travelledDistance)
+        public IActionResult Add(string make, string model, long travelledDistance, List<string> parts)
         {
             this.cars.AddCar(make, model, travelledDistance);
+
+            var carParts = this.parts.GetPartsByName(parts, make, model, travelledDistance);
+
+            this.cars.AddCarParts(make, model, travelledDistance, carParts);
 
             return Redirect("/cars/all");
         }

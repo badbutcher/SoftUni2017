@@ -24,7 +24,7 @@
     <div class="form-group row">
         <label class="col-form-label" for="parts">Parts</label>
         <select class="col-form-label" name="Parts" multiple>
-            @foreach (var item in Model.Parts)
+            @foreach (var item in Model.Parts.OrderBy(a=>a.Name))
             {
                 <option class="form-control" value="@item.Name">@item.Name</option>
             }

@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using Car.Services.Models;
+    using Cars.Data.Models;
 
     public interface ICarService
     {
@@ -12,5 +13,7 @@
         IEnumerable<CarModel> All();
 
         void AddCar(string make, string model, long travelledDistance);
+
+        void AddCarParts(string make, string model, long travelledDistance, List<PartCars> parts);
     }
 }

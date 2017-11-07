@@ -23,11 +23,11 @@
 
         [HttpPost]
         [Route("customers/add")]
-        public IActionResult Add(string name, DateTime birthdate)
+        public IActionResult Add(string name, DateTime birthdate, bool isYoungDriver)
         {
-            this.customers.Add(name, birthdate);
+            this.customers.Add(name, birthdate, isYoungDriver);
 
-            return View();
+            return Redirect("/customers/all");
         }
 
         [Route("customers/edit/{name}/{birthDate}")]
