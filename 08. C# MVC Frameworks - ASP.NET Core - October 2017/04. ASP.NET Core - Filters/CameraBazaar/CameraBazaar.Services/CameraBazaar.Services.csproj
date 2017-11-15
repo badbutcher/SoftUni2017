@@ -10,9 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Implementations\" />
     <Folder Include="Models\" />
-    <Folder Include="Contracts\" />
   </ItemGroup>
 
   <ItemGroup>

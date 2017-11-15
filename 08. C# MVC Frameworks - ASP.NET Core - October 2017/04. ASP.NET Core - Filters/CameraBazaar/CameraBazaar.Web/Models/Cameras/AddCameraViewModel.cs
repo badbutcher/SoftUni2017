@@ -1,12 +1,11 @@
-﻿namespace CameraBazaar.Data.Models
+﻿namespace CameraBazaar.Web.Models.Cameras
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using CameraBazaar.Data.Models.Enums;
 
-    public class Camera
+    public class AddCameraViewModel
     {
-        public int Id { get; set; }
-
         public CameraMake Make { get; set; }
 
         [Required]
@@ -18,35 +17,38 @@
         [Range(0, 100)]
         public int Quantity { get; set; }
 
+        [Display(Name = "Min Shutter Speed")]
         [Range(1, 30)]
         public int MinShutterSpeed { get; set; }
 
+        [Display(Name = "Max Shutter Speed")]
         [Range(2000, 8000)]
         public int MaxShutterSpeed { get; set; }
 
+        [Display(Name = "Min ISO")]
         public CameraMinIso MinIso { get; set; }
 
+        [Display(Name = "Max ISO")]
         [Range(200, 409600)]
         public int MaxIso { get; set; }
 
+        [Display(Name = "Full Frame")]
         public bool IsFullFrame { get; set; }
 
-        [MaxLength(15)]
+        [Display(Name = "Video Resolution")]
+        [StringLength(15)]
         public string VideoResolution { get; set; }
 
-        public LightMetering LightMetering { get; set; }
+        [Display(Name = "Light Metering")]
+        public IEnumerable<LightMetering> LightMeterings { get; set; }
 
         [Required]
-        [MaxLength(6000)]
+        [StringLength(6000)]
         public string Description { get; set; }
 
+        [Display(Name = "Image URL")]
         [Required]
-        [MinLength(10)]
-        [MaxLength(2000)]
+        [StringLength(2000, MinimumLength = 10)]
         public string ImageUrl { get; set; }
-
-        public string UserId { get; set; }
-
-        public User User { get; set; }
     }
 }

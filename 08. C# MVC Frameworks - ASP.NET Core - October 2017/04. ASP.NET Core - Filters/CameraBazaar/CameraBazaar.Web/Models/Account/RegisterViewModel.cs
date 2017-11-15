@@ -5,6 +5,11 @@
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(20, MinimumLength = 4)]
+        [RegularExpression("[a-zA-Z]+", ErrorMessage = "Username must have only letters.")]
+        public string Username { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -19,5 +24,9 @@
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [RegularExpression(@"\+[0-9]{10,12}", ErrorMessage = "Must start with " + " and must be between 10-12 symbols")]
+        public string Phone { get; set; }
     }
 }

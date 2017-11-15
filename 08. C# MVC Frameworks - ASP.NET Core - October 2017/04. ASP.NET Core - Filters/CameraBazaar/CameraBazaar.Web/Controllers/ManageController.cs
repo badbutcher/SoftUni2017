@@ -7,7 +7,6 @@
     using System.Threading.Tasks;
     using CameraBazaar.Data.Models;
     using CameraBazaar.Web.Models.ManageViewModels;
-    using CameraBazaar.Web.Services;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -22,20 +21,17 @@
 
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
-        private readonly IEmailSender emailSender;
         private readonly ILogger logger;
         private readonly UrlEncoder urlEncoder;
 
         public ManageController(
           UserManager<User> userManager,
           SignInManager<User> signInManager,
-          IEmailSender emailSender,
           ILogger<ManageController> logger,
           UrlEncoder urlEncoder)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
-            this.emailSender = emailSender;
             this.logger = logger;
             this.urlEncoder = urlEncoder;
         }
@@ -119,9 +115,6 @@
             }
 
             var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
-            var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
-            var email = user.Email;
-            await this.emailSender.SendEmailConfirmationAsync(email, callbackUrl);
 
             this.StatusMessage = "Verification email sent. Please check your email.";
             return this.RedirectToAction(nameof(this.Index));
