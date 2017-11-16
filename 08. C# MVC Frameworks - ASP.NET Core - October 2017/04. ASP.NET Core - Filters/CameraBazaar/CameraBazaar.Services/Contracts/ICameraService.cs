@@ -1,7 +1,9 @@
 ﻿namespace CameraBazaar.Services.Contracts
 {
     using System.Collections.Generic;
+    using CameraBazaar.Data.Models;
     using CameraBazaar.Data.Models.Enums;
+    using CameraBazaar.Services.Models.Cameras;
 
     public interface ICameraService
     {
@@ -20,5 +22,9 @@
             string description,
             string imageUrl,
             string userId);
+
+        IEnumerable<CameraBasicInfoModel> All();
+
+        Camera GetCameraById(int id);
     }
 }

@@ -51,5 +51,19 @@
 
             return this.RedirectToAction(nameof(HomeController.Index), "Home");
         }
+
+        public IActionResult All()
+        {
+            var cameras = this.cameras.All();
+
+            return this.View(cameras);
+        }
+
+        public IActionResult FullDetail(int id)
+        {
+            var camera = this.cameras.GetCameraById(id);
+
+            return this.View(camera);
+        }
     }
 }
