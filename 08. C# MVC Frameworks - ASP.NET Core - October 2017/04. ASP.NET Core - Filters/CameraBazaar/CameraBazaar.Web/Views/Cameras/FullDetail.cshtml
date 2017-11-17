@@ -5,7 +5,7 @@
 <h2>@ViewData["Title"]</h2>
 
 <div>
-    @Model.Make @Model.Model - $@Model.Price -
+    <strong>@Model.Make @Model.Model - $@Model.Price - </strong>
     @{
         if (Model.Quantity == 0)
         {
@@ -18,15 +18,35 @@
     }
 </div>
 <div><a href="/users/profile/@Model.UserId">@Model.User.UserName</a></div>
-<div><img src="@Model.ImageUrl" width="100" alt="@Model.Make @Model.Model" class="img-responsive" /></div>
-<div>Is Full Frame: @(Model.IsFullFrame == true ? "Yes" : "No")</div>
-<div>Min Shutter Speed: @Model.MaxShutterSpeed"</div>
-<div>Max Shutter Speed: 1/@Model.MaxShutterSpeed</div>
-<div>Min ISO: @Model.MinIso</div>
-<div>Max ISO: @Model.MaxIso</div>
-<div>Video Resolution: @Model.VideoResolution</div>
 <div>
-    Light Metering:
+    <img src="@Model.ImageUrl" width="200" alt="@Model.Make @Model.Model" class="img-responsive" />
+</div>
+<div>
+    <strong>Full Frame:</strong>
+    @(Model.IsFullFrame == true ? "Yes" : "No")
+</div>
+<div>
+    <strong>Min Shutter Speed:</strong>
+    @Model.MinShutterSpeed"
+</div>
+<div>
+    <strong>Max Shutter Speed:</strong>
+    1/@Model.MaxShutterSpeed
+</div>
+<div>
+    <strong>Min ISO:</strong>
+    @Model.MinIso
+</div>
+<div>
+    <strong>Max ISO:</strong>
+    @Model.MaxIso
+</div>
+<div>
+    <strong>Video Resolution:</strong>
+    @Model.VideoResolution
+</div>
+<div>
+    <strong>Light Metering:</strong>
     <ul>
         @foreach (var item in Model.LightMetering.ToString().Split(", ", StringSplitOptions.RemoveEmptyEntries))
         {
@@ -34,4 +54,7 @@
         }
     </ul>
 </div>
-<div>Description: @Model.Description</div>
+<div>
+    <strong>Description:</strong>
+    @Model.Description
+</div>

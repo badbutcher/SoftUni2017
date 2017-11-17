@@ -19,15 +19,5 @@
 
             return this.View(user);
         }
-
-        public IActionResult Edit(string id)
-        {
-            var user = this.users.GetUserInfo(id);
-
-            return this.View(new UserEditModel
-            {
-                Email = user.Email, //TODO
-            });
-        }
     }
 }

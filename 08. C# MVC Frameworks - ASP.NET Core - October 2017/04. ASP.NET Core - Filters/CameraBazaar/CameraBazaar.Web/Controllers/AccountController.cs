@@ -4,6 +4,8 @@
     using System.Security.Claims;
     using System.Threading.Tasks;
     using CameraBazaar.Data.Models;
+    using CameraBazaar.Services.Models.Users;
+    using CameraBazaar.Web.Infrastructure.Filters;
     using CameraBazaar.Web.Models.AccountViewModels;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
@@ -436,6 +438,32 @@
         public IActionResult AccessDenied()
         {
             return this.View();
+        }
+
+        [Route("{id}")]
+        public async Task<IActionResult> ChangePassword(string id)
+        {      
+            var user = await this.userManager.FindByIdAsync(id);
+
+            return this.View(new UserEditModel
+            {
+                Id = id,
+                Email = user.Email,
+                Password = "Enter new password",
+                Phone = user.PhoneNumber,
+                CurrentPassword = string.Empty
+            });
+        }
+
+        [HttpPost]
+        [Route("{id}")]
+        public async Task<IActionResult> ChangePassword(string id, UserEditModel userModel)
+        {
+            var user = await this.userManager.FindByIdAsync(id);
+            var token = await this.userManager.GeneratePasswordResetTokenAsync(user);
+            var result = await this.userManager.ResetPasswordAsync(user, token, userModel.Password);
+
+            return this.Redirect("/");
         }
 
         #region Helpers

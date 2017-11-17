@@ -3,13 +3,22 @@
     ViewData["Title"] = "Profile";
 }
 <h2>@ViewData["Title"]</h2>
-<div>@Model.Username <a href="/users/edit" class="btn btn-primary">Edit Profile</a></div>
+<div>@Model.Username <a href="/account/changePassword/@Model.Id" class="btn btn-primary">Edit Profile</a></div>
 
-<div>Email: @Model.Email</div>
-<div>Phone: @Model.PhoneNumber</div>
-<div>Cameras: @Model.Cameras.Where(a => a.Quantity > 0).Count() in stock / @Model.Cameras.Where(a => a.Quantity == 0).Count() out of stock</div>
+<div>
+    <strong>Email:</strong>
+    @Model.Email
+</div>
+<div>
+    <strong>Phone Number:</strong>
+    @Model.PhoneNumber
+</div>
+<div>
+    <strong>Cameras:</strong>
+    @Model.Cameras.Where(a => a.Quantity > 0).Count() in stock / @Model.Cameras.Where(a => a.Quantity == 0).Count() out of stock
+</div>
 
-<div>Cameras:</div>
+<strong>Cameras:</strong>
 @if (Model.Cameras.Count > 0)
 {
     <table class="table table-bordered table-hover">

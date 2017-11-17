@@ -14,25 +14,6 @@
             this.db = db;
         }
 
-        public void Edit(string id, string email, string password, string phone, string currentPassword)
-        {
-            var user = this.db.Users.FirstOrDefault(a => a.Id == id);
-
-            if (user == null)
-            {
-                return;
-            }
-
-            if (currentPassword != user.PasswordHash)
-            {
-                return;
-            }
-
-            user.Email = email;
-            user.PhoneNumber = phone;
-            user.PasswordHash = password; //MUST BE HASH TODO
-        }
-
         public UserBasicInfoModel GetUserInfo(string id)
         {
             var user = this.db.Users
