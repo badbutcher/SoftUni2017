@@ -10,6 +10,7 @@
 
         [Required]
         [MaxLength(100)]
+        [RegularExpression(@"^[a-z0-9-]{3,}$")]
         public string Model { get; set; }
 
         public decimal Price { get; set; }
@@ -49,6 +50,7 @@
         [Display(Name = "Image URL")]
         [Required]
         [StringLength(2000, MinimumLength = 10)]
+        [RegularExpression(@"(http|https):\/\/.*")]
         public string ImageUrl { get; set; }
     }
 }

@@ -23,6 +23,7 @@
                     Username = a.UserName,
                     Email = a.Email,
                     PhoneNumber = a.PhoneNumber,
+                    LastLoginTime = a.LastLoginTime,
                     Cameras = a.Cameras
                 }).FirstOrDefault(a => a.Id == id);
 

@@ -5,7 +5,6 @@
     using System.Threading.Tasks;
     using CameraBazaar.Data.Models;
     using CameraBazaar.Services.Models.Users;
-    using CameraBazaar.Web.Infrastructure.Filters;
     using CameraBazaar.Web.Models.AccountViewModels;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
@@ -34,6 +33,7 @@
         [TempData]
         public string ErrorMessage { get; set; }
 
+        ////[MeasureTime]
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> Login(string returnUrl = null)
@@ -53,12 +53,16 @@
             this.ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
+                var user = await this.userManager.FindByNameAsync(model.Username);
+
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await this.signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     this.logger.LogInformation("User logged in.");
+                    user.LastLoginTime = DateTime.UtcNow;
+                    await this.userManager.UpdateAsync(user);
                     return this.RedirectToLocal(returnUrl);
                 }
 
@@ -442,7 +446,7 @@
 
         [Route("{id}")]
         public async Task<IActionResult> ChangePassword(string id)
-        {      
+        {
             var user = await this.userManager.FindByIdAsync(id);
 
             return this.View(new UserEditModel
@@ -451,6 +455,7 @@
                 Email = user.Email,
                 Password = "Enter new password",
                 Phone = user.PhoneNumber,
+                LastLoginTime = user.LastLoginTime,
                 CurrentPassword = string.Empty
             });
         }

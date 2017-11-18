@@ -33,3 +33,13 @@
         display: none;
     }
 }
+
+footer {
+    float: right
+}
+
+#profileLogoutButton{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}

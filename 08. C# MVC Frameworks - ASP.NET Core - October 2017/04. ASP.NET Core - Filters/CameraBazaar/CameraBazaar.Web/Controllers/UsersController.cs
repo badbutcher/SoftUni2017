@@ -1,7 +1,6 @@
 ﻿namespace CameraBazaar.Web.Controllers
 {
     using CameraBazaar.Services.Contracts;
-    using CameraBazaar.Services.Models.Users;
     using Microsoft.AspNetCore.Mvc;
 
     public class UsersController : Controller

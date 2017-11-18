@@ -5,7 +5,7 @@
 <h2>@ViewData["Title"]</h2>
 
 <div>
-    <strong>@Model.Make @Model.Model - $@Model.Price - </strong>
+    <strong>@Model.Make @Model.Model - $@Model.Price.ToString("f2") - </strong>
     @{
         if (Model.Quantity == 0)
         {

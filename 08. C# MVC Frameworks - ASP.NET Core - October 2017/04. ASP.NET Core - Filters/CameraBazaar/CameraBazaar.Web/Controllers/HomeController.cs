@@ -6,6 +6,7 @@
 
     public class HomeController : Controller
     {
+        ////[MeasureTime]
         public IActionResult Index()
         {
             return this.View();

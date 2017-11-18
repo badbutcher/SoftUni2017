@@ -1,0 +1,11 @@
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\bin\Debug\netstandard2.0\CameraBazaar.Services.deps.json
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\bin\Debug\netstandard2.0\CameraBazaar.Services.dll
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\bin\Debug\netstandard2.0\CameraBazaar.Services.pdb
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\bin\Debug\netstandard2.0\CameraBazaar.Data.dll
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\bin\Debug\netstandard2.0\CameraBazaar.Data.pdb
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\obj\Debug\netstandard2.0\CameraBazaar.Services.csprojResolveAssemblyReference.cache
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\obj\Debug\netstandard2.0\CameraBazaar.Services.csproj.CoreCompileInputs.cache
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\obj\Debug\netstandard2.0\CameraBazaar.Services.AssemblyInfoInputs.cache
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\obj\Debug\netstandard2.0\CameraBazaar.Services.AssemblyInfo.cs
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\obj\Debug\netstandard2.0\CameraBazaar.Services.dll
+D:\Github\SoftUni2017\08. C# MVC Frameworks - ASP.NET Core - October 2017\04. ASP.NET Core - Filters\CameraBazaar\CameraBazaar.Services\obj\Debug\netstandard2.0\CameraBazaar.Services.pdb

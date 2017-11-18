@@ -83,6 +83,8 @@ namespace CameraBazaar.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<DateTime>("LastLoginTime");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
