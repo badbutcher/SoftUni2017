@@ -18,7 +18,7 @@
     </environment>
 </head>
 <body>
-    @if (@Context.Request.Path == "/")
+    @if (!@Context.Request.Path.StartsWithSegments("/users/profile"))
     {
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">

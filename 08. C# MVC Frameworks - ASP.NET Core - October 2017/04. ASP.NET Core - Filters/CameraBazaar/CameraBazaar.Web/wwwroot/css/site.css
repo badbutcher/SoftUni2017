@@ -43,3 +43,17 @@ footer {
     border: 0;
     padding: 0;
 }
+
+#userProfileNavBar {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+#userProfileArticle {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}

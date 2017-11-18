@@ -746,10 +746,6 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="529796689">
-    <configuration>
-    </configuration>
-  </project>
   <sourcecode name="AccountController.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
@@ -819,4 +815,8 @@
     </timestamps>
     <violations />
   </sourcecode>
+  <project key="529796689">
+    <configuration>
+    </configuration>
+  </project>
 </stylecopresultscache>

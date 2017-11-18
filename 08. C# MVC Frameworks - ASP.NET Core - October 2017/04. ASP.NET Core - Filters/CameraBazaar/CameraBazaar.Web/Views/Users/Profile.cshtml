@@ -1,16 +1,17 @@
 ﻿@model UserBasicInfoModel
+@inject UserManager<User> UserManager
 @{
     ViewData["Title"] = "Profile";
 }
 <h2>@ViewData["Title"]</h2>
 
-<nav>
+<nav id="userProfileNavBar">
     <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
         <a href="/cameras/all">All Cameras</a>
         <hr />
-        <a href="/users/profile/@Model.Id">My Profile</a>
+        <a href="/users/profile/@UserManager.GetUserId(User)">My Profile</a>
         <hr />
-        <a href="/account/changePassword/@Model.Id">Edit My Profile</a>
+        <a href="/account/changePassword/@UserManager.GetUserId(User)">Edit My Profile</a>
         <hr />
         <a href="/cameras/add">Add Camera</a>
         <hr />
@@ -18,7 +19,7 @@
     </form>
 </nav>
 
-<article>
+<article id="userProfileArticle">
     @if (User.Identity.IsAuthenticated)
     {
         <div>@Model.Username <a href="/account/changePassword/@Model.Id" class="btn btn-primary">Edit Profile</a></div>
@@ -90,19 +91,3 @@
                                 <div>The user is not selling any cameras. Go to <a href="/">home page</a> to find more offers of the other users.</div>
                             }
 </article>
-
-<style>
-    nav {
-        float: left;
-        max-width: 160px;
-        margin: 0;
-        padding: 1em;
-    }
-
-    article {
-        margin-left: 170px;
-        border-left: 1px solid gray;
-        padding: 1em;
-        overflow: hidden;
-    }
-</style>
