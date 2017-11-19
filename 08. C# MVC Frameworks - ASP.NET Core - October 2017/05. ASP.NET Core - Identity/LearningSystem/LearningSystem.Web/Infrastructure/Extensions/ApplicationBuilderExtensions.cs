@@ -1,10 +1,10 @@
-﻿namespace CameraBazaar.Web.Infrastructure.Extensions
+﻿namespace LearningSystem.Web.Infrastructure.Extensions
 {
     using System;
     using System.Reflection;
     using System.Threading.Tasks;
-    using CameraBazaar.Data;
-    using CameraBazaar.Data.Models;
+    using LearningSystem.Data;
+    using LearningSystem.Data.Models;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
@@ -16,7 +16,7 @@
         {
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
-                serviceScope.ServiceProvider.GetService<CameraBazaarDbContext>().Database.Migrate();
+                serviceScope.ServiceProvider.GetService<LearningSystemDbContext>().Database.Migrate();
 
                 var userManager = serviceScope.ServiceProvider.GetService<UserManager<User>>();
                 var roleManager = serviceScope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
@@ -42,24 +42,22 @@
                         }
                     }
 
-                    var adminName = GlocalConstants.AdminRole;
+                    var adminName = GlocalConstants.Administrator;
 
                     var adminUser = await userManager.FindByNameAsync(adminName);
 
                     if (adminUser == null)
                     {
-                        for (int i = 0; i < 2; i++)
+                        adminUser = new User
                         {
-                            adminUser = new User
-                            {
-                                Email = $"Admin@Admin{i}.com",
-                                UserName = $"Admin@Admin{i}.com"
-                            };
+                            Email = "admin@admin.com",
+                            UserName = "admin@admin.com",
+                            Name = "admin"
+                        };
 
-                            await userManager.CreateAsync(adminUser, $"Admin{i}");
+                        await userManager.CreateAsync(adminUser, "admin12");
 
-                            await userManager.AddToRoleAsync(adminUser, adminName);
-                        }
+                        await userManager.AddToRoleAsync(adminUser, adminName);
                     }
                 }).Wait();
             }
