@@ -1,0 +1,60 @@
+﻿@model Camera
+@{
+    ViewData["Title"] = "Camera Info";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <strong>@Model.Make @Model.Model - $@Model.Price.ToString("f2") - </strong>
+    @{
+        if (Model.Quantity == 0)
+        {
+            <span style="color:red">OUT OF STOCK</span>
+        }
+        else
+        {
+            <span style="color:green">IN STOCK</span>
+        }
+    }
+</div>
+<div><a href="/users/profile/@Model.UserId">@Model.User.UserName</a></div>
+<div>
+    <img src="@Model.ImageUrl" width="200" alt="@Model.Make @Model.Model" class="img-responsive" />
+</div>
+<div>
+    <strong>Full Frame:</strong>
+    @(Model.IsFullFrame == true ? "Yes" : "No")
+</div>
+<div>
+    <strong>Min Shutter Speed:</strong>
+    @Model.MinShutterSpeed"
+</div>
+<div>
+    <strong>Max Shutter Speed:</strong>
+    1/@Model.MaxShutterSpeed
+</div>
+<div>
+    <strong>Min ISO:</strong>
+    @Model.MinIso
+</div>
+<div>
+    <strong>Max ISO:</strong>
+    @Model.MaxIso
+</div>
+<div>
+    <strong>Video Resolution:</strong>
+    @Model.VideoResolution
+</div>
+<div>
+    <strong>Light Metering:</strong>
+    <ul>
+        @foreach (var item in Model.LightMetering.ToString().Split(", ", StringSplitOptions.RemoveEmptyEntries))
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
+<div>
+    <strong>Description:</strong>
+    @Model.Description
+</div>

@@ -1,0 +1,93 @@
+﻿@model UserBasicInfoModel
+@inject UserManager<User> UserManager
+@{
+    ViewData["Title"] = "Profile";
+}
+<h2>@ViewData["Title"]</h2>
+
+<nav id="userProfileNavBar">
+    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+        <a href="/cameras/all">All Cameras</a>
+        <hr />
+        <a href="/users/profile/@UserManager.GetUserId(User)">My Profile</a>
+        <hr />
+        <a href="/account/changePassword/@UserManager.GetUserId(User)">Edit My Profile</a>
+        <hr />
+        <a href="/cameras/add">Add Camera</a>
+        <hr />
+        <button type="submit" class="btn btn-link navbar-btn navbar-link" id="profileLogoutButton">Log out</button>
+    </form>
+</nav>
+
+<article id="userProfileArticle">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div>@Model.Username <a href="/account/changePassword/@Model.Id" class="btn btn-primary">Edit Profile</a></div>
+    }
+
+    <div>
+        <strong>Last login:</strong>
+        @if (Model.LastLoginTime.Year == 0001)
+        {
+            <span>First log in</span>
+        }
+        else
+        {
+            @Model.LastLoginTime
+        }
+    </div>
+
+    <div>
+        <strong>Email:</strong>
+        @Model.Email
+    </div>
+    <div>
+        <strong>Phone Number:</strong>
+        @Model.PhoneNumber
+    </div>
+    <div>
+        <strong>Cameras:</strong>
+        @Model.Cameras.Where(a => a.Quantity > 0).Count() in stock / @Model.Cameras.Where(a => a.Quantity == 0).Count() out of stock
+    </div>
+
+    <strong>Cameras:</strong>
+    @if (Model.Cameras.Count > 0)
+    {
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Camera</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Cameras)
+                {
+                    <tr>
+                        <td><img src="@item.ImageUrl" width="200" alt="@item.Make @item.Model" class="img-responsive" /></td>
+                        <td>@item.Make @item.Model</td>
+                        <td>$@item.Price.ToString("f2")</td>
+                        @{
+                            if (item.Quantity == 0)
+                            {
+                                <td style="color:red">OUT OF STOCK</td>
+                            }
+                            else
+                            {
+                                <td style="color:green">IN STOCK</td>
+                            }
+                        }
+                        @*<td>@(item.Quantity == 0 ? "OUT OF STOCK" : "IN STOCK")</td>*@
+                        <td><a class="btn btn-sm btn-default" href="/cameras/fullDetail/@item.Id">Details</a></td>
+                    </tr>
+                            }
+            </tbody>
+        </table>
+                            }
+                            else
+                            {
+                                <div>The user is not selling any cameras. Go to <a href="/">home page</a> to find more offers of the other users.</div>
+                            }
+</article>

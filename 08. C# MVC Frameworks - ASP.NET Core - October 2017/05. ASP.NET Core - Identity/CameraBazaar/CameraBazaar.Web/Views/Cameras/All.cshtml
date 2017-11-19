@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CameraBasicInfoModel>
+@{
+    ViewData["Title"] = "All Cameras";
+}
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Camera</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img src="@item.ImageUrl" width="100" alt="@item.Make @item.CameraModel" class="img-responsive" /></td>
+                <td>@item.Make @item.CameraModel</td>
+                <td>$@item.Price.ToString("f2")</td>
+                @{
+                    if (item.Quantity == 0)
+                    {
+                        <td style="color:red">OUT OF STOCK</td>
+                    }
+                    else
+                    {
+                        <td style="color:green">IN STOCK</td>
+                    }
+                }
+                @*<td>@(item.Quantity == 0 ? "OUT OF STOCK" : "IN STOCK")</td>*@
+                <td><a class="btn btn-sm btn-default" href="/cameras/fullDetail/@item.Id">Details</a></td>
+            </tr>
+                    }
+    </tbody>
+</table>
