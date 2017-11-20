@@ -6,7 +6,7 @@
     using LearningSystem.Data;
     using LearningSystem.Data.Models;
     using LearningSystem.Services.Contracts;
-    using LearningSystem.Services.Models;
+    using LearningSystem.Services.Models.Course;
 
     public class CourseService : ICourseService
     {

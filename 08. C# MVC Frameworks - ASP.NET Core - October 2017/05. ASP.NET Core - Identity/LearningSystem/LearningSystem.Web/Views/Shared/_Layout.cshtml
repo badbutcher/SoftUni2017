@@ -31,6 +31,10 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    @if (User.IsInRole(GlocalConstants.Administrator))
+                    {
+                        <li><a asp-area="" asp-controller="Admins" asp-action="AllUsers">All users</a></li>
+                    }
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>

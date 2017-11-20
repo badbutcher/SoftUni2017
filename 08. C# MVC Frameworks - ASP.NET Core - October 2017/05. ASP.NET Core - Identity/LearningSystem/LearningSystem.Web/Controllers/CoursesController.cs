@@ -4,7 +4,7 @@
     using System.Linq;
     using LearningSystem.Data.Models;
     using LearningSystem.Services.Contracts;
-    using LearningSystem.Services.Models;
+    using LearningSystem.Services.Models.Course;
     using LearningSystem.Web.Infrastructure;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -53,7 +53,7 @@
 
         private IEnumerable<SelectListItem> GetAllTrainers()
         {
-            var trainers = this.userManager.GetUsersInRoleAsync(GlocalConstants.Student).Result;
+            var trainers = this.userManager.GetUsersInRoleAsync(GlocalConstants.Trainer).Result;
 
             return trainers.Select(a => new SelectListItem
             {

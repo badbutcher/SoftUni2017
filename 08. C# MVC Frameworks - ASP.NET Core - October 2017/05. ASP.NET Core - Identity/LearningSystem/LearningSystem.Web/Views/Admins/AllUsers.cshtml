@@ -1,0 +1,28 @@
+﻿@model IEnumerable<UserBasicInfoModel>
+@{
+    ViewData["Title"] = "AllUsers";
+}
+<h2>AllUsers</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Username</td>
+                <td>@item.Email</td>
+                <td>@item.Role.First()</td>
+                <td><a href="/admins/changeUserRole/@item.Id">Change role</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

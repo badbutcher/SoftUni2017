@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using LearningSystem.Services.Models;
+    using LearningSystem.Services.Models.Course;
 
     public interface ICourseService
     {
