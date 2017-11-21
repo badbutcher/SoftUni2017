@@ -1,5 +1,6 @@
 ﻿namespace CameraBazaar.Web.Controllers
 {
+    using System.Linq;
     using CameraBazaar.Data.Models;
     using CameraBazaar.Services.Contracts;
     using CameraBazaar.Web.Models.Cameras;
@@ -26,8 +27,13 @@
 
         [HttpPost]
         [Authorize]
-        public IActionResult Add(AddCameraViewModel cameraModel)
+        public IActionResult Add(CameraFormModel cameraModel)
         {
+            //if (cameraModel.LightMeterings == null || !cameraModel.LightMeterings.Any())
+            //{
+            //    this.ModelState.AddModelError(nameof(cameraModel.LightMeterings), "Please select at least on light metering.");
+            //}
+
             if (!ModelState.IsValid)
             {
                 return this.View(cameraModel);
@@ -64,6 +70,48 @@
             var camera = this.cameras.GetCameraById(id);
 
             return this.View(camera);
+        }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var cameraExists = this.cameras.CameraExists(id, this.userManager.GetUserId(User));
+
+            if (!cameraExists)
+            {
+                return NotFound();
+            }
+
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult Edit(int id, CameraFormModel cameraModel)
+        {
+            var editCamera = this.cameras.Edit(
+                id,
+                cameraModel.Make,
+                cameraModel.Model,
+                cameraModel.Price,
+                cameraModel.Quantity,
+                cameraModel.MinShutterSpeed,
+                cameraModel.MinShutterSpeed,
+                cameraModel.MinIso,
+                cameraModel.MaxIso,
+                cameraModel.IsFullFrame,
+                cameraModel.VideoResolution,
+                cameraModel.LightMeterings,
+                cameraModel.Description,
+                cameraModel.ImageUrl,
+                this.userManager.GetUserId(this.User));
+
+            if (!editCamera)
+            {
+                return NotFound();
+            }
+
+            return RedirectToAction(nameof(All));
         }
     }
 }

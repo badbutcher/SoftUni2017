@@ -26,5 +26,24 @@
         IEnumerable<CameraBasicInfoModel> All();
 
         Camera GetCameraById(int id);
+
+        bool Edit(
+            int id,
+            CameraMake make,
+            string model,
+            decimal price,
+            int quantity,
+            int minShutterSpeed,
+            int maxShutterSpeed,
+            CameraMinIso minIso,
+            int maxIso,
+            bool isFullFrame,
+            string vdeoResolution,
+            IEnumerable<LightMetering> lightMeterings,
+            string description,
+            string imageUrl,
+            string userId);
+
+        bool CameraExists(int id, string userId);
     }
 }

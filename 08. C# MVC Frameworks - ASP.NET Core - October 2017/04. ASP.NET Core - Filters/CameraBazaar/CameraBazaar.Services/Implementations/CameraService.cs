@@ -33,8 +33,20 @@
             return cameras;
         }
 
+        public bool CameraExists(int id, string userId)
+        {
+            var result = this.db.Cameras.Any(a => a.Id == id && a.UserId == userId);
+
+            return result;
+        }
+
         public void Create(CameraMake make, string model, decimal price, int quantity, int minShutterSpeed, int maxShutterSpeed, CameraMinIso minIso, int maxIso, bool isFullFrame, string vdeoResolution, IEnumerable<LightMetering> lightMeterings, string description, string imageUrl, string userId)
         {
+            if (lightMeterings == null)
+            {
+                lightMeterings = new List<LightMetering>();
+            }
+
             Camera camera = new Camera
             {
                 Make = make,
@@ -55,6 +67,34 @@
 
             this.db.Cameras.Add(camera);
             this.db.SaveChanges();
+        }
+
+        public bool Edit(int id, CameraMake make, string model, decimal price, int quantity, int minShutterSpeed, int maxShutterSpeed, CameraMinIso minIso, int maxIso, bool isFullFrame, string vdeoResolution, IEnumerable<LightMetering> lightMeterings, string description, string imageUrl, string userId)
+        {
+            var camera = this.db.Cameras.FirstOrDefault(a => a.Id == id && a.UserId == userId);
+
+            if (camera == null)
+            {
+                return false;
+            }
+
+            camera.Make = make;
+            camera.Model = model;
+            camera.Price = price;
+            camera.Quantity = quantity;
+            camera.MinShutterSpeed = minShutterSpeed;
+            camera.MaxShutterSpeed = maxShutterSpeed;
+            camera.MinIso = minIso;
+            camera.MaxIso = maxIso;
+            camera.IsFullFrame = isFullFrame;
+            camera.VideoResolution = vdeoResolution;
+            camera.LightMetering = (LightMetering)lightMeterings.Cast<int>().Sum();
+            camera.Description = description;
+            camera.ImageUrl = imageUrl;
+
+            this.db.SaveChanges();
+
+            return true;
         }
 
         public Camera GetCameraById(int id)

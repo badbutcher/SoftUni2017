@@ -5,7 +5,9 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
-    [Authorize(Roles = GlocalConstants.AdminRole + "," + GlocalConstants.LoggedInUserRole)]
+    //[Authorize(Roles = "Logged In, Admin")]
+    [Authorize(Roles = GlocalConstants.AdminRole + ", " + GlocalConstants.LoggedInUserRole)]
+    //[Authorize(Roles = GlocalConstants.LoggedInUserRole)]
     public class UsersController : Controller
     {
         private readonly IUserService users;
