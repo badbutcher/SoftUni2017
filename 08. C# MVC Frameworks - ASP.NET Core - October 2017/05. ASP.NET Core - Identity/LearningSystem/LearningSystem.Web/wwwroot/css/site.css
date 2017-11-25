@@ -26,6 +26,22 @@
     margin: 15px;
 }
 
+.article-list li {
+    margin-bottom: 20px;
+}
+
+.pagination li.disabled a {
+    pointer-events: none;
+}
+
+.home-jumbotron {
+    margin-top: 50px;
+}
+
+.home-page .img-responsive {
+    height: 200px;
+}
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */

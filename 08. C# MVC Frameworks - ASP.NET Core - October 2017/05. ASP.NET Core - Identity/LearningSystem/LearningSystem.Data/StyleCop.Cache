@@ -162,10 +162,6 @@
       </violation>
     </violations>
   </sourcecode>
-  <project key="-1405859148">
-    <configuration>
-    </configuration>
-  </project>
   <sourcecode name="Article.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
@@ -576,4 +572,8 @@
     </timestamps>
     <violations />
   </sourcecode>
+  <project key="-1405859148">
+    <configuration>
+    </configuration>
+  </project>
 </stylecopresultscache>

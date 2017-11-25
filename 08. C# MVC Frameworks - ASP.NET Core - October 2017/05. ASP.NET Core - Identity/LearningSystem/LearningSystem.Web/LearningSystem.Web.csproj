@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
+    <PackageReference Include="HtmlSanitizer" Version="4.0.181" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" PrivateAssets="All" />
@@ -23,13 +24,6 @@
     <ProjectReference Include="..\LearningSystem.Common\LearningSystem.Common.csproj" />
     <ProjectReference Include="..\LearningSystem.Data\LearningSystem.Data.csproj" />
     <ProjectReference Include="..\LearningSystem.Services\LearningSystem.Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Blog\Controllers\" />
-    <Folder Include="Areas\Blog\Data\" />
-    <Folder Include="Areas\Blog\Models\" />
-    <Folder Include="Areas\Blog\Views\" />
   </ItemGroup>
 
 </Project>

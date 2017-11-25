@@ -1,9 +1,5 @@
 <stylecopresultscache>
   <version>12</version>
-  <project key="641462810">
-    <configuration>
-    </configuration>
-  </project>
   <sourcecode name="IHaveCustomMapping.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
@@ -50,4 +46,8 @@
     </timestamps>
     <violations />
   </sourcecode>
+  <project key="641462810">
+    <configuration>
+    </configuration>
+  </project>
 </stylecopresultscache>
