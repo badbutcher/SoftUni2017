@@ -17,14 +17,14 @@
 
         public async Task<IActionResult> Index()
         {
-            var result = await this.courses.Active();
+            var result = await this.courses.ActiveAsync();
 
-            return View(result);
+            return this.View(result);
         }
 
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return this.View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

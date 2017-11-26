@@ -52,6 +52,8 @@
             {
                 Username = user.UserName,
                 Email = user.Email,
+                Name = user.Name,
+                Birthdate = user.Birthdate,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
                 StatusMessage = StatusMessage
@@ -93,6 +95,24 @@
                 {
                     throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
                 }
+            }
+
+            var nameIsChanged = model.Name != user.Name;
+            var birthdateIsChange = model.Birthdate != user.Birthdate;
+
+            if (nameIsChanged)
+            {
+                user.Name = model.Name;
+            }
+
+            if (birthdateIsChange)
+            {
+                user.Birthdate = model.Birthdate;
+            }
+
+            if (nameIsChanged || birthdateIsChange)
+            {
+                await this._userManager.UpdateAsync(user);
             }
 
             StatusMessage = "Your profile has been updated";

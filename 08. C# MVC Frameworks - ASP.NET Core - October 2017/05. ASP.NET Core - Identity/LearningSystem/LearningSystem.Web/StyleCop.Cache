@@ -276,29 +276,6 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="UsersController.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2017-09-14 17:15:22.012</styleCop>
-      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
-      <sourceFile>2017-11-23 13:48:30.745</sourceFile>
-      <parser>2017-09-14 17:15:22.012</parser>
-      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
   <sourcecode name="AddCourseFromModel.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
@@ -345,52 +322,6 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="ArticlesController.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2017-09-14 17:15:22.012</styleCop>
-      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
-      <sourceFile>2017-11-25 13:21:05.128</sourceFile>
-      <parser>2017-09-14 17:15:22.012</parser>
-      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ArticlesController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>63</line>
-        <index>2119</index>
-        <endIndex>2134</endIndex>
-        <startLine>63</startLine>
-        <startColumn>20</startColumn>
-        <endLine>63</endLine>
-        <endColumn>35</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to Index must begin with the 'this.', 'base.', 'object.' or 'ArticlesController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>63</line>
-        <index>2143</index>
-        <endIndex>2147</endIndex>
-        <startLine>63</startLine>
-        <startColumn>44</startColumn>
-        <endLine>63</endLine>
-        <endColumn>48</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
   <sourcecode name="ArticleListingViewModel.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
@@ -436,52 +367,6 @@
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
     <violations />
-  </sourcecode>
-  <sourcecode name="HomeController.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2017-09-14 17:15:22.012</styleCop>
-      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
-      <sourceFile>2017-11-25 13:00:05.899</sourceFile>
-      <parser>2017-09-14 17:15:22.012</parser>
-      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'HomeController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>22</line>
-        <index>582</index>
-        <endIndex>585</endIndex>
-        <startLine>22</startLine>
-        <startColumn>20</startColumn>
-        <endLine>22</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'HomeController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>27</line>
-        <index>678</index>
-        <endIndex>681</endIndex>
-        <startLine>27</startLine>
-        <startColumn>20</startColumn>
-        <endLine>27</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
   </sourcecode>
   <sourcecode name="ApplicationBuilderExtensions.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
@@ -713,29 +598,6 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="IndexViewModel.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2017-09-14 17:15:22.012</styleCop>
-      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
-      <sourceFile>2017-11-23 10:37:34.498</sourceFile>
-      <parser>2017-09-14 17:15:22.012</parser>
-      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
   <sourcecode name="SetPasswordViewModel.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
@@ -844,96 +706,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="Startup.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2017-09-14 17:15:22.012</styleCop>
-      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
-      <sourceFile>2017-11-25 12:33:33.311</sourceFile>
-      <parser>2017-09-14 17:15:22.012</parser>
-      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Configuration must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>19</line>
-        <index>599</index>
-        <endIndex>611</endIndex>
-        <startLine>19</startLine>
-        <startColumn>13</startColumn>
-        <endLine>19</endLine>
-        <endColumn>25</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Configuration must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>27</line>
-        <index>887</index>
-        <endIndex>899</endIndex>
-        <startLine>27</startLine>
-        <startColumn>38</startColumn>
-        <endLine>27</endLine>
-        <endColumn>50</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ClosingParenthesisMustBeOnLineOfLastParameter" ruleCheckId="SA1111">
-        <context>The closing parenthesis or bracket must be placed on the same line as the last parameter in the parameter list.</context>
-        <line>80</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
-        <context>Invalid spacing around the closing parenthesis.</context>
-        <line>80</line>
-        <index>2669</index>
-        <endIndex>2688</endIndex>
-        <startLine>80</startLine>
-        <startColumn>1</startColumn>
-        <endLine>80</endLine>
-        <endColumn>20</endColumn>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
   <sourcecode name="WebConstats.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
       <settingsFile>2017-11-23 10:18:30.834</settingsFile>
       <sourceFile>2017-11-24 20:12:00.901</sourceFile>
-      <parser>2017-09-14 17:15:22.012</parser>
-      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
-  <sourcecode name="CoursesController.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2017-09-14 17:15:22.012</styleCop>
-      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
-      <sourceFile>2017-11-25 13:26:13.492</sourceFile>
       <parser>2017-09-14 17:15:22.012</parser>
       <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -2223,11 +2000,80 @@
       </violation>
     </violations>
   </sourcecode>
+  <sourcecode name="ArticlesController.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-25 13:26:23.327</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="HomeController.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-25 17:26:45.543</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'HomeController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>22</line>
+        <index>587</index>
+        <endIndex>590</endIndex>
+        <startLine>22</startLine>
+        <startColumn>20</startColumn>
+        <endLine>22</endLine>
+        <endColumn>23</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'HomeController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>27</line>
+        <index>683</index>
+        <endIndex>686</endIndex>
+        <startLine>27</startLine>
+        <startColumn>20</startColumn>
+        <endLine>27</endLine>
+        <endColumn>23</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
   <sourcecode name="ManageController.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-09-14 17:15:22.012</styleCop>
       <settingsFile>2017-11-23 10:18:30.834</settingsFile>
-      <sourceFile>2017-11-25 13:25:53.585</sourceFile>
+      <sourceFile>2017-11-26 14:31:54.007</sourceFile>
       <parser>2017-09-14 17:15:22.012</parser>
       <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -2327,746 +2173,680 @@
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>57</line>
-        <index>1986</index>
-        <endIndex>1998</endIndex>
-        <startLine>57</startLine>
+        <line>59</line>
+        <index>2066</index>
+        <endIndex>2078</endIndex>
+        <startLine>59</startLine>
         <startColumn>33</startColumn>
-        <endLine>57</endLine>
+        <endLine>59</endLine>
         <endColumn>45</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>60</line>
-        <index>2038</index>
-        <endIndex>2041</endIndex>
-        <startLine>60</startLine>
+        <line>62</line>
+        <index>2118</index>
+        <endIndex>2121</endIndex>
+        <startLine>62</startLine>
         <startColumn>20</startColumn>
-        <endLine>60</endLine>
+        <endLine>62</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>69</line>
-        <index>2278</index>
-        <endIndex>2281</endIndex>
-        <startLine>69</startLine>
+        <line>71</line>
+        <index>2358</index>
+        <endIndex>2361</endIndex>
+        <startLine>71</startLine>
         <startColumn>24</startColumn>
-        <endLine>69</endLine>
+        <endLine>71</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>72</line>
-        <index>2338</index>
-        <endIndex>2349</endIndex>
-        <startLine>72</startLine>
+        <line>74</line>
+        <index>2418</index>
+        <endIndex>2429</endIndex>
+        <startLine>74</startLine>
         <startColumn>30</startColumn>
-        <endLine>72</endLine>
+        <endLine>74</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>81</line>
-        <index>2684</index>
-        <endIndex>2695</endIndex>
-        <startLine>81</startLine>
+        <line>83</line>
+        <index>2764</index>
+        <endIndex>2775</endIndex>
+        <startLine>83</startLine>
         <startColumn>44</startColumn>
-        <endLine>81</endLine>
+        <endLine>83</endLine>
         <endColumn>55</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>91</line>
-        <index>3120</index>
-        <endIndex>3131</endIndex>
-        <startLine>91</startLine>
+        <line>93</line>
+        <index>3200</index>
+        <endIndex>3211</endIndex>
+        <startLine>93</startLine>
         <startColumn>44</startColumn>
-        <endLine>91</endLine>
+        <endLine>93</endLine>
         <endColumn>55</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>98</line>
-        <index>3429</index>
-        <endIndex>3441</endIndex>
-        <startLine>98</startLine>
+        <line>118</line>
+        <index>4010</index>
+        <endIndex>4022</endIndex>
+        <startLine>118</startLine>
         <startColumn>13</startColumn>
-        <endLine>98</endLine>
+        <endLine>118</endLine>
         <endColumn>25</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>99</line>
-        <index>3498</index>
-        <endIndex>3513</endIndex>
-        <startLine>99</startLine>
+        <line>119</line>
+        <index>4079</index>
+        <endIndex>4094</endIndex>
+        <startLine>119</startLine>
         <startColumn>20</startColumn>
-        <endLine>99</endLine>
+        <endLine>119</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to Index must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>99</line>
-        <index>3522</index>
-        <endIndex>3526</endIndex>
-        <startLine>99</startLine>
+        <line>119</line>
+        <index>4103</index>
+        <endIndex>4107</endIndex>
+        <startLine>119</startLine>
         <startColumn>44</startColumn>
-        <endLine>99</endLine>
+        <endLine>119</endLine>
         <endColumn>48</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>108</line>
-        <index>3774</index>
-        <endIndex>3777</endIndex>
-        <startLine>108</startLine>
+        <line>128</line>
+        <index>4355</index>
+        <endIndex>4358</endIndex>
+        <startLine>128</startLine>
         <startColumn>24</startColumn>
-        <endLine>108</endLine>
+        <endLine>128</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>111</line>
-        <index>3834</index>
-        <endIndex>3845</endIndex>
-        <startLine>111</startLine>
+        <line>131</line>
+        <index>4415</index>
+        <endIndex>4426</endIndex>
+        <startLine>131</startLine>
         <startColumn>30</startColumn>
-        <endLine>111</endLine>
+        <endLine>131</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>117</line>
-        <index>4075</index>
-        <endIndex>4086</endIndex>
-        <startLine>117</startLine>
+        <line>137</line>
+        <index>4656</index>
+        <endIndex>4667</endIndex>
+        <startLine>137</startLine>
         <startColumn>30</startColumn>
-        <endLine>117</endLine>
+        <endLine>137</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>119</line>
-        <index>4146</index>
-        <endIndex>4158</endIndex>
-        <startLine>119</startLine>
+        <line>139</line>
+        <index>4727</index>
+        <endIndex>4739</endIndex>
+        <startLine>139</startLine>
         <startColumn>13</startColumn>
-        <endLine>119</endLine>
+        <endLine>139</endLine>
         <endColumn>25</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>120</line>
-        <index>4235</index>
-        <endIndex>4250</endIndex>
-        <startLine>120</startLine>
+        <line>140</line>
+        <index>4816</index>
+        <endIndex>4831</endIndex>
+        <startLine>140</startLine>
         <startColumn>20</startColumn>
-        <endLine>120</endLine>
+        <endLine>140</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to Index must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>120</line>
-        <index>4259</index>
-        <endIndex>4263</endIndex>
-        <startLine>120</startLine>
+        <line>140</line>
+        <index>4840</index>
+        <endIndex>4844</endIndex>
+        <startLine>140</startLine>
         <startColumn>44</startColumn>
-        <endLine>120</endLine>
+        <endLine>140</endLine>
         <endColumn>48</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>126</line>
-        <index>4400</index>
-        <endIndex>4411</endIndex>
-        <startLine>126</startLine>
+        <line>146</line>
+        <index>4981</index>
+        <endIndex>4992</endIndex>
+        <startLine>146</startLine>
         <startColumn>30</startColumn>
-        <endLine>126</endLine>
+        <endLine>146</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>132</line>
-        <index>4648</index>
-        <endIndex>4659</endIndex>
-        <startLine>132</startLine>
+        <line>152</line>
+        <index>5229</index>
+        <endIndex>5240</endIndex>
+        <startLine>152</startLine>
         <startColumn>37</startColumn>
-        <endLine>132</endLine>
+        <endLine>152</endLine>
         <endColumn>48</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>135</line>
-        <index>4755</index>
-        <endIndex>4770</endIndex>
-        <startLine>135</startLine>
+        <line>155</line>
+        <index>5336</index>
+        <endIndex>5351</endIndex>
+        <startLine>155</startLine>
         <startColumn>24</startColumn>
-        <endLine>135</endLine>
+        <endLine>155</endLine>
         <endColumn>39</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to SetPassword must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>135</line>
-        <index>4779</index>
-        <endIndex>4789</endIndex>
-        <startLine>135</startLine>
+        <line>155</line>
+        <index>5360</index>
+        <endIndex>5370</endIndex>
+        <startLine>155</startLine>
         <startColumn>48</startColumn>
-        <endLine>135</endLine>
+        <endLine>155</endLine>
         <endColumn>58</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>138</line>
-        <index>4882</index>
-        <endIndex>4894</endIndex>
-        <startLine>138</startLine>
+        <line>158</line>
+        <index>5463</index>
+        <endIndex>5475</endIndex>
+        <startLine>158</startLine>
         <startColumn>71</startColumn>
-        <endLine>138</endLine>
+        <endLine>158</endLine>
         <endColumn>83</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>139</line>
-        <index>4919</index>
-        <endIndex>4922</endIndex>
-        <startLine>139</startLine>
+        <line>159</line>
+        <index>5500</index>
+        <endIndex>5503</endIndex>
+        <startLine>159</startLine>
         <startColumn>20</startColumn>
-        <endLine>139</endLine>
+        <endLine>159</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>148</line>
-        <index>5177</index>
-        <endIndex>5180</endIndex>
-        <startLine>148</startLine>
+        <line>168</line>
+        <index>5758</index>
+        <endIndex>5761</endIndex>
+        <startLine>168</startLine>
         <startColumn>24</startColumn>
-        <endLine>148</endLine>
+        <endLine>168</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>151</line>
-        <index>5237</index>
-        <endIndex>5248</endIndex>
-        <startLine>151</startLine>
+        <line>171</line>
+        <index>5818</index>
+        <endIndex>5829</endIndex>
+        <startLine>171</startLine>
         <startColumn>30</startColumn>
-        <endLine>151</endLine>
+        <endLine>171</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>157</line>
-        <index>5494</index>
-        <endIndex>5505</endIndex>
-        <startLine>157</startLine>
+        <line>177</line>
+        <index>6075</index>
+        <endIndex>6086</endIndex>
+        <startLine>177</startLine>
         <startColumn>46</startColumn>
-        <endLine>157</endLine>
+        <endLine>177</endLine>
         <endColumn>57</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to AddErrors must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>160</line>
-        <index>5654</index>
-        <endIndex>5662</endIndex>
-        <startLine>160</startLine>
+        <line>180</line>
+        <index>6235</index>
+        <endIndex>6243</endIndex>
+        <startLine>180</startLine>
         <startColumn>17</startColumn>
-        <endLine>160</endLine>
+        <endLine>180</endLine>
         <endColumn>25</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>161</line>
-        <index>5711</index>
-        <endIndex>5714</endIndex>
-        <startLine>161</startLine>
+        <line>181</line>
+        <index>6292</index>
+        <endIndex>6295</endIndex>
+        <startLine>181</startLine>
         <startColumn>24</startColumn>
-        <endLine>161</endLine>
+        <endLine>181</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _signInManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>164</line>
-        <index>5760</index>
-        <endIndex>5773</endIndex>
-        <startLine>164</startLine>
+        <line>184</line>
+        <index>6341</index>
+        <endIndex>6354</endIndex>
+        <startLine>184</startLine>
         <startColumn>19</startColumn>
-        <endLine>164</endLine>
+        <endLine>184</endLine>
         <endColumn>32</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _logger must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>165</line>
-        <index>5828</index>
-        <endIndex>5834</endIndex>
-        <startLine>165</startLine>
+        <line>185</line>
+        <index>6409</index>
+        <endIndex>6415</endIndex>
+        <startLine>185</startLine>
         <startColumn>13</startColumn>
-        <endLine>165</endLine>
+        <endLine>185</endLine>
         <endColumn>19</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>166</line>
-        <index>5910</index>
-        <endIndex>5922</endIndex>
-        <startLine>166</startLine>
+        <line>186</line>
+        <index>6491</index>
+        <endIndex>6503</endIndex>
+        <startLine>186</startLine>
         <startColumn>13</startColumn>
-        <endLine>166</endLine>
+        <endLine>186</endLine>
         <endColumn>25</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>168</line>
-        <index>5983</index>
-        <endIndex>5998</endIndex>
-        <startLine>168</startLine>
+        <line>188</line>
+        <index>6564</index>
+        <endIndex>6579</endIndex>
+        <startLine>188</startLine>
         <startColumn>20</startColumn>
-        <endLine>168</endLine>
+        <endLine>188</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to ChangePassword must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>168</line>
-        <index>6007</index>
-        <endIndex>6020</endIndex>
-        <startLine>168</startLine>
+        <line>188</line>
+        <index>6588</index>
+        <endIndex>6601</endIndex>
+        <startLine>188</startLine>
         <startColumn>44</startColumn>
-        <endLine>168</endLine>
+        <endLine>188</endLine>
         <endColumn>57</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>174</line>
-        <index>6154</index>
-        <endIndex>6165</endIndex>
-        <startLine>174</startLine>
+        <line>194</line>
+        <index>6735</index>
+        <endIndex>6746</endIndex>
+        <startLine>194</startLine>
         <startColumn>30</startColumn>
-        <endLine>174</endLine>
+        <endLine>194</endLine>
         <endColumn>41</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>180</line>
-        <index>6402</index>
-        <endIndex>6413</endIndex>
-        <startLine>180</startLine>
-        <startColumn>37</startColumn>
-        <endLine>180</endLine>
-        <endColumn>48</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>184</line>
-        <index>6510</index>
-        <endIndex>6525</endIndex>
-        <startLine>184</startLine>
-        <startColumn>24</startColumn>
-        <endLine>184</endLine>
-        <endColumn>39</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to ChangePassword must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>184</line>
-        <index>6534</index>
-        <endIndex>6547</endIndex>
-        <startLine>184</startLine>
-        <startColumn>48</startColumn>
-        <endLine>184</endLine>
-        <endColumn>61</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>187</line>
-        <index>6637</index>
-        <endIndex>6649</endIndex>
-        <startLine>187</startLine>
-        <startColumn>68</startColumn>
-        <endLine>187</endLine>
-        <endColumn>80</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>188</line>
-        <index>6674</index>
-        <endIndex>6677</endIndex>
-        <startLine>188</startLine>
-        <startColumn>20</startColumn>
-        <endLine>188</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>197</line>
-        <index>6926</index>
-        <endIndex>6929</endIndex>
-        <startLine>197</startLine>
-        <startColumn>24</startColumn>
-        <endLine>197</endLine>
-        <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
         <line>200</line>
-        <index>6986</index>
-        <endIndex>6997</endIndex>
+        <index>6983</index>
+        <endIndex>6994</endIndex>
         <startLine>200</startLine>
-        <startColumn>30</startColumn>
+        <startColumn>37</startColumn>
         <endLine>200</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>204</line>
+        <index>7091</index>
+        <endIndex>7106</endIndex>
+        <startLine>204</startLine>
+        <startColumn>24</startColumn>
+        <endLine>204</endLine>
+        <endColumn>39</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to ChangePassword must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>204</line>
+        <index>7115</index>
+        <endIndex>7128</endIndex>
+        <startLine>204</startLine>
+        <startColumn>48</startColumn>
+        <endLine>204</endLine>
+        <endColumn>61</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>207</line>
+        <index>7218</index>
+        <endIndex>7230</endIndex>
+        <startLine>207</startLine>
+        <startColumn>68</startColumn>
+        <endLine>207</endLine>
+        <endColumn>80</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>208</line>
+        <index>7255</index>
+        <endIndex>7258</endIndex>
+        <startLine>208</startLine>
+        <startColumn>20</startColumn>
+        <endLine>208</endLine>
+        <endColumn>23</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>217</line>
+        <index>7507</index>
+        <endIndex>7510</endIndex>
+        <startLine>217</startLine>
+        <startColumn>24</startColumn>
+        <endLine>217</endLine>
+        <endColumn>27</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>220</line>
+        <index>7567</index>
+        <endIndex>7578</endIndex>
+        <startLine>220</startLine>
+        <startColumn>30</startColumn>
+        <endLine>220</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>206</line>
-        <index>7240</index>
-        <endIndex>7251</endIndex>
-        <startLine>206</startLine>
+        <line>226</line>
+        <index>7821</index>
+        <endIndex>7832</endIndex>
+        <startLine>226</startLine>
         <startColumn>43</startColumn>
-        <endLine>206</endLine>
+        <endLine>226</endLine>
         <endColumn>54</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to AddErrors must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>209</line>
-        <index>7375</index>
-        <endIndex>7383</endIndex>
-        <startLine>209</startLine>
+        <line>229</line>
+        <index>7956</index>
+        <endIndex>7964</endIndex>
+        <startLine>229</startLine>
         <startColumn>17</startColumn>
-        <endLine>209</endLine>
+        <endLine>229</endLine>
         <endColumn>25</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>210</line>
-        <index>7429</index>
-        <endIndex>7432</endIndex>
-        <startLine>210</startLine>
+        <line>230</line>
+        <index>8010</index>
+        <endIndex>8013</endIndex>
+        <startLine>230</startLine>
         <startColumn>24</startColumn>
-        <endLine>210</endLine>
+        <endLine>230</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _signInManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>213</line>
-        <index>7478</index>
-        <endIndex>7491</endIndex>
-        <startLine>213</startLine>
+        <line>233</line>
+        <index>8059</index>
+        <endIndex>8072</endIndex>
+        <startLine>233</startLine>
         <startColumn>19</startColumn>
-        <endLine>213</endLine>
+        <endLine>233</endLine>
         <endColumn>32</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>214</line>
-        <index>7546</index>
-        <endIndex>7558</endIndex>
-        <startLine>214</startLine>
+        <line>234</line>
+        <index>8127</index>
+        <endIndex>8139</endIndex>
+        <startLine>234</startLine>
         <startColumn>13</startColumn>
-        <endLine>214</endLine>
+        <endLine>234</endLine>
         <endColumn>25</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>216</line>
-        <index>7615</index>
-        <endIndex>7630</endIndex>
-        <startLine>216</startLine>
+        <line>236</line>
+        <index>8196</index>
+        <endIndex>8211</endIndex>
+        <startLine>236</startLine>
         <startColumn>20</startColumn>
-        <endLine>216</endLine>
+        <endLine>236</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to SetPassword must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>216</line>
-        <index>7639</index>
-        <endIndex>7649</endIndex>
-        <startLine>216</startLine>
+        <line>236</line>
+        <index>8220</index>
+        <endIndex>8230</endIndex>
+        <startLine>236</startLine>
         <startColumn>44</startColumn>
-        <endLine>216</endLine>
+        <endLine>236</endLine>
         <endColumn>54</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>222</line>
-        <index>7786</index>
-        <endIndex>7797</endIndex>
-        <startLine>222</startLine>
+        <line>242</line>
+        <index>8367</index>
+        <endIndex>8378</endIndex>
+        <startLine>242</startLine>
         <startColumn>30</startColumn>
-        <endLine>222</endLine>
+        <endLine>242</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>228</line>
-        <index>8074</index>
-        <endIndex>8085</endIndex>
-        <startLine>228</startLine>
+        <line>248</line>
+        <index>8655</index>
+        <endIndex>8666</endIndex>
+        <startLine>248</startLine>
         <startColumn>77</startColumn>
-        <endLine>228</endLine>
+        <endLine>248</endLine>
         <endColumn>88</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _signInManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>229</line>
-        <index>8151</index>
-        <endIndex>8164</endIndex>
-        <startLine>229</startLine>
+        <line>249</line>
+        <index>8732</index>
+        <endIndex>8745</endIndex>
+        <startLine>249</startLine>
         <startColumn>40</startColumn>
-        <endLine>229</endLine>
+        <endLine>249</endLine>
         <endColumn>53</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>232</line>
-        <index>8373</index>
-        <endIndex>8384</endIndex>
-        <startLine>232</startLine>
+        <line>252</line>
+        <index>8954</index>
+        <endIndex>8965</endIndex>
+        <startLine>252</startLine>
         <startColumn>44</startColumn>
-        <endLine>232</endLine>
+        <endLine>252</endLine>
         <endColumn>55</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>233</line>
-        <index>8478</index>
-        <endIndex>8490</endIndex>
-        <startLine>233</startLine>
+        <line>253</line>
+        <index>9059</index>
+        <endIndex>9071</endIndex>
+        <startLine>253</startLine>
         <startColumn>35</startColumn>
-        <endLine>233</endLine>
+        <endLine>253</endLine>
         <endColumn>47</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>235</line>
-        <index>8515</index>
-        <endIndex>8518</endIndex>
-        <startLine>235</startLine>
+        <line>255</line>
+        <index>9096</index>
+        <endIndex>9099</endIndex>
+        <startLine>255</startLine>
         <startColumn>20</startColumn>
-        <endLine>235</endLine>
+        <endLine>255</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to LinkLoginCallback must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>246</line>
-        <index>8993</index>
-        <endIndex>9009</endIndex>
-        <startLine>246</startLine>
+        <line>266</line>
+        <index>9574</index>
+        <endIndex>9590</endIndex>
+        <startLine>266</startLine>
         <startColumn>49</startColumn>
-        <endLine>246</endLine>
+        <endLine>266</endLine>
         <endColumn>65</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _signInManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>247</line>
-        <index>9044</index>
-        <endIndex>9057</endIndex>
-        <startLine>247</startLine>
+        <line>267</line>
+        <index>9625</index>
+        <endIndex>9638</endIndex>
+        <startLine>267</startLine>
         <startColumn>30</startColumn>
-        <endLine>247</endLine>
+        <endLine>267</endLine>
         <endColumn>43</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>247</line>
-        <index>9124</index>
-        <endIndex>9135</endIndex>
-        <startLine>247</startLine>
+        <line>267</line>
+        <index>9705</index>
+        <endIndex>9716</endIndex>
+        <startLine>267</startLine>
         <startColumn>110</startColumn>
-        <endLine>247</endLine>
+        <endLine>267</endLine>
         <endColumn>121</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>254</line>
-        <index>9353</index>
-        <endIndex>9364</endIndex>
-        <startLine>254</startLine>
+        <line>274</line>
+        <index>9934</index>
+        <endIndex>9945</endIndex>
+        <startLine>274</startLine>
         <startColumn>30</startColumn>
-        <endLine>254</endLine>
+        <endLine>274</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _signInManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>260</line>
-        <index>9594</index>
-        <endIndex>9607</endIndex>
-        <startLine>260</startLine>
+        <line>280</line>
+        <index>10175</index>
+        <endIndex>10188</endIndex>
+        <startLine>280</startLine>
         <startColumn>30</startColumn>
-        <endLine>260</endLine>
+        <endLine>280</endLine>
         <endColumn>43</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>266</line>
-        <index>9877</index>
-        <endIndex>9888</endIndex>
-        <startLine>266</startLine>
+        <line>286</line>
+        <index>10458</index>
+        <endIndex>10469</endIndex>
+        <startLine>286</startLine>
         <startColumn>32</startColumn>
-        <endLine>266</endLine>
+        <endLine>286</endLine>
         <endColumn>43</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>275</line>
-        <index>10293</index>
-        <endIndex>10305</endIndex>
-        <startLine>275</startLine>
-        <startColumn>13</startColumn>
-        <endLine>275</endLine>
-        <endColumn>25</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>276</line>
-        <index>10362</index>
-        <endIndex>10377</endIndex>
-        <startLine>276</startLine>
-        <startColumn>20</startColumn>
-        <endLine>276</endLine>
-        <endColumn>35</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to ExternalLogins must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>276</line>
-        <index>10386</index>
-        <endIndex>10399</endIndex>
-        <startLine>276</startLine>
-        <startColumn>44</startColumn>
-        <endLine>276</endLine>
-        <endColumn>57</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>283</line>
-        <index>10596</index>
-        <endIndex>10607</endIndex>
-        <startLine>283</startLine>
-        <startColumn>30</startColumn>
-        <endLine>283</endLine>
-        <endColumn>41</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>289</line>
-        <index>10839</index>
-        <endIndex>10850</endIndex>
-        <startLine>289</startLine>
-        <startColumn>32</startColumn>
-        <endLine>289</endLine>
-        <endColumn>43</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _signInManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
         <line>295</line>
-        <index>11136</index>
-        <endIndex>11149</endIndex>
+        <index>10874</index>
+        <endIndex>10886</endIndex>
         <startLine>295</startLine>
-        <startColumn>19</startColumn>
-        <endLine>295</endLine>
-        <endColumn>32</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>296</line>
-        <index>11204</index>
-        <endIndex>11216</endIndex>
-        <startLine>296</startLine>
         <startColumn>13</startColumn>
-        <endLine>296</endLine>
+        <endLine>295</endLine>
         <endColumn>25</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>297</line>
-        <index>11275</index>
-        <endIndex>11290</endIndex>
-        <startLine>297</startLine>
+        <line>296</line>
+        <index>10943</index>
+        <endIndex>10958</endIndex>
+        <startLine>296</startLine>
         <startColumn>20</startColumn>
-        <endLine>297</endLine>
+        <endLine>296</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to ExternalLogins must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>297</line>
-        <index>11299</index>
-        <endIndex>11312</endIndex>
-        <startLine>297</startLine>
+        <line>296</line>
+        <index>10967</index>
+        <endIndex>10980</endIndex>
+        <startLine>296</startLine>
         <startColumn>44</startColumn>
-        <endLine>297</endLine>
+        <endLine>296</endLine>
         <endColumn>57</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
         <line>303</line>
-        <index>11458</index>
-        <endIndex>11469</endIndex>
+        <index>11177</index>
+        <endIndex>11188</endIndex>
         <startLine>303</startLine>
         <startColumn>30</startColumn>
         <endLine>303</endLine>
@@ -3075,453 +2855,755 @@
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>311</line>
-        <index>11788</index>
-        <endIndex>11799</endIndex>
-        <startLine>311</startLine>
+        <line>309</line>
+        <index>11420</index>
+        <endIndex>11431</endIndex>
+        <startLine>309</startLine>
+        <startColumn>32</startColumn>
+        <endLine>309</endLine>
+        <endColumn>43</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to _signInManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>315</line>
+        <index>11717</index>
+        <endIndex>11730</endIndex>
+        <startLine>315</startLine>
+        <startColumn>19</startColumn>
+        <endLine>315</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to StatusMessage must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>316</line>
+        <index>11785</index>
+        <endIndex>11797</endIndex>
+        <startLine>316</startLine>
+        <startColumn>13</startColumn>
+        <endLine>316</endLine>
+        <endColumn>25</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>317</line>
+        <index>11856</index>
+        <endIndex>11871</endIndex>
+        <startLine>317</startLine>
+        <startColumn>20</startColumn>
+        <endLine>317</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to ExternalLogins must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>317</line>
+        <index>11880</index>
+        <endIndex>11893</endIndex>
+        <startLine>317</startLine>
+        <startColumn>44</startColumn>
+        <endLine>317</endLine>
+        <endColumn>57</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>323</line>
+        <index>12039</index>
+        <endIndex>12050</endIndex>
+        <startLine>323</startLine>
+        <startColumn>30</startColumn>
+        <endLine>323</endLine>
+        <endColumn>41</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>331</line>
+        <index>12369</index>
+        <endIndex>12380</endIndex>
+        <startLine>331</startLine>
         <startColumn>42</startColumn>
-        <endLine>311</endLine>
+        <endLine>331</endLine>
         <endColumn>53</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>313</line>
-        <index>11939</index>
-        <endIndex>11950</endIndex>
-        <startLine>313</startLine>
+        <line>333</line>
+        <index>12520</index>
+        <endIndex>12531</endIndex>
+        <startLine>333</startLine>
         <startColumn>43</startColumn>
-        <endLine>313</endLine>
+        <endLine>333</endLine>
         <endColumn>54</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>316</line>
-        <index>12021</index>
-        <endIndex>12024</endIndex>
-        <startLine>316</startLine>
+        <line>336</line>
+        <index>12602</index>
+        <endIndex>12605</endIndex>
+        <startLine>336</startLine>
         <startColumn>20</startColumn>
-        <endLine>316</endLine>
+        <endLine>336</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>322</line>
-        <index>12169</index>
-        <endIndex>12180</endIndex>
-        <startLine>322</startLine>
+        <line>342</line>
+        <index>12750</index>
+        <endIndex>12761</endIndex>
+        <startLine>342</startLine>
         <startColumn>30</startColumn>
-        <endLine>322</endLine>
+        <endLine>342</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>333</line>
-        <index>12595</index>
-        <endIndex>12598</endIndex>
-        <startLine>333</startLine>
+        <line>353</line>
+        <index>13176</index>
+        <endIndex>13179</endIndex>
+        <startLine>353</startLine>
         <startColumn>20</startColumn>
-        <endLine>333</endLine>
+        <endLine>353</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to Disable2fa must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>333</line>
-        <index>12607</index>
-        <endIndex>12616</endIndex>
-        <startLine>333</startLine>
+        <line>353</line>
+        <index>13188</index>
+        <endIndex>13197</endIndex>
+        <startLine>353</startLine>
         <startColumn>32</startColumn>
-        <endLine>333</endLine>
+        <endLine>353</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>340</line>
-        <index>12786</index>
-        <endIndex>12797</endIndex>
-        <startLine>340</startLine>
+        <line>360</line>
+        <index>13367</index>
+        <endIndex>13378</endIndex>
+        <startLine>360</startLine>
         <startColumn>30</startColumn>
-        <endLine>340</endLine>
+        <endLine>360</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>346</line>
-        <index>13039</index>
-        <endIndex>13050</endIndex>
-        <startLine>346</startLine>
+        <line>366</line>
+        <index>13620</index>
+        <endIndex>13631</endIndex>
+        <startLine>366</startLine>
         <startColumn>42</startColumn>
-        <endLine>346</endLine>
+        <endLine>366</endLine>
         <endColumn>53</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _logger must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>352</line>
-        <index>13304</index>
-        <endIndex>13310</endIndex>
-        <startLine>352</startLine>
+        <line>372</line>
+        <index>13885</index>
+        <endIndex>13891</endIndex>
+        <startLine>372</startLine>
         <startColumn>13</startColumn>
-        <endLine>352</endLine>
+        <endLine>372</endLine>
         <endColumn>19</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>353</line>
-        <index>13400</index>
-        <endIndex>13415</endIndex>
-        <startLine>353</startLine>
+        <line>373</line>
+        <index>13981</index>
+        <endIndex>13996</endIndex>
+        <startLine>373</startLine>
         <startColumn>20</startColumn>
-        <endLine>353</endLine>
+        <endLine>373</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to TwoFactorAuthentication must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>353</line>
-        <index>13424</index>
-        <endIndex>13446</endIndex>
-        <startLine>353</startLine>
+        <line>373</line>
+        <index>14005</index>
+        <endIndex>14027</endIndex>
+        <startLine>373</startLine>
         <startColumn>44</startColumn>
-        <endLine>353</endLine>
+        <endLine>373</endLine>
         <endColumn>66</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>359</line>
-        <index>13588</index>
-        <endIndex>13599</endIndex>
-        <startLine>359</startLine>
+        <line>379</line>
+        <index>14169</index>
+        <endIndex>14180</endIndex>
+        <startLine>379</startLine>
         <startColumn>30</startColumn>
-        <endLine>359</endLine>
+        <endLine>379</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>365</line>
-        <index>13839</index>
-        <endIndex>13850</endIndex>
-        <startLine>365</startLine>
+        <line>385</line>
+        <index>14420</index>
+        <endIndex>14431</endIndex>
+        <startLine>385</startLine>
         <startColumn>40</startColumn>
-        <endLine>365</endLine>
+        <endLine>385</endLine>
         <endColumn>51</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>368</line>
-        <index>13977</index>
-        <endIndex>13988</endIndex>
-        <startLine>368</startLine>
+        <line>388</line>
+        <index>14558</index>
+        <endIndex>14569</endIndex>
+        <startLine>388</startLine>
         <startColumn>23</startColumn>
-        <endLine>368</endLine>
+        <endLine>388</endLine>
         <endColumn>34</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>369</line>
-        <index>14064</index>
-        <endIndex>14075</endIndex>
-        <startLine>369</startLine>
+        <line>389</line>
+        <index>14645</index>
+        <endIndex>14656</endIndex>
+        <startLine>389</startLine>
         <startColumn>40</startColumn>
-        <endLine>369</endLine>
+        <endLine>389</endLine>
         <endColumn>51</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to FormatKey must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>374</line>
-        <index>14228</index>
-        <endIndex>14236</endIndex>
-        <startLine>374</startLine>
+        <line>394</line>
+        <index>14809</index>
+        <endIndex>14817</endIndex>
+        <startLine>394</startLine>
         <startColumn>29</startColumn>
-        <endLine>374</endLine>
+        <endLine>394</endLine>
         <endColumn>37</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to GenerateQrCodeUri must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>375</line>
-        <index>14291</index>
-        <endIndex>14307</endIndex>
-        <startLine>375</startLine>
+        <line>395</line>
+        <index>14872</index>
+        <endIndex>14888</endIndex>
+        <startLine>395</startLine>
         <startColumn>36</startColumn>
-        <endLine>375</endLine>
+        <endLine>395</endLine>
         <endColumn>52</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>378</line>
-        <index>14375</index>
-        <endIndex>14378</endIndex>
-        <startLine>378</startLine>
+        <line>398</line>
+        <index>14956</index>
+        <endIndex>14959</endIndex>
+        <startLine>398</startLine>
         <startColumn>20</startColumn>
-        <endLine>378</endLine>
+        <endLine>398</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>387</line>
-        <index>14643</index>
-        <endIndex>14646</endIndex>
-        <startLine>387</startLine>
+        <line>407</line>
+        <index>15224</index>
+        <endIndex>15227</endIndex>
+        <startLine>407</startLine>
         <startColumn>24</startColumn>
-        <endLine>387</endLine>
+        <endLine>407</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>390</line>
-        <index>14703</index>
-        <endIndex>14714</endIndex>
-        <startLine>390</startLine>
+        <line>410</line>
+        <index>15284</index>
+        <endIndex>15295</endIndex>
+        <startLine>410</startLine>
         <startColumn>30</startColumn>
-        <endLine>390</endLine>
+        <endLine>410</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>399</line>
-        <index>15099</index>
-        <endIndex>15110</endIndex>
-        <startLine>399</startLine>
+        <line>419</line>
+        <index>15680</index>
+        <endIndex>15691</endIndex>
+        <startLine>419</startLine>
         <startColumn>41</startColumn>
-        <endLine>399</endLine>
+        <endLine>419</endLine>
         <endColumn>52</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>400</line>
-        <index>15162</index>
-        <endIndex>15173</endIndex>
-        <startLine>400</startLine>
+        <line>420</line>
+        <index>15743</index>
+        <endIndex>15754</endIndex>
+        <startLine>420</startLine>
         <startColumn>23</startColumn>
-        <endLine>400</endLine>
+        <endLine>420</endLine>
         <endColumn>34</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>405</line>
-        <index>15403</index>
-        <endIndex>15406</endIndex>
-        <startLine>405</startLine>
+        <line>425</line>
+        <index>15984</index>
+        <endIndex>15987</endIndex>
+        <startLine>425</startLine>
         <startColumn>24</startColumn>
-        <endLine>405</endLine>
+        <endLine>425</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>408</line>
-        <index>15452</index>
-        <endIndex>15463</endIndex>
-        <startLine>408</startLine>
+        <line>428</line>
+        <index>16033</index>
+        <endIndex>16044</endIndex>
+        <startLine>428</startLine>
         <startColumn>19</startColumn>
-        <endLine>408</endLine>
+        <endLine>428</endLine>
         <endColumn>30</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _logger must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>409</line>
-        <index>15516</index>
-        <endIndex>15522</endIndex>
-        <startLine>409</startLine>
+        <line>429</line>
+        <index>16097</index>
+        <endIndex>16103</endIndex>
+        <startLine>429</startLine>
         <startColumn>13</startColumn>
-        <endLine>409</endLine>
+        <endLine>429</endLine>
         <endColumn>19</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>410</line>
-        <index>15637</index>
-        <endIndex>15652</endIndex>
-        <startLine>410</startLine>
+        <line>430</line>
+        <index>16218</index>
+        <endIndex>16233</endIndex>
+        <startLine>430</startLine>
         <startColumn>20</startColumn>
-        <endLine>410</endLine>
+        <endLine>430</endLine>
         <endColumn>35</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to GenerateRecoveryCodes must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>410</line>
-        <index>15661</index>
-        <endIndex>15681</endIndex>
-        <startLine>410</startLine>
+        <line>430</line>
+        <index>16242</index>
+        <endIndex>16262</endIndex>
+        <startLine>430</startLine>
         <startColumn>44</startColumn>
-        <endLine>410</endLine>
+        <endLine>430</endLine>
         <endColumn>64</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>416</line>
-        <index>15807</index>
-        <endIndex>15810</endIndex>
-        <startLine>416</startLine>
+        <line>436</line>
+        <index>16388</index>
+        <endIndex>16391</endIndex>
+        <startLine>436</startLine>
         <startColumn>20</startColumn>
-        <endLine>416</endLine>
+        <endLine>436</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to ResetAuthenticator must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>416</line>
-        <index>15819</index>
-        <endIndex>15836</endIndex>
-        <startLine>416</startLine>
+        <line>436</line>
+        <index>16400</index>
+        <endIndex>16417</endIndex>
+        <startLine>436</startLine>
         <startColumn>32</startColumn>
-        <endLine>416</endLine>
+        <endLine>436</endLine>
         <endColumn>49</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>423</line>
-        <index>16014</index>
-        <endIndex>16025</endIndex>
-        <startLine>423</startLine>
+        <line>443</line>
+        <index>16595</index>
+        <endIndex>16606</endIndex>
+        <startLine>443</startLine>
         <startColumn>30</startColumn>
-        <endLine>423</endLine>
+        <endLine>443</endLine>
         <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>429</line>
-        <index>16244</index>
-        <endIndex>16255</endIndex>
-        <startLine>429</startLine>
+        <line>449</line>
+        <index>16825</index>
+        <endIndex>16836</endIndex>
+        <startLine>449</startLine>
         <startColumn>19</startColumn>
-        <endLine>429</endLine>
+        <endLine>449</endLine>
         <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>430</line>
-        <index>16315</index>
-        <endIndex>16326</endIndex>
-        <startLine>430</startLine>
-        <startColumn>19</startColumn>
-        <endLine>430</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _logger must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>431</line>
-        <index>16375</index>
-        <endIndex>16381</endIndex>
-        <startLine>431</startLine>
-        <startColumn>13</startColumn>
-        <endLine>431</endLine>
-        <endColumn>19</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>433</line>
-        <index>16497</index>
-        <endIndex>16512</endIndex>
-        <startLine>433</startLine>
-        <startColumn>20</startColumn>
-        <endLine>433</endLine>
-        <endColumn>35</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to EnableAuthenticator must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>433</line>
-        <index>16521</index>
-        <endIndex>16539</endIndex>
-        <startLine>433</startLine>
-        <startColumn>44</startColumn>
-        <endLine>433</endLine>
-        <endColumn>62</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>439</line>
-        <index>16683</index>
-        <endIndex>16694</endIndex>
-        <startLine>439</startLine>
-        <startColumn>30</startColumn>
-        <endLine>439</endLine>
-        <endColumn>41</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
         <line>450</line>
-        <index>17152</index>
-        <endIndex>17163</endIndex>
+        <index>16896</index>
+        <endIndex>16907</endIndex>
         <startLine>450</startLine>
-        <startColumn>39</startColumn>
+        <startColumn>19</startColumn>
         <endLine>450</endLine>
+        <endColumn>30</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to _logger must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>451</line>
+        <index>16956</index>
+        <endIndex>16962</endIndex>
+        <startLine>451</startLine>
+        <startColumn>13</startColumn>
+        <endLine>451</endLine>
+        <endColumn>19</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to RedirectToAction must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>453</line>
+        <index>17078</index>
+        <endIndex>17093</endIndex>
+        <startLine>453</startLine>
+        <startColumn>20</startColumn>
+        <endLine>453</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to EnableAuthenticator must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>453</line>
+        <index>17102</index>
+        <endIndex>17120</endIndex>
+        <startLine>453</startLine>
+        <startColumn>44</startColumn>
+        <endLine>453</endLine>
+        <endColumn>62</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>459</line>
+        <index>17264</index>
+        <endIndex>17275</endIndex>
+        <startLine>459</startLine>
+        <startColumn>30</startColumn>
+        <endLine>459</endLine>
+        <endColumn>41</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to _userManager must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>470</line>
+        <index>17733</index>
+        <endIndex>17744</endIndex>
+        <startLine>470</startLine>
+        <startColumn>39</startColumn>
+        <endLine>470</endLine>
         <endColumn>50</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _logger must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>453</line>
-        <index>17335</index>
-        <endIndex>17341</endIndex>
-        <startLine>453</startLine>
+        <line>473</line>
+        <index>17916</index>
+        <endIndex>17922</endIndex>
+        <startLine>473</startLine>
         <startColumn>13</startColumn>
-        <endLine>453</endLine>
+        <endLine>473</endLine>
         <endColumn>19</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>455</line>
-        <index>17453</index>
-        <endIndex>17456</endIndex>
-        <startLine>455</startLine>
+        <line>475</line>
+        <index>18034</index>
+        <endIndex>18037</endIndex>
+        <startLine>475</startLine>
         <startColumn>20</startColumn>
-        <endLine>455</endLine>
+        <endLine>475</endLine>
         <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _urlEncoder must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>490</line>
-        <index>18538</index>
-        <endIndex>18548</endIndex>
-        <startLine>490</startLine>
+        <line>510</line>
+        <index>19119</index>
+        <endIndex>19129</endIndex>
+        <startLine>510</startLine>
         <startColumn>17</startColumn>
-        <endLine>490</endLine>
+        <endLine>510</endLine>
         <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
         <context>The call to _urlEncoder must begin with the 'this.', 'base.', 'object.' or 'ManageController.' or 'Controller.' prefix to indicate the intended method call. </context>
-        <line>491</line>
-        <index>18597</index>
-        <endIndex>18607</endIndex>
-        <startLine>491</startLine>
+        <line>511</line>
+        <index>19178</index>
+        <endIndex>19188</endIndex>
+        <startLine>511</startLine>
         <startColumn>17</startColumn>
-        <endLine>491</endLine>
+        <endLine>511</endLine>
         <endColumn>27</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="CourseDetailsViewModel.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-26 14:32:13.571</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="IndexViewModel.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-26 12:51:28.743</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="StudentsInCourseViewModel.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-26 14:32:24.276</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Startup.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-26 14:32:48.107</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to Configuration must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>19</line>
+        <index>599</index>
+        <endIndex>611</endIndex>
+        <startLine>19</startLine>
+        <startColumn>13</startColumn>
+        <endLine>19</endLine>
+        <endColumn>25</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to Configuration must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>27</line>
+        <index>887</index>
+        <endIndex>899</endIndex>
+        <startLine>27</startLine>
+        <startColumn>38</startColumn>
+        <endLine>27</endLine>
+        <endColumn>50</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ClosingParenthesisMustBeOnLineOfLastParameter" ruleCheckId="SA1111">
+        <context>The closing parenthesis or bracket must be placed on the same line as the last parameter in the parameter list.</context>
+        <line>85</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>85</line>
+        <index>2885</index>
+        <endIndex>2904</endIndex>
+        <startLine>85</startLine>
+        <startColumn>1</startColumn>
+        <endLine>85</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="UsersController.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-26 14:31:56.657</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to NotFound must begin with the 'this.', 'base.', 'object.' or 'UsersController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>26</line>
+        <index>803</index>
+        <endIndex>810</endIndex>
+        <startLine>26</startLine>
+        <startColumn>24</startColumn>
+        <endLine>26</endLine>
+        <endColumn>31</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="CoursesController.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-26 14:36:22.325</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to Details must begin with the 'this.', 'base.', 'object.' or 'CoursesController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>79</line>
+        <index>2436</index>
+        <endIndex>2442</endIndex>
+        <startLine>79</startLine>
+        <startColumn>49</startColumn>
+        <endLine>79</endLine>
+        <endColumn>55</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="TrainerController.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-09-14 17:15:22.012</styleCop>
+      <settingsFile>2017-11-23 10:18:30.834</settingsFile>
+      <sourceFile>2017-11-26 14:36:50.341</sourceFile>
+      <parser>2017-09-14 17:15:22.012</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-09-14 17:15:22.012</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-09-14 17:15:22.012</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-09-14 17:15:22.012</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-09-14 17:15:22.012</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to View must begin with the 'this.', 'base.', 'object.' or 'TrainerController.' or 'Controller.' prefix to indicate the intended method call. </context>
+        <line>45</line>
+        <index>1510</index>
+        <endIndex>1513</endIndex>
+        <startLine>45</startLine>
+        <startColumn>20</startColumn>
+        <endLine>45</endLine>
+        <endColumn>23</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
