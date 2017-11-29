@@ -23,7 +23,7 @@
         {
             var result = await this.db.Courses
                 .OrderByDescending(a => a.Id)
-                .Where(a => a.StartDate >= DateTime.UtcNow)
+                .Where(a => a.StartDate <= DateTime.UtcNow)
                 .ProjectTo<CourseListingServiceModel>()
                 .ToListAsync();
 
@@ -91,6 +91,34 @@
                 .AnyAsync(a => a.Id == courseId && a.Students.Any(c => c.StudentId == studentId));
 
             return result;
+        }
+
+        public async Task<IEnumerable<CourseListingServiceModel>> FindAsync(string searchText)
+        {
+            searchText = searchText ?? string.Empty;
+            var result = await this.db.Courses
+                .OrderByDescending(c => c.Id)
+                .Where(c => c.Name.ToLower().Contains(searchText.ToLower()))
+                .ProjectTo<CourseListingServiceModel>()
+                .ToListAsync();
+
+            return result;
+        }
+
+        public async Task<bool> SaveExamSubmission(int courseId, string studentId, byte[] examSubmission)
+        {
+            var studnetInCourse = await this.db
+              .FindAsync<StudentCourse>(courseId, studentId);
+
+            if (studnetInCourse == null)
+            {
+                return false;
+            }
+
+            studnetInCourse.ExamSubmission = examSubmission;
+            await this.db.SaveChangesAsync();
+
+            return true;
         }
 
         private async Task<CourseWithStudentInfo> GetCourseInfo(int courseId, string studentId)

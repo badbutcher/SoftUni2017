@@ -3,6 +3,7 @@
     using System.Threading.Tasks;
     using LearningSystem.Data.Models;
     using LearningSystem.Services;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
@@ -29,6 +30,21 @@
             var profile = await this.users.ProfileAsync(user.Id);
 
             return this.View(profile);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> DownloadCertificate(int id)
+        {
+            var userId = this.userManager.GetUserId(User);
+
+            var certificateContents = await this.users.GetPdfCertificate(id, userId);
+
+            if (certificateContents == null)
+            {
+                return this.BadRequest();
+            }
+
+            return this.File(certificateContents, "application/pdf", "Certificate");
         }
     }
 }

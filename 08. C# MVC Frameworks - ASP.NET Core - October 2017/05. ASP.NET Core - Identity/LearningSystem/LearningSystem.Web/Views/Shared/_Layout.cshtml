@@ -59,6 +59,14 @@
                 @TempData[WebConstats.TempDataSuccessMessageKey]
             </div>
         }
+
+        @if (TempData.ContainsKey(WebConstats.TempDataErrorMessageKey))
+        {
+            <div class="alert alert-warning">
+                @TempData[WebConstats.TempDataErrorMessageKey]
+            </div>
+        }
+
         @RenderBody()
         <hr />
         <footer>

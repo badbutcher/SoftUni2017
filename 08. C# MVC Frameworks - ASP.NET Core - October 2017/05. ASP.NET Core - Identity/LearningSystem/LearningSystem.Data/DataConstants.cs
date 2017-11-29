@@ -10,5 +10,7 @@
 
         public const int CourseNameMaxLenght = 50;
         public const int CourseDescriptionMaxLenght = 2000;
+
+        public const int CourseExamSubmissionFileLenght = 2 * 1024 * 1024;
     }
 }

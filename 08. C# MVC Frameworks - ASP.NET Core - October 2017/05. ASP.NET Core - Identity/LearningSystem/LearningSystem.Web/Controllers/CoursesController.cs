@@ -1,12 +1,14 @@
 ﻿namespace LearningSystem.Web.Controllers
 {
     using System.Threading.Tasks;
+    using LearningSystem.Data;
     using LearningSystem.Data.Models;
     using LearningSystem.Services;
     using LearningSystem.Services.Models;
     using LearningSystem.Web.Infrastructure.Extensions;
     using LearningSystem.Web.Models.Courses;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
@@ -45,6 +47,30 @@
 
         [Authorize]
         [HttpPost]
+        public async Task<IActionResult> SubmitExam(int id, IFormFile exam)
+        {
+            if (!exam.FileName.EndsWith(".zip") || exam.Length > DataConstants.CourseExamSubmissionFileLenght)
+            {
+                TempData.AddErrorMessage("Your submission should be a .zip file with max of 2mb size.");
+                return this.RedirectToAction(nameof(this.Details), new { id });
+            }
+
+            var fileContents = await exam.ToByteArrayAsync();
+            var userId = this.userManager.GetUserId(User);
+
+            var success = await this.courses.SaveExamSubmission(id, userId, fileContents);
+
+            if (!success)
+            {
+                return this.BadRequest();
+            }
+
+            TempData.AddSuccessMessage("Exam saved successfully!");
+            return this.RedirectToAction(nameof(this.Details), new { id });
+        }
+
+        [Authorize]
+        [HttpPost]
         public async Task<IActionResult> SignUp(int id)
         {
             var userId = this.userManager.GetUserId(User);
@@ -74,7 +100,7 @@
                 return this.BadRequest();
             }
 
-            TempData.AddSuccessMessage("Sotty to see you go.");
+            TempData.AddSuccessMessage("Sorry to see you go.");
 
             return this.RedirectToAction(nameof(this.Details), new { id });
         }

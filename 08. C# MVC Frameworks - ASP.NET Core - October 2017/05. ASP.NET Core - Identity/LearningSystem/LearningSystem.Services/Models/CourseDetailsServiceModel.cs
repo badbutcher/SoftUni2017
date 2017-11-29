@@ -1,10 +1,10 @@
-﻿using System;
-using AutoMapper;
-using LearningSystem.Common.Mapping;
-using LearningSystem.Data.Models;
-
-namespace LearningSystem.Services.Models
+﻿namespace LearningSystem.Services.Models
 {
+    using System;
+    using AutoMapper;
+    using LearningSystem.Common.Mapping;
+    using LearningSystem.Data.Models;
+
     public class CourseDetailsServiceModel : IMapFrom<Course>, IHaveCustomMapping
     {
         public int Id { get; set; }

@@ -18,7 +18,7 @@
             this.db = db;
         }
 
-        public async Task<bool> AddGrade(int courseId, string studentId, Grade grade)
+        public async Task<bool> AddGradeAsync(int courseId, string studentId, Grade grade)
         {
             var studentInCourse = await this.db.FindAsync<StudentCourse>(courseId, studentId);
 
@@ -43,6 +43,23 @@
             return result;
         }
 
+        ////public async Task<byte[]> GetExamSubmossion(int courseId, string studentId)
+        ////{
+        ////    var studentInCourse = await this.db.FindAsync<StudentCourse>(courseId, studentId);
+
+        ////    if (studentInCourse == null)
+        ////    {
+        ////        return null;
+        ////    }
+
+        ////    return studentInCourse.ExamSubmission;
+        ////}
+
+        ////VVVV edno i su6to
+
+        public async Task<byte[]> GetExamSubmossion(int courseId, string studentId)
+            => (await this.db.FindAsync<StudentCourse>(courseId, studentId))?.ExamSubmission;
+
         public async Task<bool> IsTrainer(int courseId, string trainerId)
         {
             var result = await this.db.Courses.AnyAsync(c => c.Id == courseId && c.TrainerId == trainerId);
@@ -57,6 +74,35 @@
                 .ProjectTo<StudnetInCourseServiceModel>(new { courseId }).ToListAsync();
 
             return result;
+        }
+
+        public async Task<StudentInCourseNamesServiceModel> StudentInCourseNamesAsync(int courseId, string studentId)
+        {
+            var username = await this.db.Users
+                .Where(a => a.Id == studentId)
+                .Select(a => a.UserName)
+                .FirstOrDefaultAsync();
+
+            if (username == null)
+            {
+                return null;
+            }
+
+            var courseName = await this.db.Courses
+                .Where(a => a.Id == courseId)
+                .Select(a => a.Name)
+                .FirstOrDefaultAsync();
+
+            if (courseName == null)
+            {
+                return null;
+            }
+
+            return new StudentInCourseNamesServiceModel
+            {
+                Username = username,
+                CourseName = courseName
+            };
         }
     }
 }

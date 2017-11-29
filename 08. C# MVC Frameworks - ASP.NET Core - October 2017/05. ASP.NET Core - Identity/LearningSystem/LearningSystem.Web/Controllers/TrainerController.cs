@@ -64,7 +64,7 @@
                 return this.BadRequest();
             }
 
-            var success = await this.trainers.AddGrade(id, studentId, grade);
+            var success = await this.trainers.AddGradeAsync(id, studentId, grade);
 
             if (!success)
             {
@@ -72,6 +72,37 @@
             }
 
             return this.RedirectToAction(nameof(this.Students), new { id });
+        }
+
+        public async Task<IActionResult> DownloadExam(int id, string studentId)
+        {
+            if (string.IsNullOrEmpty(studentId))
+            {
+                return this.BadRequest();
+            }
+
+            var userId = this.userManager.GetUserId(User);
+
+            if (!await this.trainers.IsTrainer(id, userId))
+            {
+                return this.BadRequest();
+            }
+
+            var examContents = await this.trainers.GetExamSubmossion(id, studentId);
+
+            if (examContents == null)
+            {
+                return this.BadRequest();
+            }
+
+            var studentInCourseNames = await this.trainers.StudentInCourseNamesAsync(id, userId);
+
+            if (studentInCourseNames == null)
+            {
+                return this.BadRequest();
+            }
+
+            return this.File(examContents, "application/zip", $"{studentInCourseNames.CourseName}-{studentInCourseNames.Username}.zip");
         }
     }
 }

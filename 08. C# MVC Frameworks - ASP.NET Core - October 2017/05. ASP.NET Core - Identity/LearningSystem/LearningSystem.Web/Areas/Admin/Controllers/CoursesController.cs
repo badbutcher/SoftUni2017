@@ -47,7 +47,7 @@
                 model.Name,
                 model.Description,
                 model.StartDate,
-                model.EndDate,
+                model.EndDate.AddDays(1),
                 model.TrainerId);
 
             TempData.AddSuccessMessage($"Course {model.Name} created successfully!");

@@ -13,6 +13,21 @@
 
 @if (User.Identity.IsAuthenticated)
 {
+    if (Model.UserIsEnrolledCourse && Model.Course.EndDate.Date == DateTime.UtcNow.AddDays(1).Date)
+    {
+        <form asp-action="SubmitExam" asp-route-id="@Model.Course.Id" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+            <br />
+            Upload your exam (only .zip files)
+            <br />
+            <input type="file" name="exam" style="display: none" accept=".zip" />
+            <button type="button" class="btn btn-default" onclick="document.getElementsByName('exam')[0].click()">Choose your file!</button>
+            <br />
+            <br />
+            <input type="submit" class="btn btn-primary" value="Upload Exam" />
+        </form>
+    }
+
     if (Model.Course.StartDate > DateTime.UtcNow)
     {
         if (Model.UserIsEnrolledCourse)

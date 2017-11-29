@@ -18,6 +18,7 @@
         <tr>
             <th>Course</th>
             <th>Grade</th>
+            <th>Certificate</th>
         </tr>
     </thead>
     <tbody>
@@ -29,6 +30,16 @@
                 </td>
                 <td>
                     @(course.Grade == null ? "No Grade" : course.Grade.ToString())
+                </td>
+                <td>
+                    @if (course.Grade == Grade.A || course.Grade == Grade.B || course.Grade == Grade.C)
+                    {
+                        <a asp-action="DownloadCertificate" asp-route-id="@course.Id">Download</a>
+                    }
+                    else
+                    {
+                        @: You do not qualify
+                    }
                 </td>
             </tr>
         }

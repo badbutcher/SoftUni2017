@@ -13,6 +13,7 @@
             <th>Grade</th>
             @if (Model.Course.EndDate < DateTime.UtcNow)
             {
+                <th>Exam submission</th>
                 <th></th>
             }
         </tr>
@@ -21,18 +22,21 @@
         @foreach (var student in Model.Students)
         {
             <tr>
-                <th>@student.Name</th>
-                <th>@student.Email</th>
-                <th>@(student.Grade == null ? "No Grade" : student.Grade.ToString())</th>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@(student.Grade == null ? "No Grade" : student.Grade.ToString())</td>
                 @if (Model.Course.EndDate < DateTime.UtcNow)
                 {
-                    <th>
+                    <td>
+                        <a asp-action="DownloadExam" asp-route-id="@Model.Course.Id" asp-route-studentId="@student.Id">Download</a>
+                    </td>
+                    <td>
                        <form asp-action="GradeStudnet" asp-route-id="@Model.Course.Id" method="post">
                            <input type="hidden" name="studentId" value="@student.Id" />
                            <select name="grade" asp-items="@Html.GetEnumSelectList<Grade>()"></select>
                            <input type="submit" class="btn btn-primary" value="Add Grade" />
                        </form>
-                    </th>
+                    </td>
                 }
             </tr>
         }
