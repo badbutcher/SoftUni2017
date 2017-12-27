@@ -2,7 +2,7 @@
 {
     public class ServiceConstats
     {
-        public const int BlogArticlesPageSize = 25;
+        public const int BlogArticlesPageSize = 1;
 
         public const string PDfCertificateFormat = @"
 <h1>Certificate</h1>
