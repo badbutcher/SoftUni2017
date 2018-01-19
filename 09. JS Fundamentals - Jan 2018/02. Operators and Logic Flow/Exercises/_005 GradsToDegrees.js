@@ -1,23 +1,15 @@
 function gradsToDegrees(grad) {
     let degrees = 0;
-    let currentGrad = 100;
 
+    grad = grad % 400;
     if (grad < 0) {
         grad += 400;
     }
 
-    while (currentGrad <= grad) {
-        degrees += 90;
-        currentGrad += 100;
-    }
-
-    if (currentGrad - 100 < grad) {
-        currentGrad = currentGrad - grad;
-        let degreesToAdd = 100 / currentGrad;
-        degrees += 90 / degreesToAdd;
-    }
+    let degreesToDivide = 100 / grad;
+    degrees += 90 / degreesToDivide;
 
     console.log(degrees % 360);
 }
 
-gradsToDegrees(-50);
+gradsToDegrees(100);
