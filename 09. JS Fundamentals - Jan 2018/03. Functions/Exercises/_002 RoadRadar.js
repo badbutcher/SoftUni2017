@@ -1,27 +1,8 @@
 function roadRadar(input) {
     let driverSpeed = input[0];
     let area = input[1];
-    let speed = 0;
-    let overTheSpeed = 0;
-
-    switch (area) {
-        case 'motorway':
-            speed = 130;
-            break;
-        case 'interstate':
-            speed = 90;
-            break;
-        case 'city':
-            speed = 50;
-            break;
-        case 'residential':
-            speed = 20;
-            break;
-        default:
-            break;
-    }
-
-    overTheSpeed = driverSpeed - speed;
+    let speed = getSpeed(area);
+    let overTheSpeed = driverSpeed - speed;
 
     if (overTheSpeed <= 0) {
         console.log();
@@ -34,6 +15,21 @@ function roadRadar(input) {
     }
     else if (overTheSpeed <= 80) {
         console.log('reckless driving');
+    }
+
+    function getSpeed(area) {
+        switch (area) {
+            case 'motorway':
+                return 130;
+            case 'interstate':
+                return 90;
+            case 'city':
+                return 50;
+            case 'residential':
+                return 20;
+            default:
+                break;
+        }
     }
 }
 
