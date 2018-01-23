@@ -67,29 +67,36 @@ function radioCrystals(input) {
                 }
             }
             else if (stage === 4) {
-                if (crystal - 2 >= target) {
+                if (crystal - 2 >= target || target - (crystal - 2) === 1) {
                     crystal -= 2;
                     actions++;
                 }
                 else {
-                    stage++;
                     if (actions !== 0) {
+                        if (crystal !== target) {
+                            actions++;
+                        }
+
                         console.log(`Etch x${actions}`);
                         crystal = wash(crystal);
                     }
 
-                    if (crystal === target || stage === 5) {
+                    if (crystal === target) {
                         break;
                     }
                 }
             }
         }
 
-        if (stage === 5 && crystal - 1 === target) {
+        crystal = Math.floor(crystal);
+
+        if (crystal - 1 === target) {
             crystal -= 1;
-            actions++;
-            console.log(`X-ray x${actions}`);
-            crystal = wash(crystal);
+            console.log(`X-ray x1`);
+        }
+        else if (crystal + 1 === target) {
+            crystal += 1;
+            console.log(`X-ray x1`);
         }
 
         stage = 1;
@@ -97,6 +104,8 @@ function radioCrystals(input) {
     }
 }
 
-radioCrystals([1375, 50000]);
-// radioCrystals([100, 101.9]);
-// radioCrystals(['100', '100.1', '101.9', '102']);
+radioCrystals([1000, 4000, 8100]);
+//radioCrystal([1375, 50000]);
+
+//radioCrystals([100, 101.9]);
+// radioCrystal(['100', '100.1', '101.9', '102']);
