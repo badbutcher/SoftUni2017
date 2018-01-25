@@ -9,7 +9,7 @@ function matchTheDates(input) {
 }
 
 matchTheDates(['I am born on 30-Dec-1994.',
-    'This is not date: 512-Jan-1996.',
+    'This is not date: 512-Ja  n-1996.',
     'My father is born on the 29-Jul-1955.',
 ]);
 
