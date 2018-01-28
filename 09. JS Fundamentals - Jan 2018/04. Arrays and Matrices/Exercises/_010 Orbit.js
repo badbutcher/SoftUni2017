@@ -8,16 +8,16 @@ function orbit(input) {
         matrix[i] = new Array(cols);
     }
 
-    for (let i = rows - 1; i >= 0; i--) {
-        for (let row = xStart - i; row < i + 1; row++) {
-            for (let col = yStart - i; col < i + 1; col++) {
-
-                matrix[row][col] = i;
-            }
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            let formula = Math.max(Math.abs(row - xStart), Math.abs(col - yStart));
+            matrix[row][col] = formula + 1;
         }
     }
 
-    console.log(matrix);
+    for (let value of matrix) {
+        console.log(value.join(' '));
+    }
 }
 
 orbit([5, 5, 2, 2]);
