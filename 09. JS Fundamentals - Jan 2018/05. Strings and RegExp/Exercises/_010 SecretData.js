@@ -1,21 +1,11 @@
 function secretData(input) {
-    let re = new RegExp(/(\*[A-Z][a-z]+[^\s]+)|(\+[0-9-]{10}$)|(\![A-Za-z0-9]+)|(\_[A-Za-z0-9]+)/, 'g');
     let result = [];
     for (let value of input) {
-        result.push(value.replace(re, function (u) {
-            if (u.match(/(\*[A-Z][a-z]+[^\s]+)/)) {
-                return '|'.repeat(u.length);
-            }
-            else if (u.match(/(\+[0-9-]{10}$)/)) {
-                return '|'.repeat(u.length);
-            }
-            else if (u.match(/(![A-Za-z0-9]+)/)) {
-                return '|'.repeat(u.length);
-            }
-            else if (u.match(/(_[A-Za-z0-9]+)/)) {
-                return '|'.repeat(u.length);
-            }
-        }))
+        result.push(value
+            .replace(/(\*[A-Z][A-Za-z]*(?=\s|$))/g, m => '|'.repeat(m.length))
+            .replace(/(\+[0-9-]{10}(?=\s|$))/g, m => '|'.repeat(m.length))
+            .replace(/(\![A-Za-z0-9]+(?=\s|$))/g, m => '|'.repeat(m.length))
+            .replace(/(\_[A-Za-z0-9]+(?=\s|$))/g, m => '|'.repeat(m.length)))
     }
 
     console.log(result.join('\n'));
