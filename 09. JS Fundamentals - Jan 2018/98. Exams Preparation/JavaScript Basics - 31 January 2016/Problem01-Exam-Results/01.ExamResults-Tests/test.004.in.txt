@@ -1,0 +1,8 @@
+Student1 JS-Basics 0 0
+Student2 JS-Basics 39 1000
+Student3 JS-Basics 30 15
+Student4 JS-Basics 10 2
+Student5 JS-Basics 20 2
+Student6 JS-Basics 9 2
+Student7 JS-Basics 9 2
+JS-Basics

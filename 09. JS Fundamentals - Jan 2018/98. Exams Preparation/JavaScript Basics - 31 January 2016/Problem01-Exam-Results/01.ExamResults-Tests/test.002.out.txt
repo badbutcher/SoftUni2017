@@ -1,0 +1,2 @@
+Student1: Exam - "C#-Advanced"; Points - 80; Grade - 6.00
+"C#-Advanced" average points -> 390

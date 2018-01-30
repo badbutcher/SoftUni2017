@@ -1,0 +1,14 @@
+<code>
+#gosho
+#pesho
+#madafaka
+</code>
+#1nval1d says yoo and I had to reply, so I
+typed 'yoo muthafucka' and then
+#another_invalid_ said gz gg gj so I had to go incognito
+and changed my user name to:
+**************!
+the code in question is:
+<code>
+Console.WriteLine("#nimoa");
+</code>

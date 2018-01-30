@@ -1,0 +1,9 @@
+#RoYaL: I'm not sure what you mean,
+but I am confident that I've written
+everything correctly. Ask #iordan_93
+and #pesho if you don't believe me
+<code>
+#trying to print stuff
+print("yoo")
+</code>
+pesho gosho

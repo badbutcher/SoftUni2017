@@ -1,0 +1,14 @@
+I'm not sure what you mean but <a href="/users/profile/show/RoYaL">RoYaL</a>
+says that I've written everything correctly. Ask 
+<a href="/users/profile/show/iordan_93">iordan_93</a> and *****
+if you don't believe me
+<code>
+#trying to print stuff
+print("yoo")
+</code>
+Yoo
+<code>
+#trying to print stuff
+#gosho
+print("yoo")
+</code>

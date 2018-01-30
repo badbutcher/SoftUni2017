@@ -1,0 +1,3 @@
+murdjo: Exam - "nekuv-typ-kurs"; Points - 20; Grade - 3.00
+pisna-mi-da-pravq-testove: Exam - "za-taq-zada4a"; Points - 95; Grade - 6.00
+"nekuv-typ-kurs" average points -> 100

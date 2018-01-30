@@ -1,0 +1,8 @@
+*****, *****, *****, *****, ******, ******
+aideee ***** i *****
+<code>
+function solve(input) {
+//zaebi tapanarshtinata #trygwamsi
+console.log(generateSolution(input));
+}
+</code>

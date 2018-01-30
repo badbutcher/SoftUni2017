@@ -1,0 +1,8 @@
+Student1: Exam - "Course1"; Points - 79.8; Grade - 5.99
+Student2: Exam - "Course1"; Points - 88.8; Grade - 6.00
+Student3: Exam - "Course2"; Points - 75; Grade - 5.75
+Student4: Exam - "Course3"; Points - 40; Grade - 4.00
+Student5: Exam - "Course4"; Points - 60; Grade - 5.00
+Student6 failed at "Course4"
+Student7 failed at "Course5"
+"Course4" average points -> 191.5

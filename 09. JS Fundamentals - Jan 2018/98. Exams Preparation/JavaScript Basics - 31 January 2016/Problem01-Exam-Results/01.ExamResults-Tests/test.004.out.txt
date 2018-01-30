@@ -1,0 +1,8 @@
+Student1 failed at "JS-Basics"
+Student2 failed at "JS-Basics"
+Student3 failed at "JS-Basics"
+Student4 failed at "JS-Basics"
+Student5 failed at "JS-Basics"
+Student6 failed at "JS-Basics"
+Student7 failed at "JS-Basics"
+"JS-Basics" average points -> 16.71

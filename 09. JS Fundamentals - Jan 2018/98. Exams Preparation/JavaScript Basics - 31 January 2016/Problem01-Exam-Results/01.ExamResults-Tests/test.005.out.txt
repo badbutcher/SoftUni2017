@@ -1,0 +1,101 @@
+Student1 failed at "JS-Basics"
+Student2 failed at "JS-Basics"
+Student3 failed at "JS-Basics"
+Student4 failed at "JS-Basics"
+Student5 failed at "JS-Basics"
+Student6 failed at "JS-Basics"
+Student7 failed at "JS-Basics"
+Student1 failed at "JS-Basics"
+Student2 failed at "JS-Basics"
+Student3 failed at "JS-Basics"
+Student4 failed at "JS-Basics"
+Student5 failed at "JS-Basics"
+Student6 failed at "JS-Basics"
+Student7 failed at "JS-Basics"
+Student1 failed at "JS-Basics"
+Student2 failed at "JS-Basics"
+Student3 failed at "JS-Basics"
+Student4 failed at "JS-Basics"
+Student5 failed at "JS-Basics"
+Student6 failed at "JS-Basics"
+Student7 failed at "JS-Basics"
+Student1 failed at "JS-Basics"
+Student2 failed at "JS-Basics"
+Student3 failed at "JS-Basics"
+Student4 failed at "JS-Basics"
+Student5: Exam - "JS-Basics"; Points - 22; Grade - 3.10
+Student6: Exam - "JS-Basics"; Points - 22.8; Grade - 3.14
+Student7: Exam - "JS-Basics"; Points - 23.6; Grade - 3.18
+Student1: Exam - "JS-Basics"; Points - 22.4; Grade - 3.12
+Student2: Exam - "JS-Basics"; Points - 1023.2; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 39; Grade - 3.95
+Student4: Exam - "JS-Basics"; Points - 26.8; Grade - 3.34
+Student5: Exam - "JS-Basics"; Points - 27.6; Grade - 3.38
+Student6: Exam - "JS-Basics"; Points - 28.4; Grade - 3.42
+Student7: Exam - "JS-Basics"; Points - 29.2; Grade - 3.46
+Student1: Exam - "JS-Basics"; Points - 28; Grade - 3.40
+Student2: Exam - "JS-Basics"; Points - 1028.8; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 44.6; Grade - 4.23
+Student4: Exam - "JS-Basics"; Points - 32.4; Grade - 3.62
+Student5: Exam - "JS-Basics"; Points - 33.2; Grade - 3.66
+Student6: Exam - "JS-Basics"; Points - 34; Grade - 3.70
+Student7: Exam - "JS-Basics"; Points - 34.8; Grade - 3.74
+Student1: Exam - "JS-Basics"; Points - 33.6; Grade - 3.68
+Student2: Exam - "JS-Basics"; Points - 1034.4; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 50.2; Grade - 4.51
+Student4: Exam - "JS-Basics"; Points - 38; Grade - 3.90
+Student5: Exam - "JS-Basics"; Points - 38.8; Grade - 3.94
+Student6: Exam - "JS-Basics"; Points - 40.4; Grade - 4.02
+Student7: Exam - "JS-Basics"; Points - 41.2; Grade - 4.06
+Student1: Exam - "JS-Basics"; Points - 40; Grade - 4.00
+Student2: Exam - "JS-Basics"; Points - 1040.8; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 56.6; Grade - 4.83
+Student4: Exam - "JS-Basics"; Points - 44.4; Grade - 4.22
+Student5: Exam - "JS-Basics"; Points - 45.2; Grade - 4.26
+Student6: Exam - "JS-Basics"; Points - 46; Grade - 4.30
+Student7: Exam - "JS-Basics"; Points - 46.8; Grade - 4.34
+Student1: Exam - "JS-Basics"; Points - 45.6; Grade - 4.28
+Student2: Exam - "JS-Basics"; Points - 1046.4; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 62.2; Grade - 5.11
+Student4: Exam - "JS-Basics"; Points - 50; Grade - 4.50
+Student5: Exam - "JS-Basics"; Points - 50.8; Grade - 4.54
+Student6: Exam - "JS-Basics"; Points - 51.6; Grade - 4.58
+Student7: Exam - "JS-Basics"; Points - 52.4; Grade - 4.62
+Student1: Exam - "JS-Basics"; Points - 51.2; Grade - 4.56
+Student2: Exam - "JS-Basics"; Points - 1052; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 67.8; Grade - 5.39
+Student4: Exam - "JS-Basics"; Points - 55.6; Grade - 4.78
+Student5: Exam - "JS-Basics"; Points - 56.4; Grade - 4.82
+Student6: Exam - "JS-Basics"; Points - 57.2; Grade - 4.86
+Student7: Exam - "JS-Basics"; Points - 58; Grade - 4.90
+Student4: Exam - "JS-Basics"; Points - 58.8; Grade - 4.94
+Student5: Exam - "JS-Basics"; Points - 60.4; Grade - 5.02
+Student6: Exam - "JS-Basics"; Points - 61.2; Grade - 5.06
+Student7: Exam - "JS-Basics"; Points - 62; Grade - 5.10
+Student1: Exam - "JS-Basics"; Points - 60.8; Grade - 5.04
+Student2: Exam - "JS-Basics"; Points - 1061.6; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 77.4; Grade - 5.87
+Student4: Exam - "JS-Basics"; Points - 65.2; Grade - 5.26
+Student5: Exam - "JS-Basics"; Points - 66; Grade - 5.30
+Student6: Exam - "JS-Basics"; Points - 66.8; Grade - 5.34
+Student7: Exam - "JS-Basics"; Points - 67.6; Grade - 5.38
+Student1: Exam - "JS-Basics"; Points - 66.4; Grade - 5.32
+Student2: Exam - "JS-Basics"; Points - 1067.2; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 83; Grade - 6.00
+Student4: Exam - "JS-Basics"; Points - 70.8; Grade - 5.54
+Student5: Exam - "JS-Basics"; Points - 71.6; Grade - 5.58
+Student6: Exam - "JS-Basics"; Points - 72.4; Grade - 5.62
+Student7: Exam - "JS-Basics"; Points - 73.2; Grade - 5.66
+Student1: Exam - "JS-Basics"; Points - 72; Grade - 5.60
+Student2: Exam - "JS-Basics"; Points - 1072.8; Grade - 6.00
+Student3: Exam - "JS-Basics"; Points - 88.6; Grade - 6.00
+Student4: Exam - "JS-Basics"; Points - 76.4; Grade - 5.82
+Student5: Exam - "JS-Basics"; Points - 77.2; Grade - 5.86
+Student6: Exam - "JS-Basics"; Points - 78; Grade - 5.90
+Student7: Exam - "JS-Basics"; Points - 78.8; Grade - 5.94
+Student3: Exam - "JS-Basics"; Points - 93.4; Grade - 6.00
+Student4: Exam - "JS-Basics"; Points - 81.2; Grade - 6.00
+Student5: Exam - "JS-Basics"; Points - 82; Grade - 6.00
+Student6: Exam - "JS-Basics"; Points - 26.6; Grade - 3.33
+Student7: Exam - "JS-Basics"; Points - 26.6; Grade - 3.33
+"JS-Basics" average points -> 195.82

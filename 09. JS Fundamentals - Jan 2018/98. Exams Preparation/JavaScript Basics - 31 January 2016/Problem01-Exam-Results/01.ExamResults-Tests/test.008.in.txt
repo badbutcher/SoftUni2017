@@ -1,0 +1,3 @@
+murdjo nekuv-typ-kurs 100 0
+pisna-mi-da-pravq-testove za-taq-zada4a 400 15
+nekuv-typ-kurs  

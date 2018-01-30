@@ -1,0 +1,6 @@
+Bankin failed at "HTML&CSS"
+RoYaL: Exam - "HTML5&CSS"; Points - 78; Grade - 5.90
+Bi0GaMe failed at "Java"
+Stamat: Exam - "HQC"; Points - 48; Grade - 4.40
+MINKA: Exam - "OOP"; Points - 56; Grade - 4.80
+"Java" average points -> 10

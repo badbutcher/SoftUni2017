@@ -1,0 +1,16 @@
+Student1: Exam - "C#-Advanced"; Points - 23; Grade - 3.15
+Student2: Exam - "C#-Advanced"; Points - 34.4; Grade - 3.72
+Student3: Exam - "C#-Advanced"; Points - 75.4; Grade - 5.77
+Student4 failed at "C#-Advanced"
+Student5: Exam - "C#-Advanced"; Points - 46.4; Grade - 4.32
+Student6: Exam - "C#-Advanced"; Points - 73.6; Grade - 5.68
+Student7: Exam - "C#-Advanced"; Points - 50.4; Grade - 4.52
+Student8: Exam - "C#-Advanced"; Points - 37.2; Grade - 3.86
+Student9 failed at "C#-Advanced"
+Student10 failed at "C#-Advanced"
+Student11: Exam - "C#-Advanced"; Points - 47.2; Grade - 4.36
+Student12: Exam - "C#-Advanced"; Points - 30; Grade - 3.50
+Student13 failed at "C#-Advanced"
+Student14: Exam - "C#-Advanced"; Points - 90; Grade - 6.00
+Student15: Exam - "C#-Advanced"; Points - 30; Grade - 3.50
+"C#-Advanced" average points -> 167.07

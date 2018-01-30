@@ -1,0 +1,8 @@
+Student1 Course1 399 0
+Student2 Course1 399 9
+Student3 Course2 300 15
+Student4 Course3 190 2
+Student5 Course4 290 2
+Student6 Course4 93 2
+Student7 Course5 99 2
+Course4

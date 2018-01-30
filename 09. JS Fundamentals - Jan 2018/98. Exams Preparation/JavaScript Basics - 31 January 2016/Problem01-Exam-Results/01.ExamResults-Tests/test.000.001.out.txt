@@ -1,0 +1,8 @@
+Pesho: Exam - "C#-Advanced"; Points - 23; Grade - 3.15
+Gosho: Exam - "Java-Basics"; Points - 34.4; Grade - 3.72
+Tosho: Exam - "HTML&CSS"; Points - 75.4; Grade - 5.77
+Minka failed at "C#-Advanced"
+Stanka: Exam - "C#-Advanced"; Points - 46.4; Grade - 4.32
+Kircho: Exam - "C#-Advanced"; Points - 60; Grade - 5.00
+Niki: Exam - "C#-Advanced"; Points - 90; Grade - 6.00
+"C#-Advanced" average points -> 202.8

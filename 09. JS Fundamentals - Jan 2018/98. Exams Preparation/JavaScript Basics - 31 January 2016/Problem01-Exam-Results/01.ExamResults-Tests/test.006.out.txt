@@ -1,0 +1,6 @@
+EDUU: Exam - "JS-Basics"; Points - 78.4; Grade - 5.92
+RoYaL: Exam - "HTML5"; Points - 34.2; Grade - 3.71
+ApovBerger failed at "OOP"
+Stamat: Exam - "OOP"; Points - 48; Grade - 4.40
+MINKA: Exam - "OOP"; Points - 56; Grade - 4.80
+"OOP" average points -> 140
