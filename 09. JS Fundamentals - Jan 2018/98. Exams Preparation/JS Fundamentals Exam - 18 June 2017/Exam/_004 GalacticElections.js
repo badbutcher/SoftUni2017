@@ -1,0 +1,4 @@
+function galacticElections(input) {
+
+}
+
