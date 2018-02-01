@@ -11,6 +11,7 @@ function countWordsWithMaps(input) {
             result.set(obj, v);
         }
     }
+
     let allWords = Array.from(result.keys()).sort();
     //allWords.forEach(w => console.log(`'${w}' -> ${result.get(w)} times`));
 
