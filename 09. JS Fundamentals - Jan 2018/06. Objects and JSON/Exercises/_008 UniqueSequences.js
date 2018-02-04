@@ -1,23 +1,18 @@
 function uniqueSequences(input) {
-    let result = [];
-    let re = new RegExp(/ \/ /, 'g');
-    for (let value of input) {
-        let data = value.split(re);
-        let name = data[0];
-        let level = Number(data[1]);
-        let items = [];
-        if (data.length > 2) {
-            items = data[2].split(', ');
-        }
+    let customSort = (arrA, arrB, map) => map.get(arrA) - map.get(arrB);
+    let arrays = new Map;
 
-        let hero = {name: name, level: level, items: items};
-        result.push(hero);
+    for (let line of input) {
+        let array = JSON.parse(line).map(Number).sort((a, b) => b - a);
+        let toStore = `[${array.join(', ')}]`;
+        if (!arrays.has(toStore))
+            arrays.set(toStore, array.length);
     }
 
-    console.log(JSON.stringify(result));
+    console.log([...arrays.keys()].sort((a, b) => customSort(a, b, arrays)).join('\n'));
 }
 
-uniqueSequences(['Isacc / 25 / ',
-    'Derek / 12 / BarrelVest, DestructionSword',
-    'Hes / 1 / Desolator, Sentinel, Antara'
-]);
+uniqueSequences([
+    '[-3, -2, -1, 0, 1, 2, 3, 4]',
+    '[10, 1, -17, 0, 2, 13]',
+    '[4, -3, 3, -2, 2, -1, 1, 0]']);
