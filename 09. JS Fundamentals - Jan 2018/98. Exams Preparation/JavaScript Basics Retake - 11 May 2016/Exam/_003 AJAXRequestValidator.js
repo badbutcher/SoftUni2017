@@ -1,7 +1,8 @@
 function ajaxRequestValidator(input) {
     let methodRegex = new RegExp(/^Method:\s+GET|POST|PUT|DELETE$/, 'g');
     let credentialsRegex = new RegExp(/^Credentials:\s+(Basic |Bearer )[A-Za-z0-9]+$/, 'g');
-    let contentRegeex = new RegExp(/^Content: [A-Za-z0-9\.]+$/, 'g')
+    let contentRegex = new RegExp(/^Content: [A-Za-z0-9\.]+$/, 'g')
+
 }
 
 ajaxRequestValidator(['Method: GET',
