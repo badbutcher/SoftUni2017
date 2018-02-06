@@ -17,7 +17,9 @@ function galacticElections(input) {
         election.get(system).set(candidate, votes + election.get(system).get(candidate))
     }
 
-    console.log(election);
+    for (let obj of election) {
+        console.log(Object.values(obj));
+    }
 }
 
 galacticElections([ { system: 'Theta', candidate: 'Flying Shrimp', votes: 10 },
