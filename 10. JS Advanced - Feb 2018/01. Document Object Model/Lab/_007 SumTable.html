@@ -23,3 +23,16 @@
     </tbody>
 </table>
 <button onclick="sum()">Sum</button>
+
+<script>
+    function sum() {
+        let sum = 0;
+        let result = document.getElementById('sum');
+        let tds = document.querySelectorAll('td');
+        for (let i = 1; i < tds.length - 2; i += 2) {
+            sum += Number(tds[i].textContent);
+        }
+
+        result.innerHTML = sum;
+    }
+</script>

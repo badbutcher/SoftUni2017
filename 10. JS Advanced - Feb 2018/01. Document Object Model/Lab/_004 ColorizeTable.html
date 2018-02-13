@@ -23,6 +23,11 @@
 <button onclick="colorize()">Colorize</button>
 <script>
     function colorize() {
-        // TODO
+        let items = document.querySelectorAll('tr');
+        for (let i = 0; i < items.length; i++) {
+            if (i % 2 === 1) {
+                items[i].style.backgroundColor = 'teal';
+            }
+        }
     }
 </script>
