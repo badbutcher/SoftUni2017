@@ -5,7 +5,17 @@
        onclick="addItem()">
 <script>
     function addItem() {
+        let items = document.getElementById('items');
+        let itemToAdd = document.getElementById('newText').value;
+        let li = document.createElement('li');
+        li.innerHTML = itemToAdd + ' <a href="#">[Delete]</a>';
+        li.children[0].addEventListener('click', deleteItem);
+        items.appendChild(li);
+
         function deleteItem() {
+            let li = this.parentNode;
+            let ul = li.parentNode;
+            ul.removeChild(li);
         }
     }
 </script>

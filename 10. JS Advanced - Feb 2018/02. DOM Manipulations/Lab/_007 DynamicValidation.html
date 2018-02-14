@@ -12,7 +12,16 @@
 <input id="email" type="text"/>
 <script>
     function validate() {
-        // TODO
+        let re = new RegExp(/^([\w\-.]+)@([a-z]+)(\.[a-z]+)+$/, 'g');
+        let email = document.getElementById('email');
+        email.addEventListener('change', function () {
+            if (re.test(email.value)) {
+                email.className = ''
+            }
+            else {
+                email.className = 'error'
+            }
+        })
     }
 </script>
 </body>

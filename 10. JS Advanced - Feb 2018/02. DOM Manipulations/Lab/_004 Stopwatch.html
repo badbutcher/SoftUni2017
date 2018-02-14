@@ -3,4 +3,38 @@
 <button id="stopBtn" disabled="true">Stop</button>
 <script>window.onload = function () {
     stopwatch();
-}</script>
+};
+
+function stopwatch() {
+    let interval;
+    let totalSeconds;
+    let item = document.getElementById('time');
+    let startButton = document.getElementById('startBtn');
+    let endButton = document.getElementById('stopBtn');
+    startButton.addEventListener('click', start);
+    endButton.addEventListener('click', end);
+
+    function start() {
+        totalSeconds = 0;
+        interval = setInterval(addTime, 1000);
+
+        startButton.disabled = true;
+        endButton.disabled = false;
+    }
+
+    function end() {
+        clearInterval(interval);
+        startButton.disabled = false;
+        endButton.disabled = true;
+    }
+
+    function addTime() {
+        totalSeconds++;
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = totalSeconds % 60;
+        let timeFormat = ('0' + minutes).substr(-2) + ':' + ('0' + seconds).substr(-2);
+        item.textContent = timeFormat;
+    }
+}
+</script>
+

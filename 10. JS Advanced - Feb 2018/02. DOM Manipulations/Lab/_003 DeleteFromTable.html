@@ -23,3 +23,22 @@
 Email: <input type="text" name="email"/>
 <button onclick="deleteByEmail()">Delete</button>
 <div id="result"/>
+
+<script>
+    function deleteByEmail() {
+        let emailToDelete = document.getElementsByName('email')[0].value.trim();
+        let result = document.getElementById('result');
+        let table = document.querySelectorAll('#customers td');
+        for (let i = 1; i < table.length; i++) {
+            let email = table[i].textContent;
+            if (email === emailToDelete) {
+                let row = table[i].parentNode;
+                row.parentNode.removeChild(row);
+                result.textContent = 'Deleted.';
+                return;
+            }
+        }
+
+        result.textContent = 'Not found.'
+    }
+</script>

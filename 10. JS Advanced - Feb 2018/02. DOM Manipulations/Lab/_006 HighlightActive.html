@@ -31,7 +31,16 @@
 </div>
 <script>
     function focus() {
-        // TODO
+        let inputs = document.getElementsByTagName('input');
+        for (let obj of inputs) {
+            obj.addEventListener('focus', function () {
+                obj.parentNode.className = 'focused'
+            });
+
+            obj.addEventListener('blur', function () {
+                obj.parentNode.className = ''
+            })
+        }
     }
 </script>
 </body>
