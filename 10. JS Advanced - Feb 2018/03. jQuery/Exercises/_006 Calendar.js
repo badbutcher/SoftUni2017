@@ -1,3 +1,3 @@
-function calendar() {
-    // TODO
+function calendar(day, month, year) {
+
 }
