@@ -1,12 +1,23 @@
-function functionalSum(input) {
+let functionalSum = (function () {
     let sum = 0;
 
-    function add(num) {
+    return function add(num) {
         sum += num;
-        return sum;
+        add.toString = () => sum;
+        return add;
     }
+})();
 
-    return add;
-}
+// function add(num) {
+//     let sum = num;
+//
+//     function calc(num2) {
+//         sum += num2;
+//         return calc;
+//     }
+//
+//     calc.toString = function() { return sum };
+//     return calc;
+// }
 
-functionalSum(1)(6)(-3);
+console.log(Number(functionalSum(1)(6)(-3)));

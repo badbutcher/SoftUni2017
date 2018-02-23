@@ -1,34 +1,26 @@
 function argumentInfo(input) {
-    let items = [{
-        string: 0,
-        number: 0,
-        function: 0,
-    }];
+    let items = {};
 
     for (let i = 0; i < arguments.length; i++) {
         let data = arguments[i];
         let type = typeof data;
-        if (type === 'string') {
-            console.log(`${type}: ${data}`);
-        } else if (type === 'number') {
-            console.log(`${type}: ${data}`);
-        } else if (type === 'function') {
-            console.log(`${type}: ${data}`);
-        }else if (type === 'object') {
-            console.log(`${type}: ${data}`);
+        if (!items[type]) {
+            items[type] = 1;
+        } else {
+            items[type]++;
         }
 
-        items[0][type]++;
+        console.log(`${type}: ${data}`);
     }
 
-    let sorted = Object.keys(items[0]).sort((a, b) => items[0][b] - items[0][a]);
+    let sorted = Object.keys(items).sort((a, b) => items[b] - items[a]);
 
     for (let obj of sorted) {
-        let count = items[0][obj];
+        let count = items[obj];
         if (count > 0) {
             console.log(`${obj} = ${count}`);
         }
     }
 }
 
-argumentInfo({ name: 'bob'}, 3.333, 9.999);
+argumentInfo({name: 'bob'}, 3.333, 9.999);
