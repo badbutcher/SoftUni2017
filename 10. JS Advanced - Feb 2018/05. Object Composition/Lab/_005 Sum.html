@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="_005 Sum.js"></script>
 </head>
 <body>
-<input type="text" id="num1" />
-<input type="text" id="num2" />
-<input type="text" id="result" readonly />
+<input type="text" id="num1"/>
+<input type="text" id="num2"/>
+<input type="text" id="result" readonly/>
 <br>
-<button id="sumButton">
-    Sum</button>
-<button id="subtractButton">
-    Subtract</button>
+<button id="sumButton" onclick="rez()">
+    Sum
+</button>
+<button id="subtractButton" onclick="sub()">
+    Subtract
+</button>
+<script>
+    let obj = sum();
+    function rez() {
+        obj.init('#num1', '#num2', '#result');
+        obj.add()
+    }
+
+    function sub() {
+        obj.init('#num1', '#num2', '#result');
+        obj.subtract()
+    }
+</script>
 </body>
 </html>
