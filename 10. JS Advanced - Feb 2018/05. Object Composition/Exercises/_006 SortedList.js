@@ -1,40 +1,43 @@
-(function sortedList() {
-    Array.prototype.add = function (element) {
+(function result() {
+    let arr = {};
+
+    String.prototype.add = function (element) {
         sort();
-        this.push(element);
-        return this;
+        return arr.push(element);
     };
 
-    Array.prototype.remove = function (index) {
+    String.prototype.remove = function(index) {
         sort();
-        this.splice(index, 1);
-        return this;
+        return arr.splice(index, 1);
     };
 
-    Array.prototype.get = function (index) {
+    String.prototype.get = function(index) {
         sort();
-        console.log(this[index]);
-        return this;
+        return arr[index];
     };
 
-    Array.prototype.size = function () {
+    String.prototype.size = function() {
         sort();
-        console.log(this.length);
-        return this;
+        return arr.length;
     };
 
     function sort() {
-        console.log(this);
-        this.sort()
+        arr = arr.sort(function (a, b) {
+            return a - b;
+        })
     }
 })();
 
-let numbers = [5, 4, 3, 2, 1];
-numbers = numbers.add(6);
-console.log(numbers);
-numbers = numbers.remove(5);
-console.log(numbers);
-numbers = numbers.get(3);
-console.log(numbers);
-numbers = numbers.size();
-console.log(numbers);
+let str = res;
+str = str.add(10);
+str = str.add(10);
+str = str.add(10);
+console.log(str);
+str = str.add(25);
+console.log(str);
+str = str.remove(0);
+console.log(str);
+str = str.get(2);
+console.log(str);
+str = str.size();
+console.log(str);
