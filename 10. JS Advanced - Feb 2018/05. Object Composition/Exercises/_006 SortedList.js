@@ -1,43 +1,44 @@
-(function result() {
-    let arr = {};
+function result() {
+    let data = (function () {
+        let arr = [];
+        let size = 0;
+        let add = function (element) {
+            arr.sort(sort);
+            arr.push(element);
+            size++;
+            return arr;
+        };
 
-    String.prototype.add = function (element) {
-        sort();
-        return arr.push(element);
-    };
+        let remove = function (index) {
+            if (index >= 0 && index < arr.length) {
+                arr.sort(sort);
+                arr.splice(index, 1);
+                size--;
+                return arr;
+            }
+        };
 
-    String.prototype.remove = function(index) {
-        sort();
-        return arr.splice(index, 1);
-    };
+        let get = function (index) {
+            if (index >= 0 && index < arr.length) {
+                return arr[index];
+            }
+        };
 
-    String.prototype.get = function(index) {
-        sort();
-        return arr[index];
-    };
+        function sort() {
+            arr.sort(function (a, b) {
+                return a - b;
+            })
+        }
 
-    String.prototype.size = function() {
-        sort();
-        return arr.length;
-    };
+        return {add, remove, get, size}
+    })();
 
-    function sort() {
-        arr = arr.sort(function (a, b) {
-            return a - b;
-        })
-    }
-})();
+    return data;
+}
 
-let str = res;
-str = str.add(10);
-str = str.add(10);
-str = str.add(10);
-console.log(str);
-str = str.add(25);
-console.log(str);
-str = str.remove(0);
-console.log(str);
-str = str.get(2);
-console.log(str);
-str = str.size();
-console.log(str);
+let str = result();
+str.add(10);
+str.add(25);
+str.remove(0);
+str.get(2);
+console.log(str.size);

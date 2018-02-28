@@ -1,6 +1,7 @@
 let expect = require("chai").expect;
+const sum = require('../_004 SumOfNumbers.js');
 
-describe("sum test", function () {
+describe("Sum test", function () {
     it("Should return 3 for [1, 2]", function () {
         expect(sum([1, 2])).to.be.equal(3);
     });
@@ -18,11 +19,3 @@ describe("sum test", function () {
     });
 });
 
-function sum(arr) {
-    let sum = 0;
-    for (let num of arr) {
-        sum += Number(num);
-    }
-
-    return sum;
-}
