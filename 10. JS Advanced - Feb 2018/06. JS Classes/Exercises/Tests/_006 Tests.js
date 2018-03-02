@@ -1,8 +1,13 @@
-let expect = require('chai').expect;
-const isSymmetric = require('../_006 ArmageDOM.js');
+let chai = require('chai');
+let jsdom = require('jsdom-global')();
+let $ = require('jquery');
+let expect = chai.expect;
+const nuke = require('../_006 ArmageDOM.js');
 
-describe('Symmetry tests', function () {
-    it('Should return falss', function () {
-        expect(isSymmetric([1, 2])).to.be.equal(false);
+describe('Math enforcer tests', function () {
+    describe('AddFive', function () {
+        it('Should return undefined', function () {
+            expect(n.nuke('asd')).to.be.equal(undefined);
+        });
     });
 });

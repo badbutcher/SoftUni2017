@@ -3,17 +3,17 @@ function result() {
         let arr = [];
         let size = 0;
         let add = function (element) {
-            arr.sort(sort);
             arr.push(element);
-            size++;
+            this.size++;
+            sort();
             return arr;
         };
 
         let remove = function (index) {
             if (index >= 0 && index < arr.length) {
-                arr.sort(sort);
                 arr.splice(index, 1);
-                size--;
+                this.size--;
+                sort();
                 return arr;
             }
         };
