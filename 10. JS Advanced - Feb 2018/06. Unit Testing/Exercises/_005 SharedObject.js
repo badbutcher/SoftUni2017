@@ -1,3 +1,5 @@
+let $ = require('jquery');
+
 let sharedObject = {
     name: null,
     income: null,

@@ -1,3 +1,5 @@
+let $ = require('jquery');
+
 function nuke(selector1, selector2) {
     if (selector1 === selector2) {
         return;

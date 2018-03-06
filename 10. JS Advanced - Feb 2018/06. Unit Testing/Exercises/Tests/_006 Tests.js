@@ -2,10 +2,7 @@ let chai = require('chai');
 let jsdom = require('jsdom-global')();
 let $ = require('jquery');
 let expect = chai.expect;
-let nuke = function nuke(selector1, selector2) {
-    if (selector1 === selector2) return;
-    $(selector1).filter(selector2).remove();
-};
+let nuke = require('../_006 ArmageDOM');
 
 describe('Armagedom Unit Tests', function () {
     let oldHtml;
