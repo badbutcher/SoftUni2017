@@ -13,8 +13,8 @@ function result() {
     class SocialMediaPost extends Post {
         constructor(title, content, likes, dislikes) {
             super(title, content);
-            this.likes = likes;
-            this.dislikes = dislikes;
+            this.likes = Number(likes);
+            this.dislikes = Number(dislikes);
             this.comments = [];
         }
 
@@ -40,7 +40,7 @@ function result() {
     class BlogPost extends Post {
         constructor(title, content, views) {
             super(title, content);
-            this.views = views;
+            this.views = Number(views);
         }
 
         view() {

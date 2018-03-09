@@ -2,7 +2,7 @@ function result() {
     class Balloon {
         constructor(color, gasWeight) {
             this.color = color;
-            this.gasWeight = gasWeight;
+            this.gasWeight = Number(gasWeight);
         }
     }
 
@@ -10,7 +10,7 @@ function result() {
         constructor(color, gasWeight, ribbonColor, ribbonLength) {
             super(color, gasWeight);
             this.ribbonColor = ribbonColor;
-            this.ribbonLength = ribbonLength;
+            this.ribbonLength = Number(ribbonLength);
             this._ribbon = {
                 color: this.ribbonColor,
                 length: this.ribbonLength

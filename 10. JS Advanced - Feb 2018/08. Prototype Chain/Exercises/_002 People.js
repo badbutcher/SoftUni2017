@@ -6,7 +6,7 @@ function result() {
             }
 
             this.name = name;
-            this.age = age;
+            this.age = Number(age);
             this.salary = 0;
             this.tasks = [];
         }
