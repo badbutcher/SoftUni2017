@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>List Items: Up / Down</title>
+    <style>
+        button {
+            margin: 3px 0 3px 8px
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="main"></div>
+<script>
+    function listBuilder(selector) {
+        return {
+            createNewList: function () {
+                $(selector).empty();
+                $(selector).append('<ul>');
+            },
+            addItem: function (text) {
+                let li =$(`<li>`).text(text);
+                li.append($(`<button>`).on('click', this.moveUp).text('Up'));
+                li.append($(`<button>`).on('click', this.moveDown).text('Down'));
+                $(selector + " ul").append(li);
+            },
+            moveUp: function () {
+                let li = $(this).parent();
+                li.insertBefore(li.prev());
+            },
+            moveDown: function () {
+                let li = $(this).parent();
+                li.insertAfter(li.next());
+            },
+        };
+    }
+
+    function listBuilder(selector) {
+        let data = (function () {
+            let createNewList = function () {
+                $(selector).empty();
+                $(selector).append('<ul>');
+            };
+
+            let addItem = function (text) {
+                $(selector).find('ul').append($(`<li>`).text(text)
+                    .append($(`<button>`).on('click', this.moveUp).text('Up'))
+                    .append($(`<button>`).on('click', this.moveDown).text('Down')));
+            };
+
+            function moveUp() {
+                let li = $(this).parent();
+                li.insertBefore(li.prev());
+
+            }
+
+            function moveDown() {
+                let li = $(this).parent();
+                li.insertAfter(li.next());
+            }
+
+            return {createNewList, addItem, moveUp, moveDown}
+        })();
+
+        return data;
+    }
+</script>
+<script>
+    $(function () {
+        let builder = listBuilder("#main");
+        builder.createNewList();
+        builder.addItem("Sofia");
+        builder.addItem("Varna");
+        builder.addItem("Sofia <new>");
+        builder.addItem("Pleven");
+    });
+</script>
+</body>
+</html>
