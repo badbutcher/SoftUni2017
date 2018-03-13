@@ -6,7 +6,8 @@ class Dialog {
 
 
     addInput(label, name, type) {
-
+        let labelDiv = $('div').addClass(label);
+        let dialogDiv = $('div').addClass(label);
     }
 
     render() {
@@ -18,7 +19,6 @@ class Dialog {
     <button>OK</button>
     <button>Cancel</button>
   </div>
-</div>		
-`;
+</div>`;
     }
 }
