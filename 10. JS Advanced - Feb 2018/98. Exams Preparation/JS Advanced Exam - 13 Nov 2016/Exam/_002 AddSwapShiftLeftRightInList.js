@@ -32,3 +32,5 @@ function createList() {
         }
     };
 }
+
+module.exports = createList;
