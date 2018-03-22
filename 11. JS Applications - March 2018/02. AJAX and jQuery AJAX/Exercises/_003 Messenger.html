@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+
+        #author, #content {
+            width: 30em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="main">
+    <textarea id="messages" cols="80" rows="12" disabled="true"></textarea>
+    <div id="controls">
+        <label for="author">Name: </label><input id="author" type="text"><br>
+        <label for="content">Message: </label><input id="content" type="text">
+        <input id="submit" type="button" value="Send">
+        <input id="refresh" type="button" value="Refresh">
+    </div>
+</div>
+<script>
+    (function attachEvents() {
+        const URL = 'https://messenger-e4690.firebaseio.com/';
+        let messages = $('#messages');
+
+        let refreshButton = $('#refresh');
+        refreshButton.on('click', refresh);
+
+        let addButton = $('#submit');
+        let author = $('#author');
+        let content = $('#content');
+        addButton.on('click', add);
+
+        function add() {
+            let messageData = JSON.stringify({
+                'author': `${author.val()}`,
+                'content': `${content.val()}`,
+                'timestamp': `${Date.now()}`
+            });
+
+            $.ajax({
+                method: 'POST',
+                url: URL + 'messenger' + '.json',
+                data: messageData,
+                success: addComment,
+                error: handleError
+            });
+
+            function addComment() {
+                messages.append(`\n${author.val()}: ${content.val()}`);
+                content.val('');
+            }
+        }
+
+        function refresh() {
+            $.ajax({
+                method: 'GET',
+                url: URL + 'messenger' + '.json',
+                success: downloadDb,
+                error: handleError
+            });
+
+            function downloadDb(res) {
+                messages.empty();
+                let result = [];
+                for (let obj in res) {
+                    let data = res[obj];
+                    result.push(`${data.author}: ${data.content}`);
+                }
+
+                messages.append(result.join('\n'))
+            }
+        }
+
+        function handleError(err) {
+            console.log(err);
+        }
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Schedule</title>
+    <style>
+        #schedule {
+            text-align: center;
+            width: 400px;
+        }
+
+        input {
+            width: 120px;
+        }
+
+        #info {
+            background-color: aquamarine;
+            border: 1px solid black;
+            margin: 0.25em;
+        }
+
+        .info {
+            font-size: 1.5em;
+            padding: 0.25em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="schedule">
+    <div id="info"><span class="info">Not Connected</span></div>
+    <div id="controls">
+        <input id="depart" value="Depart" type="button" onclick="result.depart()">
+        <input id="arrive" value="Arrive" type="button" onclick="result.arrive()" disabled="true">
+    </div>
+</div>
+<script>
+    function solve() {
+        let departButton = $('#depart');
+        let arriveButton = $('#arrive');
+        let textField = $('#info').find('span');
+        const URL = 'https://judgetests.firebaseio.com/schedule/';
+        let arrivedAt = 'depot';
+        let nextStop = 'depot';
+
+        let data = (function () {
+            function depart() {
+                $.ajax({
+                    method: 'GET',
+                    url: URL + nextStop + '.json',
+                    success: getDeparting,
+                    error: handleError
+                });
+
+                departButton.prop('disabled', true);
+                arriveButton.prop('disabled', false);
+            }
+
+            function arrive() {
+                $.ajax({
+                    method: 'GET',
+                    url: URL + nextStop + '.json',
+                    success: getArriving,
+                    error: handleError
+                });
+
+                departButton.prop('disabled', false);
+                arriveButton.prop('disabled', true);
+            }
+
+            function getDeparting(res) {
+                textField.text(`Next stop ${res.name}`);
+                arrivedAt = res.name;
+            }
+
+            function getArriving(res) {
+                textField.text(`Arriving at ${arrivedAt}`);
+                nextStop = res.next;
+            }
+
+            function handleError(err) {
+                textField.text('Error');
+            }
+
+            return {depart, arrive, getDeparting, handleError};
+        })();
+
+        return data;
+    }
+
+    let result = solve();
+</script>
+</body>
+</html>

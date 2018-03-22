@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phonebook</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<h1>Phonebook</h1>
+<ul id="phonebook"></ul>
+<button id="btnLoad">Load</button>
+
+<h2>Create Contact</h2>
+Person: <input type="text" id="person"/>
+<br>
+Phone: <input type="text" id="phone"/>
+<br>
+<button id="btnCreate">Create</button>
+<script>
+    (function attachEvents() {
+        const URL = 'https://phonebook-7013f.firebaseio.com/phonebook';
+        $('#btnLoad').on('click', downloadNumbersAjax);
+        $('#btnCreate').on('click', createNumberAjax);
+        let phonebook = $('#phonebook');
+
+        function downloadNumbersAjax() {
+            phonebook.empty();
+            $.ajax({
+                method: 'GET',
+                url: URL + '.json',
+                success: downloadNumber,
+                error: handleError
+            });
+
+            function downloadNumber(res) {
+                for (let obj in res) {
+                    liElement(res[obj].person, res[obj].phone, obj);
+                }
+            }
+        }
+
+        function createNumberAjax() {
+            let person = $('#person');
+            let phone = $('#phone');
+            let data = JSON.stringify({'person': person.val(), 'phone': phone.val()});
+            $.ajax({
+                method: 'POST',
+                url: URL + '.json',
+                data: data,
+                success: createNumber,
+                error: handleError
+            });
+
+            function createNumber(res) {
+                liElement(person.val(), phone.val(), res.name);
+                person.val('');
+                phone.val('');
+            }
+        }
+
+        function liElement(name, phone, key) {
+            let li = $('<li>').text(`${name}: ${phone}`);
+            let deleteButton = $('<button>').text('[Delete]').on('click', () => deleteNumberAjax(li, key));
+            phonebook.append(li.append(deleteButton));
+        }
+
+        function deleteNumberAjax(li, key) {
+            $.ajax({
+                method: 'DELETE',
+                url: URL + '/' + key + '.json',
+                success: () => $(li).remove(),
+                error: handleError
+            })
+        }
+
+        function handleError(err) {
+            console.log(err);
+        }
+    })();
+</script>
+</body>
+</html>
