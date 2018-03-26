@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+<button id="reload">Reload</button>
+<br>
+<label for="title">Title</label>
+<input id="title" type="text">
+<label for="author">Author</label>
+<input id="author" type="text">
+<label for="isbn">ISBN</label>
+<input id="isbn" type="text">
+<button id="addBook">Add book</button>
+
+
+<table id="mainTable">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Actions</th>
+    </tr>
+</table>
+</body>
+<script src="./_003%20CreateBooksRESTService.js"></script>
+<script>
+    loadData();
+</script>
+</html>
