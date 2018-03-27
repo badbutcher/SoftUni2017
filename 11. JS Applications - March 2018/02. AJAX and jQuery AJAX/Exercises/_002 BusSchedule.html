@@ -57,13 +57,7 @@
             }
 
             function arrive() {
-                $.ajax({
-                    method: 'GET',
-                    url: URL + nextStop + '.json',
-                    success: getArriving,
-                    error: handleError
-                });
-
+                textField.text(`Arriving at ${arrivedAt}`);
                 departButton.prop('disabled', false);
                 arriveButton.prop('disabled', true);
             }
@@ -71,10 +65,6 @@
             function getDeparting(res) {
                 textField.text(`Next stop ${res.name}`);
                 arrivedAt = res.name;
-            }
-
-            function getArriving(res) {
-                textField.text(`Arriving at ${arrivedAt}`);
                 nextStop = res.next;
             }
 
