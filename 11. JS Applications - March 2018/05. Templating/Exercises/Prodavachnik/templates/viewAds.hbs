@@ -1,0 +1,29 @@
+<h1 class="titleForm">Advertisements</h1>
+<div id="ads" class="ads">
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Publisher</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Date Published</th>
+            <th>Action</th>
+        </tr>
+        {{#each ads}}
+            <tr id="{{_id}}">
+                <td>{{title}}</td>
+                <td>{{publisher}}</td>
+                <td>{{description}}</td>
+                <td>{{price}}</td>
+                <td>{{datePublished}}</td>
+                <td>
+                    {{#if isAuthor}}
+                        <a href="#" class="deleteAd">[Delete]</a>
+                        <a href="#" class="editAd">[Edit]</a>
+                        <a href="#" class="viewAd">[View Ad]</a>
+                    {{/if}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
