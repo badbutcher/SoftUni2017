@@ -1,5 +1,5 @@
 $(() => {
-    const app = Sammy('.content', function () {
+    const app = Sammy('#container', function () {
         this.use('Handlebars', 'hbs');
         this.get('#/index.html', displayHome);
         this.get('#/home', displayHome);
@@ -11,7 +11,7 @@ $(() => {
 
 
         function displayHome(ctx) {
-            ctx.loggedIn = sessionStorage.getItem('authtoken') !== null;
+            ctx.isAuth = sessionStorage.getItem('authtoken') !== null;
             ctx.username = sessionStorage.getItem('username');
 
             ctx.loadPartials({
@@ -43,7 +43,6 @@ $(() => {
                         auth.saveSession(userInfo);
                         auth.showInfo('User registration successful.');
                         ctx.redirect('#/catalog');
-                        //displayCatalog(ctx);
                     }).catch(auth.handleError);
             }
         }
@@ -57,7 +56,6 @@ $(() => {
                     auth.saveSession(userInfo);
                     auth.showInfo('Login successful.');
                     ctx.redirect('#/catalog');
-                    //displayCatalog(ctx);
                 }).catch(auth.handleError);
         }
 
@@ -67,13 +65,13 @@ $(() => {
                     sessionStorage.clear();
                     auth.showInfo('Logout successful.');
                     ctx.redirect('#/home');
-                    //displayHome(ctx)
-                })
+                }).catch(auth.handleError);
         }
 
         function displayCatalog(ctx) {
-            ctx.loggedIn = sessionStorage.getItem('authtoken') !== null;
+            ctx.isAuth = sessionStorage.getItem('authtoken') !== null;
             ctx.username = sessionStorage.getItem('username');
+
             let index = 1;
             service.loadPosts()
                 .then(function (posts) {
@@ -116,7 +114,6 @@ $(() => {
             else return '';
         }
     }
-
 
     app.run();
 });

@@ -1,12 +1,15 @@
 {{> header}}
-{{> navigation}}
-<section id="viewCatalog">
-    <div class="posts">
-        {{#each posts}}
-            {{> post}}
-        {{else}}
-            <span>No posts yet.</span>
-        {{/each}}
-    </div>
-</section>
+
+<div class="content">
+    {{> navigation}}
+    <section id="viewCatalog">
+        <div class="posts">
+            {{#each posts}}
+                {{> post}}
+            {{else}}
+                <span>No posts yet.</span>
+            {{/each}}
+        </div>
+    </section>
+</div>
 {{> footer}}

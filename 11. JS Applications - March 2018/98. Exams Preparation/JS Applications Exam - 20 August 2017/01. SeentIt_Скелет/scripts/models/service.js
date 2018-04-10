@@ -1,6 +1,5 @@
 let service = (() => {
     function loadPosts() {
-        // Request teams from db
         return requester.get('appdata', 'posts', 'kinvey');
     }
 
