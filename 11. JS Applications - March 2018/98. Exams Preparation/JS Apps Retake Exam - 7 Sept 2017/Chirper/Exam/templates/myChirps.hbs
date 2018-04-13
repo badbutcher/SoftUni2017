@@ -1,0 +1,24 @@
+{{> header}}
+{{> navigation}}
+
+<section id="viewMe">
+    <div class="content">
+        <div class="chirper">
+
+            <h2 class="titlebar">{{username}}</h2>
+
+            <form id="formSubmitChirpMy" method="post" action="#/chirp" class="chirp-form">
+                <textarea name="text" class="chirp-input"></textarea>
+                <input class="chirp-submit" id="btnSubmitChirpMy" value="Chirp" type="submit">
+            </form>
+
+            <div id="myStats" class="user-details">
+                <span>{{myChirps}} chirps</span> | <span>{{following}} following</span> | <span>{{followers}} followers</span>
+            </div>
+        </div>
+        {{#each chirps}}
+            {{> chirp}}
+        {{/each}}
+    </div>
+</section>
+{{> footer}}

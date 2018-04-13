@@ -5,9 +5,15 @@ $(() => {
         this.get('#/home', displayHome);
         this.get('#/logout', logoutUser);
         this.get('#/catalog', displayCatalog);
+        this.get('#/newPost', displayCreatePost);
+        this.get('#/editPost/post/:postId', displayEditPost);
+        this.get('#/deletePost/post/:postId', deletePost);
+        this.get('#/myPosts', displayMyPosts);
 
         this.post('#/register', registerUser);
         this.post('#/login', loginUser);
+        this.post('#/createPost', createPost);
+        this.post('#/editPost/post', editPost);
 
 
         function displayHome(ctx) {
@@ -93,7 +99,117 @@ $(() => {
                 }).catch(auth.handleError);
 
         }
+
+
     });
+
+    function displayCreatePost(ctx) {
+        ctx.isAuth = sessionStorage.getItem('authtoken') !== null;
+        ctx.username = sessionStorage.getItem('username');
+
+        ctx.loadPartials({
+            header: './templates/header.hbs',
+            footer: './templates/footer.hbs',
+            navigation: './templates/navigation.hbs'
+        }).then(function () {
+            this.partial('./templates/createPostForm.hbs')
+        });
+    }
+
+    function createPost(ctx) {
+        let author = sessionStorage.getItem('username');
+        let url = ctx.params.url;
+        let title = ctx.params.title;
+        let image = ctx.params.image;
+        let comment = ctx.params.comment;
+
+        if (!url.startsWith('http') || url.length === 0) {
+            auth.showError('URL must start with "http" and cant be empty')
+        } else if (title.length === 0) {
+            auth.showError('Title cant be empty')
+        } else {
+            service.createPost(author, title, comment, url, image)
+                .then(function () {
+                    auth.showInfo('Post created.');
+                    ctx.redirect('#/catalog')
+                })
+        }
+    }
+
+    function displayEditPost(ctx) {
+        let postId = ctx.params.postId;
+
+        service.postsDetails(postId)
+            .then(function (post) {
+                ctx.isAuth = sessionStorage.getItem('authtoken') !== null;
+                ctx.username = sessionStorage.getItem('username');
+                ctx.post = post;
+                ctx.loadPartials({
+                    header: './templates/header.hbs',
+                    footer: './templates/footer.hbs',
+                    navigation: './templates/navigation.hbs'
+                }).then(function () {
+                    this.partial('./templates/editPostForm.hbs')
+                });
+            })
+    }
+
+    function editPost(ctx) {
+        let postId = ctx.params.postId;
+        let author = sessionStorage.getItem('username');
+        let url = ctx.params.url;
+        let title = ctx.params.title;
+        let image = ctx.params.image;
+        let comment = ctx.params.description;
+
+        if (!url.startsWith('http') || url.length === 0) {
+            auth.showError('URL must start with "http" and cant be empty')
+        } else if (title.length === 0) {
+            auth.showError('Title cant be empty')
+        } else {
+            service.editPost(postId, author, title, comment, url, image)
+                .then(function () {
+                    auth.showInfo(`Post ${title} updated.`);
+                    ctx.redirect('#/catalog')
+                }).catch(auth.handleError);
+        }
+    }
+    
+    function deletePost(ctx) {
+        let postId = ctx.params.postId;
+        
+        service.deletePost(postId)
+            .then(function () {
+                auth.showInfo('Post deleted.');
+                ctx.redirect('#/catalog');
+            }).catch(auth.handleError);
+    }
+
+    function displayMyPosts(ctx) {
+        ctx.isAuth = sessionStorage.getItem('authtoken') !== null;
+        ctx.username = sessionStorage.getItem('username');
+        let author = sessionStorage.getItem('username');
+
+        let index = 1;
+        service.myPosts(author)
+            .then(function (posts) {
+                for (let post of posts) {
+                    post.date = calcTime(post._kmd.ect);
+                    post.index = index++;
+                    post.isAuthor = post._acl.creator === sessionStorage.getItem('userId');
+                }
+
+                ctx.posts = posts;
+                ctx.loadPartials({
+                    header: './templates/header.hbs',
+                    footer: './templates/footer.hbs',
+                    navigation: './templates/navigation.hbs',
+                    post: './templates/post.hbs',
+                }).then(function () {
+                    this.partial('./templates/myPosts.hbs')
+                });
+            })
+    }
 
     function calcTime(dateIsoFormat) {
         let diff = new Date - (new Date(dateIsoFormat));

@@ -3,13 +3,13 @@
         <span>{{index}}</span>
     </div>
     <div class="col thumbnail">
-        <a href="https://softuni.bg/">
+        <a href="{{url}}">
             <img src="{{imageUrl}}">
         </a>
     </div>
     <div class="post-content">
         <div class="title">
-            <a href="https://softuni.bg/">
+            <a href="{{url}}">
                 {{title}}
             </a>
         </div>
@@ -19,10 +19,10 @@
             </div>
             <div class="controls">
                 <ul>
-                    <li class="action"><a class="commentsLink" href="#">comments</a></li>
+                    <li class="action"><a class="commentsLink" href="#/comments">comments</a></li>
                     {{#if isAuthor}}
-                        <li class="action"><a class="editLink" href="#">edit</a></li>
-                        <li class="action"><a class="deleteLink" href="#">delete</a></li>
+                        <li class="action"><a class="editLink" href="#/editPost/post/{{_id}}">edit</a></li>
+                        <li class="action"><a class="deleteLink" href="#/deletePost/post/{{_id}}">delete</a></li>
                     {{/if}}
                 </ul>
             </div>
