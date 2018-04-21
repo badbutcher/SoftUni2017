@@ -1,0 +1,50 @@
+{{> header}}
+<section id="create-receipt-view">
+    <h1>Create Receipt</h1>
+    <div class="table">
+        <div class="table-head">
+            <div class="col wide">Product Name</div>
+            <div class="col wide">Quantity</div>
+            <div class="col wide">Price per Unit</div>
+            <div class="col">Sub-total</div>
+            <div class="col">Action</div>
+        </div>
+        {{#each entries}}
+            {{> entrie}}
+        {{else}}
+            <h1>No entries</h1>
+        {{/each}}
+        <div class="row">
+            <form id="create-entry-form" method="post" action="#/catalog">
+                <div class="col wide">
+                    <input name="type" placeholder="Product name">
+                </div>
+                <div class="col wide">
+                    <input name="qty" placeholder="Quantity">
+                </div>
+                <div class="col wide">
+                    <input name="price" placeholder="Price per Unit">
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <input id="addItemBtn" type="submit" value="Add"/>
+                </div>
+            </form>
+        </div>
+        <div class="table-foot">
+            <span>checkOut-a po edno vreme rabote6e ama ve4e ne :(</span>
+            <form id="create-receipt-form" action="#/checkOut" method="post">
+                <div class="col wide">
+                </div>
+                <div class="col wide">
+                </div>
+                <div class="col wide right">Total:</div>
+                <div class="col">{{allTotal}}</div>
+                <div class="col">
+                    <input id="checkoutBtn" type="submit" value="Checkout"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{{> footer}}
