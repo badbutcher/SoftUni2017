@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _012
+﻿namespace _012
 {
     public class Parents
     {
-        private string name;
-        private DateTime birthday;
-
-        public string Name
+        public Parents(string name, string birthday)
         {
-            get { return name; }
-            set { name = value; }
+            this.Name = name;
+            this.Birthday = birthday;
         }
 
-        public DateTime Birthday
+        public string Name { get; set; }
+
+        public string Birthday { get; set; }
+
+        public override string ToString()
         {
-            get { return birthday; }
-            set { birthday = value; }
+            return $"{this.Name} {this.Birthday}";
         }
     }
 }

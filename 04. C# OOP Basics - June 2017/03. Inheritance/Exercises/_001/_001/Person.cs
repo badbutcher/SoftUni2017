@@ -14,7 +14,7 @@
             this.Age = age;
         }
 
-        public virtual string Name
+        public string Name
         {
             get
             {

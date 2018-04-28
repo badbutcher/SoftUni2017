@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class Person
     {
@@ -59,6 +60,20 @@
             set
             {
                 this.products = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            if (this.Products.Count > 0)
+            {
+                var procuts = this.Products.Select(a => a.Name);
+                string result = string.Join(", ", procuts);
+                return $"{this.Name} - {result}";
+            }
+            else
+            {
+                return $"{this.Name} - Nothing bought";
             }
         }
     }

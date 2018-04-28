@@ -4,12 +4,12 @@
 
     public class Smartphone : ISmartphone
     {
-        private string input;
-
         public Smartphone(string input)
         {
-            this.input = input;
+            this.Input = input;
         }
+
+        public string Input { get; set; }
 
         public string BrowserSite(string site)
         {

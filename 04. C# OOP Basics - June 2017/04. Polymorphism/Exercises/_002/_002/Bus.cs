@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _002
+﻿namespace _002
 {
+    using System;
+
     public class Bus : Vehicle
     {
         public Bus(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity)

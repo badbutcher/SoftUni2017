@@ -1,16 +1,17 @@
 ﻿//namespace _002
 //{
-    using System;
+using System;
 
-    public class Program
+public class Program
+{
+    public static void Main()
     {
-        public static void Main()
-        {
-            ICar seat = new Seat("Leon", "Grey");
-            ICar tesla = new Tesla("Model 3", "Red", 2);
+        ICar seat = new Seat("Leon", "Grey");
+        ICar tesla = new Tesla("Model 3", "Red", 2);
 
-            Console.WriteLine(seat.ToString());
-            Console.WriteLine(tesla.ToString());
-        }
+        Console.WriteLine(seat.ToString());
+        Console.WriteLine(tesla.ToString());
     }
+}
+
 //}

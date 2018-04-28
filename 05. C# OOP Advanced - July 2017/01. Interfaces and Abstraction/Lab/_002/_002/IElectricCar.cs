@@ -1,7 +1,8 @@
 ﻿//namespace _002
 //{
-    public interface IElectricCar
-    {
-        int Battert { get; }
-    }
+public interface IElectricCar
+{
+    int Battery { get; }
+}
+
 //}

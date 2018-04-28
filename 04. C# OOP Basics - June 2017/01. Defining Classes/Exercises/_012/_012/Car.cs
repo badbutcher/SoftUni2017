@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _012
+﻿namespace _012
 {
     public class Car
     {
-        private string model;
-        private int speed;
-
-        public string Model
+        public Car(string model, int speed)
         {
-            get { return model; }
-            set { model = value; }
+            this.Model = model;
+            this.Speed = speed;
         }
 
-        public int Speed
+        public string Model { get; set; }
+
+        public int Speed { get; set; }
+
+        public override string ToString()
         {
-            get { return speed; }
-            set { speed = value; }
+            return $"{this.Model} {this.Speed}";
         }
     }
 }

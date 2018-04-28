@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text;
-
-namespace _003
+﻿namespace _003
 {
+    using System;
+    using System.Text;
+
     public class Worker : Human
     {
         private double weeklySalary;
@@ -21,7 +21,7 @@ namespace _003
             {
                 return this.weeklySalary;
             }
-            set
+            private set
             {
                 if (value <= 10)
                 {
@@ -38,7 +38,7 @@ namespace _003
             {
                 return this.workHoursPerDay;
             }
-            set
+            private set
             {
                 if (value < 1 || value > 12)
                 {

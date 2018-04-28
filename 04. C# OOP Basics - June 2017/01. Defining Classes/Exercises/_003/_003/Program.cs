@@ -5,7 +5,7 @@
 
     public class Program
     {
-        static void Main()
+        private static void Main()
         {
             MethodInfo oldestMemberMethod = typeof(Family).GetMethod("GetOldestMember");
             MethodInfo addMemberMethod = typeof(Family).GetMethod("AddMember");
@@ -15,7 +15,7 @@
             }
 
             Family family = new Family();
-            
+
             int n = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < n; i++)
@@ -29,7 +29,7 @@
                 family.AddMember(person);
             }
 
-            Console.WriteLine("{0} {1}",family.GetOldestMember().Name, family.GetOldestMember().Age);
+            Console.WriteLine("{0} {1}", family.GetOldestMember().Name, family.GetOldestMember().Age);
         }
     }
 }

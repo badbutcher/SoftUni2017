@@ -7,7 +7,7 @@
             this.MoodName = moodName;
         }
 
-        public string MoodName { get; set; }
+        public string MoodName { get; private set; }
 
         public override string ToString()
         {

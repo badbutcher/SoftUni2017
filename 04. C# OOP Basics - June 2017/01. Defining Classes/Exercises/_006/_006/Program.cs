@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _006
 {
@@ -15,7 +13,7 @@ namespace _006
 
             for (int i = 0; i < n; i++)
             {
-                int age;        
+                int age;
                 string[] data = Console.ReadLine().Split();
                 string name = data[0];
                 decimal salary = decimal.Parse(data[1]);
@@ -42,14 +40,12 @@ namespace _006
                     string email = data[4];
                     Employee employee = new Employee(name, salary, position, department, email, int.Parse(data[5]));
                     employees.Add(employee);
-                    
                 }
                 else if (data.Length == 4)
                 {
                     Employee employee = new Employee(name, salary, position, department);
                     employees.Add(employee);
                 }
-                           
             }
 
             var avrSalary = employees
@@ -62,7 +58,6 @@ namespace _006
                 })
                 .OrderByDescending(q => q.AverageSalary)
                 .First();
-
 
             Console.WriteLine($"Highest Average Salary: {avrSalary.Department}");
 

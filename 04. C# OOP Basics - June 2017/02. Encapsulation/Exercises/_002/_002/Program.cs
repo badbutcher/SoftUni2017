@@ -12,7 +12,7 @@
             {
                 Type boxType = typeof(Box);
                 FieldInfo[] fields = boxType.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
-                Console.WriteLine(fields.Count());
+                //Console.WriteLine(fields.Count());
 
                 decimal length = decimal.Parse(Console.ReadLine());
                 decimal width = decimal.Parse(Console.ReadLine());

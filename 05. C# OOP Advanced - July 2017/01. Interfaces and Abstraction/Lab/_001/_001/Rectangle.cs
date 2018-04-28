@@ -1,61 +1,38 @@
 ﻿//namespace _001
 //{
-    using System;
+using System;
 
-    public class Rectangle : IDrawable
+public class Rectangle : IDrawable
+{
+    public Rectangle(int width, int height)
     {
-        private int width;
-        private int height;
+        this.Width = width;
+        this.Height = height;
+    }
 
-        public Rectangle(int width, int height)
-        {
-            this.Width = width;
-            this.Height = height;
-        }
+    public int Width { get; private set; }
 
-        public int Width
-        {
-            get
-            {
-                return this.width;
-            }
-            private set
-            {
-                this.width = value;
-            }
-        }
+    public int Height { get; private set; }
 
-        public int Height
+    public void Draw()
+    {
+        for (int row = 0; row < this.Width; row++)
         {
-            get
+            for (int col = 0; col < this.Height; col++)
             {
-                return this.height;
-            }
-            private set
-            {
-                this.height = value;
-            }
-        }
-
-        public void Draw()
-        {
-            for (int row = 0; row < width; row++)
-            {
-                for (int col = 0; col < height; col++)
+                if (row == 0 || row == this.Width - 1 || col == 0 || col == this.Height - 1)
                 {
-                    if (row == 0 || row == width - 1 || col == 0 || col == height - 1)
-                    {
-                        Console.Write("*");
-                    }
-                    else
-                    {
-                        Console.Write(" ");
-                    }
+                    Console.Write("*");
                 }
-
-                Console.WriteLine();
+                else
+                {
+                    Console.Write(" ");
+                }
             }
+
+            Console.WriteLine();
         }
     }
-//}
+}
 
+//}

@@ -10,7 +10,8 @@
         {
             try
             {
-                while (true)
+                bool finish = false;
+                while (!finish)
                 {
                     string input = Console.ReadLine();
 
@@ -39,29 +40,42 @@
                         }
                         else
                         {
-                            int toppingsCount = int.Parse(data[2]);
-                            Pizza pizza = new Pizza(data[1], 0, new Dough(), new List<Topping>());
+                            //int toppingsCount = int.Parse(data[2]);
 
-                            if (toppingsCount > 10)
-                            {
-                                Console.WriteLine("Number of toppings should be in range [0..10].");
-                                break;
-                            }
+                            //if (toppingsCount > 10)
+                            //{
+                            //    Console.WriteLine("Number of toppings should be in range [0..10].");
+                            //    break;
+                            //}
 
                             string[] doughData = Console.ReadLine().Split();
                             string flour = doughData[1];
                             string technique = doughData[2];
                             decimal weight = decimal.Parse(doughData[3]);
                             Dough dough = new Dough(flour, technique, weight);
-                            pizza = new Pizza(pizza.Name, 0, dough, new List<Topping>());
-
-                            for (int i = 0; i < toppingsCount; i++)
+                            Pizza pizza = new Pizza(data[1], 0, dough, new List<Topping>());
+                            int toppingsCount = 0;
+                            while (toppingsCount != 10)
                             {
                                 string[] pizzaData = Console.ReadLine().Split();
+                                if (pizzaData[0] == "END")
+                                {
+                                    finish = true;
+                                    break;
+                                }
+
                                 string type = pizzaData[1];
                                 decimal w = decimal.Parse(pizzaData[2]);
                                 Topping topping = new Topping(type, w);
-                                pizza.Toppings.Add(topping);
+                                pizza.AddToppings(topping);
+                                toppingsCount++;
+                            }
+
+                            if (toppingsCount == 10)
+                            {
+                                Console.WriteLine("Number of toppings should be in range [0..10].");
+                                finish = true;
+                                break;
                             }
 
                             decimal toppingsCalories = pizza.Toppings.Select(a => a.Calories).Sum();

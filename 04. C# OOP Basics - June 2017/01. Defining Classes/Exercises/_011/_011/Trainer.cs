@@ -4,10 +4,6 @@
 
     public class Trainer
     {
-        private string name;
-        private long badges;
-        private List<Pokemon> pokemons;
-
         public Trainer(string name, long badges, List<Pokemon> pokemons)
         {
             this.Name = name;
@@ -15,22 +11,10 @@
             this.Pokemons = pokemons;
         }
 
-        public string Name
-        {
-            get { return this.name; }
-            set { this.name = value; }
-        }
+        public string Name { get; set; }
 
-        public long Badges
-        {
-            get { return this.badges; }
-            set { this.badges = value; }
-        }
+        public long Badges { get; set; }
 
-        public List<Pokemon> Pokemons
-        {
-            get { return this.pokemons; }
-            set { this.pokemons = value; }
-        }
+        public List<Pokemon> Pokemons { get; set; }
     }
 }

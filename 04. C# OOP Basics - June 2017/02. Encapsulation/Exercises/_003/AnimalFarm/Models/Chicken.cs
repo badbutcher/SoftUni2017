@@ -22,7 +22,6 @@
             {
                 return this.name;
             }
-
             private set
             {
                 if (string.IsNullOrWhiteSpace(value))
@@ -40,12 +39,11 @@
             {
                 return this.age;
             }
-
             private set
             {
-                if (value < 0 || value > 15)
+                if (value < MinAge || value > MaxAge)
                 {
-                    throw new ArgumentException("Age should be between 0 and 15.");
+                    throw new ArgumentException($"Age should be between {MinAge} and {MaxAge}.");
                 }
 
                 this.age = value;

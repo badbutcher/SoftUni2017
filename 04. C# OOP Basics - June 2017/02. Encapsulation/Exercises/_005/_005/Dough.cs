@@ -9,10 +9,6 @@
         private decimal weight;
         private decimal calories;
 
-        public Dough()
-        {
-        }
-
         public Dough(string flour, string technique, decimal weight)
         {
             this.Flour = flour;
@@ -29,7 +25,8 @@
             }
             private set
             {
-                if (value.ToLower() != "white" && value.ToLower() != "wholegrain")
+                string data = value.ToLower();
+                if (data != "white" && data != "wholegrain")
                 {
                     throw new ArgumentException("Invalid type of dough.");
                 }
@@ -46,7 +43,8 @@
             }
             private set
             {
-                if (value.ToLower() != "crispy" && value.ToLower() != "chewy" && value.ToLower() != "homemade")
+                string data = value.ToLower();
+                if (data != "crispy" && data != "chewy" && data != "homemade")
                 {
                     throw new ArgumentException("Invalid type of dough.");
                 }

@@ -6,7 +6,7 @@
     {
         public int DifferenceInDates(DateTime start, DateTime end)
         {
-            var result = Math.Abs((start - end).Days);
+            int result = Math.Abs((start - end).Days);
             return result;
         }
     }

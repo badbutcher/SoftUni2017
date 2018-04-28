@@ -1,9 +1,9 @@
 ﻿namespace _007
 {
+    using _007.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using _007.Interfaces;
 
     public class Program
     {
@@ -11,7 +11,6 @@
         {
             int n = int.Parse(Console.ReadLine());
 
-            //Fix
             IDictionary<string, ICitizen> people = new Dictionary<string, ICitizen>();
             IDictionary<string, IRebel> rebels = new Dictionary<string, IRebel>();
 

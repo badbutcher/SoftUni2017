@@ -29,10 +29,10 @@
                 string idOne = data[0];
                 string idTwo = data[1];
 
-                Rectangle one = rects.FirstOrDefault(a => a.ID == idOne);
-                Rectangle two = rects.FirstOrDefault(a => a.ID == idTwo);
+                Rectangle one = rects.FirstOrDefault(a => a.Id == idOne);
+                Rectangle two = rects.FirstOrDefault(a => a.Id == idTwo);
 
-                if (Rectangle.Check(one, two))
+                if (one.Check(two))
                 {
                     Console.WriteLine("true");
                 }

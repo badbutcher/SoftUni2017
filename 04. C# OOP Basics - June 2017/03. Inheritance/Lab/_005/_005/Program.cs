@@ -1,14 +1,15 @@
 ﻿//namespace _005
 //{
-    public class Program
+public class Program
+{
+    public static void Main()
     {
-        public static void Main()
-        {
-            StackOfStrings s = new StackOfStrings();
-            s.Push("test");
-            s.Pop();
-            s.Peek();
-            s.IsEmpty();
-        }
+        StackOfStrings s = new StackOfStrings();
+        s.Push("test");
+        s.Pop();
+        s.Peek();
+        s.IsEmpty();
     }
+}
+
 //}

@@ -1,7 +1,7 @@
 ﻿namespace Explicit_Interfaces
 {
-    using System;
     using Interfaces;
+    using System;
 
     public class Program
     {

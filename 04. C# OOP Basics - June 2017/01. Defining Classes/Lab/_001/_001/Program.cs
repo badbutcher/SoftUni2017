@@ -1,17 +1,17 @@
 ﻿//namespace _001
 //{
-    using System;
+using System;
 
-    public class Program
+public class Program
+{
+    public static void Main()
     {
-        static void Main()
-        {
-            BankAccount acc = new BankAccount();
+        BankAccount acc = new BankAccount();
 
-            acc.ID = 1;
-            acc.Balance = 15;
+        acc.Id = 1;
+        acc.Balance = 15;
 
-            Console.WriteLine($"Account {acc.ID}, balance {acc.Balance}");
-        }
+        Console.WriteLine($"Account {acc.Id}, balance {acc.Balance}");
     }
+}
 //}

@@ -1,10 +1,10 @@
 ﻿namespace _008
 {
+    using _008.Interfaces;
+    using _008.Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using _008.Interfaces;
-    using _008.Models;
 
     public class Program
     {

@@ -1,16 +1,17 @@
 ﻿//namespace _002
 //{
-    using System;
+using System;
 
-    public class Program
+public class Program
+{
+    public static void Main()
     {
-        public static void Main()
-        {
-            Animal cat = new Cat("Pesho", "Whiskas");
-            Animal dog = new Dog("Gosho", "Meat");
+        Animal cat = new Cat("Pesho", "Whiskas");
+        Animal dog = new Dog("Gosho", "Meat");
 
-            Console.WriteLine(cat.ExplainMyself());
-            Console.WriteLine(dog.ExplainMyself());
-        }
+        Console.WriteLine(cat.ExplainMyself());
+        Console.WriteLine(dog.ExplainMyself());
     }
+}
+
 //}

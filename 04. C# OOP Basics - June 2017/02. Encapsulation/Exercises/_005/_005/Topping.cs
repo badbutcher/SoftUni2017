@@ -23,7 +23,8 @@
             }
             private set
             {
-                if (value.ToLower() != "meat" && value.ToLower() != "veggies" && value.ToLower() != "sauce" && value.ToLower() != "cheese")
+                string data = value.ToLower();
+                if (data != "meat" && data != "veggies" && data != "sauce" && data != "cheese")
                 {
                     throw new ArgumentException($"Cannot place {value} on top of your pizza.");
                 }

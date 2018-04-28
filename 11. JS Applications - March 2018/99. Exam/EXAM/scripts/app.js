@@ -165,7 +165,7 @@ $(() => {
                     for (let obj of entries) {
                         total += obj.price * obj.qty;
                     }
-           
+
                     productCount = entries.length;
                 });
 
@@ -174,8 +174,44 @@ $(() => {
                     auth.showInfo('Receipt checked out');
                     sessionStorage.removeItem('userReceipt');
                     ctx.redirect('#/catalog')
-                })
+                });
         }
+
+        // function checkOut(ctx) {
+        //     ctx.isAuth = sessionStorage.getItem('authtoken') !== null;
+        //     ctx.username = sessionStorage.getItem('username');
+        //     let receiptId = sessionStorage.getItem('userReceipt');
+        //
+        //     let productCount = 0;
+        //     let total = 0;
+        //
+        //     let p1 = new Promise(function () {
+        //         service.getEntriesByReceiptId(receiptId)
+        //             .then(function (entries) {
+        //                 for (let obj of entries) {
+        //                     total += obj.price * obj.qty;
+        //                 }
+        //
+        //                 productCount = entries.length;
+        //             })
+        //     });
+        //
+        //     let p2 = new Promise(function () {
+        //         service.commitReceipt(receiptId, "false", productCount, total)
+        //             .then(function () {
+        //                 auth.showInfo('Receipt checked out');
+        //                 sessionStorage.removeItem('userReceipt');
+        //
+        //                 ctx.redirect('#/catalog')
+        //
+        //             })
+        //     });
+        //
+        //     Promise.all([p1, p2]).then(function (asd) {
+        //         console.log(asd);
+        //     });
+        //
+        // }
 
         async function displayMyReceipts(ctx) {
 

@@ -15,41 +15,11 @@
             this.FuelConsumptionPerKm = fuelConsumptionPerKm;
         }
 
-        public virtual double FuelQuantity
-        {
-            get
-            {
-                return this.fuelQuantity;
-            }
-            set
-            {
-                this.fuelQuantity = value;
-            }
-        }
+        public virtual double FuelQuantity { get; set; }
 
-        public double FuelConsumptionPerKm
-        {
-            get
-            {
-                return this.fuelConsumptionPerKm;
-            }
-            set
-            {
-                this.fuelConsumptionPerKm = value;
-            }
-        }
+        public double FuelConsumptionPerKm { get; private set; }
 
-        public virtual double TankCapacity
-        {
-            get
-            {
-                return this.tankCapacity;
-            }
-            set
-            {
-                this.tankCapacity = value;
-            }
-        }
+        public virtual double TankCapacity { get; private set; }
 
         public virtual void Refuel(double amount)
         {

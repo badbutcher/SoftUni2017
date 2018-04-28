@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A8C019B6-C66D-48C2-8368-63D285D173A3}</ProjectGuid>
+    <ProjectGuid>{B0BA8332-31B7-4B30-A36C-5485B8EACBD3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_012</RootNamespace>
-    <AssemblyName>_012</AssemblyName>
+    <RootNamespace>_010s</RootNamespace>
+    <AssemblyName>_010</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="Children.cs" />
-    <Compile Include="Company.cs" />
-    <Compile Include="Parents.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Pokemon.cs" />
+    <Compile Include="Citizen.cs" />
+    <Compile Include="Interfaces\IPerson.cs" />
+    <Compile Include="Interfaces\IResident.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

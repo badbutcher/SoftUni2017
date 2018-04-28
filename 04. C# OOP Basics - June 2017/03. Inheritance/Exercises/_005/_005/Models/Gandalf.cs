@@ -1,26 +1,26 @@
 ﻿namespace _005.Models
 {
+    using _005.Foods;
     using System.Collections.Generic;
     using System.Linq;
-    using _005.Foods;
 
     public class Gandalf
     {
-        private List<Food> foodEaten;
-
         public Gandalf()
         {
-            this.foodEaten = new List<Food>();
+            this.FoodEaten = new List<Food>();
         }
+
+        public List<Food> FoodEaten { get; private set; }
 
         public void Eat(Food food)
         {
-            this.foodEaten.Add(food);
+            this.FoodEaten.Add(food);
         }
 
         public int GetHapinessPoints()
         {
-            return foodEaten.Sum(f => f.GetHapinessPoints());
+            return FoodEaten.Sum(f => f.GetHapinessPoints());
         }
     }
 }

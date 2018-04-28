@@ -1,30 +1,31 @@
 ﻿//namespace _004
 //{
-    using System;
-    using System.Collections;
+using System;
+using System.Collections;
 
-    public class RandomList : ArrayList
+public class RandomList : ArrayList
+{
+    private ArrayList list;
+
+    public ArrayList List
     {
-        private ArrayList list;
-
-        public ArrayList List
+        get
         {
-            get
-            {
-                return this.list;
-            }
-            set
-            {
-                this.list = value;
-            }
+            return this.list;
         }
-
-        public string RandomString()
+        set
         {
-            Random r = new Random();
-            list.RemoveAt(r.Next(0, list.Count));
-            Console.WriteLine(list[r.Next(0, list.Count)]);
-            return list[r.Next(0, list.Count)].ToString();
+            this.list = value;
         }
     }
+
+    public string RandomString()
+    {
+        Random r = new Random();
+        list.RemoveAt(r.Next(0, list.Count));
+        Console.WriteLine(list[r.Next(0, list.Count)]);
+        return list[r.Next(0, list.Count)].ToString();
+    }
+}
+
 //}

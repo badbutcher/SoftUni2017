@@ -4,7 +4,7 @@
 
     public class Car : Vehicle
     {
-        public Car(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity) 
+        public Car(double fuelQuantity, double fuelConsumptionPerKm, double tankCapacity)
             : base(fuelQuantity, fuelConsumptionPerKm + 0.9, tankCapacity)
         {
         }

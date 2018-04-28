@@ -1,8 +1,13 @@
-﻿namespace _001
+﻿//namespace _001
+//{
+public class Person
 {
-    public class Person
-    {
-        public string name;
-        public int age;
-    }
+    public string name;
+    public int age;
+
+    public string Name { get; set; }
+
+    public int Age { get; set; }
 }
+
+//}

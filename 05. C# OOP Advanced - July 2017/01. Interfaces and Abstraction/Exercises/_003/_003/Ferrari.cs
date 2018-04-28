@@ -24,7 +24,7 @@
 
         public override string ToString()
         {
-            return $"{Model}/{Break()}/{Start()}/{Driver}";
+            return $"{this.Model}/{this.Break()}/{this.Start()}/{this.Driver}";
         }
     }
 }

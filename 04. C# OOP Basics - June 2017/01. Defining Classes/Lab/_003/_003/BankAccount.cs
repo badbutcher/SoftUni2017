@@ -3,25 +3,25 @@
     public class BankAccount
     {
         private int id;
-        private double balance;
+        private decimal balance;
 
-        public int ID { get; set; }
+        public int Id { get; set; }
 
-        public double Balance { get; set; }
+        public decimal Balance { get; set; }
 
-        public void Deposit(double amount)
+        public void Deposit(decimal amount)
         {
             this.Balance += amount;
         }
 
-        public void Withdraw(double amount)
+        public void Withdraw(decimal amount)
         {
             this.Balance -= amount;
         }
 
         public override string ToString()
         {
-            return $"Account ID{this.ID}, balance {this.Balance:F2}";
+            return $"Account ID{this.Id}, balance {this.Balance:F2}";
         }
     }
 }

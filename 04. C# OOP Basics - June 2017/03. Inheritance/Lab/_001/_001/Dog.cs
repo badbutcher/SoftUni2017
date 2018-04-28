@@ -1,12 +1,13 @@
 ﻿//namespace _001
 //{
-    using System;
+using System;
 
-    public class Dog : Animal
+public class Dog : Animal
+{
+    public void Bark()
     {
-        public void Bark()
-        {
-            Console.WriteLine("barking...");
-        }
+        Console.WriteLine("barking...");
     }
+}
+
 //}

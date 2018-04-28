@@ -40,7 +40,7 @@
             }
 
             string findCat = Console.ReadLine();
-            var result = cats.First(a => a.Name == findCat);
+            Cat result = cats.First(a => a.Name == findCat);
             Console.WriteLine(result.ToString());
         }
     }

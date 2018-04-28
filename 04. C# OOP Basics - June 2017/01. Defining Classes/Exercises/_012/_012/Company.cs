@@ -1,33 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _012
+﻿namespace _012
 {
     public class Company
     {
-        private string name;
-        private string department;
-        private decimal salary;
-
-        public string Name
+        public Company(string name, string department, decimal salary)
         {
-            get { return name; }
-            set { name = value; }
+            this.Name = name;
+            this.Department = department;
+            this.Salary = salary;
         }
 
-        public string Department
-        {
-            get { return department; }
-            set { department = value; }
-        }
+        public string Name { get; set; }
 
-        public decimal Salary
+        public string Department { get; set; }
+
+        public decimal Salary { get; set; }
+
+        public override string ToString()
         {
-            get { return salary; }
-            set { salary = value; }
+            return $"{this.Name} {this.Department} {this.Salary}";
         }
     }
 }

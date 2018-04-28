@@ -23,7 +23,7 @@
             {
                 return this.artistName;
             }
-            set
+            private set
             {
                 if (value.Length < 3 || value.Length > 20)
                 {
@@ -40,7 +40,7 @@
             {
                 return this.songName;
             }
-            set
+            private set
             {
                 if (value.Length < 3 || value.Length > 20)
                 {
@@ -57,7 +57,7 @@
             {
                 return minutes;
             }
-            set
+            private set
             {
                 if (value < 0 || value > 14)
                 {
@@ -74,7 +74,7 @@
             {
                 return seconds;
             }
-            set
+            private set
             {
                 if (value < 0 || value > 59)
                 {

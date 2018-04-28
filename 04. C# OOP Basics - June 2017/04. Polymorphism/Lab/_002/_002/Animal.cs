@@ -1,43 +1,21 @@
 ﻿//namespace _002
 //{
-    public class Animal
+public class Animal
+{
+    public Animal(string name, string favouriteFood)
     {
-        private string name;
-        private string favouriteFood;
-
-        public Animal(string name, string favouriteFood)
-        {
-            this.Name = name;
-            this.FavouriteFood = favouriteFood;
-        }
-
-        public string Name
-        {
-            get
-            {
-                return this.name;
-            }
-            set
-            {
-                this.name = value;
-            }
-        }
-
-        public string FavouriteFood
-        {
-            get
-            {
-                return this.favouriteFood;
-            }
-            set
-            {
-                this.favouriteFood = value;
-            }
-        }
-
-        public virtual string ExplainMyself()
-        {
-            return $"I am {this.Name} and my fovourite food is {this.FavouriteFood}";
-        }
+        this.Name = name;
+        this.FavouriteFood = favouriteFood;
     }
+
+    public string Name { get; private set; }
+
+    public string FavouriteFood { get; private set; }
+
+    public virtual string ExplainMyself()
+    {
+        return $"I am {this.Name} and my fovourite food is {this.FavouriteFood}";
+    }
+}
+
 //}

@@ -54,7 +54,7 @@
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
-                }          
+                }
             }
 
             Console.WriteLine("Car: {0:F2}", car.FuelQuantity);
@@ -75,7 +75,7 @@
                 case "DriveEmpty":
                     Console.WriteLine(vehicle.TryTravelDistance(value, false));
                     break;
-                    default:
+                default:
                     break;
             }
         }

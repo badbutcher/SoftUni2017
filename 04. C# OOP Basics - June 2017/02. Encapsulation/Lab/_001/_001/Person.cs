@@ -1,45 +1,58 @@
 ﻿//namespace _001
 //{
-    public class Person
+public class Person
+{
+    private string firstName;
+    private string lastName;
+    private int age;
+
+    public Person(string firstName, string lastName, int age)
     {
-        private string firstName;
-        private string lastName;
-        private int age;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 
-        public Person(string firstName, string lastName, int age)
+    public string FirstName
+    {
+        get
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
+            return this.firstName;
         }
-
-        public string FirstName
+        private set
         {
-            get
-            {
-                return this.firstName;
-            }
-        }
-
-        public string LastName
-        {
-            get
-            {
-                return this.lastName;
-            }
-        }
-
-        public int Age
-        {
-            get
-            {
-                return this.age;
-            }
-        }
-
-        public override string ToString()
-        {
-            return $"{this.FirstName} {this.LastName} is a {this.Age} years old";
+            this.firstName = value;
         }
     }
+
+    public string LastName
+    {
+        get
+        {
+            return this.lastName;
+        }
+        private set
+        {
+            this.lastName = value;
+        }
+    }
+
+    public int Age
+    {
+        get
+        {
+            return this.age;
+        }
+        private set
+        {
+            this.age = value;
+        }
+    }
+
+    public override string ToString()
+    {
+        return $"{this.FirstName} {this.LastName} is {this.Age} years old.";
+    }
+}
+
 //}

@@ -19,7 +19,7 @@
             {
                 return this.firstName;
             }
-            set
+            private set
             {
                 if (!char.IsUpper(value[0]))
                 {
@@ -41,7 +41,7 @@
             {
                 return this.lastName;
             }
-            set
+            private set
             {
                 if (!char.IsUpper(value[0]))
                 {

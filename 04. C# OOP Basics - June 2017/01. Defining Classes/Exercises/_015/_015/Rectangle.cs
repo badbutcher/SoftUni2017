@@ -1,33 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _015
+﻿namespace _015
 {
-    public class Rectangle
-    {
-        private int x;
+    using System.Text;
 
-        public int X
+    public class Rectangle : Figure
+    {
+        public Rectangle(int width, int length)
         {
-            get
-            {
-                return this.x;
-            }
-            set
-            {
-                this.x = value;
-            }
+            this.Width = width;
+            this.Length = length;
         }
 
-        public void Draw()
+        public int Width { get; set; }
+        public int Length { get; set; }
+
+        public override string Draw()
         {
-            for (int row = 0; row < x; row++)
+            StringBuilder sb = new StringBuilder();
+            string topAndBottomPart = $"|{new string('-', this.Width)}|";
+
+            sb.AppendLine(topAndBottomPart);
+
+            for (int i = 0; i < this.Length - 2; i++)
             {
-                
+                sb.AppendLine($"|{new string(' ', this.Width)}|");
             }
+
+            sb.Append(topAndBottomPart);
+
+            return sb.ToString();
         }
     }
 }

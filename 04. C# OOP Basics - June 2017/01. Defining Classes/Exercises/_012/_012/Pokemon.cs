@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _012
+﻿namespace _012
 {
     public class Pokemon
     {
-        private string name;
-        private string type;
-
-
-        public string Name
+        public Pokemon(string name, string type)
         {
-            get { return name; }
-            set { name = value; }
+            this.Name = name;
+            this.Type = type;
         }
 
-        public string Type
+        public string Name { get; set; }
+
+        public string Type { get; set; }
+
+        public override string ToString()
         {
-            get { return type; }
-            set { type = value; }
+            return $"{this.Name} {this.Type}";
         }
     }
 }

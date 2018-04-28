@@ -1,7 +1,7 @@
 ﻿namespace _008.Models
 {
-    using System;
     using _008.Interfaces;
+    using System;
 
     public class Spy : Soldier, ISpy
     {

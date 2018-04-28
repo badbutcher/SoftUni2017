@@ -1,17 +1,18 @@
 ﻿//namespace _002
 //{
-    using System;
+using System;
 
-    public class Cat : Animal
+public class Cat : Animal
+{
+    public Cat(string name, string favouriteFood)
+        : base(name, favouriteFood)
     {
-        public Cat(string name, string favouriteFood)
-            : base(name, favouriteFood)
-        {
-        }
-
-        public override string ExplainMyself()
-        {
-            return base.ExplainMyself() + Environment.NewLine + "MEEOW";
-        }
     }
+
+    public override string ExplainMyself()
+    {
+        return base.ExplainMyself() + Environment.NewLine + "MEEOW";
+    }
+}
+
 //}

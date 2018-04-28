@@ -1,20 +1,21 @@
 ﻿//namespace _001
 //{
-    using System;
+using System;
 
-    public class Program
+public class Program
+{
+    public static void Main()
     {
-        public static void Main()
-        {
-            var radius = int.Parse(Console.ReadLine());
-            IDrawable circle = new Circle(radius);
+        int radius = int.Parse(Console.ReadLine());
+        IDrawable circle = new Circle(radius);
 
-            var width = int.Parse(Console.ReadLine());
-            var height = int.Parse(Console.ReadLine());
-            IDrawable rect = new Rectangle(width, height);
+        int width = int.Parse(Console.ReadLine());
+        int height = int.Parse(Console.ReadLine());
+        IDrawable rect = new Rectangle(width, height);
 
-            circle.Draw();
-            rect.Draw();
-        }
+        circle.Draw();
+        rect.Draw();
     }
+}
+
 //}

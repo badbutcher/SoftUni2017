@@ -10,8 +10,8 @@
             DateTime dateTwo = DateTime.Parse(Console.ReadLine());
 
             DateModifier mod = new DateModifier();
-
-            Console.WriteLine(mod.DifferenceInDates(dateOne, dateTwo));
+            int result = mod.DifferenceInDates(dateOne, dateTwo);
+            Console.WriteLine(result);
         }
     }
 }

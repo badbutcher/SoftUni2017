@@ -76,7 +76,7 @@
             }
         }
 
-        private void AddToppings(Topping topping)
+        public void AddToppings(Topping topping)
         {
             toppings.Add(topping);
         }

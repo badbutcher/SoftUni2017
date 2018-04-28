@@ -1,8 +1,8 @@
 ﻿namespace _006
 {
+    using _006.Interfaces;
     using System;
     using System.Collections.Generic;
-    using _006.Interfaces;
 
     public class Program
     {

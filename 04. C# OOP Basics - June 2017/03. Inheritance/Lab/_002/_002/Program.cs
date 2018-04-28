@@ -1,13 +1,14 @@
 ﻿//namespace _002
 //{
-    public class Program
+public class Program
+{
+    public static void Main()
     {
-        public static void Main()
-        {
-            Puppy puppy = new Puppy();
-            puppy.Eat();
-            puppy.Bark();
-            puppy.Weep();
-        }
+        Puppy puppy = new Puppy();
+        puppy.Eat();
+        puppy.Bark();
+        puppy.Weep();
     }
+}
+
 //}

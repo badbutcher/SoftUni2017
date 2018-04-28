@@ -72,14 +72,7 @@
 
                 foreach (var person in people)
                 {
-                    if (person.Products.Count > 0)
-                    {
-                        Console.WriteLine("{0} - {1}", person.Name, string.Join(", ", person.Products.Select(a => a.Name)));
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{person.Name} - Nothing bought");
-                    }
+                    Console.WriteLine(person.ToString());
                 }
             }
             catch (Exception ex)

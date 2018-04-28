@@ -19,7 +19,7 @@
             {
                 return this.length;
             }
-            set
+            private set
             {
                 this.length = value;
             }
@@ -31,7 +31,7 @@
             {
                 return this.width;
             }
-            set
+            private set
             {
                 this.width = value;
             }
@@ -43,7 +43,7 @@
             {
                 return this.height;
             }
-            set
+            private set
             {
                 this.height = value;
             }

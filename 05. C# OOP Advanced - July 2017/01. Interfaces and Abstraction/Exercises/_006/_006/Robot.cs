@@ -2,7 +2,7 @@
 {
     using _006.Interfaces;
 
-    public class Robot : ICitizen, IRobort
+    public class Robot : IRobort
     {
         public Robot(string id, string model)
         {

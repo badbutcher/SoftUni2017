@@ -19,6 +19,7 @@
         }
 
         public string Name { get; set; }
+
         public string BirthDate { get; set; }
 
         public IReadOnlyList<Person> Children
@@ -38,6 +39,7 @@
                 this.children.FirstOrDefault(c => c.Name == name).BirthDate = date;
                 return;
             }
+
             if (this.children.FirstOrDefault(c => c.BirthDate == date) != null)
             {
                 this.children.FirstOrDefault(c => c.BirthDate == date).Name = name;

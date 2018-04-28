@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _006
+﻿namespace _006
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Program
     {
         public static void Main()
@@ -51,7 +49,7 @@ namespace _006
                             {
                                 Player player = new Player(playerName, new Stats(endurance, sprint, dribble, passing, shooting));
                                 players.Add(player);
-                                teams.FirstOrDefault(a => a.Name == teamName).Players.Add(player);
+                                team.AddPlayer(player);
                             }
                         }
                         catch (Exception ex)
@@ -65,7 +63,7 @@ namespace _006
                         {
                             string teamName = data[1];
                             string playerName = data[2];
-                            
+
                             Team team = teams.FirstOrDefault(a => a.Name == teamName);
                             if (team == null)
                             {
@@ -81,7 +79,7 @@ namespace _006
                                     continue;
                                 }
 
-                                teams.First(a => a.Name == teamName).Players.Remove(player);
+                                team.Players.Remove(player);
                             }
                         }
                         catch (Exception ex)

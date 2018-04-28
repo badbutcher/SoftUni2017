@@ -19,8 +19,8 @@
                     string[] data = Console.ReadLine().Split(new char[] { ';', ':' }, StringSplitOptions.RemoveEmptyEntries);
                     string artistName = data[0];
                     string songName = data[1];
-                    int min;
-                    int sec;
+                    int min = 0;
+                    int sec = 0;
 
                     if (int.TryParse(data[2], out min) && int.TryParse(data[3], out sec))
                     {

@@ -17,15 +17,15 @@
             {
                 if (inputLine.Contains("-"))
                 {
-                    var tokens = inputLine
+                    string[] tokens = inputLine
                         .Split('-')
                         .Select(x => x.Trim())
                         .ToArray();
 
-                    var parentParam = tokens[0];
-                    var childParam = tokens[1];
+                    string parentParam = tokens[0];
+                    string childParam = tokens[1];
 
-                    var parent = new Person();
+                    Person parent = new Person();
                     if (parentParam.Contains("/"))
                     {
                         parent.BirthDate = parentParam;
@@ -35,7 +35,7 @@
                         parent.Name = parentParam;
                     }
 
-                    var child = new Person();
+                    Person child = new Person();
                     if (childParam.Contains("/"))
                     {
                         child.BirthDate = childParam;
@@ -58,11 +58,11 @@
                 }
                 else
                 {
-                    var tokens = inputLine.Split(' ');
+                    string[] tokens = inputLine.Split(' ');
 
-                    var name = $"{tokens[0]} {tokens[1]}";
-                    var date = tokens[2];
-                    var added = false;
+                    string name = $"{tokens[0]} {tokens[1]}";
+                    string date = tokens[2];
+                    bool added = false;
 
                     for (int i = 0; i < allPeople.Count; i++)
                     {
@@ -103,7 +103,7 @@
                 personWithTree = allPeople.FirstOrDefault(p => p.Name == searchedPersonParam);
             }
 
-            var result = new StringBuilder();
+            StringBuilder result = new StringBuilder();
             result.AppendLine($"{personWithTree.Name} {personWithTree.BirthDate}");
 
             result.AppendLine("Parents:");

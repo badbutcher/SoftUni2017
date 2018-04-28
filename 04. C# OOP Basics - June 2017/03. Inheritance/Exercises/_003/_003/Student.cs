@@ -20,7 +20,7 @@
             {
                 return this.facultyNumber;
             }
-            set
+            private set
             {
                 if (IsNumberInvalid(value))
                 {

@@ -1,12 +1,13 @@
 ﻿//namespace _003
 //{
-    using System;
+using System;
 
-    public class Cat : Animal
+public class Cat : Animal
+{
+    public void Meow()
     {
-        public void Meow()
-        {
-            Console.WriteLine("meowing...");
-        }
+        Console.WriteLine("meowing...");
     }
+}
+
 //}

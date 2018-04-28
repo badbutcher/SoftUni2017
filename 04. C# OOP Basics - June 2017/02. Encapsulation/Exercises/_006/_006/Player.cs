@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _006
+﻿namespace _006
 {
+    using System;
+
     public class Player
     {
         private string name;
@@ -23,7 +19,7 @@ namespace _006
             {
                 return this.name;
             }
-            set
+            private set
             {
                 if (string.IsNullOrWhiteSpace(value) || string.IsNullOrEmpty(value))
                 {
@@ -40,7 +36,7 @@ namespace _006
             {
                 return this.stats;
             }
-            set
+            private set
             {
                 this.stats = value;
             }

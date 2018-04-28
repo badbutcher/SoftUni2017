@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _015
+﻿namespace _015
 {
+    using System;
+
     public class Program
     {
         public static void Main()
@@ -14,12 +10,18 @@ namespace _015
 
             if (input == "Square")
             {
-                int n = int.Parse(Console.ReadLine());
+                int side = int.Parse(Console.ReadLine());
+
+                Square square = new Square(side);
+                Console.WriteLine(square.Draw());
             }
             else if (input == "Rectangle")
             {
-                int cols = int.Parse(Console.ReadLine());
-                int rows = int.Parse(Console.ReadLine());
+                int width = int.Parse(Console.ReadLine());
+                int length = int.Parse(Console.ReadLine());
+
+                Rectangle rectangle = new Rectangle(width, length);
+                Console.WriteLine(rectangle.Draw());
             }
         }
     }

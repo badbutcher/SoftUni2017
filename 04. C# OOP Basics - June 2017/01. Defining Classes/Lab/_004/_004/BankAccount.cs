@@ -1,27 +1,28 @@
 ﻿//namespace _004
 //{
-    public class BankAccount
+public class BankAccount
+{
+    private int id;
+    private decimal balance;
+
+    public int Id { get; set; }
+
+    public decimal Balance { get; set; }
+
+    public void Deposit(decimal amount)
     {
-        private int id;
-        private double balance;
-
-        public int ID { get; set; }
-
-        public double Balance { get; set; }
-
-        public void Deposit(double amount)
-        {
-            this.Balance += amount;
-        }
-
-        public void Withdraw(double amount)
-        {
-            this.Balance -= amount;
-        }
-
-        public override string ToString()
-        {
-            return $"Account ID{this.ID}, balance {this.Balance:F2}";
-        }
+        this.Balance += amount;
     }
+
+    public void Withdraw(decimal amount)
+    {
+        this.Balance -= amount;
+    }
+
+    public override string ToString()
+    {
+        return $"Account ID{this.Id}, balance {this.Balance:F2}";
+    }
+}
+
 //}

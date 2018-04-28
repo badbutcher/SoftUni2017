@@ -3,9 +3,9 @@
     using System;
     using System.Collections.Generic;
 
-    class Program
+    public class Program
     {
-        static void Main()
+        public static void Main()
         {
             Dictionary<int, BankAccount> accounts = new Dictionary<int, BankAccount>();
 
@@ -21,17 +21,17 @@
                 {
                     string[] data = input.Split();
                     int id = int.Parse(data[1]);
-                    BankAccount acc = new BankAccount();
+
                     switch (data[0])
                     {
                         case "Create":
                             Create(id, accounts);
                             break;
                         case "Deposit":
-                            Deposit(id, double.Parse(data[2]), accounts);
+                            Deposit(id, decimal.Parse(data[2]), accounts);
                             break;
                         case "Withdraw":
-                            Withdraw(id, double.Parse(data[2]), accounts);
+                            Withdraw(id, decimal.Parse(data[2]), accounts);
                             break;
                         case "Print":
                             Print(id, accounts);
@@ -55,7 +55,7 @@
             }
         }
 
-        private static void Withdraw(int id, double amount, Dictionary<int, BankAccount> accounts)
+        private static void Withdraw(int id, decimal amount, Dictionary<int, BankAccount> accounts)
         {
             if (accounts.ContainsKey(id))
             {
@@ -74,7 +74,7 @@
             }
         }
 
-        private static void Deposit(int id, double amount, Dictionary<int, BankAccount> accounts)
+        private static void Deposit(int id, decimal amount, Dictionary<int, BankAccount> accounts)
         {
             if (accounts.ContainsKey(id))
             {
@@ -91,7 +91,7 @@
             if (!accounts.ContainsKey(id))
             {
                 BankAccount acc = new BankAccount();
-                acc.ID = id;
+                acc.Id = id;
                 accounts.Add(id, acc);
             }
             else

@@ -1,18 +1,19 @@
 ﻿//namespace _002
 //{
-    using System;
+using System;
 
-    class Program
+public class Program
+{
+    public static void Main()
     {
-        static void Main()
-        {
-            BankAccount acc = new BankAccount();
+        BankAccount acc = new BankAccount();
 
-            acc.ID = 1;
-            acc.Deposit(15);
-            acc.Withdraw(5);
+        acc.Id = 1;
+        acc.Deposit(15);
+        acc.Withdraw(5);
 
-            Console.WriteLine(acc.ToString());
-        }
+        Console.WriteLine(acc.ToString());
     }
+}
+
 //}

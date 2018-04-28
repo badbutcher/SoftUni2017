@@ -1,7 +1,7 @@
 ﻿namespace _003
 {
-    using System;
     using _003.Factories;
+    using System;
 
     public class Program
     {

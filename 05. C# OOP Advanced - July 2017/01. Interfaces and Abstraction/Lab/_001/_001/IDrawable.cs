@@ -1,7 +1,8 @@
 ﻿//namespace _001
 //{
-    public interface IDrawable
-    {
-        void Draw();
-    }
+public interface IDrawable
+{
+    void Draw();
+}
+
 //}

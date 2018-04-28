@@ -1,11 +1,12 @@
 ﻿//namespace _004
 //{
-    public class Program
+public class Program
+{
+    public static void Main()
     {
-        public static void Main()
-        {
-            RandomList r = new RandomList();
-            r.RandomString();
-        }
+        RandomList r = new RandomList();
+        r.RandomString();
     }
+}
+
 //}

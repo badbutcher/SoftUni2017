@@ -1,30 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//namespace _004
+﻿//namespace _004
 //{
-    public class Program
-    {
-        static void Main()
-        {
-            //var lines = int.Parse(Console.ReadLine());
-            //Team team = new Team();
-            //var persons = new List<Person>();
-            //for (int i = 0; i < lines; i++)
-            //{
-            //    var cmdArgs = Console.ReadLine().Split();
-            //    var person = new Person(cmdArgs[0],
-            //                            cmdArgs[1],
-            //                            int.Parse(cmdArgs[2]),
-            //                            double.Parse(cmdArgs[3]));
-            //    team.AddPlayer(person);
-            //    persons.Add(person);
-            //}
+using System;
 
-            //Console.WriteLine(team.FirstTeam.Count);
+public class Program
+{
+    private static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        Team team = new Team("My Team");
+        for (int i = 0; i < n; i++)
+        {
+            string[] data = Console.ReadLine().Split();
+            string firstName = data[0];
+            string lastName = data[1];
+            int age = int.Parse(data[2]);
+            decimal salaty = decimal.Parse(data[3]);
+
+            Person player = new Person(firstName, lastName, age, salaty);
+            team.AddPlayer(player);
         }
+
+        Console.WriteLine($"First team has {team.FirstTeam.Count} players");
+        Console.WriteLine($"Reserve team has {team.ReserveTeam.Count} players");
+
     }
+}
+
 //}

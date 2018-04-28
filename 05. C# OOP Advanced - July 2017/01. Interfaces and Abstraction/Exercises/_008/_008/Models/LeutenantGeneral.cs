@@ -1,9 +1,9 @@
 ﻿namespace _008.Models
 {
+    using _008.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Text;
-    using _008.Interfaces;
 
     public class LeutenantGeneral : Private, ILeutenantGeneral
     {

@@ -1,13 +1,14 @@
 ﻿//namespace _002
 //{
-    public interface ICar
-    {
-        string Model { get; }
+public interface ICar
+{
+    string Model { get; }
 
-        string Color { get; }
+    string Color { get; }
 
-        string Start();
+    string Start();
 
-        string Stop();
-    }
+    string Stop();
+}
+
 //}

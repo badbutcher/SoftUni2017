@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _006
+﻿namespace _006
 {
+    using System;
+
     public class Stats
     {
         private int endurance;
@@ -29,7 +25,7 @@ namespace _006
             {
                 return this.endurance;
             }
-            set
+            private set
             {
                 if (value < 0 || value > 100)
                 {
@@ -46,7 +42,7 @@ namespace _006
             {
                 return this.sprint;
             }
-            set
+            private set
             {
                 if (value < 0 || value > 100)
                 {
@@ -63,7 +59,7 @@ namespace _006
             {
                 return this.dribble;
             }
-            set
+            private set
             {
                 if (value < 0 || value > 100)
                 {
@@ -80,7 +76,7 @@ namespace _006
             {
                 return this.passing;
             }
-            set
+            private set
             {
                 if (value < 0 || value > 100)
                 {
@@ -97,7 +93,7 @@ namespace _006
             {
                 return this.shooting;
             }
-            set
+            private set
             {
                 if (value < 0 || value > 100)
                 {

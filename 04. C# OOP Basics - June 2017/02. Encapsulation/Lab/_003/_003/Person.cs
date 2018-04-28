@@ -1,88 +1,94 @@
 ﻿//namespace _003
 //{
-    using System;
+using System;
 
-    public class Person
+public class Person
+{
+    private string firstName;
+    private string lastName;
+    private int age;
+    private decimal salary;
+
+    public Person(string firstName, string lastName, int age, decimal salary)
     {
-        private string firstName;
-        private string lastName;
-        private int age;
-        private double salary;
+        this.FirstName = firstName;
+        this.LastName = lastName;
+        this.Age = age;
+        this.Salary = salary;
+    }
 
-        public Person(string firstName, string lastName, int age, double salary)
+    public string FirstName
+    {
+        get
         {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Age = age;
-            this.Salary = salary;
+            return this.firstName;
         }
-
-        public string FirstName
+        private set
         {
-            get
+            if (value.Length < 3)
             {
-                return this.firstName;
+                throw new ArgumentException("First name cannot contain fewer than 3 symbols!");
             }
-            set
-            {
-                if (value.Length < 3)
-                {
-                    throw new ArgumentException("First name cannot be less than 3 symbols");
-                }
 
-                this.firstName = value;
-            }
-        }
-
-        public string LastName
-        {
-            get
-            {
-                return this.lastName;
-            }
-            set
-            {
-                if (value.Length < 3)
-                {
-                    throw new ArgumentException("Last name cannot be less than 3 symbols");
-                }
-
-                this.lastName = value;
-            }
-        }
-
-        public int Age
-        {
-            get
-            {
-                return this.age;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Age cannot be zero or negative integer");
-                }
-
-                this.age = value;
-            }
-        }
-
-        public double Salary
-        {
-            get
-            {
-                return this.salary;
-            }
-            set
-            {
-                if (value < 460)
-                {
-                    throw new ArgumentException("Salary cannot be less than 460 leva");
-                }
-
-                this.salary = value;
-            }
+            this.firstName = value;
         }
     }
+
+    public string LastName
+    {
+        get
+        {
+            return this.lastName;
+        }
+        private set
+        {
+            if (value.Length < 3)
+            {
+                throw new ArgumentException("Last name cannot contain fewer than 3 symbols!");
+            }
+
+            this.lastName = value;
+        }
+    }
+
+    public int Age
+    {
+        get
+        {
+            return this.age;
+        }
+        private set
+        {
+            if (value <= 0)
+            {
+                throw new ArgumentException("Age cannot be zero or a negative integer!");
+            }
+
+            this.age = value;
+        }
+    }
+
+    public decimal Salary
+    {
+        get
+        {
+            return this.salary;
+        }
+        private set
+        {
+            if (value < 460)
+            {
+                throw new ArgumentException("Salary cannot be less than 460 leva!");
+            }
+
+            this.salary = value;
+        }
+    }
+
+    public override string ToString()
+    {
+        return $"{this.FirstName} {this.LastName} gets {this.Salary:F2} leva.";
+    }
+}
+
 //}

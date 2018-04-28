@@ -1,40 +1,41 @@
 ﻿//namespace _005
 //{
-    using System.Collections.Generic;
-    using System.Linq;
+using System.Collections.Generic;
+using System.Linq;
 
-    public class StackOfStrings
+public class StackOfStrings
+{
+    private List<string> data;
+
+    public void Push(string item)
     {
-        private List<string> data;
+        this.data.Add(item);
+    }
 
-        public void Push(string item)
+    public string Pop()
+    {
+        string item = this.data.Last();
+        this.data.Remove(item);
+        return item;
+    }
+
+    public string Peek()
+    {
+        string item = this.data.Last();
+        return item;
+    }
+
+    public bool IsEmpty()
+    {
+        if (this.data.Count == 0)
         {
-            this.data.Add(item);
+            return true;
         }
-
-        public string Pop()
+        else
         {
-            string item = this.data.Last();
-            this.data.Remove(item);
-            return item;
-        }
-
-        public string Peek()
-        {
-            string item = this.data.Last();
-            return item;
-        }
-
-        public bool IsEmpty()
-        {
-            if (this.data.Count == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return false;
         }
     }
+}
+
 //}
