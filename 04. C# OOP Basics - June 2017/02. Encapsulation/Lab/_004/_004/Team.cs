@@ -19,22 +19,22 @@ public class Team
     {
         if (person.Age < 40)
         {
-            firstTeam.Add(person);
+            this.firstTeam.Add(person);
         }
         else
         {
-            reserveTeam.Add(person);
+            this.reserveTeam.Add(person);
         }
     }
 
-    public IList<Person> FirstTeam
+    public IReadOnlyCollection<Person> FirstTeam
     {
-        get { return this.firstTeam; }
+        get { return this.firstTeam.AsReadOnly(); }
     }
 
-    public IList<Person> ReserveTeam
+    public IReadOnlyCollection<Person> ReserveTeam
     {
-        get { return this.reserveTeam; }
+        get { return this.reserveTeam.AsReadOnly(); }
     }
 }
 
