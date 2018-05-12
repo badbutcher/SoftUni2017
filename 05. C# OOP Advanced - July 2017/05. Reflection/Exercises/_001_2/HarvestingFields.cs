@@ -7,7 +7,7 @@
     using System.Text;
     using System.Threading;
 
-    class HarvestingFields
+    public class HarvestingFields
     {
         private int testInt;
         public double testDouble;

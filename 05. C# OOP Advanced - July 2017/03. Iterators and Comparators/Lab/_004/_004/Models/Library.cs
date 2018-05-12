@@ -1,67 +1,68 @@
 ﻿//namespace _004.Models
 //{
-    using System.Collections;
-    using System.Collections.Generic;
+using System.Collections;
+using System.Collections.Generic;
 
-    public class Library : IEnumerable<Book>
+public class Library : IEnumerable<Book>
+{
+    public Library(params Book[] books)
     {
-        public Library(params Book[] books)
+        this.Books = new SortedSet<Book>(books, new BookComparator());
+    }
+
+    public SortedSet<Book> Books { get; private set; }
+
+    public IEnumerator<Book> GetEnumerator()
+    {
+        return new LibraryIterator(this.Books);
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return this.GetEnumerator();
+    }
+
+    private class LibraryIterator : IEnumerator<Book>
+    {
+        private int currentIndex;
+        private readonly List<Book> books;
+
+        public LibraryIterator(IEnumerable<Book> books)
         {
-            this.Books = new SortedSet<Book>(books, new BookComparator());
+            this.Reset();
+            this.books = new List<Book>(books);
         }
 
-        public SortedSet<Book> Books { get; private set; }
-
-        public IEnumerator<Book> GetEnumerator()
+        public Book Current
         {
-            return new LibraryIterator(this.Books);
+            get
+            {
+                return this.books[currentIndex];
+            }
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        object IEnumerator.Current
         {
-            return this.GetEnumerator();
+            get
+            {
+                return this.Current;
+            }
         }
 
-        private class LibraryIterator : IEnumerator<Book>
+        public void Dispose()
         {
-            private int currentIndex;
-            private readonly List<Book> books;
+        }
 
-            public LibraryIterator(IEnumerable<Book> books)
-            {
-                this.Reset();
-                this.books = new List<Book>(books);
-            }
+        public bool MoveNext()
+        {
+            return ++this.currentIndex < this.books.Count;
+        }
 
-            public Book Current
-            {
-                get
-                {
-                    return this.books[currentIndex];
-                }
-            }
-
-            object IEnumerator.Current
-            {
-                get
-                {
-                    return this.Current;
-                }
-            }
-
-            public void Dispose()
-            {
-            }
-
-            public bool MoveNext()
-            {
-                return ++this.currentIndex < this.books.Count;
-            }
-
-            public void Reset()
-            {
-                this.currentIndex = -1;
-            }
+        public void Reset()
+        {
+            this.currentIndex = -1;
         }
     }
+}
+
 //}

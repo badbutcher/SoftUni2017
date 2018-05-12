@@ -79,7 +79,7 @@ public class HarvestingFieldsTest
             if (item.IsPublic)
             {
                 Console.WriteLine($"public {item.FieldType.Name} {item.Name}");
-            }           
+            }
         }
     }
 
@@ -113,4 +113,5 @@ public class HarvestingFieldsTest
         return "none";
     }
 }
+
 //}

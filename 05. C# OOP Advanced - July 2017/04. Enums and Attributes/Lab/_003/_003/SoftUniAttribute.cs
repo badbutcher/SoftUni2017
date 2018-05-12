@@ -1,15 +1,16 @@
 ﻿//namespace _003
 //{
-    using System;
+using System;
 
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-    public class SoftUniAttribute : Attribute
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+public class SoftUniAttribute : Attribute
+{
+    public SoftUniAttribute(string name)
     {
-        public SoftUniAttribute(string name)
-        {
-            this.Name = name;
-        }
-
-        public string Name { get; private set; }
+        this.Name = name;
     }
+
+    public string Name { get; private set; }
+}
+
 //}

@@ -18,7 +18,7 @@
                         myCustomList.Add(tokens[1]);
                         break;
                     case "Remove":
-                       myCustomList.Remove(int.Parse(tokens[1]));
+                        myCustomList.Remove(int.Parse(tokens[1]));
                         break;
                     case "Contains":
                         Console.WriteLine(myCustomList.Contains(tokens[1]));
@@ -43,6 +43,7 @@
                         {
                             Console.WriteLine(element);
                         }
+
                         break;
                 }
             }

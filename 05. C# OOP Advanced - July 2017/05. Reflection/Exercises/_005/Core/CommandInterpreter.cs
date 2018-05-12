@@ -1,9 +1,9 @@
-﻿using System;
+﻿using _03BarracksFactory.Attributes;
+using _03BarracksFactory.Contracts;
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using _03BarracksFactory.Attributes;
-using _03BarracksFactory.Contracts;
 
 namespace _03BarracksFactory.Core
 {

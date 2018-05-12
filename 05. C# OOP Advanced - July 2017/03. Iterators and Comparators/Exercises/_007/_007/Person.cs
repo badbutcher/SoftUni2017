@@ -17,7 +17,7 @@
 
         public int CompareTo(Person other)
         {
-            var result = this.Name.CompareTo(other.Name);
+            int result = this.Name.CompareTo(other.Name);
             if (result == 0)
             {
                 result = this.Age - other.Age;
@@ -28,13 +28,13 @@
 
         public override bool Equals(object other)
         {
-            var p = other as Person;
+            Person p = other as Person;
             return this.Name == p.Name && this.Age == p.Age;
         }
 
         public override int GetHashCode()
         {
-            var hashCode = this.Name.Length * 10000;
+            int hashCode = this.Name.Length * 10000;
             hashCode = this.Name.Aggregate(hashCode, (c, l) => c + l);
 
             hashCode += this.Age * 10000;

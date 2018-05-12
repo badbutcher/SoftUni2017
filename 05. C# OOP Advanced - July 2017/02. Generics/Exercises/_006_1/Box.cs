@@ -1,6 +1,6 @@
 ﻿namespace Generic_Box_Problems
 {
-    public class Box<T> 
+    public class Box<T>
     {
         public Box(T value)
         {

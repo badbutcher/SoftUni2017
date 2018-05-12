@@ -25,7 +25,7 @@
         }
 
         public void Add(T element) => this.elements.Add(element);
-        
+
         public T Remove(int index)
         {
             T temp = this.elements[index];
@@ -42,7 +42,7 @@
             this.elements[index2] = temp;
         }
 
-        public int CountGreaterThan(T element) => 
+        public int CountGreaterThan(T element) =>
             this.elements.Count(e => e.CompareTo(element) > 0);
 
         public T Max() => this.elements.Max();

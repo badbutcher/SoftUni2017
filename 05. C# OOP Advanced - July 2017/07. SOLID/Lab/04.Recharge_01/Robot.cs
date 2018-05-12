@@ -1,7 +1,5 @@
 ﻿namespace _04.Recharge
 {
-    using System;
-
     public class Robot : Worker, IRechargeable
     {
         private int capacity;
@@ -9,7 +7,7 @@
 
         public Robot(string id, int capacity) : base(id)
         {
-           this.capacity = capacity;
+            this.capacity = capacity;
         }
 
         public int Capacity

@@ -5,9 +5,9 @@
     using Core.Factories;
     using Data;
 
-    class AppEntryPoint
+    internal class AppEntryPoint
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             IRepository repository = new UnitRepository();
             IUnitFactory unitFactory = new UnitFactory();

@@ -1,8 +1,8 @@
 ﻿namespace _009
 {
+    using Enums;
     using System;
     using System.Collections.Generic;
-    using Enums;
 
     public class Program
     {

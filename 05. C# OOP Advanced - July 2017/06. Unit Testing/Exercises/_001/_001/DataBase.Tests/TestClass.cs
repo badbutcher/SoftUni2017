@@ -1,9 +1,8 @@
 ﻿namespace DataBase.Tests
 {
+    using _001;
     using System;
     using System.Linq;
-    using _001;
-    using NUnit.Framework;
 
     [TestFixture]
     public class TestClass
@@ -48,7 +47,7 @@
         public void TestRemoveFromEmptyArray()
         {
             DataBaseClass db = new DataBaseClass();
-            
+
             InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() => db.Remove());
 
             Assert.That(ex.Message, Is.EqualTo("Index is less than 0."));

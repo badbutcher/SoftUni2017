@@ -1,8 +1,8 @@
 ﻿namespace Logger_001.Entities
 {
-    using System;
     using Logger_001.Enums;
     using Logger_001.Interfaces;
+    using System;
 
     public class Logger : ILogger
     {

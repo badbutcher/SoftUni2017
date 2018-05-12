@@ -8,7 +8,7 @@
     {
         public static void Main()
         {
-            var numberOfLines = int.Parse(Console.ReadLine());
+            int numberOfLines = int.Parse(Console.ReadLine());
             List<Box<string>> listOfBoxes = new List<Box<string>>();
             for (int i = 0; i < numberOfLines; i++)
             {
@@ -16,8 +16,8 @@
                 listOfBoxes.Add(boxStr);
             }
 
-            var element = Console.ReadLine();
-            var result = GetGreaterElementsCount(listOfBoxes, element);
+            string element = Console.ReadLine();
+            int result = GetGreaterElementsCount(listOfBoxes, element);
 
             Console.WriteLine(result);
         }
@@ -26,7 +26,6 @@
             where T : IComparable<T>
         {
             return listOfBoxes.Count(b => b.Value.CompareTo(element) > 0);
-            
         }
     }
 }

@@ -5,7 +5,7 @@
         private const int DefaultHealth = 50;
         private const int DefaultDamage = 10;
 
-        public Horseman() 
+        public Horseman()
             : base(DefaultHealth, DefaultDamage)
         {
         }

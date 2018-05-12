@@ -1,9 +1,8 @@
 ﻿namespace PersonDataBaseTests
 {
+    using _002;
     using System;
     using System.Linq;
-    using _002;
-    using NUnit.Framework;
 
     [TestFixture]
     public class TestClass

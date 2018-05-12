@@ -5,7 +5,7 @@
         private const int DefaultHealth = 20;
         private const int DefaultDamage = 20;
 
-        public Gunner() 
+        public Gunner()
             : base(DefaultHealth, DefaultDamage)
         {
         }

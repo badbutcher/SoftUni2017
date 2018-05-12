@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _03BarracksFactory.Contracts;
+﻿using _03BarracksFactory.Contracts;
 
 namespace _03BarracksFactory.Core.Commands
 {
     public class AddCommand : Command
     {
-        public AddCommand(string[] data, IRepository repository, IUnitFactory unitFactory) 
+        public AddCommand(string[] data, IRepository repository, IUnitFactory unitFactory)
             : base(data, repository, unitFactory)
         {
         }

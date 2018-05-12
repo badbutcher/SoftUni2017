@@ -15,7 +15,7 @@ public class Spy
 
         Object classInstance = Activator.CreateInstance(classType, new object[] { });
 
-        sb.AppendLine($"Class under investigation: {className}");  
+        sb.AppendLine($"Class under investigation: {className}");
 
         foreach (var item in publicFields.Where(a => fields.Contains(a.Name))) //.GetCustomAttribute<CompilerGeneratedAttribute>() == null)
         {

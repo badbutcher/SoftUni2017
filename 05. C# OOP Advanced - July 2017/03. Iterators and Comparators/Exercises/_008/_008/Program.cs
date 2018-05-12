@@ -1,9 +1,9 @@
 ﻿namespace _008
 {
+    using _008.Entities;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using _008.Entities;
 
     public class Program
     {

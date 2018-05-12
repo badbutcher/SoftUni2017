@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using _03BarracksFactory.Contracts;
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using _03BarracksFactory.Contracts;
 
 namespace _03BarracksFactory.Core
 {
@@ -25,7 +22,7 @@ namespace _03BarracksFactory.Core
         {
             string commandCompleteName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(commandName) + CommandSuffix;
 
-            Type commandType = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(t=>t.Name == commandCompleteName);
+            Type commandType = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(t => t.Name == commandCompleteName);
 
             object[] commandParams =
             {

@@ -5,7 +5,7 @@
         private const int DefaultHealth = 30;
         private const int DefaultDamage = 15;
 
-        public Pikeman() 
+        public Pikeman()
             : base(DefaultHealth, DefaultDamage)
         {
         }

@@ -18,7 +18,7 @@
                 {"public" , () => harvestingFields.Where(f => f.IsPublic).ToArray()},
                 {"all", () => harvestingFields}
             };
-            
+
             FieldInfo[] gatherdFields;
             string requestedAccMod;
             while ((requestedAccMod = Console.ReadLine()) != "HARVEST")

@@ -34,7 +34,7 @@
                         break;
                 }
 
-                string[] result = gatherdFields.Select(f => 
+                string[] result = gatherdFields.Select(f =>
                        $"{f.Attributes.ToString().ToLower()} {f.FieldType.Name} {f.Name}")
                        .ToArray();
                 Console.WriteLine(string.Join(Environment.NewLine, result).Replace("family", "protected"));

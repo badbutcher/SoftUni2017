@@ -8,7 +8,7 @@
     {
         public static void Main()
         {
-            var numberOfLines = int.Parse(Console.ReadLine());
+            int numberOfLines = int.Parse(Console.ReadLine());
             List<Box<string>> listOfBoxes = new List<Box<string>>();
             for (int i = 0; i < numberOfLines; i++)
             {
@@ -16,7 +16,7 @@
                 listOfBoxes.Add(boxStr);
             }
 
-            var indexes = Console.ReadLine()
+            int[] indexes = Console.ReadLine()
                 .Split(' ')
                 .Select(int.Parse)
                 .ToArray();

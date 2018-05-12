@@ -1,5 +1,5 @@
-﻿namespace _001
-{
+﻿//namespace _001
+//{
     using System;
 
     public class Program
@@ -11,4 +11,4 @@
             Console.WriteLine(box.ToString());
         }
     }
-}
+//}

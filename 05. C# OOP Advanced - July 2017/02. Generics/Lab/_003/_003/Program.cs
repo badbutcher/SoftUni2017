@@ -6,11 +6,11 @@
     {
         public static void Main()
         {
-            Scale<string> stringScale = new Scale<string>("a", "c");
-            Console.WriteLine(stringScale.GetHavier());
+            //Scale<string> stringScale = new Scale<string>("a", "c");
+            //Console.WriteLine(stringScale.GetHavier());
 
-            Scale<int> integerScale = new Scale<int>(2, 1);
-            Console.WriteLine(integerScale.GetHavier());
+            //Scale<int> integerScale = new Scale<int>(2, 1);
+            //Console.WriteLine(integerScale.GetHavier());
         }
     }
 //}

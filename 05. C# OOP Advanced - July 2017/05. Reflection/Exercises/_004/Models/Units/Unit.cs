@@ -1,7 +1,7 @@
 ﻿namespace _03BarracksFactory.Models.Units
 {
-    using System;
     using Contracts;
+    using System;
 
     public class Unit : IUnit
     {

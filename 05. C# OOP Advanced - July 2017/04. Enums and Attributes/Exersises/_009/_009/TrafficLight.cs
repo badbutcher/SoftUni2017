@@ -1,7 +1,7 @@
 ﻿namespace _009
 {
-    using System;
     using Enums;
+    using System;
 
     public class TrafficLight
     {

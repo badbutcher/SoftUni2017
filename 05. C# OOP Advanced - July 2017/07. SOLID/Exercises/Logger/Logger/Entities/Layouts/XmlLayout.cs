@@ -1,7 +1,7 @@
 ﻿namespace Logger_001.Entities.Layouts
 {
-    using System.Text;
     using Logger_001.Interfaces;
+    using System.Text;
 
     public class XmlLayout : ILayout
     {

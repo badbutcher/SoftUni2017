@@ -35,8 +35,8 @@
 
             Person personToCompare = people.ElementAt(number);
 
-            var peopleFoundCount = people.Count(a => a.CompareTo(personToCompare) == 0);
-            var notEqualsToPersonCount = people.Count - peopleFoundCount;
+            int peopleFoundCount = people.Count(a => a.CompareTo(personToCompare) == 0);
+            int notEqualsToPersonCount = people.Count - peopleFoundCount;
             Console.WriteLine($"{peopleFoundCount} {notEqualsToPersonCount} {people.Count}");
         }
     }

@@ -5,7 +5,7 @@
         private const int DefaultHealth = 25;
         private const int DefaultDamage = 7;
 
-        public Archer() 
+        public Archer()
             : base(DefaultHealth, DefaultDamage)
         {
         }

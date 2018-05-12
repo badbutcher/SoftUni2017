@@ -15,7 +15,6 @@
             if (input == "Rank")
             {
                 PrintAttribute(typeof(CardRanks));
-
             }
             else
             {

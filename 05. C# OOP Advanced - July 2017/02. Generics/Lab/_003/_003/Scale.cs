@@ -14,7 +14,7 @@
             this.right = right;
         }
 
-        public T GetHavier()
+        public T GetHeavier()
         {
             if (left.CompareTo(right) > 0)
             {

@@ -1,9 +1,9 @@
 ﻿namespace _03BarracksFactory.Data
 {
+    using Contracts;
     using System;
     using System.Collections.Generic;
     using System.Text;
-    using Contracts;
 
     internal class UnitRepository : IRepository
     {

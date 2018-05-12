@@ -1,8 +1,8 @@
 ﻿namespace Logger_001
 {
+    using Logger_001.Interfaces;
     using System;
     using System.Collections.Generic;
-    using Logger_001.Interfaces;
 
     public class Program
     {

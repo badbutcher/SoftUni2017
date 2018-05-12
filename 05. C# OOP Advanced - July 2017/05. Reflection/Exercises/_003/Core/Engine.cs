@@ -1,9 +1,9 @@
 ﻿namespace _03BarracksFactory.Core
 {
-    using System;
     using Contracts;
+    using System;
 
-    class Engine : IRunnable
+    internal class Engine : IRunnable
     {
         private IRepository repository;
         private IUnitFactory unitFactory;
@@ -13,7 +13,7 @@
             this.repository = repository;
             this.unitFactory = unitFactory;
         }
-        
+
         public void Run()
         {
             while (true)
@@ -54,13 +54,11 @@
             return result;
         }
 
-
         private string ReportCommand(string[] data)
         {
             string output = this.repository.Statistics;
             return output;
         }
-
 
         private string AddUnitCommand(string[] data)
         {

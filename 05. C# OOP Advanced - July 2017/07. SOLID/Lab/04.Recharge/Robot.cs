@@ -1,7 +1,5 @@
 ﻿namespace _04.Recharge
 {
-    using System;
-
     public class Robot : Worker, IRechargeable
     {
         private int capacity;
@@ -9,7 +7,7 @@
 
         public Robot(string id, int capacity) : base(id)
         {
-           this.capacity = capacity;
+            this.capacity = capacity;
         }
 
         public int Capacity
@@ -22,7 +20,7 @@
             get { return this.currentPower; }
             set { this.currentPower = value; }
         }
-                                             
+
         public void Work(int hours)
         {
             if (hours > this.currentPower)

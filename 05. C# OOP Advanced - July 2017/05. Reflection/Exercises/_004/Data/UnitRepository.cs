@@ -1,10 +1,11 @@
 ﻿namespace _03BarracksFactory.Data
 {
-    using System;
     using Contracts;
+    using System;
     using System.Collections.Generic;
     using System.Text;
-    class UnitRepository : IRepository
+
+    internal class UnitRepository : IRepository
     {
         private IDictionary<string, int> amountOfUnits;
 

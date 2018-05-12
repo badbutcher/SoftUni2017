@@ -1,5 +1,5 @@
-﻿namespace _001
-{
+﻿//namespace _001
+//{
     public class Box<T>
     {
         public Box(T value)
@@ -11,7 +11,7 @@
 
         public override string ToString()
         {
-            return $"{this.GetType().FullName}: {this.Value}";
+            return $"{this.Value.GetType().FullName}: {this.Value}";
         }
     }
-}
+//}

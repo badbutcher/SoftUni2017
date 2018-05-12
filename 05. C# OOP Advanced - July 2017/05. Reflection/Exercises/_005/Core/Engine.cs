@@ -1,7 +1,7 @@
 ﻿namespace _03BarracksFactory.Core
 {
-    using System;
     using Contracts;
+    using System;
 
     internal class Engine : IRunnable
     {
